@@ -6,48 +6,68 @@ const Footer = () => {
           <div className=" flex flex-col gap-4">
             <h3 className="text-[1.5rem] leading-7">Company</h3>
             <ul className="text-[1rem] leading-6 flex flex-col gap-2">
-              <li className="hover:text-orange">
-                <a href="">About us</a>
+              <li>
+                <a className="active:text-orange hover:text-orange" href="">
+                  About us
+                </a>
               </li>
-              <li className="hover:text-orange">
-                <a href="">Contact us</a>
+              <li>
+                <a className="active:text-orange hover:text-orange" href="">
+                  Contact us
+                </a>
               </li>
-              <li className="hover:text-orange">
-                <a href="">Privacy policy</a>
+              <li>
+                <a className="active:text-orange hover:text-orange" href="">
+                  Privacy policy
+                </a>
               </li>
-              <li className="hover:text-orange">
-                <a href="">Terms & Conditions</a>
+              <li>
+                <a className="active:text-orange hover:text-orange" href="">
+                  Terms & Conditions
+                </a>
               </li>
-              <li className="hover:text-orange">
-                <a href="">Support Center</a>
+              <li>
+                <a className="active:text-orange hover:text-orange" href="">
+                  Support Center
+                </a>
               </li>
             </ul>
           </div>
           <div className="flex flex-col gap-4">
             <h3 className="text-[1.5rem] leading-7">Question ?</h3>
             <ul className="text-[1rem] leading-6  flex flex-col gap-2 ">
-              <li className="hover:text-orange">
-                <a href="">About us</a>
+              <li>
+                <a className="active:text-orange hover:text-orange" href="">
+                  About us
+                </a>
               </li>
-              <li className="hover:text-orange">
-                <a href="">Why choose us</a>
+              <li>
+                <a className="active:text-orange hover:text-orange" href="">
+                  Why choose us
+                </a>
               </li>
-              <li className="hover:text-orange">
-                <a href="">Career</a>
+              <li>
+                <a className="active:text-orange hover:text-orange" href="">
+                  Career
+                </a>
               </li>
-              <li className="hover:text-orange">
-                <a href="">Team</a>
+              <li>
+                <a className="active:text-orange hover:text-orange" href="">
+                  Team
+                </a>
               </li>
-              <li className="hover:text-orange">
-                <a href="">FAQs</a>
+              <li>
+                <a className="active:text-orange hover:text-orange" href="">
+                  FAQs
+                </a>
               </li>
             </ul>
           </div>
           <div className="flex flex-col gap-4">
             <h3 className="text-[1.5rem] leading-7">Contact us</h3>
             <ul className="text-[1rem] leading-6  flex flex-col gap-2">
-              <li className="hover:text-orange">
-                <a href="">
+              <li>
+                <a className="active:text-orange hover:text-orange" href="">
                   <img
                     src="/src/assets/Vector3.png"
                     alt=""
@@ -56,8 +76,8 @@ const Footer = () => {
                   nhub Foundation
                 </a>
               </li>
-              <li className="hover:text-orange">
-                <a href="">
+              <li>
+                <a className="active:text-orange hover:text-orange" href="">
                   <img
                     src="/src/assets/Vector2.png"
                     alt=""
@@ -66,21 +86,23 @@ const Footer = () => {
                   info@gmail.com
                 </a>
               </li>
-              <li className="hover:text-orange">
+              <li>
                 <img
                   src="/src/assets/call.png"
                   alt=""
                   className="inline mr-2"
                 />
-                <a href="">1234568890</a>
+                <a className="active:text-orange hover:text-orange" href="">
+                  1234568890
+                </a>
               </li>
             </ul>
           </div>
           <div className="flex flex-col gap-4">
             <h3 className="text-[1.5rem] leading-7">Useful Links</h3>
             <ul className="text-[1rem] leading-6  flex flex-col gap-2">
-              <li className="hover:text-orange">
-                <a href="">
+              <li>
+                <a className="active:text-orange hover:text-orange" href="">
                   <img
                     src="/src/assets/Vector (3).png"
                     alt=""
@@ -89,8 +111,8 @@ const Footer = () => {
                   Facebook
                 </a>
               </li>
-              <li className="hover:text-orange">
-                <a href="">
+              <li>
+                <a className="active:text-orange hover:text-orange" href="">
                   <img
                     src="/src/assets/Vector (4).png"
                     alt=""
@@ -99,8 +121,8 @@ const Footer = () => {
                   Twitter
                 </a>
               </li>
-              <li className="hover:text-orange">
-                <a href="">
+              <li>
+                <a className="active:text-orange hover:text-orange" href="">
                   <img
                     src="/src/assets/Vector (5).png"
                     alt=""
@@ -109,8 +131,8 @@ const Footer = () => {
                   Instagram
                 </a>
               </li>
-              <li className="hover:text-orange">
-                <a href="">
+              <li>
+                <a className="active:text-orange hover:text-orange" href="">
                   <img
                     src="/src/assets/Vector (6).png"
                     alt=""
