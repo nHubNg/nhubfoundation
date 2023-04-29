@@ -1,14 +1,14 @@
 import { useState } from "react";
 
 const Navbar = () => {
-  const [nav, setNav] = useState(false);
+  const [nav, setNav] = useState(true);
 
   const handleNav = () => {
     setNav(!nav);
   };
   return (
     <nav className="sticky top-0 bg-white">
-      <div className="my-container flex items-center  h-16">
+      <div className="my-container flex items-center  h-14">
         <div onClick={handleNav}>
           <img
             src={
@@ -31,7 +31,7 @@ const Navbar = () => {
         <div
           className={
             !nav
-              ? "fixed bg-white top-16 left-0 w-[40%] flex flex-col transition-all duration-500 ease-in-out"
+              ? "fixed bg-white top-14 left-0 w-[40%] flex flex-col transition-all duration-500 ease-in-out"
               : "fixed left-[-100%]"
           }
         >
