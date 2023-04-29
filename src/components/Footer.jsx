@@ -69,7 +69,9 @@ const Footer = () => {
               <li>
                 <a className="active:text-orange hover:text-orange" href="">
                   <img
-                    src="/src/assets/Vector3.png"
+                    src={
+                      "https://res.cloudinary.com/ddgyd8szc/image/upload/v1682791103/vector3_wn5f1n.png"
+                    }
                     alt=""
                     className="inline mr-2"
                   />
@@ -79,7 +81,9 @@ const Footer = () => {
               <li>
                 <a className="active:text-orange hover:text-orange" href="">
                   <img
-                    src="/src/assets/Vector2.png"
+                    src={
+                      "https://res.cloudinary.com/ddgyd8szc/image/upload/v1682791103/vector2_syc7vh.png"
+                    }
                     alt=""
                     className="inline mr-2"
                   />
@@ -88,7 +92,9 @@ const Footer = () => {
               </li>
               <li>
                 <img
-                  src="/src/assets/call.png"
+                  src={
+                    "https://res.cloudinary.com/ddgyd8szc/image/upload/v1682791103/call_qlcbut.png"
+                  }
                   alt=""
                   className="inline mr-2"
                 />
@@ -104,7 +110,9 @@ const Footer = () => {
               <li>
                 <a className="active:text-orange hover:text-orange" href="">
                   <img
-                    src="/src/assets/Vector (3).png"
+                    src={
+                      "https://res.cloudinary.com/ddgyd8szc/image/upload/v1682791103/Vector_3_liqlht.png"
+                    }
                     alt=""
                     className="inline mr-2"
                   />
@@ -114,7 +122,9 @@ const Footer = () => {
               <li>
                 <a className="active:text-orange hover:text-orange" href="">
                   <img
-                    src="/src/assets/Vector (4).png"
+                    src={
+                      "https://res.cloudinary.com/ddgyd8szc/image/upload/v1682791103/Vector_4_kiillf.png"
+                    }
                     alt=""
                     className="inline mr-2"
                   />
@@ -124,7 +134,9 @@ const Footer = () => {
               <li>
                 <a className="active:text-orange hover:text-orange" href="">
                   <img
-                    src="/src/assets/Vector (5).png"
+                    src={
+                      "https://res.cloudinary.com/ddgyd8szc/image/upload/v1682791103/Vector_5_bvtror.png"
+                    }
                     alt=""
                     className="inline mr-2"
                   />
@@ -132,12 +144,15 @@ const Footer = () => {
                 </a>
               </li>
               <li>
+                <img
+                  src={
+                    "https://res.cloudinary.com/ddgyd8szc/image/upload/v1682791103/Vector_6_ftlpj1.png"
+                  }
+                  alt=""
+                  className="inline mr-2"
+                />
                 <a className="active:text-orange hover:text-orange" href="">
-                  <img
-                    src="/src/assets/Vector (6).png"
-                    alt=""
-                    className="inline mr-2"
-                  />
+                  <img alt="" className="inline mr-2" />
                   Linkedin
                 </a>
               </li>
