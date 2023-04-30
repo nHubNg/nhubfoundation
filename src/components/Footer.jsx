@@ -34,7 +34,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="flex flex-col gap-4">
-            <h3 className="text-[1.5rem] leading-7">Question ?</h3>
+            <h3 className="text-[1.5rem] leading-7">Question?</h3>
             <ul className="text-[1rem] leading-6  flex flex-col gap-2 ">
               <li>
                 <a className="active:text-orange hover:text-orange" href="">
@@ -162,7 +162,7 @@ const Footer = () => {
 
         <div>
           <p className="text-[0.8rem] leading-5 text-center">
-            @2022 <span className="text-orange">www.nhubfoundation.org</span>
+            @2022 <span className="text-orange">www.nhubfoundation.org </span>
             all right reserved
           </p>
         </div>

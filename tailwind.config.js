@@ -6,6 +6,7 @@ export default {
       colors: {
         textAsh: "#6A6B6B",
         orange: "#F26024",
+        ash: "#515151",
       },
     },
   },
