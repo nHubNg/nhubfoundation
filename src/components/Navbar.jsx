@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [nav, setNav] = useState(true);
@@ -19,14 +20,14 @@ const Navbar = () => {
         </div>
 
         <div className="mx-auto">
-          <a href="">
+          <Link to="/">
             <img
               src={
                 "https://res.cloudinary.com/nhubnacademy/image/upload/v1682899395/nHubFoundation/image_1_w7fcrk.png"
               }
               alt=""
             />
-          </a>
+          </Link>
         </div>
         <div
           className={
@@ -43,37 +44,37 @@ const Navbar = () => {
               />
             </div>
             <li className="py-2">
-              <a className="hover:text-orange text-textAsh" href="">
+              <Link className="hover:text-orange text-textAsh" to="/">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="py-2">
-              <a className="hover:text-orange text-textAsh" href="">
+              <Link className="hover:text-orange text-textAsh" to="/about">
                 About
-              </a>
+              </Link>
             </li>
             <li className="py-2">
-              <a className="hover:text-orange text-textAsh" href="">
+              <Link className="hover:text-orange text-textAsh" to="/programs">
                 Programs
-              </a>
+              </Link>
             </li>
             <li className="py-2">
-              <a className="hover:text-orange text-textAsh" href="">
+              <Link className="hover:text-orange text-textAsh" to="/blog">
                 Blog{" "}
-              </a>
+              </Link>
             </li>
             <li className="py-2">
-              <a className="hover:text-orange text-textAsh" href="">
+              <Link className="hover:text-orange text-textAsh" to="/internship">
                 Internship
-              </a>
+              </Link>
             </li>
             <li className="py-2">
-              <a className="hover:text-orange text-textAsh" href="">
+              <Link className="hover:text-orange text-textAsh" to="/contact">
                 Contact us
-              </a>
+              </Link>
             </li>
             <div className="bg-orange py-2 text-white text-center rounded-md">
-              <a href="">Donate</a>
+              <Link to="/donate">Donate</Link>
             </div>
           </ul>
         </div>

@@ -64,7 +64,7 @@ const Main = () => {
         <div className="flex flex-col items-center md:flex-row md:flex-wrap md:justify-center gap-y-10 mt-6">
           {cards.map((card) => {
             return (
-              <div className="flex flex-col justify-center items-center shadow-lg h-[300px] w-[300px]">
+              <div className="flex flex-col justify-center items-center shadow-lg h-[300px] w-[300px]" key={card.image}>
                 <img src={card.image} alt="" className="w-[45px]" />
                 <h3 className="font-medium text-[24px] text-ash">
                   {card.title}
@@ -121,10 +121,10 @@ const Main = () => {
             </p>
             <p>
               We give them the chance to learn not just tech but even
-              entreprenuership and more.
+              entrepreneurship and more.
             </p>
             <p>
-              They get the chance to develop in a career in the followng fields:
+              They get the chance to develop in a career in the following fields:
             </p>
           </div>
           <ul
