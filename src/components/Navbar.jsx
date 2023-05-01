@@ -7,12 +7,12 @@ const Navbar = () => {
     setNav(!nav);
   };
   return (
-    <nav className="sticky top-0 bg-white">
+    <nav className="  bg-white">
       <div className="my-container flex items-center  h-14">
         <div onClick={handleNav}>
           <img
             src={
-              "https://res.cloudinary.com/dzmpjgmes/image/upload/v1682086623/Vector_nnhxnh.png"
+              "https://res.cloudinary.com/nhubnacademy/image/upload/v1682899502/nHubFoundation/Vector_9_hsbdsn.png"
             }
             alt=""
           />
@@ -22,7 +22,7 @@ const Navbar = () => {
           <a href="">
             <img
               src={
-                "https://res.cloudinary.com/dzmpjgmes/image/upload/v1682087049/image_1_lstcmq.png"
+                "https://res.cloudinary.com/nhubnacademy/image/upload/v1682899395/nHubFoundation/image_1_w7fcrk.png"
               }
               alt=""
             />
@@ -31,14 +31,14 @@ const Navbar = () => {
         <div
           className={
             !nav
-              ? "fixed bg-white top-14 left-0 w-[40%] flex flex-col transition-all duration-500 ease-in-out"
+              ? "fixed  z-[1000] bg-white top-14 left-0 w-[40%] flex flex-col transition-all duration-500 ease-in-out"
               : "fixed left-[-100%]"
           }
         >
           <ul className="p-4 ">
             <div onClick={handleNav} className="flex justify-end">
               <img
-                src="https://res.cloudinary.com/dzmpjgmes/image/upload/v1682773868/Vector_8_ga3jvr.png"
+                src="https://res.cloudinary.com/nhubnacademy/image/upload/v1682899396/nHubFoundation/Vector_8_p2ivyo.png"
                 alt=""
               />
             </div>
