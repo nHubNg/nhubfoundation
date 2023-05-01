@@ -75,7 +75,7 @@ const Footer = () => {
                     alt=""
                     className="inline mr-2"
                   />
-                  nhub Foundation
+                  nHub Foundation
                 </a>
               </li>
               <li>
