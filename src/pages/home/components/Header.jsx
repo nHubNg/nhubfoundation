@@ -7,7 +7,7 @@ w-full bg-cover  bg-no-repeat h-[40vh] my-auto bg-[center_top_3rem]"
       <div className="absolute inset-0 w-full h-[50vh]  bg-overlay "></div>
       <div className="absolute top-0 flex justify-center text-center pt-6  flex-col  text-white z-30">
         <h1 className="text-[26px] text-center font-[600]">
-          Let's Create Something Great Together
+          Let&apos;s Create Something Great Together
         </h1>
         <p className="text-center text-[16px] w-[95%] mx-auto mt-3 py-3">
           nHub Foundation is born from the deep desire to create an equal
