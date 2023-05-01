@@ -1,3 +1,5 @@
+import Blogs from "./Blogs";
+
 const cards = [
   {
     image:
@@ -103,6 +105,11 @@ const Main = () => {
             <li className="py-3">Embedded systems and IoT</li>
             <li className=" py-3">Mobile App Development</li>
           </ul>
+          <div className="w-[200px] bg-purple mx-auto text-center py-3 rounded-md mt-3">
+            <a className=" text-white font-[500]" href="">
+              Apply for Internship
+            </a>
+          </div>
         </div>
 
         <div className="bg-orange text-white px-4 py-7 my-5 rounded-lg">
@@ -132,6 +139,11 @@ const Main = () => {
             <li className=" py-3">Mobile App Development</li>
             <li className="  py-3">Entrepreneurship</li>
           </ul>
+          <div className="w-[200px] bg-purple mx-auto text-center py-3 rounded-md mt-3">
+            <a className=" text-white font-[500]" href="">
+              Apply for Placeher
+            </a>
+          </div>
         </div>
 
         <div className="border-[1px] border-lightgray px-4 py-7 my-5 rounded-lg">
@@ -157,6 +169,11 @@ const Main = () => {
             <li className=" py-3">Graphics Design</li>
             <li className=" py-3">3D Animation</li>
           </ul>
+          <div className="w-[200px] bg-purple mx-auto text-center py-3 rounded-md mt-3">
+            <a className=" text-white font-[500]" href="">
+              See More.......
+            </a>
+          </div>
         </div>
       </div>
       <div className=" bg-orange  py-7">
@@ -216,6 +233,7 @@ const Main = () => {
           </a>
         </div>
       </div>
+      <Blogs />
     </div>
   );
 };
