@@ -11,7 +11,10 @@ const Blogs = () => {
       <div className="flex flex-col">
         {blogs.map((blog) => {
           return (
-            <div className="border-[1px] border-veryLightGray shadow-[lightShadow] " key={blog.img}>
+            <div
+              className="border-[1px] border-veryLightGray shadow-[lightShadow] "
+              key={blog.img}
+            >
               <div className="p-5">
                 <img className="" src={blog.img} alt="" />
                 <h4 className="text-[24px] font-[500] text-ash py-4">
@@ -29,6 +32,11 @@ const Blogs = () => {
             </div>
           );
         })}
+      </div>
+      <div className="w-[8rem] py-2 mx-auto text-center bg-white border-[1px] border-orange mb-4">
+        <a className="font-[500] text-orange" href="">
+          View All
+        </a>
       </div>
     </div>
   );
