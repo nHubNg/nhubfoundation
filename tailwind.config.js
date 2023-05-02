@@ -7,6 +7,7 @@ export default {
         textAsh: "#6A6B6B",
         orange: "#F26024",
         overlay: "rgba(0,0,0,0.3)",
+        headerOverlay: "rgba(0, 0, 0, 0.37)",
         ash: "#515151",
         lightOrange: "rgba(242, 96, 36, 0.5)",
         purple: " rgba(151, 71, 255, 1)",

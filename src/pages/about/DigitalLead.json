@@ -1,0 +1,33 @@
+[
+ {
+    "image":"https://res.cloudinary.com/nhubnacademy/image/upload/v1683035905/nHubFoundation/image_6_4_gxp51r.png",
+    "name":"Fon Desmond",
+    "post":"Master Lead:IT",
+    "id":1
+ },
+ {
+    "image":"https://res.cloudinary.com/nhubnacademy/image/upload/v1683035905/nHubFoundation/image_6_5_gdbe6n.png",
+    "name":"Sophie Ameh",
+    "post":"Master Lead: Frontend",
+    "id":2
+ },
+ {
+    "image":"https://res.cloudinary.com/nhubnacademy/image/upload/v1683035905/nHubFoundation/image_6_6_fnaxuw.png",
+    "name":"Agwom Akere",
+    "post":"Trainer",
+    "id":3
+ },
+ {
+    "image":"https://res.cloudinary.com/nhubnacademy/image/upload/v1683035906/nHubFoundation/image_6_7_ypbi8d.png",
+    "name":"Umeokoli Victor Onyeka",
+    "post":"Graphics Designer",
+    "id":4
+ },
+ {
+    "image":"https://res.cloudinary.com/nhubnacademy/image/upload/v1683035906/nHubFoundation/image_6_8_xfzsyl.png",
+    "name":"Jeremiah Oluranti Faluyi",
+    "post":"Full stack Developer",
+    "id":5
+ }
+
+]
