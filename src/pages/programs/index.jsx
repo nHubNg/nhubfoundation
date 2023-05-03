@@ -20,7 +20,7 @@ const programs = [
   {
     image:
       "https://res.cloudinary.com/nhubnacademy/image/upload/v1683075944/nHubFoundation/1f150b84-775b-4772-aace-11de277fc360_otjvks.jpg",
-    text: "Rural/Urban Strengthening",
+    text: "Emerge!",
   },
   {
     image:

@@ -3,10 +3,13 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [nav, setNav] = useState(true);
-
+  !nav
+    ? (document.body.style.overflow = "hidden")
+    : (document.body.style.overflow = "auto");
   const handleNav = () => {
     setNav(!nav);
   };
+
   return (
     <nav className="  bg-white">
       <div className="my-container flex items-center  h-14">
