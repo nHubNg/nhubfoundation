@@ -99,7 +99,7 @@ const Main = () => {
 
           <ul
             className="text-[15px] px-5 
-        list-image-[url('https://res.cloudinary.com/dzmpjgmes/image/upload/v1682248499/Vector_6_ud8wkv.png')]"
+        list-image-[url('https://res.cloudinary.com/nhubnacademy/image/upload/v1683034207/Vector_ptvzrq.png')]"
           >
             <li className="  py-3 ">Frontend Web Development</li>
             <li className="  py-3">Backend web development</li>
@@ -133,7 +133,7 @@ const Main = () => {
           </div>
           <ul
             className="text-white text-[15px] px-5 
-          list-image-[url('https://res.cloudinary.com/dzmpjgmes/image/upload/v1682249584/Vector_7_jq0ftk.png')]"
+          list-image-[url('https://res.cloudinary.com/nhubnacademy/image/upload/v1683034207/Vector_1_malazg.png')]"
           >
             <li className="py-3">Frontend Web Development</li>
             <li className=" py-3">Backend web development</li>
