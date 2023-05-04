@@ -12,7 +12,7 @@ export default {
         lightOrange: "rgba(242, 96, 36, 0.5)",
         purple: " rgba(151, 71, 255, 1)",
         lightgray: "rgba(0, 0, 0, 0.5);",
-        veryLightGray: "rgba(255, 255, 255, 1)",
+        veryLightGray: "rgba(255, 255, 255, 3)",
         lightShadow: "rgba(0, 0, 0, 0.25)",
       },
     },

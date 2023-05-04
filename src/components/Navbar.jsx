@@ -62,7 +62,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="py-2">
-              <Link className="hover:text-orange text-textAsh" to="/blog">
+              <Link className="hover:text-orange text-textAsh" to="/blogs">
                 Blog{" "}
               </Link>
             </li>
