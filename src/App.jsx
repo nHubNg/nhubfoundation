@@ -10,18 +10,16 @@ import Contact from "./pages/contact";
 function App() {
   return (
     <>
-
       <BrowserRouter>
-      <Navbar />
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-      <Footer />
+        <Footer />
       </BrowserRouter>
-
     </>
   );
 }
