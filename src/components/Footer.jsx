@@ -1,11 +1,11 @@
 const Footer = () => {
   return (
     <>
-      <footer className="bg-black text-textAsh">
+      <footer className="bg-black text-textAsh text-[1rem] ">
         <div className="p-4  flex flex-col gap-4  ">
           <div className=" flex flex-col gap-4">
-            <h3 className="text-[1.5rem] leading-7">Company</h3>
-            <ul className="text-[1rem] leading-6 flex flex-col gap-2">
+            <h3 className="text-[1.2rem] leading-5">Company</h3>
+            <ul className=" leading-6 flex flex-col gap-2">
               <li>
                 <a className="active:text-orange hover:text-orange" href="">
                   About us
@@ -34,8 +34,8 @@ const Footer = () => {
             </ul>
           </div>
           <div className="flex flex-col gap-4">
-            <h3 className="text-[1.5rem] leading-7">Question?</h3>
-            <ul className="text-[1rem] leading-6  flex flex-col gap-2 ">
+            <h3 className="text-[1.2rem] leading-5">Question?</h3>
+            <ul className=" leading-6  flex flex-col gap-2 ">
               <li>
                 <a className="active:text-orange hover:text-orange" href="">
                   About us
@@ -64,8 +64,8 @@ const Footer = () => {
             </ul>
           </div>
           <div className="flex flex-col gap-4">
-            <h3 className="text-[1.5rem] leading-7">Contact us</h3>
-            <ul className="text-[1rem] leading-6  flex flex-col gap-2">
+            <h3 className="text-[1.2rem] leading-5">Contact us</h3>
+            <ul className=" leading-6  flex flex-col gap-2">
               <li>
                 <a className="active:text-orange hover:text-orange" href="">
                   <img
@@ -73,7 +73,7 @@ const Footer = () => {
                       "https://res.cloudinary.com/ddgyd8szc/image/upload/v1682791103/vector3_wn5f1n.png"
                     }
                     alt=""
-                    className="inline mr-2"
+                    className="inline mr-2 h-4 w-4"
                   />
                   nHub Foundation
                 </a>
@@ -85,7 +85,7 @@ const Footer = () => {
                       "https://res.cloudinary.com/ddgyd8szc/image/upload/v1682791103/vector2_syc7vh.png"
                     }
                     alt=""
-                    className="inline mr-2"
+                    className="inline mr-2 h-4 w-4"
                   />
                   info@gmail.com
                 </a>
@@ -96,7 +96,7 @@ const Footer = () => {
                     "https://res.cloudinary.com/ddgyd8szc/image/upload/v1682791103/call_qlcbut.png"
                   }
                   alt=""
-                  className="inline mr-2"
+                  className="inline mr-2 h-4 w-4"
                 />
                 <a className="active:text-orange hover:text-orange" href="">
                   1234568890
@@ -105,7 +105,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="flex flex-col gap-4">
-            <h3 className="text-[1.5rem] leading-7">Useful Links</h3>
+            <h3 className="text-[1.2rem] leading-5">Useful Links</h3>
             <ul className="text-[1rem] leading-6  flex flex-col gap-2">
               <li>
                 <a className="active:text-orange hover:text-orange" href="">
