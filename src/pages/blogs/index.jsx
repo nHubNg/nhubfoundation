@@ -8,7 +8,7 @@ const Blogs = () => {
           return (
             <div
               className="border-[1px] border-veryLightGray shadow-[lightShadow] "
-              key={blog.img}
+              key={blog.id}
             >
               <div className="p-5">
                 <img className="" src={blog.img} alt="" />

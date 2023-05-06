@@ -9,7 +9,7 @@ import Navbar from "./components/Navbar";
 import Gallery from "./pages/gallery";
 import Contact from "./pages/contact";
 import Courses from "./pages/courses/Courses";
-import Success from "./pages/Success/Success";
+// import Success from "./pages/Success/Success";
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/courses" element={<Courses />} />
-          <Route path="/success" element={<Success />} />
+          {/* <Route path="/success" element={<Success />} /> */}
         </Routes>
         <Footer />
       </BrowserRouter>

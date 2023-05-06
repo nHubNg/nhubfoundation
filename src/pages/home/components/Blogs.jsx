@@ -16,7 +16,7 @@ const Blogs = () => {
               key={blog.img}
             >
               <div className="p-5">
-                <img className="" src={blog.img} alt="" />
+                <img className="" src={blog.id} alt="" />
                 <h4 className="text-[24px] font-[500] text-ash py-4">
                   {blog.title}
                 </h4>
