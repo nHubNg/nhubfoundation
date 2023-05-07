@@ -1,3 +1,4 @@
+import Modal from "./Modal.jsx";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -5,7 +6,7 @@ const Navbar = () => {
   const [nav, setNav] = useState(true);
   !nav
     ? (document.body.style.overflow = "hidden")
-    : (document.body.style.overflow = "auto");
+    : (document.body.style.overflow = "unset");
   const handleNav = () => {
     setNav(!nav);
   };

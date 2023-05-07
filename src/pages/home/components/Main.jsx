@@ -108,7 +108,7 @@ const Main = () => {
             <li className="py-3">Embedded systems and IoT</li>
             <li className=" py-3">Mobile App Development</li>
           </ul>
-          <div className="w-[200px] bg-purple mx-auto text-center py-3 rounded-md mt-3">
+          <div className="w-[200px] bg-orange mx-auto text-center py-3 rounded-md mt-3">
             <a className=" text-white font-[500]" href="">
               Apply for Internship
             </a>
@@ -143,8 +143,8 @@ const Main = () => {
             <li className=" py-3">Mobile App Development</li>
             <li className="  py-3">Entrepreneurship</li>
           </ul>
-          <div className="w-[200px] bg-purple mx-auto text-center py-3 rounded-md mt-3">
-            <a className=" text-white font-[500]" href="">
+          <div className="w-[200px] bg-white mx-auto text-center py-3 rounded-md mt-3">
+            <a className=" text-orange font-[500]" href="">
               Apply for Placeher
             </a>
           </div>
@@ -173,7 +173,7 @@ const Main = () => {
             <li className=" py-3">Graphics Design</li>
             <li className=" py-3">3D Animation</li>
           </ul>
-          <div className="w-[200px] bg-purple mx-auto text-center py-3 rounded-md mt-3">
+          <div className="w-[200px] bg-orange mx-auto text-center py-3 rounded-md mt-3">
             <a className=" text-white font-[500]" href="">
               See More.......
             </a>
