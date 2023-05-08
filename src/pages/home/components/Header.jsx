@@ -2,7 +2,7 @@ const Header = () => {
   return (
     <div
       className="relative  bg-[url('https://res.cloudinary.com/nhubnacademy/image/upload/v1682899954/nHubFoundation/IMG_0633_q4nfub.jpg')]
-w-full bg-cover  bg-no-repeat h-[40vh] my-auto bg-[center_top_3rem]"
+w-full bg-cover  bg-no-repeat h-[50vh] my-auto "
     >
       <div className="absolute inset-0 w-full h-[50vh]  bg-overlay "></div>
       <div className="absolute top-0 flex justify-center text-center pt-6  flex-col  text-white z-30">

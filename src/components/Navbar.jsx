@@ -1,3 +1,4 @@
+import Modal from "./Modal.jsx";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -5,7 +6,7 @@ const Navbar = () => {
   const [nav, setNav] = useState(true);
   !nav
     ? (document.body.style.overflow = "hidden")
-    : (document.body.style.overflow = "auto");
+    : (document.body.style.overflow = "unset");
   const handleNav = () => {
     setNav(!nav);
   };
@@ -47,36 +48,63 @@ const Navbar = () => {
               />
             </div>
             <li className="py-2">
-              <Link className="hover:text-orange text-textAsh" to="/">
+              <Link
+                onClick={handleNav}
+                className="hover:text-orange text-textAsh"
+                to="/"
+              >
                 Home
               </Link>
             </li>
             <li className="py-2">
-              <Link className="hover:text-orange text-textAsh" to="/about">
+              <Link
+                onClick={handleNav}
+                className="hover:text-orange text-textAsh"
+                to="/about"
+              >
                 About
               </Link>
             </li>
             <li className="py-2">
-              <Link className="hover:text-orange text-textAsh" to="/programs">
+              <Link
+                onClick={handleNav}
+                className="hover:text-orange text-textAsh"
+                to="/programs"
+              >
                 Programs
               </Link>
             </li>
             <li className="py-2">
-              <Link className="hover:text-orange text-textAsh" to="/blogs">
+              <Link
+                onClick={handleNav}
+                className="hover:text-orange text-textAsh"
+                to="/blogs"
+              >
                 Blog{" "}
               </Link>
             </li>
             <li className="py-2">
-              <Link className="hover:text-orange text-textAsh" to="/internship">
+              <Link
+                onClick={handleNav}
+                className="hover:text-orange text-textAsh"
+                to="/internship"
+              >
                 Internship
               </Link>
             </li>
             <li className="py-2">
-              <Link className="hover:text-orange text-textAsh" to="/contact">
+              <Link
+                onClick={handleNav}
+                className="hover:text-orange text-textAsh"
+                to="/contact"
+              >
                 Contact us
               </Link>
             </li>
-            <div className="bg-orange py-2 text-white text-center rounded-md">
+            <div
+              onClick={handleNav}
+              className="bg-orange py-2 text-white text-center rounded-md"
+            >
               <Link to="/donate">Donate</Link>
             </div>
           </ul>
