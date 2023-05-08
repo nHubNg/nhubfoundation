@@ -9,7 +9,14 @@ export default {
         'url("https://res.cloudinary.com/nhubnacademy/image/upload/v1683206377/Frame_1144_2_r5xrts.png")',
       gallery:
         'url("https://res.cloudinary.com/nhubnacademy/image/upload/v1683206490/Frame_1144_4_uuxzyk.png")',
+      desktopContact:
+        'url("https://res.cloudinary.com/nhubnacademy/image/upload/v1683559027/nHubFoundation/Frame_1144_6_cgw6on.png")',
+      desktopGallery:
+        'url("https://res.cloudinary.com/nhubnacademy/image/upload/v1683559037/nHubFoundation/Frame_1144_8_ikuk1h.png")',
+      desktopCourses:
+        'url("https://res.cloudinary.com/nhubnacademy/image/upload/v1683558770/Frame_1144_7_jnms2j.png")',
     },
+
     extend: {
       colors: {
         textAsh: "#6A6B6B",
