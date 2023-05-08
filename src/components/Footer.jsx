@@ -1,8 +1,8 @@
 const Footer = () => {
   return (
     <>
-      <footer className="bg-black text-textAsh text-[1rem] ">
-        <div className="p-4  flex flex-col gap-4  ">
+      <footer className="bg-black text-textAsh text-[1rem]  lg:py-6 ">
+        <div className="p-4  flex flex-col gap-4 sm:max-w-2xl sm:mx-auto sm:flex  sm:flex-row sm:py-10  sm:justify-between lg:max-w-4xl lg:mx-auto  xl:max-w-6xl">
           <div className=" flex flex-col gap-4">
             <h3 className="text-[1.2rem] leading-5">Company</h3>
             <ul className=" leading-6 flex flex-col gap-2">

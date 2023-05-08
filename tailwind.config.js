@@ -14,7 +14,7 @@ export default {
       colors: {
         textAsh: "#6A6B6B",
         orange: "#F26024",
-
+        brown: "#303030",
         lightBlue: "rgba(170, 170, 170, 0.12)",
 
         overlay: "rgba(0,0,0,0.2)",
