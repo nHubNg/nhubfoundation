@@ -1,4 +1,3 @@
-import Modal from "./Modal.jsx";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -12,9 +11,9 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="  bg-white">
-      <div className="my-container flex items-center  h-14">
-        <div onClick={handleNav}>
+    <nav className="  bg-white ">
+      <div className="my-container flex items-center md:justify-between   h-14">
+        <div onClick={handleNav} className="lg:hidden">
           <img
             src={
               "https://res.cloudinary.com/nhubnacademy/image/upload/v1682899502/nHubFoundation/Vector_9_hsbdsn.png"
@@ -23,7 +22,7 @@ const Navbar = () => {
           />
         </div>
 
-        <div className="mx-auto">
+        <div className="mx-auto lg:mx-0">
           <Link to="/">
             <img
               src={
@@ -58,9 +57,9 @@ const Navbar = () => {
             </li>
             <li className="py-2">
               <Link
+                to="/about"
                 onClick={handleNav}
                 className="hover:text-orange text-textAsh"
-                to="/about"
               >
                 About
               </Link>
@@ -101,12 +100,40 @@ const Navbar = () => {
                 Contact us
               </Link>
             </li>
-            <div
-              onClick={handleNav}
-              className="bg-orange py-2 text-white text-center rounded-md"
-            >
-              <Link to="/donate">Donate</Link>
+            <div>
+              <button
+                onClick={handleNav}
+                className="bg-orange py-2 px-5 text-white text-center rounded-md"
+              >
+                Donate
+              </button>
             </div>
+          </ul>
+        </div>
+
+        <div className="hidden lg:flex">
+          <ul className="flex text-textAsh  items-center justify-between gap-10">
+            <li className=" hover:text-orange ">
+              <Link to="/">Home</Link>
+            </li>
+            <li className=" hover:text-orange ">
+              <Link to="/about">About</Link>
+            </li>
+            <li className=" hover:text-orange ">
+              <Link to="/programs">Programs</Link>
+            </li>
+            <li className=" hover:text-orange ">
+              <Link to="/blogs"> Blog</Link>
+            </li>
+            <li className=" hover:text-orange ">
+              <a href="">Internship</a>
+            </li>
+            <li className=" hover:text-orange ">
+              <Link to="/contact"> Contact us</Link>
+            </li>
+            <button className="bg-orange px-4 py-2  text-white rounded-md">
+              Donate
+            </button>
           </ul>
         </div>
       </div>

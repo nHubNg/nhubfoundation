@@ -1,8 +1,7 @@
-import { useState } from "react";
-
 const Modal = () => {
-  const [modal, setModal] = useState(false);
-  return <div></div>;
+  return (
+    <div className="bg-black h-[50vh] absolute top-[50%] left-[50%]"></div>
+  );
 };
 
 export default Modal;
