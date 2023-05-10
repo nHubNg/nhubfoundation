@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Blogs from "./Blogs";
 
 const cards = [
@@ -315,7 +316,7 @@ const Main = () => {
              lg:opacity-0 lg:hover:opacity-100 transition-all duration-500 ease-in-out "
             >
               <div className="py-2">
-                <h3 className="text-[32px] text-white font-[400] leading-8">
+                <h3 className="text-[28px] text-white font-[400] leading-8">
                   Mr Eric Nanle
                 </h3>
                 <h4 className="text-[16px] text-white">Executive Director</h4>
@@ -333,7 +334,7 @@ const Main = () => {
              lg:opacity-0 lg:hover:opacity-100 transition-all duration-500 ease-in-out  "
             >
               <div className="py-2">
-                <h3 className="text-[32px] text-white font-[400] leading-8">
+                <h3 className="text-[28px] text-white font-[400] leading-8">
                   Bashir Shaidu
                 </h3>
                 <h4 className="text-[16px] text-white">COO</h4>
@@ -351,7 +352,7 @@ const Main = () => {
             lg:opacity-0 lg:hover:opacity-100 transition-all duration-500 ease-in-out "
             >
               <div className="py-2">
-                <h3 className="text-[32px] text-white font-[400] leading-8">
+                <h3 className="text-[28px] text-white font-[400] leading-8">
                   Nathan Pankyes
                 </h3>
                 <h4 className="text-[16px] text-white">Legal</h4>
@@ -360,9 +361,9 @@ const Main = () => {
           </div>
         </div>
         <div className="w-max  mx-auto mt-5 mb-7 px-4 py-3 bg-orange text-white text-[15px] rounded-md">
-          <a className="block" href="/">
+          <Link to="/about" className="block" href="/">
             See all Our Team Members
-          </a>
+          </Link>
         </div>
       </div>
       <Blogs />

@@ -40,11 +40,18 @@
       "id": 5
     },
     {
+      "image":"https://res.cloudinary.com/nhubnacademy/image/upload/v1683665257/nHubFoundation/image_6_cfyaf8.png",
+      "name":"Shamsiyya Bashir",
+      "office":"admin",
+      "post": "M & E",
+      "id": 6
+    },
+    {
       "image":
         "https://res.cloudinary.com/nhubnacademy/image/upload/v1683035905/nHubFoundation/image_6_3_gnzu0l.png",
       "name": "Eyinmosan Sholaye",
       "office": "admin",
       "post": "Lead. #kidz",
-      "id": 6
+      "id": 7
     }
   ]
