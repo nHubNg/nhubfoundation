@@ -77,7 +77,10 @@ const Programs = () => {
                   {program.text}
                 </h3>
               </div>
-              <div key={program.id} className="relative md:w-[45%] md:mx-auto ">
+              <div
+                key={program.id}
+                className="relative md:w-[60%] lg:w-[45%] md:mx-auto "
+              >
                 <img
                   className="h-[11rem] md:h-[18rem]  w-[100%] object-cover"
                   src={program.image}
