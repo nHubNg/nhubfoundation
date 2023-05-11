@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div
@@ -15,17 +16,17 @@ const Header = () => {
             gender,ethnic,religious background,through several impact-driven
             initiatives.
           </p>
-          <div className="w-40  mx-auto py-3 px-4 bg-orange rounded-md md:mt-5">
-            <a
-              href="/"
-              className=" text-base flex justify-center items-center gap-2 "
+          <div className="w-40  mx-auto py-3 px-4 bg-orange rounded-md md:mt-5 ">
+            <Link
+              to="/about"
+              className=" text-base flex justify-center items-center gap-2"
             >
               <img
                 src="https://res.cloudinary.com/nhubnacademy/image/upload/v1682899396/nHubFoundation/Vector_1_gjwxef.png"
                 alt=""
               />
               About Us
-            </a>
+            </Link>
           </div>
         </div>
       </div>

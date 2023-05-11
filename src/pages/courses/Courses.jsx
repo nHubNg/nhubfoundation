@@ -13,7 +13,7 @@ const Courses = () => {
           img={
             "https://res.cloudinary.com/nhubnacademy/image/upload/v1683145688/pexels-fauxels-3184657_1_1_unbv0e.png"
           }
-          title={"Forntend and Backend Development"}
+          title={"Frontend and Backend Development"}
           content={
             "More and more businesses are registering their online presences daily in order to create online service delivery channels to their customers and clients.At nHub Foundation, we offer training packeges for both frontend and backend website development. You can decide to pick any of these or go full-stack"
           }
