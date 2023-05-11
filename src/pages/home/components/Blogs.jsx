@@ -14,7 +14,7 @@ const Blogs = () => {
         {blogs.map((blog) => {
           return (
             <div className="border-[1px] shadow-[lightShadow] " key={blog.id}>
-              <div className="p-5">
+              <div className=" m-8">
                 <div className="md:w-[20rem]">
                   <img className="w-full block" src={blog.img} alt="" />
                 </div>
@@ -34,9 +34,14 @@ const Blogs = () => {
           );
         })}
       </div>
-      <div className="w-[8rem] lg:w-[10rem] py-2 mx-auto text-center bg-white border-[1px] border-orange mb-4 lg:my-16">
-        <a className="font-[500] text-orange" href="">
+      <div className="w-[8rem] lg:w-[10rem] py-2 mx-auto text-center bg-white border-[1px] border-orange mb-4 lg:my-16  group lg:transition-all lg:duration-800">
+        <a className="font-[500] text-orange flex justify-center items-center gap-2 ">
           View All
+          <img
+            className="lg:hidden lg:group-hover:flex"
+            src="https://res.cloudinary.com/nhubnacademy/image/upload/v1683766837/nHubFoundation/arrow-right_zcpsmr.png"
+            alt=""
+          />
         </a>
       </div>
     </div>

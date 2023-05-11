@@ -35,7 +35,7 @@ const About = () => {
         </div>
         <div className="hidden md:block">
           <img
-            className="h-[25rem] border-[1px] border-orange"
+            className="h-[25rem] border-[2px] border-orange"
             src="https://res.cloudinary.com/nhubnacademy/image/upload/v1683659606/nHubFoundation/pexels-fauxels-3184657_1_1_1_u6ll8n.png"
             alt=""
           />

@@ -112,7 +112,7 @@ const Navbar = () => {
         </div>
 
         <div className="hidden lg:flex">
-          <ul className="flex text-textAsh  items-center justify-between gap-10">
+          <ul className="flex text-textAsh  items-center justify-between gap-10 text-[]">
             <li className=" hover:text-orange ">
               <Link to="/">Home</Link>
             </li>

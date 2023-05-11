@@ -19,7 +19,7 @@ const Header = () => {
           <div className="w-40  mx-auto py-3 px-4 bg-orange rounded-md md:mt-5 ">
             <Link
               to="/about"
-              className=" text-base flex justify-center items-center gap-2 "
+              className=" text-base flex justify-center items-center gap-2"
             >
               <img
                 src="https://res.cloudinary.com/nhubnacademy/image/upload/v1682899396/nHubFoundation/Vector_1_gjwxef.png"
