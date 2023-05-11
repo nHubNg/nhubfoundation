@@ -108,7 +108,10 @@ const Footer = () => {
             <h3 className="text-[1.2rem] leading-5">Useful Links</h3>
             <ul className="text-[1rem] leading-6  flex flex-col gap-2">
               <li>
-                <a className="active:text-orange hover:text-orange" href="">
+                <a
+                  className="active:text-orange hover:text-orange"
+                  href="https://web.facebook.com/nhubfoundation/?_rdc=1&_rdr"
+                >
                   <img
                     src={
                       "https://res.cloudinary.com/ddgyd8szc/image/upload/v1682791103/Vector_3_liqlht.png"
@@ -120,7 +123,10 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a className="active:text-orange hover:text-orange" href="">
+                <a
+                  className="active:text-orange hover:text-orange"
+                  href="https://twitter.com/nhubfoundation"
+                >
                   <img
                     src={
                       "https://res.cloudinary.com/ddgyd8szc/image/upload/v1682791103/Vector_4_kiillf.png"
@@ -132,7 +138,10 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a className="active:text-orange hover:text-orange" href="">
+                <a
+                  className="active:text-orange hover:text-orange"
+                  href="https://www.instagram.com/nhub_ng/"
+                >
                   <img
                     src={
                       "https://res.cloudinary.com/ddgyd8szc/image/upload/v1682791103/Vector_5_bvtror.png"
@@ -151,7 +160,10 @@ const Footer = () => {
                   alt=""
                   className="inline mr-2"
                 />
-                <a className="active:text-orange hover:text-orange" href="">
+                <a
+                  className="active:text-orange hover:text-orange"
+                  href="https://ng.linkedin.com/company/nhub-foundation-africa"
+                >
                   <img alt="" className="inline mr-2" />
                   Linkedin
                 </a>
