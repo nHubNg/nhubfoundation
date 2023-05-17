@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
@@ -7,14 +8,20 @@ const Footer = () => {
             <h3 className="text-[1.2rem] leading-5">Company</h3>
             <ul className=" leading-6 flex flex-col gap-2">
               <li>
-                <a className="active:text-orange hover:text-orange" href="">
+                <Link
+                  className="active:text-orange hover:text-orange"
+                  to="/about"
+                >
                   About us
-                </a>
+                </Link>
               </li>
               <li>
-                <a className="active:text-orange hover:text-orange" href="">
+                <Link
+                  className="active:text-orange hover:text-orange"
+                  to="/contact"
+                >
                   Contact us
-                </a>
+                </Link>
               </li>
               <li>
                 <a className="active:text-orange hover:text-orange" href="">
@@ -37,14 +44,20 @@ const Footer = () => {
             <h3 className="text-[1.2rem] leading-5">Question?</h3>
             <ul className=" leading-6  flex flex-col gap-2 ">
               <li>
-                <a className="active:text-orange hover:text-orange" href="">
+                <Link
+                  className="active:text-orange hover:text-orange"
+                  to="/about"
+                >
                   About us
-                </a>
+                </Link>
               </li>
               <li>
-                <a className="active:text-orange hover:text-orange" href="">
+                <Link
+                  className="active:text-orange hover:text-orange"
+                  to="/programs"
+                >
                   Why choose us
-                </a>
+                </Link>
               </li>
               <li>
                 <a className="active:text-orange hover:text-orange" href="">
@@ -52,9 +65,12 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a className="active:text-orange hover:text-orange" href="">
+                <Link
+                  className="active:text-orange hover:text-orange"
+                  to="/courses"
+                >
                   Team
-                </a>
+                </Link>
               </li>
               <li>
                 <a className="active:text-orange hover:text-orange" href="">
@@ -67,7 +83,10 @@ const Footer = () => {
             <h3 className="text-[1.2rem] leading-5">Contact us</h3>
             <ul className=" leading-6  flex flex-col gap-2">
               <li>
-                <a className="active:text-orange hover:text-orange" href="">
+                <a
+                  className="active:text-orange hover:text-orange"
+                  href="https://www.google.com/maps/place/nHub+Foundation/@9.8788245,8.8747457,15z/data=!4m6!3m5!1s0x10537387fc85cf8b:0xc3317526ad656388!8m2!3d9.8788245!4d8.8747457!16s%2Fg%2F11hzlzcy49"
+                >
                   <img
                     src={
                       "https://res.cloudinary.com/ddgyd8szc/image/upload/v1682791103/vector3_wn5f1n.png"
@@ -79,7 +98,10 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a className="active:text-orange hover:text-orange" href="">
+                <a
+                  className="active:text-orange hover:text-orange"
+                  href="mailto:contact@nhubfoundation.org"
+                >
                   <img
                     src={
                       "https://res.cloudinary.com/ddgyd8szc/image/upload/v1682791103/vector2_syc7vh.png"
@@ -87,7 +109,7 @@ const Footer = () => {
                     alt=""
                     className="inline mr-2 h-4 w-4"
                   />
-                  info@gmail.com
+                  contact@nhubfoundation.org
                 </a>
               </li>
               <li>
@@ -98,8 +120,11 @@ const Footer = () => {
                   alt=""
                   className="inline mr-2 h-4 w-4"
                 />
-                <a className="active:text-orange hover:text-orange" href="">
-                  1234568890
+                <a
+                  className="active:text-orange hover:text-orange"
+                  href="tel:0806 864 0710"
+                >
+                  0806 864 0710
                 </a>
               </li>
             </ul>
@@ -108,7 +133,10 @@ const Footer = () => {
             <h3 className="text-[1.2rem] leading-5">Useful Links</h3>
             <ul className="text-[1rem] leading-6  flex flex-col gap-2">
               <li>
-                <a className="active:text-orange hover:text-orange" href="">
+                <a
+                  className="active:text-orange hover:text-orange"
+                  href="https://web.facebook.com/nhubfoundation/?_rdc=1&_rdr"
+                >
                   <img
                     src={
                       "https://res.cloudinary.com/ddgyd8szc/image/upload/v1682791103/Vector_3_liqlht.png"
@@ -120,7 +148,10 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a className="active:text-orange hover:text-orange" href="">
+                <a
+                  className="active:text-orange hover:text-orange"
+                  href="https://twitter.com/nhubfoundation"
+                >
                   <img
                     src={
                       "https://res.cloudinary.com/ddgyd8szc/image/upload/v1682791103/Vector_4_kiillf.png"
@@ -132,7 +163,10 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a className="active:text-orange hover:text-orange" href="">
+                <a
+                  className="active:text-orange hover:text-orange"
+                  href="https://www.instagram.com/nhub_ng/"
+                >
                   <img
                     src={
                       "https://res.cloudinary.com/ddgyd8szc/image/upload/v1682791103/Vector_5_bvtror.png"
@@ -151,8 +185,11 @@ const Footer = () => {
                   alt=""
                   className="inline mr-2"
                 />
-                <a className="active:text-orange hover:text-orange" href="">
-                  <img alt="" className="inline" />
+                <a
+                  className="active:text-orange hover:text-orange"
+                  href="https://ng.linkedin.com/company/nhub-foundation-africa"
+                >
+                  <img alt="" className="inline mr-2" />
                   Linkedin
                 </a>
               </li>
