@@ -1,15 +1,6 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
-  const [nav, setNav] = useState(true);
-  !nav
-    ? (document.body.style.overflow = "hidden")
-    : (document.body.style.overflow = "unset");
-  const handleNav = () => {
-    setNav(!nav);
-  };
-
+const Navbar = ({ handleDonate, handleDesktopDonate, handleNav, nav }) => {
   return (
     <nav className="  bg-white ">
       <div className="my-container flex items-center md:justify-between   h-14">
@@ -34,7 +25,7 @@ const Navbar = () => {
         </div>
         <div
           className={
-            !nav
+            nav
               ? "fixed  z-[1000] bg-white top-14 left-0 w-[40%] flex flex-col transition-all duration-500 ease-in-out"
               : "fixed left-[-100%]"
           }
@@ -86,7 +77,8 @@ const Navbar = () => {
               <Link
                 onClick={handleNav}
                 className="hover:text-orange text-textAsh"
-                to="/internship"
+                to={{ pathname: "https://nhubinternship.onrender.com" }}
+                target="_blank"
               >
                 Internship
               </Link>
@@ -102,7 +94,7 @@ const Navbar = () => {
             </li>
             <div>
               <button
-                onClick={handleNav}
+                onClick={handleDonate}
                 className="bg-orange py-2 px-5 text-white text-center rounded-md"
               >
                 Donate
@@ -126,12 +118,15 @@ const Navbar = () => {
               <Link to="/blogs"> Blog</Link>
             </li>
             <li className=" hover:text-orange ">
-              <a href="">Internship</a>
+              <a href="nhubinternship.onrender.com">Internship</a>
             </li>
             <li className=" hover:text-orange ">
               <Link to="/contact"> Contact us</Link>
             </li>
-            <button className="bg-orange px-4 py-2  text-white rounded-md">
+            <button
+              className="bg-orange px-4 py-2  text-white rounded-md"
+              onClick={handleDesktopDonate}
+            >
               Donate
             </button>
           </ul>

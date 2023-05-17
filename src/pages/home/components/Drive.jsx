@@ -30,17 +30,17 @@ const Drive = () => {
         </div>
       </div>
       <div className="my-container hidden lg:flex md:justify-center gap-12 my-6">
-        <div className="relative group">
+        <div className="relative group h-full">
           <img
             src="https://res.cloudinary.com/nhubnacademy/image/upload/v1683622320/nHubFoundation/effects1_uebo39.png"
             alt=""
           />
-          <div className="absolute bottom-0 left-0 w-full h-full flex text-center justify-center items-center bg-overlay">
-            <div className="py-2">
-              <h3 className="text-[34px] text-white font-[700] lg:group-hover:text-[30px]">
+          <div className="absolute bottom-0 left-0 w-full h-full flex text-center  items-center bg-overlay">
+            <div className="py-2 ">
+              <h3 className="text-[34px] text-white font-[700] lg:mt-36 lg:group-hover:text-[25px] lg:group-hover:translate-y-[-40px] transition-transform  lg:duration-500">
                 Innovation
               </h3>
-              <p className="text-white text-center p-7 text-[15px] hidden lg:group-hover:flex lg:transition-all lg:duration-500 lg:ease">
+              <p className="text-white text-center p-7 text-[15px] opacity-0 lg:group-hover:opacity-100 lg:group-hover:translate-y-[-60px] transition-all ">
                 We nurture young enterprising talents to discover and grow their
                 creative prowess into proffering viable solutions to evolving
                 challenges.
@@ -55,10 +55,10 @@ const Drive = () => {
           />
           <div className="absolute bottom-0 left-0 w-full h-full flex text-center justify-center items-center bg-overlay">
             <div className="py-2">
-              <h3 className="text-[34px] text-white font-[700]  lg:group-hover:text-[30px]">
+              <h3 className="text-[34px] text-white font-[700]  lg:mt-36 lg:group-hover:text-[25px] lg:group-hover:translate-y-[-40px] transition-transform  lg:duration-500">
                 Community
               </h3>
-              <p className="text-white text-center p-7 text-[15px] hidden lg:group-hover:flex lg:transition-all lg:duration-500 lg:ease">
+              <p className="text-white text-center p-7 text-[15px] opacity-0 lg:group-hover:opacity-100 lg:group-hover:translate-y-[-60px] transition-all ">
                 Be part of Africa's fastest growing tech community leveraging on
                 emerging technologies and data governance.
               </p>
@@ -72,13 +72,10 @@ const Drive = () => {
           />
           <div className="absolute bottom-0 left-0 w-full h-full flex text-center justify-center items-center bg-overlay ">
             <div className="py-2">
-              <h3 className="text-[34px] text-white font-[700] lg:group-hover:text-[30px] ">
+              <h3 className="text-[34px] text-white font-[700] lg:mt-36 lg:group-hover:text-[25px] lg:group-hover:translate-y-[-40px] transition-transform  lg:duration-500 ">
                 Growth
               </h3>
-              <p
-                className="text-white text-center p-7 text-[15px] hidden
-               lg:group-hover:flex lg:transition-all lg:duration-500 lg:ease"
-              >
+              <p className="text-white text-center p-7 text-[15px] opacity-0 lg:group-hover:opacity-100 lg:group-hover:translate-y-[-60px] transition-all ">
                 Equipping Africa's growing economy for sustainability through
                 several impact-driven initiatives
               </p>

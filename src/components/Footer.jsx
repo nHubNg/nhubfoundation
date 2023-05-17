@@ -152,7 +152,7 @@ const Footer = () => {
                   className="inline mr-2"
                 />
                 <a className="active:text-orange hover:text-orange" href="">
-                  <img alt="" className="inline mr-2" />
+                  <img alt="" className="inline" />
                   Linkedin
                 </a>
               </li>

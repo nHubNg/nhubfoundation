@@ -1,4 +1,5 @@
 import blogs from "../../../blogs.json";
+const visibleBlogs = blogs.slice(0, 3);
 const Blogs = () => {
   return (
     <div className="my-container">
@@ -11,9 +12,12 @@ const Blogs = () => {
         </p>
       </div>
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8 md:my-10">
-        {blogs.map((blog) => {
+        {visibleBlogs.map((blog) => {
           return (
-            <div className="border-[1px] shadow-[lightShadow] " key={blog.id}>
+            <div
+              className="border-[1px] border-lightgray shadow-[lightShadow] "
+              key={blog.id}
+            >
               <div className=" m-8">
                 <div className="md:w-[20rem]">
                   <img className="w-full block" src={blog.img} alt="" />
@@ -34,11 +38,11 @@ const Blogs = () => {
           );
         })}
       </div>
-      <div className="w-[8rem] lg:w-[10rem] py-2 mx-auto text-center bg-white border-[1px] border-orange mb-4 lg:my-16  group lg:transition-all lg:duration-800">
-        <a className="font-[500] text-orange flex justify-center items-center gap-2 ">
+      <div className="w-[8rem]  py-2 mx-auto text-center bg-white border-[1px] border-orange mb-4 lg:my-16 lg:px-3 group lg:hover:w-[10rem] lg:transition-[width]">
+        <a className="font-[500] text-orange flex justify-center items-center gap-2 lg:group-hover:justify-between">
           View All
           <img
-            className="lg:hidden lg:group-hover:flex"
+            className="lg:hidden lg:group-hover:flex "
             src="https://res.cloudinary.com/nhubnacademy/image/upload/v1683766837/nHubFoundation/arrow-right_zcpsmr.png"
             alt=""
           />

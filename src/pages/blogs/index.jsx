@@ -1,10 +1,11 @@
 import blogs from "../../blogs.json";
 
+const visibleBlogs = blogs.slice(0, 3);
 const Blogs = () => {
   return (
     <div className="my-container">
       <div className="flex flex-col gap-3">
-        {blogs.map((blog) => {
+        {visibleBlogs.map((blog) => {
           return (
             <div
               className="border-[1px] border-veryLightGray shadow-[lightShadow] "

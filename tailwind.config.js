@@ -25,10 +25,10 @@ export default {
         orange: "#F26024",
         brown: "#303030",
         lightBlue: "rgba(170, 170, 170, 0.12)",
-
+        gray: " rgba(16, 24, 40, 1)",
+        lightgrey: "rgba(71, 84, 103, 1)",
         overlay: "rgba(0,0,0,0.2)",
         headerOverlay: "rgba(0, 0, 0, 0.37)",
-
         ash: "#515151",
         lightOrange: "rgba(242, 96, 36, 0.5)",
         purple: " rgba(151, 71, 255, 1)",

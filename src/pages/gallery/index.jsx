@@ -5,15 +5,17 @@ import "swiper/css";
 const Gallery = () => {
   return (
     <section>
-      <div className="h-40 bg-gallery bg-no-repeat bg-cover mb-10 sm:bg-desktopGallery  sm:h-72"></div>
+      <div className="h-40 bg-gallery bg-no-repeat bg-cover mb-10 sm:bg-desktopGallery  md:h-[60vh] lg:h-[80vh]"></div>
       <section className="text-center text-ash text-lg max-w-[90%] mx-auto pb-10 sm:max-w-2xl lg:max-w-4xl xl:max-w-6xl">
         {/* first slider */}
         <div className="my-8 flex flex-col gap-8">
           <div>
-            <h2 className="font-bold text-2xl lg:text-4xl">
-              Moments Captured around the Hub
+            <h2 className="text-[26px] md:text-[30px] lg:text-[32px] mt-6 font-semibold">
+              Moments captured around the hub
             </h2>
-            <p>Keeping the moments fresh</p>
+            <p className="text-[15px] md:text-[16px] mt-2">
+              Keeping the moments fresh
+            </p>
           </div>
           <div>
             <Swiper
@@ -64,10 +66,12 @@ const Gallery = () => {
         {/* second slider */}
         <div className="flex flex-col gap-8 my-8 ">
           <div>
-            <h2 className="font-bold text-2xl lg:text-4xl">
-              Take a look at Our workspace
+            <h2 className="text-[26px] md:text-[30px] lg:text-[32px] mt-6 font-semibold">
+              Take a look at our workspace
             </h2>
-            <p>Keeping the keep moment memorable</p>
+            <p className="text-[15px] md:text-[16px] mt-2">
+              Keeping the keep moment memorable
+            </p>
           </div>
           <div>
             <Swiper
@@ -117,10 +121,12 @@ const Gallery = () => {
         {/* third slider */}
         <div className="flex flex-col gap-8 my-8 ">
           <div>
-            <h2 className="font-bold text-2xl lg:text-4xl">
+            <h2 className="text-[26px] md:text-[30px] lg:text-[32px] mt-6 font-semibold">
               Activities in pictures
             </h2>
-            <p>Keeping the keep moments memorable</p>
+            <p className="text-[15px] md:text-[16px] mt-2">
+              Keeping the keep moments memorable
+            </p>
           </div>
           <div>
             <Swiper
