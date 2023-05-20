@@ -5,7 +5,7 @@ const Trainings = () => {
       <div className="my-container mt-20 mb-10  ">
         <div className="hidden md:block my-10">
           <h2 className="text-[30px] lg:text-[35px] text-center font-semibold text-ash">
-            Our Training Programs
+            Apply for Programs
           </h2>
           <p className="text-center text-textAsh lg:mt-2">
             We offer deliver the best in all our training courses
@@ -38,7 +38,7 @@ const Trainings = () => {
               <li className="py-3">Embedded systems and IoT</li>
               <li className=" py-3">Mobile App Development</li>
             </ul>
-            <div className="w-[200px] bg-orange mx-auto text-center py-3 rounded-md mt-3">
+            <div className="w-[200px] bg-orange mx-auto text-center py-3 rounded-md mt-3 cursor-pointer hover:bg-purple transition-all duration-300 hover:scale-110">
               <a className=" text-white font-[500]" href="">
                 Apply for Internship
               </a>
@@ -70,10 +70,9 @@ const Trainings = () => {
               <li className=" py-3">Data Analysis</li>
               <li className=" py-3">Embedded systems and IoT</li>
               <li className=" py-3">Mobile App Development</li>
-              <li className="  py-3">Entrepreneurship</li>
             </ul>
-            <div className="w-[200px] bg-white mx-auto text-center py-3 rounded-md mt-3">
-              <a className=" text-orange font-[500]" href="">
+            <div className="w-[200px] bg-white  mx-auto text-center py-3 rounded-md mt-8 cursor-pointer hover:bg-purple  hover:text-white transition-all duration-300 hover:scale-110">
+              <a className=" text-orange  hover:text-white font-[500]" href="">
                 Apply for Placeher
               </a>
             </div>
@@ -83,32 +82,27 @@ const Trainings = () => {
               UpSkill!
             </h3>
             <div className="text-[15px] w-[90%] mx-auto text-center my-4">
-              <p>
-                We have in place a comprehensive plan to equip you with
-                practical skills and help you gain proficiency in various areas
-                of ICT.
+              <p className="pb-8 text-center">
+                This is a business development training for women to equip them
+                with the skills they need to grow and sustain a business.
               </p>
-              <p>
-                Whether you are completely new to the world of ICT, or need to
-                add an extra skill to your profile, we have tailor-made training
-                services for all categories of learners.
-              </p>
+              <p>They get the chance to be trained in:</p>
             </div>
             <ul
               className="text-[15px] px-5
            list-image-[url('https://res.cloudinary.com/dzmpjgmes/image/upload/v1682248499/Vector_6_ud8wkv.png')]"
             >
-              <li className=" py-3">Website design</li>
-              <li className=" py-3">Mobile App development</li>
-              <li className=" py-3">Robotics</li>
-              <li className=" py-3">Augmented & Virtual Reality</li>
-              <li className=" py-3">Data Science and AI</li>
-              <li className=" py-3">Graphics Design</li>
-              <li className=" py-3">3D Animation</li>
+              <li className=" py-3">Business Model Canvas</li>
+              <li className=" py-3">Technology for Business</li>
+              <li className=" py-3">
+                Crowdfunding Canvas (Alternative to Business financing)
+              </li>
+              <li className=" py-3">Digital Marketing</li>
+              <li className=" py-3">Business formalisation</li>
             </ul>
-            <div className="w-[200px] bg-orange mx-auto text-center py-3 rounded-md mt-3">
+            <div className="w-[200px] bg-orange mx-auto text-center py-3 rounded-md mt-24 cursor-pointer hover:bg-purple transition-all duration-300 hover:scale-110">
               <a className=" text-white font-[500]" href="">
-                See More.......
+                Apply Now for Upskill
               </a>
             </div>
           </div>
@@ -116,7 +110,7 @@ const Trainings = () => {
       </div>
       <div className="hidden md:flex  justify-center items-center mb-12">
         <Link to="/courses">
-          <button className="bg-orange text-white px-2 py-4 rounded-md ">
+          <button className="bg-orange text-white px-2 py-4 rounded-md hover:bg-purple transition-all duration-300 hover:scale-110">
             View all Our Training Courses
           </button>
         </Link>

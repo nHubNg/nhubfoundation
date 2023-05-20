@@ -67,7 +67,10 @@ const Adminteam = () => {
           </div>
         </div>
       </div>
-      <div className="w-max  mx-auto mt-5 mb-7 px-4 py-3 bg-orange text-white text-[15px] rounded-md">
+      <div
+        className="w-max  mx-auto mt-5 mb-7 px-4 py-3 bg-orange text-white text-[15px] rounded-md
+       hover:bg-purple transition-all duration-300 hover:scale-110"
+      >
         <Link to="/about" className="block" href="/">
           See all Our Team Members
         </Link>

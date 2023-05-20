@@ -1,5 +1,3 @@
-import blogs from "../../../blogs.json";
-const visibleBlogs = blogs.slice(0, 3);
 const Blogs = () => {
   return (
     <div className="my-container">
@@ -11,11 +9,11 @@ const Blogs = () => {
           View all our latest Articles
         </p>
       </div>
-      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8 md:my-10">
-        {visibleBlogs.map((blog) => {
+      {/* <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8 md:my-10">
+        ((blog) => {
           return (
             <div
-              className="border-[1px] border-lightgray shadow-[lightShadow] "
+              className="border-[1px] border-lightgray shadow-[lightShadow] rounded-lg"
               key={blog.id}
             >
               <div className=" m-8">
@@ -28,7 +26,7 @@ const Blogs = () => {
                 <p className="text-[15px] font-[400] text-textAsh lg:w-[30ch]">
                   {blog.preview}
                 </p>
-                <div className="bg-orange w-[7rem] text-center rounded-md py-2 my-3">
+                <div className="bg-orange w-[7rem] text-center rounded-md py-2 my-3 cursor-pointer hover:bg-purple  hover:text-white transition-all duration-300 hover:scale-110ho">
                   <a className="text-white" href="#">
                     Read More
                   </a>
@@ -37,8 +35,8 @@ const Blogs = () => {
             </div>
           );
         })}
-      </div>
-      <div className="w-[8rem]  py-2 mx-auto text-center bg-white border-[1px] border-orange mb-4 lg:my-16 lg:px-3 group lg:hover:w-[10rem] lg:transition-[width]">
+      </div> */}
+      <div className="w-[8rem]  py-2 mx-auto text-center bg-white border-[1px] border-orange mb-4 lg:my-16 lg:px-3 group lg:hover:w-[10rem] lg:transition-[width] duration-700 cursor-pointer">
         <a className="font-[500] text-orange flex justify-center items-center gap-2 lg:group-hover:justify-between">
           View All
           <img

@@ -4,7 +4,7 @@ const cards = [
     image:
       "https://res.cloudinary.com/nhubnacademy/image/upload/v1682899396/nHubFoundation/Vector_r0qjwc.png",
     title: "Placeher",
-    text: "A training program designed to encourage, train and empower for women in the Tech ecosystem.",
+    text: "A FREE software development program for women and Ladies.",
   },
   {
     id: 2,
@@ -17,29 +17,29 @@ const cards = [
     id: 3,
     image:
       "https://res.cloudinary.com/nhubnacademy/image/upload/v1682899396/nHubFoundation/Vector_3_mivzcn.png",
-    title: "#Kids",
-    text: "#Kids is a program aimed at training kids in primary and secondary schools on Software Development, Digital skills and Entrepreneurship.",
+    title: "#Kidz",
+    text: "A foundation training that leverages on STEAM (Science, Technology, Engineering, Arts and Mathematics to build and interact for kids in Primary and Secondary school especially in rural areas.",
   },
   {
     id: 4,
     image:
       "https://res.cloudinary.com/nhubnacademy/image/upload/v1682900356/nHubFoundation/Vector_crwk8p.png",
     title: "Rural Strengthening",
-    text: "RURAL STRENGTHENING is aimed at empowering rural communities with digital, technical and entrepreneurship skills that will enable them grow and sustain their businesses",
+    text: "Is aimed at building the capacity of rural communities with digital, Entrepreneurship, and digital economy skills that will enable growth and sustain business.",
   },
   {
     id: 5,
     image:
       "https://res.cloudinary.com/nhubnacademy/image/upload/v1682899396/nHubFoundation/Vector_4_nlsfpx.png",
     title: "Emerge!",
-    text: "At emerge, we explore emerging technologies on the global front, relating their relevance to the activities of the everyday man.",
+    text: "Is aimed at building the capacity of rural communities with digital, Entrepreneurship, and digital economy skills that will enable growth and sustain business. ",
   },
   {
     id: 6,
     image:
       "https://res.cloudinary.com/nhubnacademy/image/upload/v1682899396/nHubFoundation/Vector_5_hcdajf.png",
     title: "Trainings",
-    text: "We have various curriculum with matching professionals, aimed to equip our students with practical skills in the emerging technology.",
+    text: "Is aimed at building the capacity of rural communities with digital, Entrepreneurship, and digital economy skills that will enable growth and sustain business. ",
   },
 ];
 const Activities = () => {
@@ -64,12 +64,12 @@ const Activities = () => {
               <img
                 src={card.image}
                 alt=""
-                className="w-[45px] lg:group-hover:translate-y-[-50px] duration-700"
+                className="w-[45px] lg:group-hover:translate-y-[-50px] duration-500"
               />
-              <h3 className="font-medium text-[24px] text-ash lg:group-hover:translate-y-[-40px] lg:mt-4 transition-all duration-500">
+              <h3 className="font-medium text-[24px] text-ash lg:group-hover:translate-y-[-50px] lg:mt-4 transition-all duration-500">
                 {card.title}
               </h3>
-              <p className="text-[14px]  text-center text-textAsh w-[30ch]  lg:opacity-0 lg:group-hover:opacity-100 lg:group-hover:translate-y-[-40px] transition-all duration-500 ">
+              <p className="text-[14px]  text-center text-textAsh w-[30ch]  lg:hidden lg:group-hover:flex lg:group-hover:translate-y-[-40px] transition-all duration-500 ">
                 {card.text}
               </p>
             </div>

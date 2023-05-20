@@ -124,7 +124,7 @@ const Navbar = ({ handleDonate, handleDesktopDonate, handleNav, nav }) => {
               <Link to="/contact"> Contact us</Link>
             </li>
             <button
-              className="bg-orange px-4 py-2  text-white rounded-md"
+              className="bg-orange px-4 py-2  text-white rounded-md cursor-pointer hover:bg-purple  hover:text-white transition-all duration-1000 "
               onClick={handleDesktopDonate}
             >
               Donate

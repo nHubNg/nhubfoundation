@@ -16,7 +16,7 @@ const Header = () => {
             gender,ethnic,religious background,through several impact-driven
             initiatives.
           </p>
-          <div className="w-40  mx-auto py-3 px-4 bg-orange rounded-md md:mt-5 ">
+          <div className="w-40  mx-auto py-3 px-4 bg-orange rounded-md md:mt-5 hover:bg-purple transition-all duration-300 hover:scale-110 cursor-pointer">
             <Link
               to="/about"
               className=" text-base flex justify-center items-center gap-2"
