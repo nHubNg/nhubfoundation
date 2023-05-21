@@ -128,7 +128,7 @@ const About = () => {
                 Digital Learning Lead
               </h3>
             </div>
-            <div className="flex flex-col items-center sm:grid sm:grid-cols-2 md:flex  md:flex-row md:flex-wrap md:justify-center md:my-10 gap-6 mb-20">
+            <div className="flex flex-col items-center sm:grid sm:grid-cols-2 md:flex  md:flex-row md:flex-wrap md:justify-center md:my-10 gap-6 mb-6">
               {lead.map((admin) => {
                 return (
                   <div key={admin.id} className=" w-[300px] relative ">
@@ -153,6 +153,30 @@ const About = () => {
               })}
             </div>
           </div>
+          {/* <div>
+            <h2 className="text-center ">Gallery Sneak peak</h2>
+            <div className="flex justify-center  items-center">
+              <div className="w-[30%] h-full">
+                <img
+                  src="https://res.cloudinary.com/nhubnacademy/image/upload/v1684351306/nHubFoundation/Frame_1198_etemgp.png"
+                  alt=""
+                />
+              </div>
+              <div className="w-[30%]">
+                <img
+                  src="https://res.cloudinary.com/nhubnacademy/image/upload/v1684351307/nHubFoundation/Frame_1199_tupcwd.png"
+                  alt=""
+                />
+              </div>
+              <div className="w-[30%] ">
+                <img
+                  className="h-[22.5rem]"
+                  src="https://res.cloudinary.com/nhubnacademy/image/upload/v1684351325/nHubFoundation/Frame_1200_bhjiyz.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div> */}
         </div>
       </div>
     </div>

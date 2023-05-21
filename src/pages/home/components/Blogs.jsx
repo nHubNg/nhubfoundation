@@ -1,4 +1,3 @@
-import blogs from "../../../blogs.json";
 const Blogs = () => {
   return (
     <div className="my-container">
@@ -10,10 +9,13 @@ const Blogs = () => {
           View all our latest Articles
         </p>
       </div>
-      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8 md:my-10">
-        {blogs.map((blog) => {
+      {/* <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8 md:my-10">
+        ((blog) => {
           return (
-            <div className="border-[1px] shadow-[lightShadow] " key={blog.id}>
+            <div
+              className="border-[1px] border-lightgray shadow-[lightShadow] rounded-lg"
+              key={blog.id}
+            >
               <div className=" m-8">
                 <div className="md:w-[20rem]">
                   <img className="w-full block" src={blog.img} alt="" />
@@ -24,7 +26,7 @@ const Blogs = () => {
                 <p className="text-[15px] font-[400] text-textAsh lg:w-[30ch]">
                   {blog.preview}
                 </p>
-                <div className="bg-orange w-[7rem] text-center rounded-md py-2 my-3">
+                <div className="bg-orange w-[7rem] text-center rounded-md py-2 my-3 cursor-pointer hover:bg-purple  hover:text-white transition-all duration-300 hover:scale-110ho">
                   <a className="text-white" href="#">
                     Read More
                   </a>
@@ -33,12 +35,12 @@ const Blogs = () => {
             </div>
           );
         })}
-      </div>
-      <div className="w-[8rem] lg:w-[10rem] py-2 mx-auto text-center bg-white border-[1px] border-orange mb-4 lg:my-16  group lg:transition-all lg:duration-800">
-        <a className="font-[500] text-orange flex justify-center items-center gap-2 ">
+      </div> */}
+      <div className="w-[8rem]  py-2 mx-auto text-center bg-white border-[1px] border-orange mb-4 lg:my-16 lg:px-3 group lg:hover:w-[10rem] lg:transition-[width] duration-700 cursor-pointer">
+        <a className="font-[500] text-orange flex justify-center items-center gap-2 lg:group-hover:justify-between">
           View All
           <img
-            className="lg:hidden lg:group-hover:flex"
+            className="lg:hidden lg:group-hover:flex "
             src="https://res.cloudinary.com/nhubnacademy/image/upload/v1683766837/nHubFoundation/arrow-right_zcpsmr.png"
             alt=""
           />
