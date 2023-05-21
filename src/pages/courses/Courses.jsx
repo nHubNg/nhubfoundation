@@ -7,7 +7,7 @@ const Courses = () => {
   };
   return (
     <section className=" pb-20 sm:pb-28">
-      <div className="h-40 bg-courses bg-no-repeat bg-cover bg-center sm:mb-16 sm:bg-desktopCourses sm:h-80"></div>
+      <div className="h-40 bg-courses bg-no-repeat bg-cover bg-center sm:mb-16 sm:bg-desktopCourses sm:h-96"></div>
       <section className="max-w-[90%] mx-auto sm:max-w-2xl lg:max-w-4xl xl:max-w-6xl">
         <Article
           img={

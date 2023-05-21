@@ -5,7 +5,7 @@ import "swiper/css";
 const Gallery = () => {
   return (
     <section>
-      <div className="h-40 bg-gallery bg-no-repeat bg-cover mb-10 sm:bg-desktopGallery  sm:h-72"></div>
+      <div className="h-40 bg-gallery bg-no-repeat bg-cover mb-10 sm:bg-desktopGallery  sm:h-96"></div>
       <section className="text-center text-ash text-lg max-w-[90%] mx-auto pb-10 sm:max-w-2xl lg:max-w-4xl xl:max-w-6xl">
         {/* first slider */}
         <div className="my-8 flex flex-col gap-8">
