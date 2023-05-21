@@ -7,7 +7,7 @@ const Courses = () => {
   };
   return (
     <section className=" pb-20 sm:pb-28">
-      <div className="h-40 bg-courses bg-no-repeat bg-cover bg-center sm:mb-16 sm:bg-desktopCourses  md:h-[60vh] lg:h-[80vh]"></div>
+      <div className="h-40 bg-courses bg-no-repeat bg-cover bg-center sm:mb-16 sm:bg-desktopCourses sm:h-[50vh]  md:h-[60vh] lg:h-[80vh]"></div>
       <section className="my-container">
         <Article
           img={
