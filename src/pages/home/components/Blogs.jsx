@@ -1,4 +1,4 @@
-import blog from "../../../../public/blogs.json";
+import blog from "../../../../blogs.json";
 const visibleBlogs = blog.slice(0, 3);
 const Blogs = () => {
   return (

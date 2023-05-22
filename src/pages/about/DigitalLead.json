@@ -28,6 +28,12 @@
     "name":"Jeremiah Oluranti Faluyi",
     "post":"Full stack Developer",
     "id":5
+ },
+ {
+   "image":"https://res.cloudinary.com/nhubnacademy/image/upload/v1684758146/nHubFoundation/image_39_xpjdmg.png",
+   "name": "Jesse Kanadi",
+   "post": "Trainer",
+   "id":"6"
  }
 
 ]

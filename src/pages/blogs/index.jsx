@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import blog from "../../../public/blogs.json";
+import blog from "../../../blogs.json";
 // import axios from "axios";
 import Bloglist from "./Bloglist";
 import Paginate from "./Paginate";
