@@ -1,5 +1,4 @@
-{
-   "blogs":[
+[
       {
       "id":1,
      "img":"https://res.cloudinary.com/nhubnacademy/image/upload/v1682934515/nHubFoundation/Image_yic5ey.png",
@@ -71,5 +70,5 @@
      "title":"How to Learn UI/UX Design in 2023",
      "preview":"Learning UI/UX design in the 21st centaury is one of the best decisions you can ever make..."
     }
-  ]
-  }
+]
+  

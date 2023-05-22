@@ -1,3 +1,5 @@
+import blog from "../../../../public/blogs.json";
+const visibleBlogs = blog.slice(0, 3);
 const Blogs = () => {
   return (
     <div className="my-container">
@@ -9,8 +11,8 @@ const Blogs = () => {
           View all our latest Articles
         </p>
       </div>
-      {/* <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8 md:my-10">
-        ((blog) => {
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8 md:my-10">
+        {visibleBlogs.map((blog) => {
           return (
             <div
               className="border-[1px] border-lightgray shadow-[lightShadow] rounded-lg"
@@ -35,8 +37,8 @@ const Blogs = () => {
             </div>
           );
         })}
-      </div> */}
-      <div className="w-[8rem]  py-2 mx-auto text-center bg-white border-[1px] border-orange mb-4 lg:my-16 lg:px-3 group lg:hover:w-[10rem] lg:transition-[width] duration-700 cursor-pointer">
+      </div>
+      <div className="w-[8rem]  py-2 mx-auto text-center bg-white border-[1px] border-orange mt-5 mb-4 lg:my-16 lg:px-3 group lg:hover:w-[10rem] lg:transition-[width] duration-700 cursor-pointer">
         <a className="font-[500] text-orange flex justify-center items-center gap-2 lg:group-hover:justify-between">
           View All
           <img

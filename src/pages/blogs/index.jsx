@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useState, useEffect } from "react";
+import blog from "../../../public/blogs.json";
+// import axios from "axios";
 import Bloglist from "./Bloglist";
 import Paginate from "./Paginate";
 
 const Blogs = () => {
-  const [blog, setBlog] = useState([]);
+  // const [blog, setBlog] = useState([]);
   const [currentPage, setCurrentPage] = useState(
     parseInt(localStorage.getItem("currentPage")) || 1
   );
@@ -12,15 +13,15 @@ const Blogs = () => {
     parseInt(localStorage.getItem("blogsPerPage")) || 3
   );
   console.log(currentPage, blogsPerPage);
-  useEffect(() => {
-    const fetchBlogs = async () => {
-      const res = await axios.get("http://localhost:8000/blogs");
-      setBlog(res.data);
-      console.log(res.data);
-    };
+  // useEffect(() => {
+  //   const fetchBlogs = async () => {
+  //     const res = await axios.get("http://localhost:8000/blogs");
+  //     setBlog(res.data);
+  //     console.log(res.data);
+  //   };
 
-    fetchBlogs();
-  }, []);
+  //   fetchBlogs();
+  // }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -61,36 +62,77 @@ const Blogs = () => {
   const firstBlogIndex = lastBlogIndex - blogsPerPage;
   const currentBlogs = blog.slice(firstBlogIndex, lastBlogIndex);
   return (
-    <div className="my-container">
-      <Bloglist blog={currentBlogs} />
-      <Paginate
-        totalBlogs={blog.length}
-        blogsPerPage={blogsPerPage}
-        setCurrentPage={setCurrentPage}
-      />
-
-      {/* <div className="flex justify-center items-center gap-4 mb-5">
-        <button className="flex gap-1 justify-center items-center text-ash">
-          <img
-            src="https://res.cloudinary.com/nhubnacademy/image/upload/v1683117975/nHubFoundation/Vector_2_sajtck.png"
-            alt=""
+    <div className="my-container flex ">
+      <div className="w-[75%] pt-2">
+        <Bloglist blog={currentBlogs} />
+        <Paginate
+          totalBlogs={blog.length}
+          blogsPerPage={blogsPerPage}
+          setCurrentPage={setCurrentPage}
+        />
+      </div>
+      <div className="w-[25%] hidden md:block ">
+        <div className="relative mt-8">
+          <input
+            type="text"
+            className="border-lightgray border-[1px] py-1 px-2 rounded-md w-[18rem] mx-auto"
+            placeholder="Search....."
           />
-          Prev
-        </button>
-        <div>
-          <img
-            src="https://res.cloudinary.com/nhubnacademy/image/upload/v1683190294/nHubFoundation/Vector_4_duf3e9.png"
+          {/* <img
+            src="https://res.cloudinary.com/nhubnacademy/image/upload/v1684753619/nHubFoundation/Vector_p6xg9b.png"
             alt=""
-          />
+            className="absolute top-2 right-4"
+          /> */}
         </div>
-        <button className="flex gap-1 justify-center items-center text-ash">
-          <p>Next</p>
-          <img
-            src="https://res.cloudinary.com/nhubnacademy/image/upload/v1683118186/nHubFoundation/Vector_3_msofvi.png"
-            alt=""
-          />
-        </button>
-      </div> */}
+        <div className="my-8">
+          <h2 className="text-[23px] text-center font-semibold text-ash">
+            Latest Posts
+          </h2>
+          <ul className="text-orange">
+            <li>
+              <a href="">How to Learn UI/UX Design in 2023</a>
+            </li>
+            <li>
+              <a href=""></a>US Embassy Visits nHub Nigeria
+            </li>
+            <li>
+              <a href="">How I started UI/UX Design - Terrence Eze</a>
+            </li>
+          </ul>
+        </div>
+        <div className="my-8">
+          <h2 className="text-[23px] text-center font-semibold text-ash">
+            Archives
+          </h2>
+          <ul className="text-orange">
+            <li>
+              <a href="">January 2023</a>
+            </li>
+            <li>
+              <a href="">February 2023</a>
+            </li>
+            <li>
+              <a href="">March 2023</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2 className="text-[23px] text-center font-semibold text-ash">
+            Categories
+          </h2>
+          <ul className="text-orange">
+            <li>
+              <a href="">Placer Story</a>
+            </li>
+            <li>
+              <a href="">Internship Story</a>
+            </li>
+            <li>
+              <a href="">nHub News</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 };
