@@ -28,6 +28,7 @@ export default {
         gray: " rgba(16, 24, 40, 1)",
         lightgrey: "rgba(71, 84, 103, 1)",
         overlay: "rgba(0,0,0,0.2)",
+        cardOverlay: "rgba(0,0,0,0.6)",
         headerOverlay: "rgba(0, 0, 0, 0.37)",
         ash: "#515151",
         lightOrange: "rgba(242, 96, 36, 0.5)",

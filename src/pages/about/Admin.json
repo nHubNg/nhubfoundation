@@ -5,6 +5,9 @@
       "name": "Mr Eric Nanle",
       "office": "admin",
       "post": "Executive Director",
+       "linkedIn":"",
+       "twitter":"",
+       "facebook":"",
       "id": 1
     },
     {
@@ -13,6 +16,9 @@
       "name": "Bashir Shaidu",
       "office": "admin",
       "post": "COO",
+      "linkedIn":"https://www.linkedin.com/in/bashirsheidu/",
+      "twitter":"https://twitter.com/ImpactBash",
+      "facebook":"",
       "id": 2
     },
     {
@@ -21,6 +27,9 @@
       "name": "Nathan Pankyes",
       "office": "admin",
       "post": "Legal",
+      "linkedIn":"https://www.linkedin.com/in/pankyes-nathan-h-5b2b03123/",
+      "twitter":"",
+      "facebook":"",
       "id": 3
     },
     {
@@ -29,6 +38,9 @@
       "name": "Muhammad Sadiq Abdulrasheed",
       "office": "admin",
       "post": "Lead, Internship",
+      "linkedIn":"https://www.linkedin.com/in/dotmsadiq/",
+      "twitter":"https://twitter.com/dotMsadiq",
+      "facebook":"",
       "id": 4
     },
     {
@@ -37,6 +49,9 @@
       "name": "Nanbam Kumben",
       "office": "admin",
       "post": "Lead, Placer",
+      "linkedIn":"https://www.linkedin.com/in/nanbam-kumben-1270b9193/",
+      "twitter":"https://twitter.com/Naan_bee",
+      "facebook":"",
       "id": 5
     },
     {
@@ -44,6 +59,9 @@
       "name":"Shamsiyya Bashir",
       "office":"admin",
       "post": "M & E",
+      "linkedIn":"https://www.linkedin.com/in/shamsiya-bashir-432958185/",
+      "twitter":"",
+      "facebook":"",
       "id": 6
     },
     {
@@ -52,6 +70,9 @@
       "name": "Eyinmosan Sholaye",
       "office": "admin",
       "post": "Lead. #kidz",
+      "linkedIn":"",
+      "twitter":"",
+      "facebook":"",
       "id": 7
     }
   ]

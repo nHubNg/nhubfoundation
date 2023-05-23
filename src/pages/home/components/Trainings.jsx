@@ -28,15 +28,15 @@ const Trainings = () => {
               <p>They get the chance to learn in the following fields:</p>
             </div>
             <ul
-              className="text-[15px] px-5
+              className="text-[15px] px-8
           list-image-[url('https://res.cloudinary.com/nhubnacademy/image/upload/v1683034207/Vector_ptvzrq.png')]"
             >
-              <li className="  py-3 ">Frontend Web Development</li>
-              <li className="  py-3">Backend web development</li>
-              <li className="  py-3">Product (UI/UX) Design</li>
-              <li className=" py-3">Data Analysis</li>
-              <li className="py-3">Embedded systems and IoT</li>
-              <li className=" py-3">Mobile App Development</li>
+              <li className="  p-2">Frontend Web Development</li>
+              <li className="  p-2">Backend web development</li>
+              <li className="  p-2">Product (UI/UX) Design</li>
+              <li className=" p-2">Data Analysis</li>
+              <li className="p-2">Embedded systems and IoT</li>
+              <li className=" p-2">Mobile App Development</li>
             </ul>
             <div className="w-[200px] bg-orange mx-auto text-center py-3 rounded-md mt-3 cursor-pointer hover:bg-purple transition-all duration-300 hover:scale-110">
               <a className=" text-white font-[500]" href="">
@@ -61,15 +61,15 @@ const Trainings = () => {
               </p>
             </div>
             <ul
-              className="text-white text-[15px] px-5
+              className="text-white text-[15px] px-8
             list-image-[url('https://res.cloudinary.com/nhubnacademy/image/upload/v1683034207/Vector_1_malazg.png')]"
             >
-              <li className="py-3">Frontend Web Development</li>
-              <li className=" py-3">Backend web development</li>
-              <li className=" py-3">Product (UI/UX) Design</li>
-              <li className=" py-3">Data Analysis</li>
-              <li className=" py-3">Embedded systems and IoT</li>
-              <li className=" py-3">Mobile App Development</li>
+              <li className="p-2">Frontend Web Development</li>
+              <li className=" p-2">Backend web development</li>
+              <li className=" p-2">Product (UI/UX) Design</li>
+              <li className=" p-2">Data Analysis</li>
+              <li className=" p-2">Embedded systems and IoT</li>
+              <li className=" p-2">Mobile App Development</li>
             </ul>
             <div className="w-[200px] bg-white  mx-auto text-center py-3 rounded-md mt-8 cursor-pointer hover:bg-purple  hover:text-white transition-all duration-300 hover:scale-110">
               <a className=" text-orange  hover:text-white font-[500]" href="">
@@ -89,16 +89,16 @@ const Trainings = () => {
               <p>They get the chance to be trained in:</p>
             </div>
             <ul
-              className="text-[15px] px-5
+              className="text-[15px] px-8
            list-image-[url('https://res.cloudinary.com/dzmpjgmes/image/upload/v1682248499/Vector_6_ud8wkv.png')]"
             >
-              <li className=" py-3">Business Model Canvas</li>
-              <li className=" py-3">Technology for Business</li>
-              <li className=" py-3">
+              <li className=" p-2">Business Model Canvas</li>
+              <li className=" p-2">Technology for Business</li>
+              <li className=" p-2">
                 Crowdfunding Canvas (Alternative to Business financing)
               </li>
-              <li className=" py-3">Digital Marketing</li>
-              <li className=" py-3">Business formalisation</li>
+              <li className=" p-2">Digital Marketing</li>
+              <li className=" p-2">Business formalisation</li>
             </ul>
             <div className="w-[200px] bg-orange mx-auto text-center py-3 rounded-md mt-24 cursor-pointer hover:bg-purple transition-all duration-300 hover:scale-110">
               <a className=" text-white font-[500]" href="">

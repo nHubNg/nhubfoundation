@@ -19,7 +19,7 @@ const Adminteam = () => {
             alt=""
           />
           <div
-            className="absolute bottom-0 left-0 w-full h-full flex text-center justify-center items-end bg-overlay 
+            className="absolute bottom-0 left-0 w-full h-full flex text-center justify-center items-end bg-cardOverlay 
          lg:opacity-0 lg:hover:opacity-100 transition-all duration-500 ease-in-out "
           >
             <div className="py-2">
@@ -27,6 +27,27 @@ const Adminteam = () => {
                 Mr Eric Nanle
               </h3>
               <h4 className="text-[16px] text-white">Executive Director</h4>
+              <div className=" py-2 flex gap-4 justify-center items-center">
+                <a href="">
+                  <img
+                    className=""
+                    src="https://res.cloudinary.com/nhubnacademy/image/upload/v1684829325/nHubFoundation/Vector_gexs4r.png"
+                    alt=""
+                  />
+                </a>
+                <a href="">
+                  <img
+                    src="https://res.cloudinary.com/nhubnacademy/image/upload/v1684829324/nHubFoundation/Subtract_bbde0x.png"
+                    alt=""
+                  />
+                </a>
+                <a href="">
+                  <img
+                    src="https://res.cloudinary.com/nhubnacademy/image/upload/v1684829361/nHubFoundation/Vector_yqkhkv.png"
+                    alt=""
+                  />
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -45,6 +66,30 @@ const Adminteam = () => {
                 Bashir Shaidu
               </h3>
               <h4 className="text-[16px] text-white">COO</h4>
+              <div className=" py-2 flex gap-4 justify-center items-center">
+                <a href="">
+                  <img
+                    className=""
+                    src="https://res.cloudinary.com/nhubnacademy/image/upload/v1684829325/nHubFoundation/Vector_gexs4r.png"
+                    alt=""
+                  />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/bashirsheidu/"
+                  target="_blank"
+                >
+                  <img
+                    src="https://res.cloudinary.com/nhubnacademy/image/upload/v1684829324/nHubFoundation/Subtract_bbde0x.png"
+                    alt=""
+                  />
+                </a>
+                <a href="https://twitter.com/ImpactBash" target="_blank">
+                  <img
+                    src="https://res.cloudinary.com/nhubnacademy/image/upload/v1684829361/nHubFoundation/Vector_yqkhkv.png"
+                    alt=""
+                  />
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -63,6 +108,30 @@ const Adminteam = () => {
                 Nathan Pankyes
               </h3>
               <h4 className="text-[16px] text-white">Legal</h4>
+              <div className=" py-2 flex gap-4 justify-center items-center">
+                <a href="">
+                  <img
+                    className=""
+                    src="https://res.cloudinary.com/nhubnacademy/image/upload/v1684829325/nHubFoundation/Vector_gexs4r.png"
+                    alt=""
+                  />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/pankyes-nathan-h-5b2b03123/"
+                  target="_blank"
+                >
+                  <img
+                    src="https://res.cloudinary.com/nhubnacademy/image/upload/v1684829324/nHubFoundation/Subtract_bbde0x.png"
+                    alt=""
+                  />
+                </a>
+                <a href="">
+                  <img
+                    src="https://res.cloudinary.com/nhubnacademy/image/upload/v1684829361/nHubFoundation/Vector_yqkhkv.png"
+                    alt=""
+                  />
+                </a>
+              </div>
             </div>
           </div>
         </div>

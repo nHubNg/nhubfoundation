@@ -108,14 +108,37 @@ const About = () => {
                     alt=""
                   />
                   <div
-                    className="absolute bottom-0 left-0 w-full h-full flex text-center justify-center items-end bg-overlay 
+                    className="absolute bottom-0 left-0 w-full h-full flex text-center justify-center items-end bg-cardOverlay 
                   lg:opacity-0 lg:hover:opacity-100 transition-all duration-500 ease-in-out "
                   >
-                    <div className="py-2">
-                      <h3 className="text-[28px] text-white font-[400] leading-8">
-                        {admin.name}
-                      </h3>
-                      <h4 className="text-[16px] text-white">{admin.post}</h4>
+                    <div className="flex flex-col">
+                      <div className="">
+                        <h3 className="text-[28px] text-white font-[400] leading-8">
+                          {admin.name}
+                        </h3>
+                        <h4 className="text-[16px] text-white">{admin.post}</h4>
+                      </div>
+                      <div className=" py-2 flex gap-4 justify-center items-center">
+                        <a href="">
+                          <img
+                            className=""
+                            src="https://res.cloudinary.com/nhubnacademy/image/upload/v1684829325/nHubFoundation/Vector_gexs4r.png"
+                            alt=""
+                          />
+                        </a>
+                        <a href={admin.linkedIn} target="_blank">
+                          <img
+                            src="https://res.cloudinary.com/nhubnacademy/image/upload/v1684829324/nHubFoundation/Subtract_bbde0x.png"
+                            alt=""
+                          />
+                        </a>
+                        <a href={admin.twitter} target="_blank">
+                          <img
+                            src="https://res.cloudinary.com/nhubnacademy/image/upload/v1684829361/nHubFoundation/Vector_yqkhkv.png"
+                            alt=""
+                          />
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -138,14 +161,39 @@ const About = () => {
                       alt=""
                     />
                     <div
-                      className="absolute bottom-0 left-0 w-full h-full flex text-center justify-center items-end bg-overlay 
+                      className="absolute bottom-0 left-0 w-full h-full flex text-center justify-center items-end bg-cardOverlay 
                     lg:opacity-0 lg:hover:opacity-100 transition-all duration-500 ease-in-out "
                     >
-                      <div className="py-1">
-                        <h3 className="text-[28px] text-white font-[400] leading-8">
-                          {admin.name}
-                        </h3>
-                        <h4 className="text-[16px] text-white">{admin.post}</h4>
+                      <div className="flex flex-col">
+                        <div className="">
+                          <h3 className="text-[28px] text-white font-[400] leading-8">
+                            {admin.name}
+                          </h3>
+                          <h4 className="text-[16px] text-white">
+                            {admin.post}
+                          </h4>
+                        </div>
+                        <div className=" py-2 flex gap-4 justify-center items-center">
+                          <a href="">
+                            <img
+                              className=""
+                              src="https://res.cloudinary.com/nhubnacademy/image/upload/v1684829325/nHubFoundation/Vector_gexs4r.png"
+                              alt=""
+                            />
+                          </a>
+                          <a href={admin.linkedIn} target="_blank">
+                            <img
+                              src="https://res.cloudinary.com/nhubnacademy/image/upload/v1684829324/nHubFoundation/Subtract_bbde0x.png"
+                              alt=""
+                            />
+                          </a>
+                          <a href={admin.twitter} target="_blank">
+                            <img
+                              src="https://res.cloudinary.com/nhubnacademy/image/upload/v1684829361/nHubFoundation/Vector_yqkhkv.png"
+                              alt=""
+                            />
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>

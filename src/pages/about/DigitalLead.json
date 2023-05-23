@@ -3,37 +3,46 @@
     "image":"https://res.cloudinary.com/nhubnacademy/image/upload/v1683035905/nHubFoundation/image_6_4_gxp51r.png",
     "name":"Fon Desmond",
     "post":"Master Lead:IT",
+    "linkedIn":"https://www.linkedin.com/in/desmond-fon/",
+    "twitter":"https://twitter.com/DezmondFon",
+    "facebook":"",
     "id":1
  },
  {
     "image":"https://res.cloudinary.com/nhubnacademy/image/upload/v1683035905/nHubFoundation/image_6_5_gdbe6n.png",
     "name":"Sophie Ameh",
     "post":"Master Lead: Frontend",
+    "linkedIn":"https://www.linkedin.com/in/sophia-ameh-67a849248/",
+    "twitter":"https://twitter.com/Sophie_Ameh",
+    "facebook":"",
     "id":2
  },
  {
     "image":"https://res.cloudinary.com/nhubnacademy/image/upload/v1683035905/nHubFoundation/image_6_6_fnaxuw.png",
     "name":"Agwom Akere",
     "post":"Trainer",
+    "linkedIn":"",
+    "twitter":"https://twitter.com/AkareAgwom",
+    "facebook":"",
     "id":3
  },
  {
     "image":"https://res.cloudinary.com/nhubnacademy/image/upload/v1683035906/nHubFoundation/image_6_7_ypbi8d.png",
     "name":"Umeokoli Victor Onyeka",
     "post":"Graphics Designer",
+    "linkedIn":"https://www.linkedin.com/in/victor-umeh-146b19247/",
+    "twitter":"https://twitter.com/Le_Sieger?s=08",
+    "facebook":"",
     "id":4
  },
  {
     "image":"https://res.cloudinary.com/nhubnacademy/image/upload/v1683035906/nHubFoundation/image_6_8_xfzsyl.png",
     "name":"Jeremiah Oluranti Faluyi",
     "post":"Full stack Developer",
+    "linkedIn":"https://www.linkedin.com/in/jeremiah-faluyi-009b85206/",
+    "twitter":"https://twitter.com/_oluranti",
+    "facebook":"",
     "id":5
- },
- {
-   "image":"https://res.cloudinary.com/nhubnacademy/image/upload/v1684758146/nHubFoundation/image_39_xpjdmg.png",
-   "name": "Jesse Kanadi",
-   "post": "Trainer",
-   "id":"6"
  }
 
 ]
