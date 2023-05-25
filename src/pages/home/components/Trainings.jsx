@@ -71,8 +71,8 @@ const Trainings = () => {
               <li className=" p-2">Embedded systems and IoT</li>
               <li className=" p-2">Mobile App Development</li>
             </ul>
-            <div className="w-[200px] bg-white  mx-auto text-center py-3 rounded-md mt-8 cursor-pointer hover:bg-purple  hover:text-white transition-all duration-300 hover:scale-110">
-              <a className=" text-orange  hover:text-white font-[500]" href="">
+            <div className="w-[200px] bg-white  mx-auto text-center py-3 rounded-md mt-8 cursor-pointer hover:bg-purple  hover:text-white transition-all duration-300 hover:scale-110 text-orange">
+              <a className="hover:text-white font-[500]" href="">
                 Apply for Placeher
               </a>
             </div>
