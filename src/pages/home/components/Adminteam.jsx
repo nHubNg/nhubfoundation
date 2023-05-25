@@ -77,13 +77,14 @@ const Adminteam = () => {
                 <a
                   href="https://www.linkedin.com/in/bashirsheidu/"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <img
                     src="https://res.cloudinary.com/nhubnacademy/image/upload/v1684829324/nHubFoundation/Subtract_bbde0x.png"
                     alt=""
                   />
                 </a>
-                <a href="https://twitter.com/ImpactBash" target="_blank">
+                <a href="https://twitter.com/ImpactBash" target="_blank" rel="noreferrer">
                   <img
                     src="https://res.cloudinary.com/nhubnacademy/image/upload/v1684829361/nHubFoundation/Vector_yqkhkv.png"
                     alt=""
@@ -119,6 +120,7 @@ const Adminteam = () => {
                 <a
                   href="https://www.linkedin.com/in/pankyes-nathan-h-5b2b03123/"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <img
                     src="https://res.cloudinary.com/nhubnacademy/image/upload/v1684829324/nHubFoundation/Subtract_bbde0x.png"

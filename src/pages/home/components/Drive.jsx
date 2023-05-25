@@ -59,7 +59,7 @@ const Drive = () => {
                 Community
               </h3>
               <p className="text-white text-center p-7 text-[15px] opacity-0 lg:group-hover:opacity-100 lg:group-hover:translate-y-[-60px] transition-all ">
-                Be part of Africa's fastest growing tech community leveraging on
+                Be part of Africa&apos;s fastest growing tech community leveraging on
                 emerging technologies and data governance.
               </p>
             </div>
@@ -76,7 +76,7 @@ const Drive = () => {
                 Growth
               </h3>
               <p className="text-white text-center p-7 text-[15px] opacity-0 lg:group-hover:opacity-100 lg:group-hover:translate-y-[-60px] transition-all ">
-                Equipping Africa's growing economy for sustainability through
+                Equipping Africa&apos;s growing economy for sustainability through
                 several impact-driven initiatives
               </p>
             </div>

@@ -18,7 +18,7 @@ const cards = [
     image:
       "https://res.cloudinary.com/nhubnacademy/image/upload/v1682899396/nHubFoundation/Vector_3_mivzcn.png",
     title: "#Kidz",
-    text: "A foundation training that leverages on STEAM (Science, Technology, Engineering, Arts and Mathematics to build and interact for kids in Primary and Secondary school especially in rural areas.",
+    text: "A foundation training that leverages on STEAM (Science, Technology, Engineering, Arts and Mathematics) to build and interact for kids in Primary and Secondary school especially in rural areas.",
   },
   {
     id: 4,
