@@ -1,0 +1,78 @@
+[
+    {
+      "image":
+        "https://res.cloudinary.com/nhubnacademy/image/upload/v1682954565/nHubFoundation/eric-nanle_1_l5boss.png",
+      "name": "Mr Eric Nanle",
+      "office": "admin",
+      "post": "Executive Director",
+       "linkedIn":"",
+       "twitter":"",
+       "facebook":"",
+      "id": 1
+    },
+    {
+      "image":
+        "https://res.cloudinary.com/nhubnacademy/image/upload/v1682900757/nHubFoundation/bash_efr3k8.jpg",
+      "name": "Bashir Shaidu",
+      "office": "admin",
+      "post": "COO",
+      "linkedIn":"https://www.linkedin.com/in/bashirsheidu/",
+      "twitter":"https://twitter.com/ImpactBash",
+      "facebook":"",
+      "id": 2
+    },
+    {
+      "image":
+        "https://res.cloudinary.com/nhubnacademy/image/upload/v1682954527/nHubFoundation/image_6_lg5pyy.png",
+      "name": "Nathan Pankyes",
+      "office": "admin",
+      "post": "Legal",
+      "linkedIn":"https://www.linkedin.com/in/pankyes-nathan-h-5b2b03123/",
+      "twitter":"",
+      "facebook":"",
+      "id": 3
+    },
+    {
+      "image":
+        "https://res.cloudinary.com/nhubnacademy/image/upload/v1683035905/nHubFoundation/image_6_1_ld8tlj.png",
+      "name": "Muhammad Sadiq Abdulrasheed",
+      "office": "admin",
+      "post": "Lead, Internship",
+      "linkedIn":"https://www.linkedin.com/in/dotmsadiq/",
+      "twitter":"https://twitter.com/dotMsadiq",
+      "facebook":"",
+      "id": 4
+    },
+    {
+      "image":
+        "https://res.cloudinary.com/nhubnacademy/image/upload/v1683035905/nHubFoundation/image_6_2_hmdbvz.png",
+      "name": "Nanbam Kumben",
+      "office": "admin",
+      "post": "Lead, Placer",
+      "linkedIn":"https://www.linkedin.com/in/nanbam-kumben-1270b9193/",
+      "twitter":"https://twitter.com/Naan_bee",
+      "facebook":"",
+      "id": 5
+    },
+    {
+      "image":"https://res.cloudinary.com/nhubnacademy/image/upload/v1683665257/nHubFoundation/image_6_cfyaf8.png",
+      "name":"Shamsiyya Bashir",
+      "office":"admin",
+      "post": "M & E",
+      "linkedIn":"https://www.linkedin.com/in/shamsiya-bashir-432958185/",
+      "twitter":"",
+      "facebook":"",
+      "id": 6
+    },
+    {
+      "image":
+        "https://res.cloudinary.com/nhubnacademy/image/upload/v1683035905/nHubFoundation/image_6_3_gnzu0l.png",
+      "name": "Eyinmosan Sholaye",
+      "office": "admin",
+      "post": "Lead. #kidz",
+      "linkedIn":"",
+      "twitter":"",
+      "facebook":"",
+      "id": 7
+    }
+  ]
