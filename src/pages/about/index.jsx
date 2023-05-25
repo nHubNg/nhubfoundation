@@ -1,12 +1,13 @@
+import { Link } from "react-router-dom";
 import staff from "./Admin.json";
 import lead from "./DigitalLead.json";
 const About = () => {
   return (
     <div>
       <div className="relative">
-        <div className="bg-[url('https://res.cloudinary.com/nhubnacademy/image/upload/v1682870755/Frame_1199_1_uyxv5t.png')] py-[5rem] md:h-[80vh] bg-cover bg-[center_top_-2rem] md:bg-[top_bottom] bg-no-repeat"></div>
+        <div className="bg-[url('https://res.cloudinary.com/nhubnacademy/image/upload/v1685008539/nHubFoundation/image_51_wabdzz.png')] py-[5rem] md:h-[80vh] bg-cover bg-[center_top_-2rem] md:bg-[top_bottom] bg-no-repeat"></div>
         <div className="absolute bottom-0 left-0 w-full h-full flex text-center justify-center items-center bg-headerOverlay  ">
-          <h2 className="text-[28px] text-white font-[600] ">About Us</h2>
+          <h2 className="text-[45px] text-white font-[600] ">About Us</h2>
         </div>
       </div>
       <div className="my-container text-center my-6 ">
@@ -35,7 +36,7 @@ const About = () => {
         </div>
         <div className="hidden md:block">
           <img
-            className="h-[25rem] border-[2px] border-orange"
+            className="h-[25rem] border-[10px] border-orange"
             src="https://res.cloudinary.com/nhubnacademy/image/upload/v1683659606/nHubFoundation/pexels-fauxels-3184657_1_1_1_u6ll8n.png"
             alt=""
           />
@@ -101,27 +102,26 @@ const About = () => {
           <div className=" flex flex-col items-center sm:grid sm:grid-cols-2 md:flex  md:flex-row md:flex-wrap md:justify-center md:my-10 gap-6">
             {staff.map((admin) => {
               return (
-                <div key={admin.id} className=" w-[300px] relative">
+                <div key={admin.id} className=" w-[300px] h-[300px] relative">
                   <img
                     className="block max-w-[100%] object-cover"
                     src={admin.image}
                     alt=""
                   />
                   <div
-                    className="absolute bottom-0 left-0 w-full h-full flex text-center justify-center items-end bg-cardOverlay 
-                  lg:opacity-0 lg:hover:opacity-100 transition-all duration-500 ease-in-out "
+                    className="absolute bottom-0 left-0 w-full h-full flex text-center justify-center items-end bg-overlay lg:bg-cardOverlay 
+                  md:opacity-0 md:hover:opacity-100 transition-all duration-500 ease-in-out "
                   >
                     <div className="flex flex-col">
                       <div className="">
-                        <h3 className="text-[28px] text-white font-[400] leading-8">
+                        <h3 className="text-[26px] text-white font-[400] leading-8">
                           {admin.name}
                         </h3>
                         <h4 className="text-[16px] text-white">{admin.post}</h4>
                       </div>
-                      <div className=" py-2 flex gap-4 justify-center items-center">
-                        <a href="">
+                      <div className=" pt-2 pb-4 flex gap-4 justify-center items-center">
+                        <a href={admin.facebook} target="_blank">
                           <img
-                            className=""
                             src="https://res.cloudinary.com/nhubnacademy/image/upload/v1684829325/nHubFoundation/Vector_gexs4r.png"
                             alt=""
                           />
@@ -161,20 +161,20 @@ const About = () => {
                       alt=""
                     />
                     <div
-                      className="absolute bottom-0 left-0 w-full h-full flex text-center justify-center items-end bg-cardOverlay 
-                    lg:opacity-0 lg:hover:opacity-100 transition-all duration-500 ease-in-out "
+                      className="absolute bottom-0 left-0 w-full h-full flex text-center justify-center items-end bg-overlay lg:bg-cardOverlay 
+                    md:opacity-0 md:hover:opacity-100 transition-all duration-500 ease-in-out "
                     >
                       <div className="flex flex-col">
                         <div className="">
-                          <h3 className="text-[28px] text-white font-[400] leading-8">
+                          <h3 className="text-[26px] text-white font-[400] leading-8">
                             {admin.name}
                           </h3>
                           <h4 className="text-[16px] text-white">
                             {admin.post}
                           </h4>
                         </div>
-                        <div className=" py-2 flex gap-4 justify-center items-center">
-                          <a href="">
+                        <div className=" pt-2 pb-4 flex gap-4 justify-center items-center">
+                          <a href={admin.facebook} target="_blank">
                             <img
                               className=""
                               src="https://res.cloudinary.com/nhubnacademy/image/upload/v1684829325/nHubFoundation/Vector_gexs4r.png"
@@ -201,8 +201,10 @@ const About = () => {
               })}
             </div>
           </div>
-          {/* <div>
-            <h2 className="text-center ">Gallery Sneak peak</h2>
+          <div className="mb-24">
+            <h2 className="text-center text-[26px] md:text-[30px] text-ash font-[600] mb-6">
+              Gallery Sneak peak
+            </h2>
             <div className="flex justify-center  items-center">
               <div className="w-[30%] h-full">
                 <img
@@ -218,13 +220,17 @@ const About = () => {
               </div>
               <div className="w-[30%] ">
                 <img
-                  className="h-[22.5rem]"
-                  src="https://res.cloudinary.com/nhubnacademy/image/upload/v1684351325/nHubFoundation/Frame_1200_bhjiyz.png"
+                  src="https://res.cloudinary.com/nhubnacademy/image/upload/v1685008662/nHubFoundation/Frame_1200_zb5cls.png"
                   alt=""
                 />
               </div>
             </div>
-          </div> */}
+            <div className="bg-orange w-40 text-center py-3 rounded-md my-16 mx-auto cursor-pointer  hover:bg-purple transition-all duration-300 hover:scale-110">
+              <Link to="/gallery" className="font-[500] text-white">
+                View Gallery
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </div>

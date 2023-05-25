@@ -7,10 +7,10 @@ import Paginate from "./Paginate";
 const Blogs = () => {
   // const [blog, setBlog] = useState([]);
   const [currentPage, setCurrentPage] = useState(
-    parseInt(localStorage.getItem("currentPage")) || 1
+    JSON.parse(localStorage.getItem("currentPage")) || 1
   );
   const [blogsPerPage, setBlogsPerPage] = useState(
-    parseInt(localStorage.getItem("blogsPerPage")) || 3
+    JSON.parse(localStorage.getItem("blogsPerPage"))
   );
   console.log(currentPage, blogsPerPage);
   // useEffect(() => {
@@ -27,36 +27,32 @@ const Blogs = () => {
     const handleResize = () => {
       if (window.innerWidth > 768) {
         setBlogsPerPage(6);
-      } else {
-        setBlogsPerPage(3);
       }
     };
 
     window.addEventListener("resize", handleResize);
     console.log(useEffect);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    // return () => {
+    //   window.removeEventListener("resize", handleResize);
+    // };
   }, []);
   useEffect(() => {
-    localStorage.setItem("currentPage", currentPage.toString());
-    localStorage.setItem("blogsPerPage", blogsPerPage.toString());
+    localStorage.setItem("currentPage", JSON.stringify(currentPage));
+    localStorage.setItem("blogsPerPage", JSON.stringify(blogsPerPage));
   }, [currentPage, blogsPerPage]);
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 960) {
+      if (window.innerWidth >= 960) {
         setBlogsPerPage(12);
-      } else {
-        setBlogsPerPage(6);
       }
     };
 
     window.addEventListener("resize", handleResize);
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    // return () => {
+    //   window.removeEventListener("resize", handleResize);
+    // };
   }, []);
   const lastBlogIndex = currentPage * blogsPerPage;
   const firstBlogIndex = lastBlogIndex - blogsPerPage;
@@ -71,7 +67,7 @@ const Blogs = () => {
           setCurrentPage={setCurrentPage}
         />
       </div>
-      <div className="w-[25%] hidden md:block ">
+      <div className="w-[25%] hidden md:block fixed right-2 h-[100%] z-[-40]">
         <div className="relative mt-8">
           <input
             type="text"
@@ -122,7 +118,7 @@ const Blogs = () => {
           </h2>
           <ul className="text-orange">
             <li>
-              <a href="">Placer Story</a>
+              <a href="">PlaceHer Story</a>
             </li>
             <li>
               <a href="">Internship Story</a>

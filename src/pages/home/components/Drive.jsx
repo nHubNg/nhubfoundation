@@ -14,16 +14,16 @@ const Drive = () => {
             opportunity for growth and development regardless of gender, ethnic,
             religious background, through several impact-driven initiatives.
           </p>
-          <p className="hidden md:block text-textAsh text-[16px] text-center md:text-left">
+          {/* <p className="hidden md:block text-textAsh text-[16px] text-center md:text-left">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
             doloribus id labore nesciunt quaerat eos enim facere. Facilis
             maiores veniam libero rerum asperiores. Excepturi nam dolorem aut
             nobis voluptatibus atque.
-          </p>
+          </p> */}
         </div>
         <div className="hidden md:block ">
           <img
-            className="h-[25rem] border-[1px] border-orange"
+            className="h-[25rem] border-[10px] border-orange"
             src="https://res.cloudinary.com/nhubnacademy/image/upload/v1683589032/nHubFoundation/pexels-fauxels-3184657_1_1_zdzjca.png"
             alt=""
           />

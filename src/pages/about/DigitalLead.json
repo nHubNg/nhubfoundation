@@ -5,7 +5,7 @@
     "post":"Master Lead:IT",
     "linkedIn":"https://www.linkedin.com/in/desmond-fon/",
     "twitter":"https://twitter.com/DezmondFon",
-    "facebook":"",
+    "facebook":"https://www.facebook.com/profile.php?id=100069766370623",
     "id":1
  },
  {
@@ -28,7 +28,7 @@
  },
  {
     "image":"https://res.cloudinary.com/nhubnacademy/image/upload/v1683035906/nHubFoundation/image_6_7_ypbi8d.png",
-    "name":"Umeokoli Victor Onyeka",
+    "name":"Umeokoli Victor",
     "post":"Graphics Designer",
     "linkedIn":"https://www.linkedin.com/in/victor-umeh-146b19247/",
     "twitter":"https://twitter.com/Le_Sieger?s=08",
@@ -44,5 +44,6 @@
     "facebook":"",
     "id":5
  }
+
 
 ]

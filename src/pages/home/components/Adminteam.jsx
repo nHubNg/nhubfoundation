@@ -19,15 +19,15 @@ const Adminteam = () => {
             alt=""
           />
           <div
-            className="absolute bottom-0 left-0 w-full h-full flex text-center justify-center items-end bg-cardOverlay 
-         lg:opacity-0 lg:hover:opacity-100 transition-all duration-500 ease-in-out "
+            className="absolute bottom-0 left-0 w-full h-full flex text-center justify-center items-end lg:bg-cardOverlay  bg-overlay
+         md:opacity-0 md:hover:opacity-100 transition-all duration-500 ease-in-out "
           >
             <div className="py-2">
-              <h3 className="text-[28px] text-white font-[400] leading-8">
+              <h3 className="text-[26px] text-white font-[400] leading-8">
                 Mr Eric Nanle
               </h3>
               <h4 className="text-[16px] text-white">Executive Director</h4>
-              <div className=" py-2 flex gap-4 justify-center items-center">
+              <div className=" pt-2 pb-4 flex gap-4 justify-center items-center">
                 <a href="">
                   <img
                     className=""
@@ -58,15 +58,15 @@ const Adminteam = () => {
             alt=""
           />
           <div
-            className="absolute bottom-0 left-0 w-full h-full flex text-center justify-center items-end bg-overlay
-         lg:opacity-0 lg:hover:opacity-100 transition-all duration-500 ease-in-out  "
+            className="absolute bottom-0 left-0 w-full h-full flex text-center justify-center items-end lg:bg-cardOverlay  bg-overlay
+         md:opacity-0 md:hover:opacity-100 transition-all duration-500 ease-in-out  "
           >
             <div className="py-2">
-              <h3 className="text-[28px] text-white font-[400] leading-8">
+              <h3 className="text-[26px] text-white font-[400] leading-8">
                 Bashir Shaidu
               </h3>
               <h4 className="text-[16px] text-white">COO</h4>
-              <div className=" py-2 flex gap-4 justify-center items-center">
+              <div className="pt-2 pb-4 flex gap-4 justify-center items-center">
                 <a href="">
                   <img
                     className=""
@@ -100,15 +100,15 @@ const Adminteam = () => {
             alt=""
           />
           <div
-            className="absolute bottom-0 left-0 w-full h-full flex text-center justify-center items-end bg-overlay 
-        lg:opacity-0 lg:hover:opacity-100 transition-all duration-500 ease-in-out "
+            className="absolute bottom-0 left-0 w-full h-full flex text-center justify-center items-end  lg:bg-cardOverlay  bg-overlay 
+        md:opacity-0 md:hover:opacity-100 transition-all duration-500 ease-in-out "
           >
             <div className="py-2">
-              <h3 className="text-[28px] text-white font-[400] leading-8">
+              <h3 className="text-[26px] text-white font-[400] leading-8">
                 Nathan Pankyes
               </h3>
               <h4 className="text-[16px] text-white">Legal</h4>
-              <div className=" py-2 flex gap-4 justify-center items-center">
+              <div className="pt-2 pb-4 flex gap-4 justify-center items-center">
                 <a href="">
                   <img
                     className=""

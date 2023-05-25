@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 const Navbar = ({ handleDonate, handleDesktopDonate, handleNav, nav }) => {
+  const active = "text-orange border-b-2 pb-1 border-orange";
   return (
     <nav className="  bg-white ">
       <div className="my-container flex items-center md:justify-between   h-14">
@@ -106,22 +107,49 @@ const Navbar = ({ handleDonate, handleDesktopDonate, handleNav, nav }) => {
         <div className="hidden lg:flex">
           <ul className="flex text-textAsh  items-center justify-between gap-10 text-[]">
             <li className=" hover:text-orange ">
-              <Link to="/">Home</Link>
+              <NavLink
+                className={({ isActive }) => (isActive ? active : "")}
+                to="/"
+              >
+                Home
+              </NavLink>
             </li>
             <li className=" hover:text-orange ">
-              <Link to="/about">About</Link>
+              <NavLink
+                className={({ isActive }) => (isActive ? active : "")}
+                to="/about"
+              >
+                About
+              </NavLink>
             </li>
             <li className=" hover:text-orange ">
-              <Link to="/programs">Programs</Link>
+              <NavLink
+                className={({ isActive }) => (isActive ? active : "")}
+                to="/programs"
+              >
+                Programs
+              </NavLink>
             </li>
             <li className=" hover:text-orange ">
-              <Link to="/blogs"> Blog</Link>
+              <NavLink
+                className={({ isActive }) => (isActive ? active : "")}
+                to="/blogs"
+              >
+                {" "}
+                Blog
+              </NavLink>
             </li>
             <li className=" hover:text-orange ">
               <a href="nhubinternship.onrender.com">Internship</a>
             </li>
             <li className=" hover:text-orange ">
-              <Link to="/contact"> Contact us</Link>
+              <NavLink
+                className={({ isActive }) => (isActive ? active : "")}
+                to="/contact"
+              >
+                {" "}
+                Contact us
+              </NavLink>
             </li>
             <button
               className="bg-orange px-4 py-2  text-white rounded-md cursor-pointer hover:bg-purple  hover:text-white transition-all duration-1000 "

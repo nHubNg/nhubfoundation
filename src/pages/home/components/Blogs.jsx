@@ -38,7 +38,7 @@ const Blogs = () => {
           );
         })}
       </div>
-      <div className="w-[8rem]  py-2 mx-auto text-center bg-white border-[1px] border-orange mt-5 mb-4 lg:my-16 lg:px-3 group lg:hover:w-[10rem] lg:transition-[width] duration-700 cursor-pointer">
+      <div className="w-[8rem]  py-2 mx-auto text-center bg-white border-[1px] border-orange mt-5 mb-4 lg:my-16 lg:px-3 group lg:hover:w-[8rem] lg:transition-[width] duration-700 cursor-pointer">
         <a className="font-[500] text-orange flex justify-center items-center gap-2 lg:group-hover:justify-between">
           View All
           <img
