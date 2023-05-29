@@ -5,13 +5,13 @@ const Paginate = ({ totalBlogs, blogsPerPage, setCurrentPage }) => {
     pages.push(i);
   }
   return (
-    <div className=" flex justify-center items-center gap-3">
+    <div className=" flex justify-center items-center gap-3 my-5">
       {pages.map((page, index) => {
         return (
           <button
             key={index}
             onClick={() => setCurrentPage(page)}
-            className="px-3 py-1 border-[1px] border-lightgray hover:bg-orange hover:text-white transition-all duration-300 "
+            className="px-3 py-1 rounded-md border-[1px] border-lightgray hover:bg-orange hover:text-white transition-all duration-300 "
           >
             {page}
           </button>

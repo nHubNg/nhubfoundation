@@ -59,7 +59,7 @@ const Blogs = () => {
   const currentBlogs = blog.slice(firstBlogIndex, lastBlogIndex);
   return (
     <div className="my-container flex ">
-      <div className="w-[75%] pt-2">
+      <div className="md:w-[75%] pt-2">
         <Bloglist blog={currentBlogs} />
         <Paginate
           totalBlogs={blog.length}
