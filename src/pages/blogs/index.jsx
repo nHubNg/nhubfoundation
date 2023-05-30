@@ -78,12 +78,8 @@ import Paginate from "./Paginate";
 
 const Blogs = () => {
   // const [blog, setBlog] = useState([]);
-  const [currentPage, setCurrentPage] = useState(
-    JSON.parse(localStorage.getItem("currentPage")) || 1
-  );
-  const [blogsPerPage, setBlogsPerPage] = useState(
-    JSON.parse(localStorage.getItem("blogsPerPage"))
-  );
+  const [currentPage, setCurrentPage] = useState( 1);
+  const [blogsPerPage, setBlogsPerPage] = useState(6);
   console.log(currentPage, blogsPerPage);
   // useEffect(() => {
   //   const fetchBlogs = async () => {
@@ -104,14 +100,14 @@ const Blogs = () => {
 
     window.addEventListener("resize", handleResize);
     console.log(useEffect);
-    // return () => {
-    //   window.removeEventListener("resize", handleResize);
-    // };
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
-  useEffect(() => {
-    localStorage.setItem("currentPage", JSON.stringify(currentPage));
-    localStorage.setItem("blogsPerPage", JSON.stringify(blogsPerPage));
-  }, [currentPage, blogsPerPage]);
+  // useEffect(() => {
+  //   localStorage.setItem("currentPage", JSON.stringify(currentPage));
+  //   localStorage.setItem("blogsPerPage", JSON.stringify(blogsPerPage));
+  // }, [currentPage, blogsPerPage]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -122,9 +118,9 @@ const Blogs = () => {
 
     window.addEventListener("resize", handleResize);
 
-    // return () => {
-    //   window.removeEventListener("resize", handleResize);
-    // };
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
   const lastBlogIndex = currentPage * blogsPerPage;
   const firstBlogIndex = lastBlogIndex - blogsPerPage;
