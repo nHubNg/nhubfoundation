@@ -9,31 +9,31 @@ const blog = [
  "id":2,
  "img":"https://res.cloudinary.com/nhubnacademy/image/upload/v1682934549/nHubFoundation/Image_2_pjmkqj.png",
  "title":"US Embassy Visits nHub Nigeria",
- "preview":"Julia .P. McKay, the cultural   affairs officer of the embassy of the United states of America on Wednesday......."
+ "preview":"Julia .P. McKay, the cultural   affairs officer of the embassy of the United states of America on Wednesday..."
 },
 {
   "id":3,
   "img":"https://res.cloudinary.com/nhubnacademy/image/upload/v1682934516/nHubFoundation/Image_1_elrbvy.png",
   "title":"How Started UI/UX Design - Terrence Eze",
-  "preview":"The UI/Ux lead at nHub Nigeria, Mr. Terrence Eze took us through how he developed a career in UI/UX design...."
+  "preview":"The UI/Ux lead at nHub Nigeria, Mr. Terrence Eze took us through how he developed a career in UI/UX design..."
 },
 {
   "id":4,
   "img":"https://res.cloudinary.com/nhubnacademy/image/upload/v1682934516/nHubFoundation/Image_1_elrbvy.png",
   "title":"How Started UI/UX Design - Terrence Eze",
-  "preview":"The UI/Ux lead at nHub Nigeria, Mr. Terrence Eze took us through how he developed a career in UI/UX design...."
+  "preview":"The UI/Ux lead at nHub Nigeria, Mr. Terrence Eze took us through how he developed a career in UI/UX design..."
 },
 {
   "id":5,
   "img":"https://res.cloudinary.com/nhubnacademy/image/upload/v1682934516/nHubFoundation/Image_1_elrbvy.png",
   "title":"How Started UI/UX Design - Terrence Eze",
-  "preview":"The UI/Ux lead at nHub Nigeria, Mr. Terrence Eze took us through how he developed a career in UI/UX design...."
+  "preview":"The UI/Ux lead at nHub Nigeria, Mr. Terrence Eze took us through how he developed a career in UI/UX design..."
 },
 {
   "id":6,
   "img":"https://res.cloudinary.com/nhubnacademy/image/upload/v1682934516/nHubFoundation/Image_1_elrbvy.png",
   "title":"How Started UI/UX Design - Terrence Eze",
-  "preview":"The UI/Ux lead at nHub Nigeria, Mr. Terrence Eze took us through how he developed a career in UI/UX design...."
+  "preview":"The UI/Ux lead at nHub Nigeria, Mr. Terrence Eze took us through how he developed a career in UI/UX design..."
 },
 {
   "id":7,
@@ -131,7 +131,7 @@ const Blogs = () => {
   const currentBlogs = blog.slice(firstBlogIndex, lastBlogIndex);
   return (
     <div className="my-container flex ">
-      <div className="md:w-[75%] pt-2">
+      <div className="lg:w-[75%] pt-2">
         <Bloglist blog={currentBlogs} />
         <Paginate
           totalBlogs={blog.length}
@@ -139,7 +139,7 @@ const Blogs = () => {
           setCurrentPage={setCurrentPage}
         />
       </div>
-      <div className="w-[25%] hidden md:block fixed right-2 h-[100%] z-[-40]">
+      <div className="lg:w-[25%] hidden lg:block fixed right-2 h-[100%] z-[-40]">
         <div className="relative mt-8">
           <input
             type="text"

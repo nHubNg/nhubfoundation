@@ -8,11 +8,13 @@ const Bloglist = ({ blog }) => {
             key={blog.id}
           >
             <div className="p-5 flex flex-col justify-center items-center md:block">
+              <div className="w-full h-48 bg-red-300">
               <img
-                className="block max-w-[100%] object-cover"
+                className="block w-full h-full object-cover md:object-cover"
                 src={blog.img}
                 alt=""
               />
+              </div>
               <h4 className="text-[24px] font-[500] text-ash py-4">
                 {blog.title}
               </h4>

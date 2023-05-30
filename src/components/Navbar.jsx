@@ -75,14 +75,15 @@ const Navbar = ({ handleDonate, handleDesktopDonate, handleNav, nav }) => {
               </Link>
             </li>
             <li className="py-2">
-              <Link
+              <a
                 onClick={handleNav}
                 className="hover:text-orange text-textAsh"
-                to={{ pathname: "https://nhubinternship.onrender.com" }}
+                href="https://nhubinternship.onrender.com"
                 target="_blank"
+                rel='noreferrer'
               >
                 Internship
-              </Link>
+              </a>
             </li>
             <li className="py-2">
               <Link
@@ -140,7 +141,7 @@ const Navbar = ({ handleDonate, handleDesktopDonate, handleNav, nav }) => {
               </NavLink>
             </li>
             <li className=" hover:text-orange ">
-              <a href="nhubinternship.onrender.com">Internship</a>
+              <a href="nhubinternship.onrender.com" target="_blank" rel="noreferrer">Internship</a>
             </li>
             <li className=" hover:text-orange ">
               <NavLink
