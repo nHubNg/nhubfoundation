@@ -63,9 +63,11 @@ const Programs = () => {
   return (
     <div>
       <div className="relative">
-        <div className="bg-[url('https://res.cloudinary.com/nhubnacademy/image/upload/v1683076121/nHubFoundation/IMG_0721_lchbvf.jpg')] py-[5.5rem]  md:h-[80vh] md:mb-14 bg-no-repeat bg-cover bg-[top_bottom_12rem]"></div>
+        <div className="bg-[url('https://res.cloudinary.com/nhubnacademy/image/upload/v1683076121/nHubFoundation/IMG_0721_lchbvf.jpg')] py-[5.5rem]  md:h-[50vh]  lg:h-[80vh] md:mb-14 bg-no-repeat bg-cover bg-[top_bottom_12rem]"></div>
         <div className="absolute bottom-0 left-0 w-full h-full flex text-center justify-center items-center bg-headerOverlay  ">
-          <h2 className="text-[45px] text-white font-[600] ">Our Programs</h2>
+          <h2 className=" text-[30px] md:text-[45px] text-white font-[600] ">
+            Our Programs
+          </h2>
         </div>
       </div>
       <div className="flex flex-col gap-7 mt-5">

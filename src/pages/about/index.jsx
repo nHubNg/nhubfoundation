@@ -5,9 +5,11 @@ const About = () => {
   return (
     <div>
       <div className="relative">
-        <div className="bg-[url('https://res.cloudinary.com/nhubnacademy/image/upload/v1685008539/nHubFoundation/image_51_wabdzz.png')] py-[5rem] md:h-[80vh] bg-cover bg-[center_top_-2rem] md:bg-[top_bottom] bg-no-repeat"></div>
+        <div className="bg-[url('https://res.cloudinary.com/nhubnacademy/image/upload/v1685008539/nHubFoundation/image_51_wabdzz.png')] py-[5rem] md:h-[50vh]  lg:h-[80vh] bg-cover bg-[center_top_-2rem] md:bg-[top_bottom] bg-no-repeat"></div>
         <div className="absolute bottom-0 left-0 w-full h-full flex text-center justify-center items-center bg-headerOverlay  ">
-          <h2 className="text-[45px] text-white font-[600] ">About Us</h2>
+          <h2 className=" text-[30px] md:text-[45px] text-white font-[600] ">
+            About Us
+          </h2>
         </div>
       </div>
       <div className="my-container text-center my-6 ">
