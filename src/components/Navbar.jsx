@@ -140,8 +140,15 @@ const Navbar = ({ handleDonate, handleDesktopDonate, handleNav, nav }) => {
                 Blog
               </NavLink>
             </li>
-            <li className=" hover:text-orange ">
-              <a href="nhubinternship.onrender.com" target="_blank" rel="noreferrer">Internship</a>
+            <li className="py-2">
+              <a
+                className="hover:text-orange"
+                href="https://nhubinternship.onrender.com"
+                target="_blank"
+                rel='noreferrer'
+              >
+                Internship
+              </a>
             </li>
             <li className=" hover:text-orange ">
               <NavLink
