@@ -37,6 +37,9 @@ export default {
         veryLightGray: "rgba(255, 255, 255, 3)",
         lightShadow: "rgba(0, 0, 0, 0.25)",
         darkPurple: "#3B16A7",
+        red: "#FF0000",
+        skyBlue: "#C6D4ED",
+        blue: "#4DA0FF"
       },
     },
   },

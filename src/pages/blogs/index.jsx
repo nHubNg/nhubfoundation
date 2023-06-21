@@ -9,30 +9,30 @@ const blog = [
  "id":2,
  "img":"https://res.cloudinary.com/nhubnacademy/image/upload/v1682934549/nHubFoundation/Image_2_pjmkqj.png",
  "title":"US Embassy Visits nHub Nigeria",
- "preview":"Julia .P. McKay, the cultural   affairs officer of the embassy of the United states of America on Wednesday..."
+ "preview":"Julia .P. McKay, the cultural   affairs officer of the embassy of the United states of America..."
 },
 {
   "id":3,
   "img":"https://res.cloudinary.com/nhubnacademy/image/upload/v1682934516/nHubFoundation/Image_1_elrbvy.png",
-  "title":"How Started UI/UX Design - Terrence Eze",
-  "preview":"The UI/Ux lead at nHub Nigeria, Mr. Terrence Eze took us through how he developed a career in UI/UX design..."
+  "title":"How Started UI/UX Design - Terrence",
+  "preview":"The UI/Ux lead at nHub Nigeria, Mr. Terrence Eze took us through how he developed a career..."
 },
 {
   "id":4,
   "img":"https://res.cloudinary.com/nhubnacademy/image/upload/v1682934516/nHubFoundation/Image_1_elrbvy.png",
-  "title":"How Started UI/UX Design - Terrence Eze",
+  "title":"How Started UI/UX Design - Terrence",
   "preview":"The UI/Ux lead at nHub Nigeria, Mr. Terrence Eze took us through how he developed a career in UI/UX design..."
 },
 {
   "id":5,
   "img":"https://res.cloudinary.com/nhubnacademy/image/upload/v1682934516/nHubFoundation/Image_1_elrbvy.png",
-  "title":"How Started UI/UX Design - Terrence Eze",
+  "title":"How Started UI/UX Design - Terrence",
   "preview":"The UI/Ux lead at nHub Nigeria, Mr. Terrence Eze took us through how he developed a career in UI/UX design..."
 },
 {
   "id":6,
   "img":"https://res.cloudinary.com/nhubnacademy/image/upload/v1682934516/nHubFoundation/Image_1_elrbvy.png",
-  "title":"How Started UI/UX Design - Terrence Eze",
+  "title":"How Started UI/UX Design - Terrence",
   "preview":"The UI/Ux lead at nHub Nigeria, Mr. Terrence Eze took us through how he developed a career in UI/UX design..."
 },
 {

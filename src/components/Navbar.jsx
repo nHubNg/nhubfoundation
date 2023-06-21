@@ -75,7 +75,14 @@ const Navbar = ({ handleDonate, handleDesktopDonate, handleNav, nav }) => {
               </Link>
             </li>
             <li className="py-2">
-              <a
+              <Link
+                onClick={handleNav}
+                className="hover:text-orange text-textAsh"
+                to="/internship"
+              >
+                Internship
+              </Link>
+              {/* <a
                 onClick={handleNav}
                 className="hover:text-orange text-textAsh"
                 href="https://nhubinternship.onrender.com"
@@ -83,7 +90,7 @@ const Navbar = ({ handleDonate, handleDesktopDonate, handleNav, nav }) => {
                 rel='noreferrer'
               >
                 Internship
-              </a>
+              </a> */}
             </li>
             <li className="py-2">
               <Link
@@ -141,14 +148,21 @@ const Navbar = ({ handleDonate, handleDesktopDonate, handleNav, nav }) => {
               </NavLink>
             </li>
             <li className="py-2">
-              <a
+              <NavLink
+                className={({ isActive }) => (isActive ? active : "")}
+                to="/internship"
+              >
+                {" "}
+                Internship
+              </NavLink>
+              {/* <a
                 className="hover:text-orange"
                 href="https://nhubinternship.onrender.com"
                 target="_blank"
                 rel='noreferrer'
               >
                 Internship
-              </a>
+              </a> */}
             </li>
             <li className=" hover:text-orange ">
               <NavLink

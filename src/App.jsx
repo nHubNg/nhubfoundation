@@ -11,6 +11,7 @@ import Contact from "./pages/contact";
 import Courses from "./pages/courses/Courses";
 import Modal from "./components/Modal";
 import { useState } from "react";
+import Internship from "./pages/internship";
 // import Success from "./pages/Success/Success";
 
 function App() {
@@ -57,6 +58,7 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/courses" element={<Courses />} />
+          <Route path="/internship" element={<Internship />} />
           {/* <Route path="/success" element={<Success />} /> */}
         </Routes>
         <Footer />
