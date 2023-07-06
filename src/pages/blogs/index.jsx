@@ -76,6 +76,15 @@ import { useState, useEffect } from "react";
 import Bloglist from "./Bloglist";
 import Paginate from "./Paginate";
 
+
+function ScrollToTopOnMount() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return null;
+};
+
 const Blogs = () => {
   // const [blog, setBlog] = useState([]);
   const [currentPage, setCurrentPage] = useState( 1);
@@ -126,6 +135,8 @@ const Blogs = () => {
   const firstBlogIndex = lastBlogIndex - blogsPerPage;
   const currentBlogs = blog.slice(firstBlogIndex, lastBlogIndex);
   return (
+    <>
+    <ScrollToTopOnMount/>
     <div className="my-container flex ">
       <div className="lg:w-[75%] pt-2">
         <Bloglist blog={currentBlogs} />
@@ -198,6 +209,7 @@ const Blogs = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

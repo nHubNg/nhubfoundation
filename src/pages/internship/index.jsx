@@ -1,8 +1,16 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import PersonalDetails from "./components/personalDetails";
 import School from "./components/School";
 import FileUpload from "./components/FileUpload";
 
+
+function ScrollToTopOnMount() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return null;
+}
 const Internship = () => {
   const [page, setPage] = useState(0);
   const [formData, setFormData] = useState({
@@ -43,6 +51,8 @@ const Internship = () => {
     console.log(formData);
   };
   return (
+    <>
+    <ScrollToTopOnMount/>
     <div className="my-container">
     <div className="pt-10 pb-8 ">
     <p className="text-orange">nHub Internship Application</p>
@@ -88,6 +98,7 @@ const Internship = () => {
         </div>
     </div>
     </div>
+    </>
   );
 };
 

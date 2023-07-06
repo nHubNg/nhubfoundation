@@ -34,8 +34,8 @@ const Modal = ({ handleDesktopDonate }) => {
   }
 
   return (
-    <div className="bg-overlay h-[100vh]  w-[100%] top-0 fixed z-50 flex items-center justify-center">
-      <div className="bg-white w-[90%] max-w-[450px] rounded-lg px-3 py-4">
+    <div className="bg-overlay h-[100vh]  w-[100%] top-0 fixed z-50 flex items-center md:justify-end justify-center ">
+      <div className="bg-white w-[90%] max-w-[450px] rounded-lg px-3 py-4 md:mr-12">
         <div className="flex justify-center items-center">
           <button onClick={handleDesktopDonate}>
             <img
@@ -44,7 +44,7 @@ const Modal = ({ handleDesktopDonate }) => {
             />
           </button>
         </div>
-        <div className="my-3">
+        <div className="my-3 px-5">
           <h3 className="font-semibold text-lg pt-1 text-gray">
             Partner with us
           </h3>
@@ -54,7 +54,7 @@ const Modal = ({ handleDesktopDonate }) => {
             and beyond.
           </p>
         </div>
-        <div className="my-3">
+        {/* <div className="my-3  px-5">
           <h3 className="font-semibold text-gray">
             You can send your donations to the account details below:
           </h3>
@@ -72,8 +72,8 @@ const Modal = ({ handleDesktopDonate }) => {
               Bank
             </p>
           </div>
-        </div>
-        <div>
+        </div> */}
+        <div className="">
           <h4 className="text-gray font-semibold">
             You can also make online payment
           </h4>
@@ -82,20 +82,20 @@ const Modal = ({ handleDesktopDonate }) => {
             <form action="">
               <div className='flex items-center justify-between gap-5 mb-3'>
                 <label htmlFor="firstName">First Name:</label>
-                <input type="text" name="" id="firstName" className='border-[2px] border-lightgrey outline-none rounded-md w-[60%] px-3' value={firstName} onChange={e => setFirstName(e.target.value)} placeholder='Enter First Name
+                <input type="text" name="" id="firstName" className='border-[2px] border-lightgrey outline-none rounded-md w-[60%] md:w-[70%] px-3' value={firstName} onChange={e => setFirstName(e.target.value)} placeholder='Enter First Name
                 ' />
               </div>
               <div className='flex items-center justify-between gap-5 mb-3'>
                 <label htmlFor="lastName">Last Name:</label>
-                <input type="text" id='lastName' className='border-[2px] border-lightgrey outline-none rounded-md w-[60%] px-3' value={lastName} onChange={e => setLastName(e.target.value)} placeholder='Enter Last Name' />
+                <input type="text" id='lastName' className='border-[2px] border-lightgrey outline-none rounded-md w-[60%] md:w-[70%] px-3' value={lastName} onChange={e => setLastName(e.target.value)} placeholder='Enter Last Name' />
               </div>
               <div className='flex items-center justify-between gap-5 mb-3'>
                 <label htmlFor="email">Email:</label>
-                <input type="text" id='email' className='border-[2px] border-lightgrey outline-none rounded-md w-[60%] px-3' value={email} onChange={e => setEmail(e.target.value)} placeholder='Enter Email' />
+                <input type="text" id='email' className='border-[2px] border-lightgrey outline-none rounded-md w-[60%] md:w-[70%] px-3' value={email} onChange={e => setEmail(e.target.value)} placeholder='Enter Email' />
               </div>
               <div className='flex items-center justify-between gap-5 mb-3'>
                 <label htmlFor="amount">Amount:</label>
-                <input type="number" id='amount' className='border-[2px] border-lightgrey outline-none rounded-md w-[60%] px-3' value={amount} onChange={e => setAmount(e.target.value)} placeholder='Enter Amount' />
+                <input type="number" id='amount' className='border-[2px] border-grey outline-none rounded-md w-[60%] md:w-[70%] px-3' value={amount} onChange={e => setAmount(e.target.value)} placeholder='Enter Amount' />
               </div>
               <div className='flex justify-center items-center mt-8 mb-5'>
                 <input type='submit' className="bg-orange py-2 px-3 text-white text-center rounded-md" onClick={payWithPaystack} placeholder='Make Payment' />

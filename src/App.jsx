@@ -10,7 +10,7 @@ import Gallery from "./pages/gallery";
 import Contact from "./pages/contact";
 import Courses from "./pages/courses/Courses";
 import Modal from "./components/Modal";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Internship from "./pages/internship";
 // import Success from "./pages/Success/Success";
 
@@ -39,6 +39,8 @@ function App() {
       ? (document.body.style.overflow = "hidden")
       : (document.body.style.overflow = "unset");
   };
+
+  
 
   return (
     <>

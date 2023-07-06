@@ -84,15 +84,16 @@ const Blogs = () => {
           View all our latest Articles
         </p>
       </div>
-      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8 md:my-10">
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-6">
         {visibleBlogs.map((blog) => {
           return (
             <div
               className="border-[1px] border-lightgray shadow-[lightShadow] rounded-lg"
               key={blog.id}
             >
-              <div className=" m-8">
-                <div className="md:w-[20rem]">
+              <div className="m-8 md:m-6">
+                {/* 20rem  100%*/}
+                <div className="">
                   <img className="w-full block" src={blog.img} alt="" />
                 </div>
                 <h4 className="text-[24px] font-[500] text-ash py-4 lg:w-[20ch]">

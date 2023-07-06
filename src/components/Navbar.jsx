@@ -27,7 +27,7 @@ const Navbar = ({ handleDonate, handleDesktopDonate, handleNav, nav }) => {
         <div
           className={
             nav
-              ? "fixed  z-[1000] bg-white top-14 left-0 w-[40%] flex flex-col transition-all duration-500 ease-in-out"
+              ? "fixed  z-[1000] bg-white top-14 left-0 w-[50%] flex flex-col transition-all duration-500 ease-in-out"
               : "fixed left-[-100%]"
           }
         >

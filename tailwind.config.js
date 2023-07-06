@@ -39,7 +39,8 @@ export default {
         darkPurple: "#3B16A7",
         red: "#FF0000",
         skyBlue: "#C6D4ED",
-        blue: "#4DA0FF"
+        blue: "#4DA0FF",
+        grey: "#D0D5DD",
       },
     },
   },

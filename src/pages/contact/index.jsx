@@ -1,6 +1,17 @@
+import { useEffect } from "react";
+
+function ScrollToTopOnMount() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return null;
+}
+
 const Contact = () => {
   return (
     <>
+    <ScrollToTopOnMount/>
       <div className="h-40 bg-contact bg-no-repeat  bg-center bg-cover mb-10 lg:mb-20 sm:bg-desktopContact md:h-[60vh] lg:h-[80vh]"></div>
       <section className=" text-[1rem] bg-white max-w-[90%] mx-auto text-center lg:flex lg:flex-row-reverse lg:text-[0.8rem] lg:max-w-4xl lg:mx-auto lg:h-[40rem] xl:max-w-6xl    lg:mb-20 lg:border-2 lg:border-orange">
         <div className="max-w-xl mx-auto lg:max-w-[50%] lg:grid lg:place-items-center lg:max-h-full ">

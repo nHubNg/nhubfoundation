@@ -1,10 +1,21 @@
+import { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperNav from "./SwiperNav";
 import "swiper/css";
 
+
+function ScrollToTopOnMount() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return null;
+}
 const Gallery = () => {
   return (
+   
     <section>
+       <ScrollToTopOnMount/>
       <div className="h-40 bg-gallery bg-no-repeat bg-cover  bg-center mb-10 sm:bg-desktopGallery sm:h-[50vh] md:h-[60vh] lg:h-[80vh]"></div>
       <section className="text-center text-ash text-lg max-w-[90%] mx-auto pb-10 sm:max-w-2xl lg:max-w-4xl xl:max-w-6xl">
         {/* first slider */}

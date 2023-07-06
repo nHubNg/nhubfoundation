@@ -1,9 +1,19 @@
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import staff from "./Admin.json";
 import lead from "./DigitalLead.json";
+
+function ScrollToTopOnMount() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return null;
+}
 const About = () => {
   return (
     <div>
+      <ScrollToTopOnMount/>
       <div className="relative">
         <div className="bg-[url('https://res.cloudinary.com/nhubnacademy/image/upload/v1685008539/nHubFoundation/image_51_wabdzz.png')] py-[5rem] md:h-[50vh]  lg:h-[80vh] bg-cover bg-[center_top_-2rem] md:bg-[top_bottom] bg-no-repeat"></div>
         <div className="absolute bottom-0 left-0 w-full h-full flex text-center justify-center items-center bg-headerOverlay  ">
@@ -13,7 +23,7 @@ const About = () => {
         </div>
       </div>
       <div className="my-container text-center my-6 ">
-        <p className="text-[16px] md:text-[20px] leading-5 md:leading-6 md:my-16 md:w-[60%] md:mx-auto">
+        <p className="text-[16px] text-textAsh md:text-[20px] leading-5 md:leading-6 md:my-16 md:w-[60%] md:mx-auto">
           nHub Foundation is a non-governmental and not-for-profit organization
           that works to enhance policy advocacy, gender inclusiveness,
           Technology for all, infrastructure/capacity building as regards
