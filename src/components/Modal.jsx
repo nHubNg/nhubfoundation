@@ -3,8 +3,8 @@ import PaystackPop from '@paystack/inline-js'
 
 const Modal = ({ handleDesktopDonate }) => {
 
-  const [firstName, setFirstName] = useState('')
-  const [lastName, setLastName] = useState('')
+  const [name, setName] = useState('')
+  // const [lastName, setLastName] = useState('')
   const [email, setEmail] = useState('')
   const [amount, setAmount] = useState('')
 
@@ -16,14 +16,13 @@ const Modal = ({ handleDesktopDonate }) => {
       key: publicKey,
       amount: amount * 100,
       email,
-      firstname: firstName,
-      lastname: lastName,
+      name: name,
+      // lastname: lastName,
       currency: 'NGN',
       onSuccess: (transaction) => {
         let message = `Payment Complete! Reference: ${transaction.reference}`
         alert(message)
-        setFirstName('')
-        setLastName('')
+        setName('')
         setEmail('')
         setAmount('')
       },
@@ -35,16 +34,16 @@ const Modal = ({ handleDesktopDonate }) => {
 
   return (
     <div className="bg-overlay h-[100vh]  w-[100%] top-0 fixed z-50 flex items-center md:justify-end justify-center ">
-      <div className="bg-white w-[90%] max-w-[450px] rounded-lg px-3 py-4 md:mr-12">
+      <div className="bg-white w-[90%] mx-auto max-w-[450px] rounded-lg px-5 py-4 md:mr-12 flex flex-col justify-center ">
         <div className="flex justify-center items-center">
-          <button onClick={handleDesktopDonate}>
+          {/* <button onClick={handleDesktopDonate}>
             <img
               src="https://res.cloudinary.com/nhubnacademy/image/upload/v1682899396/nHubFoundation/Vector_8_p2ivyo.png"
               alt=""
             />
-          </button>
+          </button> */}
         </div>
-        <div className="my-3 px-5">
+        <div className="my-3 ">
           <h3 className="font-semibold text-lg pt-1 text-gray">
             Partner with us
           </h3>
@@ -78,27 +77,32 @@ const Modal = ({ handleDesktopDonate }) => {
             You can also make online payment
           </h4>
           <p className="text-sm text-lightgrey">Fill your details.</p>
-          <div className='mt-3 mr-8'>
+          <div className='mt-3 '>
             <form action="">
-              <div className='flex items-center justify-between gap-5 mb-3'>
-                <label htmlFor="firstName">First Name:</label>
-                <input type="text" name="" id="firstName" className='border-[2px] border-lightgrey outline-none rounded-md w-[60%] md:w-[70%] px-3' value={firstName} onChange={e => setFirstName(e.target.value)} placeholder='Enter First Name
-                ' />
+              <div className='my-2'>
+                <label htmlFor="name" className="my-1">Name</label>
+                <input type="text" name="" id="name" className='border-[2px] border-grey outline-none rounded-md w-[100%] px-3 py-2 placeholder-darkBlue' value={name} onChange={e => setName(e.target.value)} placeholder='e.g John Doe' />
               </div>
-              <div className='flex items-center justify-between gap-5 mb-3'>
+              {/* <div className=''>
                 <label htmlFor="lastName">Last Name:</label>
-                <input type="text" id='lastName' className='border-[2px] border-lightgrey outline-none rounded-md w-[60%] md:w-[70%] px-3' value={lastName} onChange={e => setLastName(e.target.value)} placeholder='Enter Last Name' />
+                <input type="text" id='lastName' className='border-[2px] border-lightgrey outline-none rounded-md w-[100%] px-3' value={lastName} onChange={e => setLastName(e.target.value)} placeholder='Enter Last Name' />
+              </div> */}
+              <div className='my-2'>
+                <label htmlFor="email" className="my-1">Email</label>
+                <input type="text" id='email' className='border-[2px] border-grey  rounded-md w-[100%] px-3 py-2 placeholder-darkBlue' value={email} onChange={e => setEmail(e.target.value)} placeholder='Johndoe@example.com' />
               </div>
-              <div className='flex items-center justify-between gap-5 mb-3'>
-                <label htmlFor="email">Email:</label>
-                <input type="text" id='email' className='border-[2px] border-lightgrey outline-none rounded-md w-[60%] md:w-[70%] px-3' value={email} onChange={e => setEmail(e.target.value)} placeholder='Enter Email' />
+              <div className='my-2'>
+                <label htmlFor="amount" className="my-1">Amount</label>
+                <input type="number" id='amount' className='border-[2px] border-grey outline-none rounded-md w-[100%] px-3 py-2 placeholder-darkBlue' value={amount} onChange={e => setAmount(e.target.value)} placeholder='Enter Amount' />
               </div>
-              <div className='flex items-center justify-between gap-5 mb-3'>
-                <label htmlFor="amount">Amount:</label>
-                <input type="number" id='amount' className='border-[2px] border-grey outline-none rounded-md w-[60%] md:w-[70%] px-3' value={amount} onChange={e => setAmount(e.target.value)} placeholder='Enter Amount' />
-              </div>
-              <div className='flex justify-center items-center mt-8 mb-5'>
-                <input type='submit' className="bg-orange py-2 px-3 text-white text-center rounded-md" onClick={payWithPaystack} placeholder='Make Payment' />
+              <div className='flex justify-center flex-col md:flex-row items-center gap-3 md:gap-8 mt-8 mb-5'>
+                {/* <input type='submit' className="bg-orange py-2 px-3 text-white text-center rounded-md"  placeholder='Make Payment' /> */}
+                <button  onClick={handleDesktopDonate} className="w-full border-grey border-[2px] text-darkBlue px-12 py-2 rounded-lg">
+                  Cancel
+                </button>
+                <button onClick={payWithPaystack} className="w-full bg-buttonPurple px-12 py-2 text-white rounded-lg">
+                  Confirm
+                </button>
               </div>
             </form>
           </div>

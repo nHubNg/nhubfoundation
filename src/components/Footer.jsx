@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      <footer className="bg-black text-textAsh text-[1rem]  lg:py-6 ">
-        <div className="p-4  flex flex-col gap-4 sm:max-w-2xl sm:mx-auto sm:flex  sm:flex-row sm:py-10  sm:justify-between lg:max-w-4xl lg:mx-auto  xl:max-w-6xl">
-          <div className=" flex flex-col gap-4">
-            <h3 className="text-[1.2rem] leading-5">Company</h3>
+      <footer className="bg-black text-textAsh text-[1rem]   ">
+        <div className=" my-container py-6 md:py-11 flex flex-col gap-4   md:flex-row  md:justify-between ">
+          <div className=" flex flex-col gap-4 basis-1/4">
+            <h3 className="text-[1.2rem] font-semibold leading-5">Company</h3>
             <ul className=" leading-6 flex flex-col gap-2">
               <li>
                 <Link
@@ -33,14 +33,9 @@ const Footer = () => {
                   Terms & Conditions
                 </a>
               </li>
-              <li>
-                <a className="active:text-orange hover:text-orange" href="">
-                  Support Center
-                </a>
-              </li>
             </ul>
           </div>
-          <div className="flex flex-col gap-4">
+          {/* <div className="flex flex-col gap-4">
             <h3 className="text-[1.2rem] leading-5">Question?</h3>
             <ul className=" leading-6  flex flex-col gap-2 ">
               <li>
@@ -78,23 +73,23 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
-          </div>
-          <div className="flex flex-col gap-4">
-            <h3 className="text-[1.2rem] leading-5">Contact us</h3>
+          </div> */}
+          <div className="flex flex-col gap-4 basis-1/3">
+            <h3 className="text-[1.2rem] font-semibold leading-5">Find us</h3>
             <ul className=" leading-6  flex flex-col gap-2">
-              <li>
-                <a
-                  className="active:text-orange hover:text-orange"
-                  href="https://www.google.com/maps/place/nHub+Foundation/@9.8788245,8.8747457,15z/data=!4m6!3m5!1s0x10537387fc85cf8b:0xc3317526ad656388!8m2!3d9.8788245!4d8.8747457!16s%2Fg%2F11hzlzcy49"
-                >
-                  <img
+              <li className="">
+              <img
                     src={
                       "https://res.cloudinary.com/ddgyd8szc/image/upload/v1682791103/vector3_wn5f1n.png"
                     }
                     alt=""
                     className="inline mr-2 h-4 w-4"
                   />
-                  nHub Foundation
+                <a
+                  className="active:text-orange hover:text-orange"
+                  href="https://www.google.com/maps/place/nHub+Foundation/@9.8788245,8.8747457,15z/data=!4m6!3m5!1s0x10537387fc85cf8b:0xc3317526ad656388!8m2!3d9.8788245!4d8.8747457!16s%2Fg%2F11hzlzcy49"
+                >
+                  2nd Floor TAEN Business Complex Opposite former NITEL Office, Old Airport Junction, Jos, Plateau State, Nigeria.
                 </a>
               </li>
               <li>
@@ -129,8 +124,8 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="flex flex-col gap-4">
-            <h3 className="text-[1.2rem] leading-5">Useful Links</h3>
+          <div className="flex flex-col gap-4 ">
+            <h3 className="text-[1.2rem] font-semibold leading-5">Social Media Links</h3>
             <ul className="text-[1rem] leading-6  flex flex-col gap-2">
               <li>
                 <a
@@ -178,18 +173,17 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <img
-                  src={
-                    "https://res.cloudinary.com/ddgyd8szc/image/upload/v1682791103/Vector_6_ftlpj1.png"
-                  }
-                  alt=""
-                  className="inline mr-2"
-                />
                 <a
                   className="active:text-orange hover:text-orange"
                   href="https://ng.linkedin.com/company/nhub-foundation-africa"
                 >
-                  <img alt="" className="inline mr-2" />
+                  <img
+                    src={
+                      "https://res.cloudinary.com/ddgyd8szc/image/upload/v1682791103/Vector_6_ftlpj1.png"
+                    }
+                    alt=""
+                    className="inline mr-2"
+                  />
                   Linkedin
                 </a>
               </li>
@@ -198,7 +192,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <p className="text-[0.8rem] leading-5 text-center">
+          <p className="text-[0.8rem] leading-5 text-center py-4">
             @2022 <span className="text-orange">www.nhubfoundation.org </span>
             all right reserved
           </p>
