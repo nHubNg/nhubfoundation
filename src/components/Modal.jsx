@@ -80,7 +80,7 @@ const Modal = ({ handleDesktopDonate }) => {
           <div className='mt-3 '>
             <form action="">
               <div className='my-2'>
-                <label htmlFor="name" className="my-1">Name</label>
+                <label htmlFor="name" className="my-2">Name</label>
                 <input type="text" name="" id="name" className='border-[2px] border-grey outline-none rounded-md w-[100%] px-3 py-2 placeholder-darkBlue' value={name} onChange={e => setName(e.target.value)} placeholder='e.g John Doe' />
               </div>
               {/* <div className=''>
@@ -88,11 +88,11 @@ const Modal = ({ handleDesktopDonate }) => {
                 <input type="text" id='lastName' className='border-[2px] border-lightgrey outline-none rounded-md w-[100%] px-3' value={lastName} onChange={e => setLastName(e.target.value)} placeholder='Enter Last Name' />
               </div> */}
               <div className='my-2'>
-                <label htmlFor="email" className="my-1">Email</label>
+                <label htmlFor="email" className="my-2">Email</label>
                 <input type="text" id='email' className='border-[2px] border-grey  rounded-md w-[100%] px-3 py-2 placeholder-darkBlue' value={email} onChange={e => setEmail(e.target.value)} placeholder='Johndoe@example.com' />
               </div>
               <div className='my-2'>
-                <label htmlFor="amount" className="my-1">Amount</label>
+                <label htmlFor="amount" className="my-2">Amount</label>
                 <input type="number" id='amount' className='border-[2px] border-grey outline-none rounded-md w-[100%] px-3 py-2 placeholder-darkBlue' value={amount} onChange={e => setAmount(e.target.value)} placeholder='Enter Amount' />
               </div>
               <div className='flex justify-center flex-col md:flex-row items-center gap-3 md:gap-8 mt-8 mb-5'>

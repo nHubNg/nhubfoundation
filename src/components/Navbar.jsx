@@ -1,15 +1,19 @@
 import { NavLink, Link } from "react-router-dom";
+import hamburger from "../assets/hamburger.png"
+import logo from "../assets/logo.png"
+import close from "../assets/close.png"
 
 const Navbar = ({ handleDonate, handleDesktopDonate, handleNav, nav }) => {
   const active = "text-orange border-b-2 pb-1 border-orange";
   return (
-    <nav className="  bg-white ">
+    <nav className="  bg-white">
       <div className="my-container flex items-center md:justify-between   h-14">
         <div onClick={handleNav} className="lg:hidden">
           <img
-            src={
-              "https://res.cloudinary.com/nhubnacademy/image/upload/v1682899502/nHubFoundation/Vector_9_hsbdsn.png"
-            }
+            // src={
+            //   "https://res.cloudinary.com/nhubnacademy/image/upload/v1682899502/nHubFoundation/Vector_9_hsbdsn.png"
+            // }
+            src={hamburger}
             alt=""
           />
         </div>
@@ -17,9 +21,10 @@ const Navbar = ({ handleDonate, handleDesktopDonate, handleNav, nav }) => {
         <div className="mx-auto lg:mx-0">
           <Link to="/">
             <img
-              src={
-                "https://res.cloudinary.com/nhubnacademy/image/upload/v1682899395/nHubFoundation/image_1_w7fcrk.png"
-              }
+              // src={
+              //   "https://res.cloudinary.com/nhubnacademy/image/upload/v1682899395/nHubFoundation/image_1_w7fcrk.png"
+              // }
+              src={logo}
               alt=""
             />
           </Link>
@@ -34,7 +39,8 @@ const Navbar = ({ handleDonate, handleDesktopDonate, handleNav, nav }) => {
           <ul className="p-4 ">
             <div onClick={handleNav} className="flex justify-end">
               <img
-                src="https://res.cloudinary.com/nhubnacademy/image/upload/v1682899396/nHubFoundation/Vector_8_p2ivyo.png"
+                // src="https://res.cloudinary.com/nhubnacademy/image/upload/v1682899396/nHubFoundation/Vector_8_p2ivyo.png"
+                src={close}
                 alt=""
               />
             </div>
@@ -112,8 +118,8 @@ const Navbar = ({ handleDonate, handleDesktopDonate, handleNav, nav }) => {
           </ul>
         </div>
 
-        <div className="hidden lg:flex">
-          <ul className="flex text-textAsh  items-center justify-between gap-10 text-[]">
+        <div className="hidden lg:flex  ">
+          <ul className="flex text-textAsh  items-center justify-between gap-10 text-[] ">
             <li className=" hover:text-orange ">
               <NavLink
                 className={({ isActive }) => (isActive ? active : "")}

@@ -23,7 +23,7 @@ const About = () => {
         </div>
       </div>
       <div className="my-container text-center my-6 ">
-        <p className="text-[16px] text-textAsh md:text-[20px] leading-5 md:leading-6 md:my-16 md:w-[60%] md:mx-auto">
+        <p className="text-[16px] text-textAsh md:text-[17px]  md:my-16 md:w-[60%] md:mx-auto">
           nHub Foundation is a non-governmental and not-for-profit organization
           that works to enhance policy advocacy, gender inclusiveness,
           Technology for all, infrastructure/capacity building as regards

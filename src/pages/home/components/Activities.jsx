@@ -69,7 +69,7 @@ const Activities = () => {
               <h3 className="font-medium text-[24px] text-ash lg:group-hover:translate-y-[-50px] lg:mt-4 transition-all duration-500">
                 {card.title}
               </h3>
-              <p className="text-[14px]  text-center text-textAsh sm:w-[30ch] md:w-[30ch] lg:hidden lg:group-hover:flex lg:group-hover:translate-y-[-40px] transition-all duration-500 ">
+              <p className="text-[14px]  text-center text-textAsh sm:w-[30ch] md:w-[30ch] lg:hidden lg:group-hover:flex lg:group-hover:translate-y-[-40px] transition-all duration-300 ">
                 {card.text}
               </p>
             </div>
