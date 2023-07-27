@@ -17,7 +17,14 @@ const Courses = () => {
   return (
     <section className=" pb-20 sm:pb-28">
       <ScrollToTopOnMount/>
-      <div className="h-40 bg-courses bg-no-repeat bg-cover bg-center sm:mb-16 sm:bg-desktopCourses sm:h-[50vh]  md:h-[60vh] lg:h-[80vh]"></div>
+      <div className="relative">
+        <div className="h-40  bg-no-repeat bg-cover bg-center sm:mb-16 bg-courses sm:h-[50vh]  md:h-[60vh] lg:h-[80vh] "></div>
+        <div className="absolute bottom-0 left-0 w-full h-full flex text-center justify-center items-center bg-headerOverlay  ">
+            <h2 className=" text-[30px] md:text-[45px] text-white font-[600] ">
+             Courses
+            </h2>
+          </div>
+      </div>
       <section className="my-container">
         <Article
           img={

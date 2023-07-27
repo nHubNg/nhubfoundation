@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 import Home from "./pages/home";
 import About from "./pages/about";
 import Programs from "./pages/programs";
@@ -10,13 +10,26 @@ import Gallery from "./pages/gallery";
 import Contact from "./pages/contact";
 import Courses from "./pages/courses/Courses";
 import Modal from "./components/Modal";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Internship from "./pages/internship";
+import Dashboard from "./admin";
+import PendingReviews from "./admin/components/PendingReviews";
+import PlaceHer from "./admin/components/PlaceHer";
+import Interviews from "./admin/components/Interviews";
+import Approved from "./admin/components/Approved";
+import Declined from "./admin/components/Declined";
+import Allblogs from "./admin/components/Allblogs";
+import Newblog from "./admin/components/Newblog";
+import Categories from "./admin/components/Categories";
+import Tags from "./admin/components/Tags";
+
 // import Success from "./pages/Success/Success";
 
 function App() {
   const [donate, setDonate] = useState(false);
   const [nav, setNav] = useState(false);
+  const [showNav, setShowNav] = useState(true);
+ 
 
   const handleNav = () => {
     setNav(!nav);
@@ -40,18 +53,21 @@ function App() {
       : (document.body.style.overflow = "unset");
   };
 
-  
-
+  const pathname = window.location.pathname
+  console.log(pathname)
+ 
   return (
     <>
       <BrowserRouter>
         {donate ? <Modal handleDesktopDonate={handleDesktopDonate} /> : ""}
-        <Navbar
+        {pathname.includes ( "/admin") ? "" : <Navbar
           handleDonate={handleDonate}
           handleNav={handleNav}
           handleDesktopDonate={handleDesktopDonate}
           nav={nav}
         />
+       }
+       {}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -62,9 +78,27 @@ function App() {
           <Route path="/courses" element={<Courses />} />
           <Route path="/internship" element={<Internship />} />
           {/* <Route path="/success" element={<Success />} /> */}
+        <Route path="/admin" element={<Dashboard />} >
+        <Route  path="/admin/applications" >
+          <Route path="/admin/applications/pending" element={<PendingReviews/>}/>
+          <Route path="/admin/applications/placeher" element={<PlaceHer/>}/>
+          <Route path="/admin/applications/interview" element={<Interviews/>}/>
+          <Route path="/admin/applications/approved" element = {<Approved/>}/>
+          <Route path="/admin/applications/declined" element = {<Declined/>}/>
+        </Route>
+        <Route path="/admin/blogadmin">
+          <Route path="/admin/blogadmin/all" element={<Allblogs/>}/>
+          <Route path="/admin/blogadmin/new" element={<Newblog/>}/>
+          <Route path="/admin/blogadmin/categories" element={<Categories/>}/>
+          <Route path="/admin/blogadmin/tags"  element={<Tags/>}/>
+        </Route>
+         
+        </Route>
         </Routes>
-        <Footer />
+        {pathname.includes ("/admin") ? "" :  <Footer /> }
+       
       </BrowserRouter>
+     
     </>
   );
 }

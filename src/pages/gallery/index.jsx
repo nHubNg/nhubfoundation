@@ -16,7 +16,14 @@ const Gallery = () => {
    
     <section>
        <ScrollToTopOnMount/>
-      <div className="h-40 bg-gallery bg-no-repeat bg-cover  bg-center mb-10 sm:bg-desktopGallery sm:h-[50vh] md:h-[60vh] lg:h-[80vh]"></div>
+      <div className="relative">
+        <div className="h-40 bg-gallery bg-no-repeat bg-cover  bg-center mb-10  sm:h-[50vh] md:h-[60vh] lg:h-[80vh]"></div>
+        <div className="absolute bottom-0 left-0 w-full h-full flex text-center justify-center items-center bg-cardOverlay  ">
+              <h2 className=" text-[30px] md:text-[45px] text-white font-[600] ">
+               Gallery
+              </h2>
+            </div>
+      </div>
       <section className="text-center text-ash text-lg max-w-[90%] mx-auto pb-10 sm:max-w-2xl lg:max-w-4xl xl:max-w-6xl">
         {/* first slider */}
         <div className="my-8 flex flex-col gap-8">

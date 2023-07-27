@@ -95,12 +95,12 @@ const Modal = ({ handleDesktopDonate }) => {
                 <label htmlFor="amount" className="my-2">Amount</label>
                 <input type="number" id='amount' className='border-[2px] border-grey outline-none rounded-md w-[100%] px-3 py-2 placeholder-darkBlue' value={amount} onChange={e => setAmount(e.target.value)} placeholder='Enter Amount' />
               </div>
-              <div className='flex justify-center flex-col md:flex-row items-center gap-3 md:gap-8 mt-8 mb-5'>
+              <div className='flex justify-center  items-center gap-3 md:gap-8 mt-8 mb-5'>
                 {/* <input type='submit' className="bg-orange py-2 px-3 text-white text-center rounded-md"  placeholder='Make Payment' /> */}
-                <button  onClick={handleDesktopDonate} className="w-full border-grey border-[2px] text-darkBlue px-12 py-2 rounded-lg">
+                <button  onClick={handleDesktopDonate} className="w-full border-grey border-[2px] text-darkBlue  md:px-12 py-2 rounded-lg">
                   Cancel
                 </button>
-                <button onClick={payWithPaystack} className="w-full bg-buttonPurple px-12 py-2 text-white rounded-lg">
+                <button onClick={payWithPaystack} className="w-full bg-buttonPurple  md:px-12 py-2 text-white rounded-lg">
                   Confirm
                 </button>
               </div>

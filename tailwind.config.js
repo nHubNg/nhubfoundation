@@ -6,15 +6,13 @@ export default {
       contact:
         'url("https://res.cloudinary.com/nhubnacademy/image/upload/v1683205246/Frame_1144_lmrctx.png")',
       courses:
-        'url("https://res.cloudinary.com/nhubnacademy/image/upload/v1683206377/Frame_1144_2_r5xrts.png")',
+        'url("https://res.cloudinary.com/nhubnacademy/image/upload/v1690461153/nHubFoundation/IMG-20230715-WA0037_wgiprc.jpg")',
       gallery:
-        'url("https://res.cloudinary.com/nhubnacademy/image/upload/v1683206490/Frame_1144_4_uuxzyk.png")',
+        'url("https://res.cloudinary.com/nhubnacademy/image/upload/v1690462069/nHubFoundation/IMG-20230715-WA0106_wuhru8.jpg")',
       desktopContact:
         'url("https://res.cloudinary.com/nhubnacademy/image/upload/v1683559027/nHubFoundation/Frame_1144_6_cgw6on.png")',
-      desktopGallery:
-        'url("https://res.cloudinary.com/nhubnacademy/image/upload/v1683559037/nHubFoundation/Frame_1144_8_ikuk1h.png")',
-      desktopCourses:
-        'url("https://res.cloudinary.com/nhubnacademy/image/upload/v1683558770/Frame_1144_7_jnms2j.png")',
+      // desktopGallery:
+      //   'url("https://res.cloudinary.com/nhubnacademy/image/upload/v1683559037/nHubFoundation/Frame_1144_8_ikuk1h.png")',
       about:
         'url("https://res.cloudinary.com/nhubnacademy/image/upload/v1683646832/nHubFoundation/Frame_1048_nsmske.png")',
     },
