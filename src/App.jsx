@@ -22,6 +22,7 @@ import Allblogs from "./admin/components/Allblogs";
 import Newblog from "./admin/components/Newblog";
 import Categories from "./admin/components/Categories";
 import Tags from "./admin/components/Tags";
+import Overview from "./admin/components/Overview";
 
 // import Success from "./pages/Success/Success";
 
@@ -78,7 +79,8 @@ function App() {
           <Route path="/courses" element={<Courses />} />
           <Route path="/internship" element={<Internship />} />
           {/* <Route path="/success" element={<Success />} /> */}
-        <Route path="/admin" element={<Dashboard />} >
+        <Route path="/admin"  element={<Dashboard />}>
+          <Route path="/admin" element={<Overview/>} />
         <Route  path="/admin/applications" >
           <Route path="/admin/applications/pending" element={<PendingReviews/>}/>
           <Route path="/admin/applications/placeher" element={<PlaceHer/>}/>

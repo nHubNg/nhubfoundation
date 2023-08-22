@@ -11,8 +11,6 @@ export default {
         'url("https://res.cloudinary.com/nhubnacademy/image/upload/v1690462069/nHubFoundation/IMG-20230715-WA0106_wuhru8.jpg")',
       desktopContact:
         'url("https://res.cloudinary.com/nhubnacademy/image/upload/v1683559027/nHubFoundation/Frame_1144_6_cgw6on.png")',
-      // desktopGallery:
-      //   'url("https://res.cloudinary.com/nhubnacademy/image/upload/v1683559037/nHubFoundation/Frame_1144_8_ikuk1h.png")',
       about:
         'url("https://res.cloudinary.com/nhubnacademy/image/upload/v1683646832/nHubFoundation/Frame_1048_nsmske.png")',
     },
@@ -40,7 +38,18 @@ export default {
         skyBlue: "#C6D4ED",
         blue: "#4DA0FF",
         darkBlue:"#101828",
+        adminBlue: " rgba(25, 55, 91, 1)",
+        adminGray: "rgba(236, 236, 236, 1)",
+        adminBorder: "rgba(25, 55, 91, 0.3)",
+        adminText: "rgba(0, 0, 0, 1) ",
         grey: "#D0D5DD",
+        transparent: "rgba(255, 255, 255, 0.15)",
+        btnGreen : "rgba(7, 215, 28, 1)",
+        btnRed : "rgba(246, 27, 27, 1)",
+        btnYellow : "rgba(234, 112, 0, 1)",
+        btnMaroon : " rgba(234, 112, 0, 1)",
+
+
       },
     },
   },

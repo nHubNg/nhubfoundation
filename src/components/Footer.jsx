@@ -78,18 +78,19 @@ const Footer = () => {
             <h3 className="text-[1.2rem] font-semibold leading-5">Find us</h3>
             <ul className=" leading-6  flex flex-col gap-2">
               <li className="">
-              <img
-                    src={
-                      "https://res.cloudinary.com/ddgyd8szc/image/upload/v1682791103/vector3_wn5f1n.png"
-                    }
-                    alt=""
-                    className="inline mr-2 h-4 w-4"
-                  />
+                <img
+                  src={
+                    "https://res.cloudinary.com/ddgyd8szc/image/upload/v1682791103/vector3_wn5f1n.png"
+                  }
+                  alt=""
+                  className="inline mr-2 h-4 w-4"
+                />
                 <a
                   className="active:text-orange hover:text-orange"
                   href="https://www.google.com/maps/place/nHub+Foundation/@9.8788245,8.8747457,15z/data=!4m6!3m5!1s0x10537387fc85cf8b:0xc3317526ad656388!8m2!3d9.8788245!4d8.8747457!16s%2Fg%2F11hzlzcy49"
                 >
-                  2nd Floor TAEN Business Complex Opposite former NITEL Office, Old Airport Junction, Jos, Plateau State, Nigeria.
+                  2nd Floor TAEN Business Complex Opposite former NITEL Office,
+                  Old Airport Junction, Jos, Plateau State, Nigeria.
                 </a>
               </li>
               <li>
@@ -125,7 +126,9 @@ const Footer = () => {
             </ul>
           </div>
           <div className="flex flex-col gap-4 ">
-            <h3 className="text-[1.2rem] font-semibold leading-5">Social Media Links</h3>
+            <h3 className="text-[1.2rem] font-semibold leading-5">
+              Social Media Links
+            </h3>
             <ul className="text-[1rem] leading-6  flex flex-col gap-2">
               <li>
                 <a
