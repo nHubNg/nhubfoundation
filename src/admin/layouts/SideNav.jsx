@@ -3,8 +3,9 @@ import SubMenu from "./SubMenu";
 import { useState } from "react";
 import AdminModal from "../modals/LogoutModal";
 
-const SideNav = ({ open }) => {
+const SideNav = ({open}) => {
   const [modal, setModal] = useState(false);
+  
 
   const handleModal = () => {
     setModal(!modal);
@@ -14,8 +15,8 @@ const SideNav = ({ open }) => {
   return (
     <>
       {modal ? <AdminModal handleModal={handleModal} /> : ""}
-      <div className="relative ">
-        <div className="fixed  flex flex-col justify-center  pt-4 md:px-3 lg:px-6 gap-y-3  ">
+      <div className=" md:transition-all md:duration-500 md:ease-in-out ">
+        <div className={`flex flex-col justify-center  pt-4 ${open ? "md:px-1" : "md:px-10"} lg:px-4 gap-y-3  md:transition-all md:duration-500 md:ease-in-out `}>
           <h1
             className={`${
               open ? "text-center" : "text-left"

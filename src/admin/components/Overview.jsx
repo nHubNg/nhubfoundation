@@ -11,7 +11,7 @@ const Overview = () => {
       <div className="hidden md:block">
         <AdminHeader heading="Dashboard" text="Admin profile" />
       </div>
-      <div className="flex flex-col md:flex-row justify-center items-center py-14 w-[85%] md:w-[60%] mx-auto md:mt-[-70px] bg-white shadow-lg rounded-md gap-10">
+      <div className="flex flex-col md:flex-row justify-center items-center py-14 w-[85%] md:w-[80%] mx-auto md:mt-[-70px] bg-white shadow-lg rounded-md gap-10">
         <img
           src="https://res.cloudinary.com/nhubnacademy/image/upload/v1690717429/nHubFoundation/Frame_4_ftvfwy.png"
           alt=""

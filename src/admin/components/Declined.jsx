@@ -43,7 +43,7 @@ const Declined = () => {
         </div>
         <AppHeader total={4} />
         <div className="mt-8  md:hidden flex flex-col gap-y-5">
-          <div className="flex justify-between items-center w-[90%] mx-auto bg-white shadow-md py-4 px-5 rounded-lg">
+          <div className="flex justify-between items-center w-[90%] mx-auto bg-white shadow-md  shadow-adminShadow py-4 px-5 rounded-lg">
             <div>
               <h5>Abdulmalik Ishaya</h5>
               <p>elmaleeq112@gmail.com</p>
@@ -55,7 +55,7 @@ const Declined = () => {
               />
             </div>
           </div>
-          <div className="flex justify-between items-center w-[90%] mx-auto bg-white shadow-lg py-4 px-5 rounded-lg">
+          <div className="flex justify-between items-center w-[90%] mx-auto bg-white shadow-md  shadow-adminShadow py-4 px-5 rounded-lg">
             <div>
               <h5>Abdulmalik Ishaya</h5>
               <p>elmaleeq112@gmail.com</p>
@@ -67,7 +67,7 @@ const Declined = () => {
               />
             </div>
           </div>
-          <div className="flex justify-between items-center w-[90%] mx-auto bg-white shadow-lg py-4 px-5 rounded-lg">
+          <div className="flex justify-between items-center w-[90%] mx-auto bg-white shadow-md  shadow-adminShadow py-4 px-5 rounded-lg">
             <div>
               <h5>Abdulmalik Ishaya</h5>
               <p>elmaleeq112@gmail.com</p>

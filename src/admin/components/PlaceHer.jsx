@@ -14,7 +14,7 @@ const PlaceHer = () => {
         <AppHeader total={4} />
       </div>
       <div className="mt-8  md:hidden flex flex-col gap-y-5">
-          <div className="flex justify-between items-center w-[90%] mx-auto bg-white shadow-md py-4 px-5 rounded-lg">
+          <div className="flex justify-between items-center w-[90%] mx-auto bg-white shadow-md shadow-adminShadow py-4 px-5 rounded-lg">
             <div>
               <h5>Abdulmalik Ishaya</h5>
               <p>elmaleeq112@gmail.com</p>
@@ -26,7 +26,7 @@ const PlaceHer = () => {
               />
             </div>
           </div>
-          <div className="flex justify-between items-center w-[90%] mx-auto bg-white shadow-lg py-4 px-5 rounded-lg">
+          <div className="flex justify-between items-center w-[90%] mx-auto bg-white shadow-md shadow-adminShadow py-4 px-5 rounded-lg">
             <div>
               <h5>Abdulmalik Ishaya</h5>
               <p>elmaleeq112@gmail.com</p>
@@ -38,7 +38,7 @@ const PlaceHer = () => {
               />
             </div>
           </div>
-          <div className="flex justify-between items-center w-[90%] mx-auto bg-white shadow-lg py-4 px-5 rounded-lg">
+          <div className="flex justify-between items-center w-[90%] mx-auto bg-white shadow-md  shadow-adminShadow py-4 px-5 rounded-lg">
             <div>
               <h5>Abdulmalik Ishaya</h5>
               <p>elmaleeq112@gmail.com</p>
@@ -51,7 +51,7 @@ const PlaceHer = () => {
             </div>
           </div>
         </div>
-      <div className="hidden md:block">
+      <div className="hidden md:block overflow-x-auto">
         <table class="table-auto mx-auto mt-10 w-[90%] overflow-auto ">
           <thead>
             <tr>

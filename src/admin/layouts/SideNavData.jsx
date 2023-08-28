@@ -14,6 +14,8 @@ export const SideNavData = [
         tittle : 'Internship application',
         icon : 'https://res.cloudinary.com/nhubnacademy/image/upload/v1691063574/nHubFoundation/charm_person_sr3kco.svg',
         mobileIcon: 'https://res.cloudinary.com/nhubnacademy/image/upload/v1692616689/nHubFoundation/charm_person_lbjbys.svg',
+        sideArrow : 'https://res.cloudinary.com/nhubnacademy/image/upload/v1692793410/nHubFoundation/icons8-greater-than-50_pprtqw.png',
+        
         // path : '/applications',
         subMenu: [
             {
@@ -52,6 +54,7 @@ export const SideNavData = [
         tittle: 'Blogs',
         icon : 'https://res.cloudinary.com/nhubnacademy/image/upload/v1691063574/nHubFoundation/tabler_brand-blogger_p53hfh.svg',
         mobileIcon : 'https://res.cloudinary.com/nhubnacademy/image/upload/v1692616515/nHubFoundation/tabler_brand-blogger_fg5ar3.svg',
+        sideArrow : 'https://res.cloudinary.com/nhubnacademy/image/upload/v1692793410/nHubFoundation/icons8-greater-than-50_pprtqw.png',
         // path: '/blogadmin',
         subMenu: [
             {

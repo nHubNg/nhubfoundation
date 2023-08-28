@@ -42,6 +42,7 @@ export default {
         adminGray: "rgba(236, 236, 236, 1)",
         adminBorder: "rgba(25, 55, 91, 0.3)",
         adminText: "rgba(0, 0, 0, 1) ",
+        adminShadow : "rgba(0, 0, 0, 0.05)",
         grey: "#D0D5DD",
         transparent: "rgba(255, 255, 255, 0.15)",
         btnGreen : "rgba(7, 215, 28, 1)",
