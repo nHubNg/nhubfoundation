@@ -115,6 +115,7 @@ const About = () => {
             {staff.map((admin) => {
               return (
                 <div key={admin.id} className=" w-[300px] h-[300px] relative">
+                  {/* {console.log(admin.name)} */}
                   <img
                     className="block max-w-[100%] object-cover"
                     src={admin.image}

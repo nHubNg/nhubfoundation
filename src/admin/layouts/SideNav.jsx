@@ -2,10 +2,15 @@ import { SideNavData } from "./SideNavData";
 import SubMenu from "./SubMenu";
 import { useState } from "react";
 import AdminModal from "../modals/LogoutModal";
+import hamburger from "../../assets/hamburger.svg"
 
-const SideNav = ({open}) => {
+const SideNav = ({open, handleOpen}) => {
   const [modal, setModal] = useState(false);
-  
+  // const [open, setOpen] = useState(true);
+
+  // const handleOpen = () => {
+  //   setOpen(!open)
+  // }
 
   const handleModal = () => {
     setModal(!modal);
@@ -47,9 +52,9 @@ const SideNav = ({open}) => {
               </p>
             </button>
           </div>
-          {/* <button onClick={handleOpen} className="absolute top-4 ">
+          <button onClick={handleOpen} className="absolute top-4 right-[-15px]">
             <img src={hamburger} alt="" />
-          </button> */}
+          </button>
         </div>
       </div>
     </>

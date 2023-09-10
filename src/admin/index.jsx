@@ -15,11 +15,11 @@ const Dashboard = () => {
       <div className={` ${open ? "md:col-span-3": "md:col-span-2"}  ${open ? "lg:col-span-2" : "lg:col-span-1"}  bg-orange min-h-[100vh] hidden md:block relative`  }>
         <div className="sticky top-1">
           <SideNav open={open} setOpen={setOpen}  handleOpen={handleOpen}/>
-          <div className="sticky top-2">
-          <button onClick={handleOpen} className="absolute top-[-250px] right-[-15px] ">
+          {/* <div className="sticky top-2">
+          <button onClick={handleOpen} className="absolute bottom-[-100px] right-[-15px] ">
               <img src={hamburger} alt="" />
             </button>
-        </div>
+        </div> */}
         </div>
         
       </div>

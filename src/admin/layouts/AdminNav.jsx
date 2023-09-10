@@ -40,7 +40,7 @@ const AdminNav = ({ heading }) => {
           <div
             className={
               toggle
-                ? "fixed left-0 top-0   bg-white min-h-full w-[80%] py-10 rounded-r-xl transition-all duration-500 ease-in"
+                ? "fixed left-0 top-0   bg-white min-h-full w-[80%] py-10 pl-3 rounded-r-xl transition-all duration-500 ease-in"
                 : "fixed left-[-100%]  h-full"
             }
           >
