@@ -1,6 +1,6 @@
 const Bloglist = ({ blog }) => {
   return (
-    <div className="flex flex-col items-center md:grid  md:grid-cols-2  sm:grid sm:grid-cols-2   lg:grid-cols-3 gap-x-6 gap-y-10 ">
+    <div className="flex flex-col items-center md:grid  md:grid-cols-2  sm:grid sm:grid-cols-2   lg:grid-cols-3 gap-x-6 gap-y-10 md:mt-6 ">
       {blog.map((blog) => {
         return (
           <div

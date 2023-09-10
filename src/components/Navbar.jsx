@@ -1,15 +1,19 @@
 import { NavLink, Link } from "react-router-dom";
+import hamburger from "../assets/hamburger.png"
+import logo from "../assets/logo.png"
+import close from "../assets/close.png"
 
 const Navbar = ({ handleDonate, handleDesktopDonate, handleNav, nav }) => {
   const active = "text-orange border-b-2 pb-1 border-orange";
   return (
-    <nav className="  bg-white ">
+    <nav className="  bg-white">
       <div className="my-container flex items-center md:justify-between   h-14">
         <div onClick={handleNav} className="lg:hidden">
           <img
-            src={
-              "https://res.cloudinary.com/nhubnacademy/image/upload/v1682899502/nHubFoundation/Vector_9_hsbdsn.png"
-            }
+            // src={
+            //   "https://res.cloudinary.com/nhubnacademy/image/upload/v1682899502/nHubFoundation/Vector_9_hsbdsn.png"
+            // }
+            src={hamburger}
             alt=""
           />
         </div>
@@ -17,9 +21,10 @@ const Navbar = ({ handleDonate, handleDesktopDonate, handleNav, nav }) => {
         <div className="mx-auto lg:mx-0">
           <Link to="/">
             <img
-              src={
-                "https://res.cloudinary.com/nhubnacademy/image/upload/v1682899395/nHubFoundation/image_1_w7fcrk.png"
-              }
+              // src={
+              //   "https://res.cloudinary.com/nhubnacademy/image/upload/v1682899395/nHubFoundation/image_1_w7fcrk.png"
+              // }
+              src={logo}
               alt=""
             />
           </Link>
@@ -27,14 +32,15 @@ const Navbar = ({ handleDonate, handleDesktopDonate, handleNav, nav }) => {
         <div
           className={
             nav
-              ? "fixed  z-[1000] bg-white top-14 left-0 w-[40%] flex flex-col transition-all duration-500 ease-in-out"
+              ? "fixed  z-[1000] bg-white top-14 left-0 w-[50%] flex flex-col transition-all duration-500 ease-in-out"
               : "fixed left-[-100%]"
           }
         >
           <ul className="p-4 ">
             <div onClick={handleNav} className="flex justify-end">
               <img
-                src="https://res.cloudinary.com/nhubnacademy/image/upload/v1682899396/nHubFoundation/Vector_8_p2ivyo.png"
+                // src="https://res.cloudinary.com/nhubnacademy/image/upload/v1682899396/nHubFoundation/Vector_8_p2ivyo.png"
+                src={close}
                 alt=""
               />
             </div>
@@ -75,7 +81,14 @@ const Navbar = ({ handleDonate, handleDesktopDonate, handleNav, nav }) => {
               </Link>
             </li>
             <li className="py-2">
-              <a
+              <Link
+                onClick={handleNav}
+                className="hover:text-orange text-textAsh"
+                to="/internship"
+              >
+                Internship
+              </Link>
+              {/* <a
                 onClick={handleNav}
                 className="hover:text-orange text-textAsh"
                 href="https://nhubinternship.onrender.com"
@@ -83,7 +96,7 @@ const Navbar = ({ handleDonate, handleDesktopDonate, handleNav, nav }) => {
                 rel='noreferrer'
               >
                 Internship
-              </a>
+              </a> */}
             </li>
             <li className="py-2">
               <Link
@@ -105,8 +118,8 @@ const Navbar = ({ handleDonate, handleDesktopDonate, handleNav, nav }) => {
           </ul>
         </div>
 
-        <div className="hidden lg:flex">
-          <ul className="flex text-textAsh  items-center justify-between gap-10 text-[]">
+        <div className="hidden lg:flex  ">
+          <ul className="flex text-textAsh  items-center justify-between gap-10 text-[] ">
             <li className=" hover:text-orange ">
               <NavLink
                 className={({ isActive }) => (isActive ? active : "")}
@@ -141,14 +154,21 @@ const Navbar = ({ handleDonate, handleDesktopDonate, handleNav, nav }) => {
               </NavLink>
             </li>
             <li className="py-2">
-              <a
+              <NavLink
+                className={({ isActive }) => (isActive ? active : "")}
+                to="/internship"
+              >
+                {" "}
+                Internship
+              </NavLink>
+              {/* <a
                 className="hover:text-orange"
                 href="https://nhubinternship.onrender.com"
                 target="_blank"
                 rel='noreferrer'
               >
                 Internship
-              </a>
+              </a> */}
             </li>
             <li className=" hover:text-orange ">
               <NavLink

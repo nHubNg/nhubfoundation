@@ -7,11 +7,14 @@
   max-width: 1240px;
   margin-inline: auto;
 }
-.my-transition {
-  transition: height 13s;
+.header {
+  background: linear-gradient(90deg, #19375B 36.12%, rgba(25, 55, 91, 0.87) 89.52%);
+
 }
 @layer base {
   html {
     font-family: "Poppins", sans-serif;
   }
 }
+
+

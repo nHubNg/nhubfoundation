@@ -58,7 +58,7 @@ const Activities = () => {
         {cards.map((card) => {
           return (
             <div
-              className="flex flex-col justify-center items-center shadow-lg w-[300px] h-[300px] group "
+              className="flex flex-col justify-center items-center shadow-lg w-[80%] md:w-[300px] h-[300px] group "
               key={card.id}
             >
               <img
@@ -69,7 +69,7 @@ const Activities = () => {
               <h3 className="font-medium text-[24px] text-ash lg:group-hover:translate-y-[-50px] lg:mt-4 transition-all duration-500">
                 {card.title}
               </h3>
-              <p className="text-[14px]  text-center text-textAsh w-[30ch]  lg:hidden lg:group-hover:flex lg:group-hover:translate-y-[-40px] transition-all duration-500 ">
+              <p className="text-[14px]  text-center text-textAsh sm:w-[30ch] md:w-[30ch] lg:hidden lg:group-hover:flex lg:group-hover:translate-y-[-40px] transition-all duration-300 ">
                 {card.text}
               </p>
             </div>

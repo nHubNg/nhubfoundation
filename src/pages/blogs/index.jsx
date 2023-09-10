@@ -9,30 +9,30 @@ const blog = [
  "id":2,
  "img":"https://res.cloudinary.com/nhubnacademy/image/upload/v1682934549/nHubFoundation/Image_2_pjmkqj.png",
  "title":"US Embassy Visits nHub Nigeria",
- "preview":"Julia .P. McKay, the cultural   affairs officer of the embassy of the United states of America on Wednesday..."
+ "preview":"Julia .P. McKay, the cultural   affairs officer of the embassy of the United states of America..."
 },
 {
   "id":3,
   "img":"https://res.cloudinary.com/nhubnacademy/image/upload/v1682934516/nHubFoundation/Image_1_elrbvy.png",
-  "title":"How Started UI/UX Design - Terrence Eze",
-  "preview":"The UI/Ux lead at nHub Nigeria, Mr. Terrence Eze took us through how he developed a career in UI/UX design..."
+  "title":"How Started UI/UX Design - Terrence",
+  "preview":"The UI/Ux lead at nHub Nigeria, Mr. Terrence Eze took us through how he developed a career..."
 },
 {
   "id":4,
   "img":"https://res.cloudinary.com/nhubnacademy/image/upload/v1682934516/nHubFoundation/Image_1_elrbvy.png",
-  "title":"How Started UI/UX Design - Terrence Eze",
+  "title":"How Started UI/UX Design - Terrence",
   "preview":"The UI/Ux lead at nHub Nigeria, Mr. Terrence Eze took us through how he developed a career in UI/UX design..."
 },
 {
   "id":5,
   "img":"https://res.cloudinary.com/nhubnacademy/image/upload/v1682934516/nHubFoundation/Image_1_elrbvy.png",
-  "title":"How Started UI/UX Design - Terrence Eze",
+  "title":"How Started UI/UX Design - Terrence",
   "preview":"The UI/Ux lead at nHub Nigeria, Mr. Terrence Eze took us through how he developed a career in UI/UX design..."
 },
 {
   "id":6,
   "img":"https://res.cloudinary.com/nhubnacademy/image/upload/v1682934516/nHubFoundation/Image_1_elrbvy.png",
-  "title":"How Started UI/UX Design - Terrence Eze",
+  "title":"How Started UI/UX Design - Terrence",
   "preview":"The UI/Ux lead at nHub Nigeria, Mr. Terrence Eze took us through how he developed a career in UI/UX design..."
 },
 {
@@ -75,6 +75,15 @@ import { useState, useEffect } from "react";
 // import axios from "axios";
 import Bloglist from "./Bloglist";
 import Paginate from "./Paginate";
+
+
+function ScrollToTopOnMount() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return null;
+};
 
 const Blogs = () => {
   // const [blog, setBlog] = useState([]);
@@ -126,6 +135,8 @@ const Blogs = () => {
   const firstBlogIndex = lastBlogIndex - blogsPerPage;
   const currentBlogs = blog.slice(firstBlogIndex, lastBlogIndex);
   return (
+    <>
+    <ScrollToTopOnMount/>
     <div className="my-container flex ">
       <div className="lg:w-[75%] pt-2">
         <Bloglist blog={currentBlogs} />
@@ -198,6 +209,7 @@ const Blogs = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

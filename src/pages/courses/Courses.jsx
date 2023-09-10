@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Article from "./Article";
 
 const Courses = () => {
@@ -5,9 +6,25 @@ const Courses = () => {
     flexReverse: "flex flex-row-reverse",
     flex: "flex",
   };
+
+  function ScrollToTopOnMount() {
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+  
+    return null;
+  }
   return (
     <section className=" pb-20 sm:pb-28">
-      <div className="h-40 bg-courses bg-no-repeat bg-cover bg-center sm:mb-16 sm:bg-desktopCourses sm:h-[50vh]  md:h-[60vh] lg:h-[80vh]"></div>
+      <ScrollToTopOnMount/>
+      <div className="relative">
+        <div className="h-40  bg-no-repeat bg-cover bg-center sm:mb-16 bg-courses sm:h-[50vh]  md:h-[60vh] lg:h-[80vh] "></div>
+        <div className="absolute bottom-0 left-0 w-full h-full flex text-center justify-center items-center bg-headerOverlay  ">
+            <h2 className=" text-[30px] md:text-[45px] text-white font-[600] ">
+             Courses
+            </h2>
+          </div>
+      </div>
       <section className="my-container">
         <Article
           img={

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const blog = [
   {
   "id":1,
@@ -83,15 +84,16 @@ const Blogs = () => {
           View all our latest Articles
         </p>
       </div>
-      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8 md:my-10">
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-6">
         {visibleBlogs.map((blog) => {
           return (
             <div
               className="border-[1px] border-lightgray shadow-[lightShadow] rounded-lg"
               key={blog.id}
             >
-              <div className=" m-8">
-                <div className="md:w-[20rem]">
+              <div className="m-8 md:m-6">
+                {/* 20rem  100%*/}
+                <div className="">
                   <img className="w-full block" src={blog.img} alt="" />
                 </div>
                 <h4 className="text-[24px] font-[500] text-ash py-4 lg:w-[20ch]">
@@ -111,14 +113,14 @@ const Blogs = () => {
         })}
       </div>
       <div className="w-[8rem]  py-2 mx-auto text-center bg-white border-[1px] border-orange mt-5 mb-4 lg:my-16 lg:px-3 group lg:hover:w-[8rem] lg:transition-[width] duration-700 cursor-pointer">
-        <a className="font-[500] text-orange flex justify-center items-center gap-2 lg:group-hover:justify-between">
+        <Link to="/blogs" className="font-[500] text-orange flex justify-center items-center gap-2 lg:group-hover:justify-between">
           View All
           <img
             className="lg:hidden lg:group-hover:flex "
             src="https://res.cloudinary.com/nhubnacademy/image/upload/v1683766837/nHubFoundation/arrow-right_zcpsmr.png"
             alt=""
           />
-        </a>
+        </Link>
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const programs = [
   {
@@ -59,9 +60,18 @@ const programs = [
   },
 ];
 
+function ScrollToTopOnMount() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return null;
+}
+
 const Programs = () => {
   return (
     <div>
+      <ScrollToTopOnMount/>
       <div className="relative">
         <div className="bg-[url('https://res.cloudinary.com/nhubnacademy/image/upload/v1683076121/nHubFoundation/IMG_0721_lchbvf.jpg')] py-[5.5rem]  md:h-[50vh]  lg:h-[80vh] md:mb-14 bg-no-repeat bg-cover bg-[top_bottom_12rem]"></div>
         <div className="absolute bottom-0 left-0 w-full h-full flex text-center justify-center items-center bg-headerOverlay  ">

@@ -39,9 +39,9 @@ const Trainings = () => {
               <li className=" p-2">Mobile App Development</li>
             </ul>
             <div className="w-[200px] bg-orange mx-auto text-center py-3 rounded-md mt-3 cursor-pointer hover:bg-purple transition-all duration-300 hover:scale-110">
-              <a className=" text-white font-[500]" href="">
+              <Link to="/internship" className=" text-white font-[500]" href="">
                 Apply for Internship
-              </a>
+              </Link>
             </div>
           </div>
           <div className="bg-orange text-white px-3 py-7 my-5 rounded-lg">
