@@ -1,5 +1,5 @@
 import { useState,useEffect } from "react";
-import PersonalDetails from "./components/personalDetails";
+import PersonalDetails from "./components/PersonalDetails";
 import School from "./components/School";
 import FileUpload from "./components/FileUpload";
 
