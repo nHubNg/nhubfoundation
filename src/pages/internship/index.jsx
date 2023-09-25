@@ -2,6 +2,8 @@ import { useState,useEffect } from "react";
 import PersonalDetails from "./components/PersonalDetails";
 import School from "./components/School";
 import FileUpload from "./components/FileUpload";
+import { InstructModal } from "./components/InstructModal";
+import {CiWarning} from 'react-icons/ci'
 
 
 function ScrollToTopOnMount() {
@@ -13,6 +15,7 @@ function ScrollToTopOnMount() {
 }
 const Internship = () => {
   const [page, setPage] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -30,6 +33,7 @@ const Internship = () => {
     cover:"",
     it:"",
   });
+
   const formTitles = [
     "Personal Details",
     "School and Experience",
@@ -50,6 +54,17 @@ const Internship = () => {
     e.preventDefault();
     console.log(formData);
   };
+
+
+  // Modal handlers
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <>
     <ScrollToTopOnMount/>
@@ -59,9 +74,12 @@ const Internship = () => {
     <div className="w-[90%] md:[55%] h-[2px] bg-orange"></div>
   </div>
     <div className=" flex flex-col justify-center items-center">
-        <div className="md:w-[60%] ">
+        <div className="md:w-[70%] ">
+          <div className="text-center bg-orange rounded-[50%] text-white w-10 mx-[47%] p-[5px]">
+            <h1>1</h1>
+          </div>
           <div>
-            <h1 className="flex justify-center items-center text-orange">
+            <h1 className="flex justify-center items-center text-xl text-black">
               {formTitles[page]}
             </h1>
             <div >{pageDisplay()}</div>
@@ -97,6 +115,37 @@ const Internship = () => {
           </div>
         </div>
     </div>
+    </div>
+    <div className=" flex items-center justify-center">
+      <button className="bg-orange text-white py-2 px-4 rounded" onClick={openModal}>
+        Open Modal
+      </button>
+
+      <InstructModal isOpen={isModalOpen} >
+        <h1 className="text-2xl text-center font-semibold mb-4">Instruction</h1>
+        <div className="border rounded p-4 border-">
+          <div className="flex items-center justify-between w-[100%]">
+            <CiWarning className="text-3xl text-red" />
+            <p>This is a simple modal example using Tailwind CSS and React.</p>
+          </div>
+          <div className="flex items-center justify-between w-[100%]">
+            <CiWarning className="text-3xl text-red" />
+            <p>This is a simple modal example using Tailwind CSS and React.</p>
+          </div>
+          <div className="flex items-center justify-between w-[100%]">
+            <CiWarning className="text-3xl text-red" />
+            <p>This is a simple modal example using Tailwind CSS and React.</p>
+          </div>
+          <div className="flex items-center justify-between w-[100%]">
+            <CiWarning className="text-3xl text-red" />
+            <p>This is a simple modal example using Tailwind CSS and React.</p>
+          </div>
+        </div>
+        
+        <button onClose={closeModal} className="bg-orange text-white py-2 px-4 rounded" >
+          close
+        </button>
+      </InstructModal>
     </div>
     </>
   );
