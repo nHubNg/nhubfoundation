@@ -1,19 +1,39 @@
-import { useState } from "react"
+import { useState } from "react";
+import {CiWarning} from 'react-icons/ci';
 
 
-export const InstructModal=({ isOpen, onClose, children })=>{
-    // const [openModal,setOpenModal,closeModal] = useState(false);
-    if (!isOpen) return null;
+export const InstructModal=()=>{
 
     return(
-        <div className="fixed inset-0 flex items-center justify-center z-50">
-            <div className="fixed inset-0 bg-gray-800 opacity-50"></div>
-            <div className="bg-white p-6 rounded shadow-lg z-50">
-                {children}
-                <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600" onClick={onClose}>
-                Close
-                </button>
-            </div>
+        <div className="">
+             
+        <div className="text-center capitalize  font-semibold">
+        <h1 className="text-2xl">Instruction</h1>
+        <p>read carefully before attempting to fill the form</p>
+        </div>
+        <div className=" p-4 text-[14px]">
+          <div className=" items-center mt-6 justify-between w-[100%]">
+            <CiWarning className="text-3xl text-red font-bold" />
+            <p>Read and fill every form field carefully as the form completion process counts towards final consideration for internship position at the hub.</p>
+          </div>
+          <div className=" items-center mt-6 justify-between w-[100%]">
+            <CiWarning className="text-3xl text-red font-bold" />
+            <p>For whichever technological stack you will be picking during this applications process, make sure you've done your research into it as there will be no room for change once accepted to that track.</p>
+          </div>
+          <div className=" items-center mt-6 justify-between w-[100%]">
+            <CiWarning className="text-3xl text-red font-bold" />
+            <p>Personal computer (Laptop) is the major tool for all you'll be doing when accepted for internship at nHub, as such make sure you have a working PC and internet access means on or before the registered internship start date.</p>
+          </div>
+          <div className=" items-center mt-6 justify-between w-[100%]">
+            <CiWarning className="text-3xl text-red font-bold" />
+            <p>As a point of note, you should know that nHub does not provide anyone with laptop but can help guide you in getting one that matches your choosen track requirements</p>
+          </div>
+        </div>
+        
+       
+      
+    
+            
     </div>
     )
 }

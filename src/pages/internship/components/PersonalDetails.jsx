@@ -27,7 +27,7 @@ const PersonalDetails = ({ formData, setFormData }) => {
         </label>
         <input
           type="text"
-          placeholder="Full Name"
+          placeholder="First Name"
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
           className="w-[100%] border-[#808080] border-[1px] py-2 px-2 outline-0 rounded-[5px]"
@@ -39,7 +39,7 @@ const PersonalDetails = ({ formData, setFormData }) => {
         </label>
         <input
           type="text"
-          placeholder="Full Name"
+          placeholder="Last Name"
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
           className="w-[100%] border-[#808080] border-[1px] py-2 px-2 outline-0 rounded-[5px]"
@@ -83,7 +83,7 @@ const PersonalDetails = ({ formData, setFormData }) => {
             }
           >
             <option value="" disabled selected hidden>
-            Select a preferred interview Location
+            Select 
             </option>
             <option value="On-Site">On-Site</option>
             <option value="Virtual">
@@ -96,14 +96,14 @@ const PersonalDetails = ({ formData, setFormData }) => {
             Gender<span className="text-red">*</span>
           </label>
           <select
-            className="w-[100%] border-[#808080] border-[1px] py-2 px-2  outline-0 rounded-[5px]"
+            className="w-[100%] border-[#808080] border-[1px] py-2 px-2 cursor-pointer outline-0 rounded-[5px]"
             value={formData.gender}
             onChange={(e) =>
               setFormData({ ...formData, gender: e.target.value })
             }
           >
             <option value="" disabled selected hidden>
-              Select Gender
+              Select 
             </option>
             <option value="male">Male</option>
             <option value="female">Female</option>

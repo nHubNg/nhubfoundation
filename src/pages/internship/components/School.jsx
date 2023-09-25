@@ -7,7 +7,7 @@ const School = ({ formData, setFormData }) => {
   //   setHideDiv(!hideDiv)
   // }
   return (
-    <div>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-[#808080]" >
       <div className="pb-4">
         <label>
           School<span className="text-red">*</span>
@@ -17,7 +17,7 @@ const School = ({ formData, setFormData }) => {
           placeholder="e.g University of Jos"
           value={formData.school}
           onChange={(e) => setFormData({ ...formData, school: e.target.value })}
-          className="w-[100%] border-orange border-[1px] py-1 px-2 rounded-2xl outline-0"
+          className="w-[100%] border-[#808080] border-[1px] py-2 px-2 outline-0 rounded-[5px]"
         />
       </div>
       <div className="pb-4">
@@ -31,7 +31,7 @@ const School = ({ formData, setFormData }) => {
           onChange={(e) =>
             setFormData({ ...formData, department: e.target.value })
           }
-          className="w-[100%] border-orange border-[1px] py-1 px-2 rounded-2xl outline-0"
+          className="w-[100%] border-[#808080] border-[1px] py-2 px-2 outline-0 rounded-[5px]"
         />
       </div>
       <div className="pb-4">
@@ -43,7 +43,7 @@ const School = ({ formData, setFormData }) => {
           placeholder="e.g Cybersecurity"
           value={formData.course}
           onChange={(e) => setFormData({ ...formData, course: e.target.value })}
-          className="w-[100%] border-orange border-[1px] py-1 px-2 rounded-2xl outline-0"
+          className="w-[100%] border-[#808080] border-[1px] py-2 px-2 outline-0 rounded-[5px]"
         />
       </div>
       <div className="pb-4">
@@ -56,7 +56,7 @@ const School = ({ formData, setFormData }) => {
           onChange={(e) =>
             setFormData({ ...formData, startDate: e.target.value })
           }
-          className="w-[100%] border-orange border-[1px] py-1 px-2 rounded-2xl outline-0"
+          className="w-[100%] border-[#808080] border-[1px] py-2 px-2 outline-0 rounded-[5px]"
         />
       </div>
       <div className="pb-4">
@@ -69,7 +69,7 @@ const School = ({ formData, setFormData }) => {
           onChange={(e) =>
             setFormData({ ...formData, endDate: e.target.value })
           }
-          className="w-[100%] border-orange border-[1px] py-1 px-2 rounded-2xl outline-0"
+          className="w-[100%] border-[#808080] border-[1px] py-2 px-2 outline-0 rounded-[5px]"
         />
       </div>
 
@@ -82,7 +82,7 @@ const School = ({ formData, setFormData }) => {
           onChange={(e) =>
             setFormData({ ...formData, experience: e.target.value })
           }
-          className="w-[100%]  border-orange border-[1px] outline-0 py-2 pl-2 pr-4  rounded-xl"
+          className="w-[100%] border-[#808080] border-[1px] py-2 px-2 outline-0 rounded-[5px]"
         >
           <option value="" disabled selected hidden>
             Programming Experience
@@ -98,7 +98,7 @@ const School = ({ formData, setFormData }) => {
         <select
           value={formData.track}
           onChange={(e) => setFormData({ ...formData, track: e.target.value })}
-          className="w-[100%]  border-orange border-[1px] outline-0 py-2 pl-2 pr-4  rounded-xl"
+          className="w-[100%] border-[#808080] border-[1px] py-2 px-2 outline-0 rounded-[5px]"
         >
           <option value="" disabled selected hidden>
             Select
@@ -268,7 +268,7 @@ const School = ({ formData, setFormData }) => {
           onChange={(e) =>
             setFormData({ ...formData, duration: e.target.value })
           }
-          className="w-[100%]  border-orange border-[1px] outline-0 py-2 pl-2 pr-4  rounded-xl"
+          className="w-[100%] border-[#808080] border-[1px] py-2 px-2 outline-0 rounded-[5px]"
         >
           <option value="" disabled selected hidden>
             Select
