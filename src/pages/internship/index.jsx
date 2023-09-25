@@ -3,7 +3,12 @@ import PersonalDetails from "./components/PersonalDetails";
 import School from "./components/School";
 import FileUpload from "./components/FileUpload";
 import { InstructModal } from "./components/InstructModal";
+
+
 import {CiWarning} from 'react-icons/ci'
+
+//Swiper on PageNumber
+import {Swiper, SwiperSlide} from "swiper/react";
 
 
 function ScrollToTopOnMount() {
@@ -50,6 +55,22 @@ const Internship = () => {
     }
   };
 
+  const pageNumber =()=>{
+    if (page === 0) {
+      return (<div className="text-center bg-orange rounded-[50%] text-white w-10 mx-[47%] p-[5px]">
+            <h1>1</h1>
+            </div>);
+    } else if (page === 1) {
+      return (<div className="text-center bg-orange rounded-[50%] text-white w-10 mx-[47%] p-[5px]">
+      <h1>2</h1>
+    </div>);
+    } else {
+      return (<div className="text-center bg-orange rounded-[50%] text-white w-10 mx-[47%] p-[5px]">
+      <h1>3</h1>
+    </div>);
+    }
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
@@ -75,14 +96,16 @@ const Internship = () => {
   </div>
     <div className=" flex flex-col justify-center items-center">
         <div className="md:w-[70%] ">
-          <div className="text-center bg-orange rounded-[50%] text-white w-10 mx-[47%] p-[5px]">
-            <h1>1</h1>
-          </div>
+          <Swiper>
+            <SwiperSlide>
+            {pageNumber()}
+            </SwiperSlide>
+          </Swiper>
           <div>
             <h1 className="flex justify-center items-center text-xl text-black">
               {formTitles[page]}
             </h1>
-            <div >{pageDisplay()}</div>
+            <div className="mt-10" >{pageDisplay()}</div>
           </div>
           <div className="flex justify-between items-center my-4 ">
             {page === 0 ? (

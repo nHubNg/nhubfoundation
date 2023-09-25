@@ -20,7 +20,7 @@ const PersonalDetails = ({ formData, setFormData }) => {
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-[#808080]" >
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-[#808080]" >
       <div className="pb-4">
         <label>
           First Name<span className="text-red">*</span>
@@ -30,7 +30,7 @@ const PersonalDetails = ({ formData, setFormData }) => {
           placeholder="Full Name"
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-          className="w-[100%] border-[#808080] border-[1px] py-2 px-2 outline-0 rounded-[10px]"
+          className="w-[100%] border-[#808080] border-[1px] py-2 px-2 outline-0 rounded-[5px]"
         />
       </div>
       <div className="pb-4">
@@ -42,7 +42,7 @@ const PersonalDetails = ({ formData, setFormData }) => {
           placeholder="Full Name"
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-          className="w-[100%] border-[#808080] border-[1px] py-2 px-2 outline-0 rounded-[10px]"
+          className="w-[100%] border-[#808080] border-[1px] py-2 px-2 outline-0 rounded-[5px]"
         />
       </div>
       <div className="pb-4">
@@ -54,7 +54,7 @@ const PersonalDetails = ({ formData, setFormData }) => {
           placeholder="e.g yourname@example.com"
           value={formData.email}
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-          className="w-[100%] border-[#808080] border-[1px] py-2 px-2  outline-0 rounded-[10px]"
+          className="w-[100%] border-[#808080] border-[1px] py-2 px-2  outline-0 rounded-[5px]"
         />
       </div>
       <div className="pb-4">
@@ -66,7 +66,7 @@ const PersonalDetails = ({ formData, setFormData }) => {
           placeholder="e.g +2348000000000"
           value={formData.phone}
           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-          className="w-[100%]  border-[#808080] border-[1px] py-2 px-2 outline-0 rounded-[10px]"
+          className="w-[100%]  border-[#808080] border-[1px] py-2 px-2 outline-0 rounded-[5px]"
         />
       </div>
       
@@ -76,7 +76,7 @@ const PersonalDetails = ({ formData, setFormData }) => {
             Interview Location<span className="text-red">*</span>
           </label>
           <select
-            className="w-[100%] border-[#808080] border-[1px] py-2 px-2  outline-0 rounded-[10px]"
+            className="w-[100%] border-[#808080] border-[1px] py-2 px-2  outline-0 rounded-[5px]"
             value={formData.interview}
             onChange={(e) =>
               setFormData({ ...formData, interview: e.target.value })
@@ -96,7 +96,7 @@ const PersonalDetails = ({ formData, setFormData }) => {
             Gender<span className="text-red">*</span>
           </label>
           <select
-            className="w-[100%] border-[#808080] border-[1px] py-2 px-2  outline-0 rounded-[10px]"
+            className="w-[100%] border-[#808080] border-[1px] py-2 px-2  outline-0 rounded-[5px]"
             value={formData.gender}
             onChange={(e) =>
               setFormData({ ...formData, gender: e.target.value })
