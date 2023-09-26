@@ -56,15 +56,15 @@ const Internship = () => {
 
   const pageNumber =()=>{
     if (page === 0) {
-      return (<div className="text-center bg-orange rounded-[50%] text-white w-10 mx-[47%] p-[5px]">
+      return (<div className="text-center bg-orange rounded-[50%] text-white w-14  mx-[47%] p-[12px]">
             <h1>1</h1>
             </div>);
     } else if (page === 1) {
-      return (<div className="text-center bg-orange rounded-[50%] text-white w-10 mx-[47%] p-[5px]">
+      return (<div className="text-center bg-orange rounded-[50%] text-white w-14  mx-[47%] p-[12px]">
       <h1>2</h1>
     </div>);
     } else {
-      return (<div className="text-center bg-orange rounded-[50%] text-white w-10 mx-[47%] p-[5px]">
+      return (<div className="text-center bg-orange rounded-[50%] text-white w-14  mx-[47%] p-[12px]">
       <h1>3</h1>
     </div>);
     }
@@ -82,8 +82,8 @@ const Internship = () => {
     <>
 
     <ScrollToTopOnMount/>
-    <div className="md:flex justify-between w-full p-4">
-      <div className="pt-10 w-[50%]">
+    <div className="md:flex justify-between overflow-x-hidden mb-10 w-full p-4">
+      <div className="pt-10 w-[500px]">
         <InstructModal/>
       </div>
         <div className="">
@@ -93,13 +93,13 @@ const Internship = () => {
           
          </div>
           <div className=" md:w-[80%] md:ml-32 border border-orange rounded-[10px] flex flex-col justify-center items-center">
-            <div className="md:w-[80%] h-[100vh] mt-2 ">
+            <div className="md:w-[105%] overflow-hidden px-10 h-[105vh] mt-2 ">
               <Swiper>
                 <SwiperSlide>
                 {pageNumber()}
                 </SwiperSlide>
               </Swiper>
-              <div>
+              <div className="overflow-hidden">
                 <h1 className="flex justify-center items-center text-xl text-black">
                   {formTitles[page]}
                 </h1>
