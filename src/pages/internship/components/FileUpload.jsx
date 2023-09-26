@@ -18,10 +18,10 @@ const FileUpload = ({formData, setFormData}) => {
   }
 
   return (
-    <div className="flex flex-col w-[100%]  gap-12 my-8 ">
-      <div>
-        <h3 className="text-center font-semibold my-2">Cover Letter: (letter of motivation)<span className="text-red"> PDF*</span></h3>
-        <div className="flex justify-center items-center ">
+    <div className="flex flex-col overflow-hidden mx-40  gap-2 my-8 ">
+      <div className="w-[] " >
+        <h3 className="text-center font-semibold mb-1">Cover Letter: (letter of motivation)<span className="text-red"> PDF*</span></h3>
+        <div className="flex justify-center  items-center ">
           <div className="bg-skyBlue flex flex-col justify-center items-center gap-y-1 p-8 border-dashed border-[2px] border-blue rounded-lg">
             <img
               src="https://res.cloudinary.com/nhubnacademy/image/upload/v1686751581/nHubFoundation/CloudArrowUp_ehadyi.png"
@@ -29,7 +29,7 @@ const FileUpload = ({formData, setFormData}) => {
             />
             <p>drag and drop your file</p>
             <p>Or</p>
-            <button onClick={handleCoverInput} className="bg-blue py-1 px-3 rounded-md">
+            <button onClick={handleCoverInput} className="bg-blue py-0 px-3 rounded-md">
               Browse file
             </button>
             <p>
