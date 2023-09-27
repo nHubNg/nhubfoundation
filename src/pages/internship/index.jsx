@@ -9,6 +9,13 @@ import { InstructModal } from "./components/InstructModal";
 
 //Swiper on PageNumber
 import {Swiper, SwiperSlide} from "swiper/react";
+import {EffectCoverflow,Pagination,Navigation,Scrollbar,A11y} from "swiper";
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 
 function ScrollToTopOnMount() {
@@ -20,6 +27,7 @@ function ScrollToTopOnMount() {
 }
 const Internship = () => {
   const [page, setPage] = useState(0);
+  const [activeSlide, setActiveSlide] = useState(0);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -49,7 +57,7 @@ const Internship = () => {
       return <PersonalDetails formData={formData} setFormData={setFormData} />;
     } else if (page === 1) {
       return <School formData={formData} setFormData={setFormData} />;
-    } else {
+    }else if (page === 2) {
       return <FileUpload formData={formData} setFormData={setFormData}/>;
     }
   };
@@ -74,10 +82,11 @@ const Internship = () => {
     e.preventDefault();
     console.log(formData);
   };
+  const handleSlideChange = () => {
+    setPage((currPage) => currPage + 1);
+  };
 
-
-
-
+  const slides = ['Slide 1', 'Slide 2', 'Slide 3', 'Slide 4'];
   return (
     <>
 
@@ -94,15 +103,36 @@ const Internship = () => {
          </div>
           <div className=" md:w-[80%] md:ml-32 border border-orange rounded-[10px] flex flex-col justify-center items-center">
             <div className="md:w-[105%] overflow-hidden px-10 h-[105vh] mt-2 ">
-              <Swiper>
-                <SwiperSlide>
-                {pageNumber()}
-                </SwiperSlide>
-              </Swiper>
+              
+              <p>Active Page: {activeSlide + 1}</p>
               <div className="overflow-hidden">
                 <h1 className="flex justify-center items-center text-xl text-black">
                   {formTitles[page]}
                 </h1>
+          <Swiper
+                // effect={'coverflow'}
+                // grabCursor={true}
+                // centeredSlides={true}
+                slidesPerView={1}
+                onSlideChange={ handleSlideChange}
+                // navigation
+                pagination={{
+                  clickable: true,
+                 
+                }}
+                modules={[EffectCoverflow, Pagination,Navigation]}
+                className="mySwiper w-[30%] ">
+                <SwiperSlide>
+                  <div className="swiper-slide-content">{ page===0 && pageDisplay()}</div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="swiper-slide-content">{ page===1 && pageDisplay()}</div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="swiper-slide-content">{ page===2 && pageDisplay()}</div>
+                </SwiperSlide>
+                
+              </Swiper>
                 <div className="mt-10" >{pageDisplay()}</div>
               </div>
               <div className="flex justify-between items-center my-4 ">
