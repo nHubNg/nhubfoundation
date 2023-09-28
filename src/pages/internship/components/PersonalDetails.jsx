@@ -20,7 +20,7 @@ const PersonalDetails = ({ formData, setFormData }) => {
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-[#808080]" >
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-textAsh" >
       <div className="pb-4">
         <label>
           First Name<span className="text-red">*</span>

@@ -9,6 +9,13 @@ import { InstructModal } from "./components/InstructModal";
 
 //Swiper on PageNumber
 import {Swiper, SwiperSlide} from "swiper/react";
+import {EffectCoverflow,Pagination,Navigation,Scrollbar,A11y} from "swiper";
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 
 function ScrollToTopOnMount() {
@@ -20,6 +27,7 @@ function ScrollToTopOnMount() {
 }
 const Internship = () => {
   const [page, setPage] = useState(0);
+  const [activeSlide, setActiveSlide] = useState(0);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -49,7 +57,7 @@ const Internship = () => {
       return <PersonalDetails formData={formData} setFormData={setFormData} />;
     } else if (page === 1) {
       return <School formData={formData} setFormData={setFormData} />;
-    } else {
+    }else if (page === 2) {
       return <FileUpload formData={formData} setFormData={setFormData}/>;
     }
   };
@@ -74,16 +82,20 @@ const Internship = () => {
     e.preventDefault();
     console.log(formData);
   };
+  const handleNextChange = () => {
+      setPage((currPage) => currPage + 1);
+  };
 
-
-
+  const handlePrevChange= () => {
+    setPage((currPage) => currPage - 1);
+  }
 
   return (
     <>
 
     <ScrollToTopOnMount/>
     <div className="md:flex justify-between overflow-x-hidden mb-10 w-full p-4">
-      <div className="pt-10 w-[500px]">
+      <div className="pt-10  md:w-[500px]">
         <InstructModal/>
       </div>
         <div className="">
@@ -94,23 +106,47 @@ const Internship = () => {
          </div>
           <div className=" md:w-[80%] md:ml-32 border border-orange rounded-[10px] flex flex-col justify-center items-center">
             <div className="md:w-[105%] overflow-hidden px-10 h-[105vh] mt-2 ">
-              <Swiper>
-                <SwiperSlide>
-                {pageNumber()}
-                </SwiperSlide>
-              </Swiper>
+              
+              <p>{pageNumber()}</p>
               <div className="overflow-hidden">
                 <h1 className="flex justify-center items-center text-xl text-black">
                   {formTitles[page]}
                 </h1>
-                <div className="mt-10" >{pageDisplay()}</div>
+          <Swiper
+                rewind={true}
+                slidesPerView={1}
+                onSlideChange={ handleNextChange}
+                pagination={{
+                  clickable: true,
+                 
+                }}
+                navigation={{
+                  nextEl: '.swiper-button-next',
+                  prevEl: '.swiper-button-prev',
+                  clickable: true,
+                }}
+
+                modules={[EffectCoverflow, Pagination,Navigation]}
+                className="mySwiper w-[600px] ">
+                <SwiperSlide>
+                  <div className="swiper-slide-content">{ page === 0 && pageDisplay()}</div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="swiper-slide-content">{ page === 1 && pageDisplay()}</div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="swiper-slide-content">{ page === 2 && pageDisplay()}</div>
+                </SwiperSlide>
+                
+              </Swiper>
+                {/* <div className="mt-10" >{pageDisplay()}</div> */}
               </div>
               <div className="flex justify-between items-center my-4 ">
                 {page === 0 ? (
                   ""
                 ) : (
                   <button
-                    className="py-2 px-9 bg-orange text-white rounded-md"
+                    className=" py-2 px-9 bg-orange text-white rounded-md"
                     disabled={page === 0}
                     onClick={() => {
                       setPage((currPage) => currPage - 1);
@@ -119,15 +155,14 @@ const Internship = () => {
                     Prev
                   </button>
                 )}
-                {/* <button onClick={handleSubmit} className="py-2 px-9 bg-orange text-white rounded-md">Submit</button> */}
                 <button
-                  className="py-2 px-9 bg-orange text-white rounded-md"
+                  className="  py-2 px-9 bg-orange text-white rounded-md"
                   onClick={(e) => {
                     if (page === formTitles.length - 1) {
                       e.preventDefault();
                       console.log(formData);
                     } else {
-                      setPage((currPage) => currPage + 1);
+                      setPage( (currPage) => currPage + 1 );
                     }
                   }}
                 >
