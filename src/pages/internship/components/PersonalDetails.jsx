@@ -13,17 +13,6 @@ const PersonalDetails = () => {
 
     const value = type === "checkbox" ? e.target.checked : e.target.value;
 
-    const data = {
-      type,
-      firstname,
-      lastname,
-      value,
-    };
-    const dataJSON = JSON.stringify(data);
-    localStorage.setItem('myDataKey', dataJSON);
-    const storedDataJSON = localStorage.getItem('myDataKey');
-    const storedData = JSON.parse(storedDataJSON);
-    console.log(storedData);
 
     setFormData((prevData) => ({
       ...prevData,
@@ -38,9 +27,24 @@ const PersonalDetails = () => {
       selectOption: event.target.value,
     });
   };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (
+      formData.firstname && 
+      formData.lastname && 
+      formData.email &&
+      formData.gender &&
+      formData.phone &&
+      formD
+) {
+      history.goForward();
+    } else {
+      alert('Please fill in all required fields.');
+    }
+  };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-textAsh" >
+    <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6 text-textAsh" >
       <div className="pb-4">
         <label>
           First Name<span className="text-red">*</span>
@@ -130,7 +134,7 @@ const PersonalDetails = () => {
           </select>
         </div>
       
-    </div>
+    </form>
   );
 };
 

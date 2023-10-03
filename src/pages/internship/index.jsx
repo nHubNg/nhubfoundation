@@ -28,7 +28,7 @@ function ScrollToTopOnMount() {
 
   return null;
 }
-const Internship = () => {
+const Internship = ({canProceed}) => {
   const swiper = useSwiper();
   const swiperRef = useRef(null); 
   const [page, setPage] = useState(0);
@@ -111,57 +111,6 @@ const slide3 = <div className="swiper-slide-content">{ page === 2 && pageDisplay
             <div className="md:w-[105%] overflow-hidden px-10 md:h-[105vh] mt-2 ">
             
               <div className="overflow-hidden">
-          {/* <Swiper
-                rewind={true}
-                spaceBetween={20}
-                slidesPerView={'auto'}
-                loop={true}
-                onSlideChange={ (swiper) => handleSlideChange(swiper) }
-                pagination={{
-                  el: '.swiper-pagination',
-                  clickable: true,
-                 
-                }}
-                navigation={{
-                  nextEl: '.swiper-button-next',
-                  prevEl: '.swiper-button-prev',
-                  clickable: true,
-                }}
-
-                modules={[EffectCoverflow, Pagination,Navigation]}
-                className="mySwiper w-[500px] relative">
-                <div className="swiper_controler absolute flex flex-col justify-center top-2">
-               
-                <p className="mb-2 w-[500px] text-center">{pageNumber()}</p>
-                <div className="hidden">
-
-                  <div className="swiper-button-prev slider-arrow">
-                      <FiChevronLeft />
-                  </div>
-                  <div className="swiper-button-next slider-arrow">
-                      <FiChevronRight />
-                  </div>
-                </div>
-                  <div className="swiper-pagination mb-5 w-[500px]"></div>
-                  <div className="">
-                    <h1 className="flex justify-center mt-6 items-center text-xl text-black">
-                      {formTitles[page]}
-                    </h1>
-                  </div>
-              </div>
-              <div className=" mt-16">
-
-                <SwiperSlide className="mt-32">                 
-                  <div className="">{slide1}</div>
-                </SwiperSlide>
-                <SwiperSlide className="mt-32">
-                  <div className="">{slide2}</div>
-                </SwiperSlide>
-                <SwiperSlide className="mt-32">
-                  <div className="">{slide3}</div>
-                </SwiperSlide>
-              </div>
-                </Swiper> */}
                 
                 <p className="mb-0 text-center">{pageNumber()}</p>
                 <div className="mb-4">
@@ -173,15 +122,14 @@ const slide3 = <div className="swiper-slide-content">{ page === 2 && pageDisplay
                   {pageDisplay()}
                 </div>
   
-              <div className="md:flex  justify-between items-center my-4 ">
+              <div className="flex  justify-between items-center my-4 ">
                 {page === 0 ? (
                   ""
                 ) : (
                   <button
-                    className="py-2 px-24 md:px-9 bg-orange text-white rounded-md"
+                    className="py-2 px-6 md:px-9 bg-orange text-white rounded-md"
                     disabled={page === 0}
                     onClick={() => {
-                      // goToPreviousSlide
                       setPage((currPage) => currPage - 1);
                     }}
                   >
@@ -189,9 +137,9 @@ const slide3 = <div className="swiper-slide-content">{ page === 2 && pageDisplay
                   </button>
                 )}
                 <button
-                  className="  py-2 px-24 mt-2 md:mt-0 md:px-9 bg-orange text-white rounded-md"
+                  className="  py-2 px-6 mt-2 md:mt-0 md:px-9 bg-orange text-white rounded-md"
+                  disabled={!canProceed}
                   onClick={(e) => {
-                    // goToNextSlide
                     if (page === formTitles.length - 1) {
                       e.preventDefault();
                       console.log(formData);
@@ -203,12 +151,6 @@ const slide3 = <div className="swiper-slide-content">{ page === 2 && pageDisplay
                   {page === formTitles.length - 1 ? "Apply" : " Next"}
                 </button>
               </div>
-              {/* <div className="">
-                <button className="swiper-button-next">Next</button>
-                <button className="swiper-button-prev">Prev</button>
-              </div> */}
-              {/* <div className="swiper-pagination"></div> */}
-                {/* <div className="mt-10" >{pageDisplay()}</div> */}
               </div>
             </div>
         </div>
