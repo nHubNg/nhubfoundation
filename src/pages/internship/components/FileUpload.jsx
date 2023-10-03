@@ -18,8 +18,8 @@ const FileUpload = ({formData, setFormData}) => {
   }
 
   return (
-    <div className="flex flex-col overflow-hidden h-[70vh]  gap-2 my-8 ">
-      <div className="w-[] " >
+    <div className="flex flex-col overflow-hidden md:h-[70vh]   gap-2 my-8 ">
+      <div className="md:w-[500px] " >
         <h3 className="text-center font-semibold mb-1">Cover Letter: (letter of motivation)<span className="text-red"> PDF*</span></h3>
         <div className="flex justify-center  items-center ">
           <div className="bg-skyBlue flex flex-col justify-center items-center gap-y-1 p-8 border-dashed border-[2px] border-blue rounded-lg">

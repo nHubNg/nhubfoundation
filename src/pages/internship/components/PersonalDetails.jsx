@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 const PersonalDetails = ({ formData, setFormData }) => {
   const handleChange = (e) => {
     const type = e.target.type;
@@ -6,12 +8,23 @@ const PersonalDetails = ({ formData, setFormData }) => {
 
     const value = type === "checkbox" ? e.target.checked : e.target.value;
 
+    const data = {
+      type,
+      name,
+      value,
+    };
+    const dataJSON = JSON.stringify(data);
+    localStorage.setItem('myDataKey', dataJSON);
+    const storedDataJSON = localStorage.getItem('myDataKey');
+    const storedData = JSON.parse(storedDataJSON);
+    console.log(storedData);
+
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
   };
-
+  
   const handleSelectChange = (event) => {
     setFormData({
       ...formData,
