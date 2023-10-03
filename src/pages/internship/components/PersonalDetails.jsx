@@ -1,6 +1,9 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
+import { FormContext } from "..";
 
-const PersonalDetails = ({ formData, setFormData }) => {
+const PersonalDetails = () => {
+  const [formData,setFormData] = useContext(FormContext)
+
   const handleChange = (e) => {
     const type = e.target.type;
 

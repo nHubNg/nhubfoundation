@@ -21,7 +21,7 @@ import 'swiper/css/scrollbar';
 import { createContext } from "react";
 
 //context
-const formContext = createContext();
+export const FormContext = createContext();
 
 function ScrollToTopOnMount() {
   useEffect(() => {
@@ -34,7 +34,6 @@ const Internship = () => {
   const swiper = useSwiper();
   const swiperRef = useRef(null); 
   const [page, setPage] = useState(0);
-  const [activeSlide, setActiveSlide] = useState(0);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -112,8 +111,8 @@ const slide1 = <div className="swiper-slide-content">{ page === 0 && pageDisplay
 const slide2 = <div className="swiper-slide-content">{ page === 1 && pageDisplay()}</div>;
 const slide3 = <div className="swiper-slide-content">{ page === 2 && pageDisplay()}</div>;
   
-  return (
-    <formContext>
+  return ( 
+    <FormContext.Provider value={[formData,setFormData]}>
 
     <ScrollToTopOnMount/>
     <div className="md:flex justify-between overflow-x-hidden mb-10 w-full p-4">
@@ -234,7 +233,7 @@ const slide3 = <div className="swiper-slide-content">{ page === 2 && pageDisplay
       </div>
       
     </div>
-    </formContext>
+     </FormContext.Provider>
   );
 };
 
