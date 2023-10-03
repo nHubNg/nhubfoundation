@@ -1,4 +1,4 @@
-import { useState,useEffect,useRef} from "react";
+import { useState,useEffect,useRef, useContext} from "react";
 import PersonalDetails from "./components/PersonalDetails";
 import School from "./components/School";
 import FileUpload from "./components/FileUpload";
@@ -18,10 +18,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import { createContext } from "react";
+import { Context } from "../../App";
 
-//context
-const formContext = createContext();
 
 function ScrollToTopOnMount() {
   useEffect(() => {
@@ -34,24 +32,7 @@ const Internship = () => {
   const swiper = useSwiper();
   const swiperRef = useRef(null); 
   const [page, setPage] = useState(0);
-  const [activeSlide, setActiveSlide] = useState(0);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    interview: "",
-    gender: "",
-    school: "",
-    department: "",
-    course: "",
-    startDate: "",
-    endDate: "",
-    experience: "",
-    track: "",
-    duration: "",
-    cover:"",
-    it:"",
-  });
+  const [formData, setFormData] = useContext(Context);
 
   const formTitles = [
     "Personal Details",
@@ -112,8 +93,8 @@ const slide1 = <div className="swiper-slide-content">{ page === 0 && pageDisplay
 const slide2 = <div className="swiper-slide-content">{ page === 1 && pageDisplay()}</div>;
 const slide3 = <div className="swiper-slide-content">{ page === 2 && pageDisplay()}</div>;
   
-  return (
-    <formContext>
+  return ( 
+    <>
 
     <ScrollToTopOnMount/>
     <div className="md:flex justify-between overflow-x-hidden mb-10 w-full p-4">
@@ -234,7 +215,7 @@ const slide3 = <div className="swiper-slide-content">{ page === 2 && pageDisplay
       </div>
       
     </div>
-    </formContext>
+     </>
   );
 };
 

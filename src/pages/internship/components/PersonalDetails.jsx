@@ -1,16 +1,22 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
+import { Context } from "../../../App";
 
-const PersonalDetails = ({ formData, setFormData }) => {
+const PersonalDetails = () => {
+  const [formData,setFormData] = useContext(Context)
+
   const handleChange = (e) => {
     const type = e.target.type;
 
-    const name = e.target.name;
+    const firstname = e.target.name;
+
+    const lastname = e.target.name;
 
     const value = type === "checkbox" ? e.target.checked : e.target.value;
 
     const data = {
       type,
-      name,
+      firstname,
+      lastname,
       value,
     };
     const dataJSON = JSON.stringify(data);
@@ -21,7 +27,8 @@ const PersonalDetails = ({ formData, setFormData }) => {
 
     setFormData((prevData) => ({
       ...prevData,
-      [name]: value,
+      [firstname]: value,
+      [lastname]: value,
     }));
   };
   
@@ -41,8 +48,8 @@ const PersonalDetails = ({ formData, setFormData }) => {
         <input
           type="text"
           placeholder="First Name"
-          value={formData.name}
-          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+          value={formData.firstname}
+          onChange={(e) => setFormData({ ...formData, firstname: e.target.value })}
           className="w-[100%] border-[#808080] border-[1px] py-2 px-2 outline-0 rounded-[5px]"
         />
       </div>
@@ -53,8 +60,8 @@ const PersonalDetails = ({ formData, setFormData }) => {
         <input
           type="text"
           placeholder="Last Name"
-          value={formData.name}
-          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+          value={formData.lastname}
+          onChange={(e) => setFormData({ ...formData, lastname: e.target.value })}
           className="w-[100%] border-[#808080] border-[1px] py-2 px-2 outline-0 rounded-[5px]"
         />
       </div>

@@ -23,14 +23,34 @@ import Newblog from "./admin/components/Newblog";
 import Categories from "./admin/components/Categories";
 import Tags from "./admin/components/Tags";
 import Overview from "./admin/components/Overview";
+import { createContext } from "react";
 
 // import Success from "./pages/Success/Success";
 
+//context
+export const Context = createContext();
 function App() {
   const [donate, setDonate] = useState(false);
   const [nav, setNav] = useState(false);
   const [showNav, setShowNav] = useState(true);
- 
+  const [formData, setFormData] = useState({
+    firstname: "",
+    lastname:"",
+    email: "",
+    phone: "",
+    interview: "",
+    gender: "",
+    school: "",
+    department: "",
+    course: "",
+    startDate: "",
+    endDate: "",
+    experience: "",
+    track: "",
+    duration: "",
+    cover:"",
+    it:"",
+  });
 
   const handleNav = () => {
     setNav(!nav);
@@ -58,7 +78,7 @@ function App() {
   console.log(pathname)
  
   return (
-    <>
+    <Context.Provider value={[formData,setFormData]}>
       <BrowserRouter>
         {donate ? <Modal handleDesktopDonate={handleDesktopDonate} /> : ""}
         {pathname.includes ( "/admin") ? "" : <Navbar
@@ -101,7 +121,7 @@ function App() {
        
       </BrowserRouter>
      
-    </>
+    </Context.Provider>
   );
 }
 
