@@ -53,3 +53,7 @@ async function Internship (
       }
 
 }
+
+async function getAllIntern(){
+    const result = await axios.get(`${url}/admin/internship/get-applications`)
+}
