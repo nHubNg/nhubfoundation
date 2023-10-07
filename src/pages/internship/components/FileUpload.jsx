@@ -1,10 +1,10 @@
 import { useState, useRef } from "react";
 
 const FileUpload = ({formData, setFormData}) => {
-  const [cover, setCover] = useState("");
+  const [cover] = useState("");
   const coverInput = useRef(null);
 
-  const [input, setInput] = useState("");
+  const [input] = useState("");
   const coverInput2 = useRef(null);
 
   const handleCoverInput = (e) => {
@@ -41,9 +41,11 @@ const FileUpload = ({formData, setFormData}) => {
             type="file"
             ref={coverInput}
             value={cover}
+            accept="application/pdf"
             className="hidden"
             onChange={(e) =>
-              setFormData({ ...formData, cover: e.target.files[0]})
+              {console.log(e.target.files[0])
+                setFormData({ ...formData, cover: e.target.files[0]})}
             }
           />
         </div>
@@ -70,6 +72,7 @@ const FileUpload = ({formData, setFormData}) => {
             type="file"
             ref={coverInput2}
             value={input}
+            accept="application/pdf"
             className="hidden"
             onChange={(e) =>
               setFormData({ ...formData, it: e.target.files[0]})

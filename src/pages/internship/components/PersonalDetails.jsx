@@ -1,50 +1,12 @@
-import { useContext, useEffect } from "react";
-import { Context } from "../../../App";
+import { useContext } from "react";
+import { FormContext } from "../../../contexts/FormContext";
 
 const PersonalDetails = () => {
-  const [formData,setFormData] = useContext(Context)
+  const {formData,setFormData} = useContext(FormContext)
 
-  const handleChange = (e) => {
-    const type = e.target.type;
-
-    const firstname = e.target.name;
-
-    const lastname = e.target.name;
-
-    const value = type === "checkbox" ? e.target.checked : e.target.value;
-
-
-    setFormData((prevData) => ({
-      ...prevData,
-      [firstname]: value,
-      [lastname]: value,
-    }));
-  };
-  
-  const handleSelectChange = (event) => {
-    setFormData({
-      ...formData,
-      selectOption: event.target.value,
-    });
-  };
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (
-      formData.firstname && 
-      formData.lastname && 
-      formData.email &&
-      formData.gender &&
-      formData.phone &&
-      formD
-) {
-      history.goForward();
-    } else {
-      alert('Please fill in all required fields.');
-    }
-  };
 
   return (
-    <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6 text-textAsh" >
+    <form className="grid grid-cols-1 md:grid-cols-2 gap-6 text-textAsh" >
       <div className="pb-4">
         <label>
           First Name<span className="text-red">*</span>
@@ -109,7 +71,7 @@ const PersonalDetails = () => {
             <option value="" disabled selected hidden>
             Select 
             </option>
-            <option value="On-Site">On-Site</option>
+            <option value="Physical">On-Site</option>
             <option value="Virtual">
               Virtual (Have good network connection)
             </option>
@@ -129,8 +91,8 @@ const PersonalDetails = () => {
             <option value="" disabled selected hidden>
               Select 
             </option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
           </select>
         </div>
       
