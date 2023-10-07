@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import {CiWarning} from 'react-icons/ci';
 
 
@@ -18,15 +18,15 @@ export const InstructModal=()=>{
           </div>
           <div className=" items-center mt-3 md:mt-6 justify-between w-[100%]">
             <CiWarning className="text-3xl text-red font-bold" />
-            <p>For whichever technological stack you will be picking during this applications process, make sure you've done your research into it as there will be no room for change once accepted to that track.</p>
+            <p>For whichever technological stack you will be picking during this applications process, make sure you have done your research into it as there will be no room for change once accepted to that track.</p>
           </div>
           <div className=" items-center mt-3 md:mt-6 justify-between w-[100%]">
             <CiWarning className="text-3xl text-red font-bold" />
-            <p>Personal computer (Laptop) is the major tool for all you'll be doing when accepted for internship at nHub, as such make sure you have a working PC and internet access means on or before the registered internship start date.</p>
+            <p>Personal computer (Laptop) is the major tool for all you will be doing when accepted for internship at nHub, as such make sure you have a working PC and internet access means on or before the registered internship start date.</p>
           </div>
           <div className=" items-center mt-3 md:mt-6 justify-between w-[100%]">
             <CiWarning className="text-3xl text-red font-bold" />
-            <p>As a point of note, you should know that nHub does not provide anyone with laptop but can help guide you in getting one that matches your choosen track requirements</p>
+            <p>As a point of note, you should know that nHub does not provide anyone with laptop but can help guide you in getting one that matches your chosen track requirements</p>
           </div>
         </div>
         

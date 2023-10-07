@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const url = import.meta.env.VITE_BASE_URL
 
-async function signIn (email, password) {
+export async function signIn (email, password) {
     const header = {
         "Content-Type": "application/json",
       };
@@ -16,4 +16,18 @@ async function signIn (email, password) {
       }else {
         console.log(result)
       }
+}
+
+export async function getAllIntern() {
+      const header = {
+        "Content-Type": "application/json",
+      };
+  const result = await axios.get(`${url}/admin/internship/get-applications`, {
+    headers: header,
+  });
+   if (result.error !== null) {
+     return result;
+   } else {
+     console.log(result);
+   }
 }
