@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import SideNav from "./layouts/SideNav";
-import hamburger from "../assets/hamburger.svg"
+// import hamburger from "../assets/hamburger.svg"
 import { useState } from "react";
 
 const Dashboard = () => {

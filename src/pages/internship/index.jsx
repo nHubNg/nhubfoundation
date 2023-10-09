@@ -5,6 +5,7 @@ import FileUpload from "./components/FileUpload";
 import { InstructModal } from "./components/InstructModal";
 import { FormContext } from "../../contexts/FormContext";
 import { SubmitInternship } from "../../helpers/internship";
+import Modal from "../../components/Success";
 
 
 function ScrollToTopOnMount() {
@@ -19,6 +20,7 @@ const Internship = () => {
   const [page, setPage] = useState(0);
   const [error, setError] = useState('')
   const [errMsg, setErrMsg] = useState(null)
+  const [success, setSuccess] = useState(false)
 
   const formTitles = [
     "Personal Details",
@@ -65,6 +67,7 @@ const Internship = () => {
         console.log(res)
         if (res.status === 200 || res.status === 201) {
           alert(res.data.message)
+          setSuccess(true)
         } else {
           setErrMsg(res.data.errors)
         }
@@ -135,6 +138,7 @@ const Internship = () => {
         </div>
 
       </div>
+      {success && <Modal />}
     </>
   );
 };

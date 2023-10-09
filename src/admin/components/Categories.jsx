@@ -1,9 +1,8 @@
-import React from 'react'
 
 const Categories = () => {
   return (
     <div>
-      <h1>Catergories</h1>
+      <h1>Categories</h1>
     </div>
   )
 }
