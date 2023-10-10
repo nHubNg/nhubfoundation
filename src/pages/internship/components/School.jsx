@@ -124,7 +124,7 @@ const School = ({ formData, setFormData }) => {
           <div className="bg-orange text-white py-3 px-3 mt-3 rounded-lg">
             <div className="flex justify-between">
               <h4 className="font-medium text-lg my-1">Frontend Development PC Requirements</h4>
-              
+
             </div>
             <ul className="list-disc px-4">
               <li>Processor (CPU): Intel Core i5 & Above</li>
@@ -138,7 +138,7 @@ const School = ({ formData, setFormData }) => {
           <div className="bg-orange text-white py-3 px-3 mt-3 rounded-lg">
             <div className="flex justify-between">
               <h4 className="font-medium text-lg my-1">Backend Development PC Requirements</h4>
-              
+
             </div>
             <ul className="list-disc px-4">
               <li>Processor (CPU): Intel Core i5 & Above</li>
@@ -152,7 +152,7 @@ const School = ({ formData, setFormData }) => {
           <div className="bg-orange text-white py-3 px-3 mt-3 rounded-lg">
             <div className="flex justify-between">
               <h4 className="font-medium text-lg my-1">Product (UI/UX) PC Requirements</h4>
-              
+
             </div>
             <ul className="list-disc px-4">
               <li>8GB RAM</li>
@@ -187,7 +187,7 @@ const School = ({ formData, setFormData }) => {
           <div className="bg-orange text-white py-3 px-3 mt-3 rounded-lg">
             <div className="flex justify-between">
               <h4 className="font-medium text-lg my-1">Mobile App PC Requirements</h4>
-              
+
             </div>
             <ul className="list-disc px-4">
               <li>Ram: 8GB and Above</li>
@@ -209,7 +209,7 @@ const School = ({ formData, setFormData }) => {
           <div className="bg-orange text-white py-3 px-3 mt-3 rounded-lg">
             <div className="flex justify-between">
               <h4 className="font-medium text-lg my-1">Data Analysis PC Requirements</h4>
-              
+
             </div>
             <ul className="list-disc px-4">
               <li>Processor (CPU): Intel Core i5</li>
@@ -224,7 +224,7 @@ const School = ({ formData, setFormData }) => {
           <div className="bg-orange text-white py-3 px-3 mt-3 rounded-lg">
             <div className="flex justify-between">
               <h4 className="font-medium text-lg my-1">Data Analysis PC Requirements</h4>
-              
+
             </div>
             <ul className="list-disc px-4 font-light ">
               <li>Processor: 2.5Ghz</li>

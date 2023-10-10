@@ -1,6 +1,6 @@
 import { useState} from "react";
 import { Link} from "react-router-dom";
-import { SideNavData } from "./SideNavData";
+// import { SideNavData } from "./SideNavData";
 
 const SubMenu = ({ parent, open, toggle, setToggle}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -37,7 +37,7 @@ const SubMenu = ({ parent, open, toggle, setToggle}) => {
               <div className="flex items-center gap-1 py-2 mt-2 hover:bg-transparent rounded-md px-3  hover:rounded-xl transition">
                 <img src={item.mobileIcon} alt=""  className="md:hidden"/>
                 <img src={item.icon} alt="" className={` hidden md:block ${open ? "w-4" : "w-6"} ${open ? "h-4" : "h-6"} `}/>
-                <p className={` ${open ? "block" : "hidden"} text-adminBlue md:text-white md:ztext-[15px]`}>{item.tittle}</p>
+                <p className={` ${open ? "block" : "hidden"} text-adminBlue md:text-white md:text-[15px]`}>{item.tittle}</p>
               </div>
             </Link>
           );

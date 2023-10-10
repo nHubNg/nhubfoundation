@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import AdminHeader from "../layouts/AdminHeader";
 import AppHeader from "../layouts/AppHeader";
 import Dropdown from "./Dropdown";
@@ -81,7 +81,7 @@ const Declined = () => {
           </div>
         </div>
         <div className="hidden md:block">
-          <table class="table-auto mx-auto mt-10 w-[90%] overflow-auto ">
+          <table className="table-auto mx-auto mt-10 w-[90%] overflow-auto ">
             <thead>
               <tr>
                 <th className="py-3 text-left">Details</th>
