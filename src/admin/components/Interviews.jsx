@@ -1,27 +1,44 @@
 import AdminHeader from "../layouts/AdminHeader";
 import AppHeader from "../layouts/AppHeader";
-import InterviewDropdown from "./InterviewDropdown";
+// import InterviewDropdown from "./InterviewDropdown";
 import { useState } from "react";
-import InterviewModal from "../modals/InterviewModal";
+// import InterviewModal from "../modals/InterviewModal";
 import DeclineModal from "../modals/DeclineModal";
 import AdminNav from "../layouts/AdminNav";
-
+import Dropdown from "./Dropdown";
+import Details from "./Details";
+import AcceptModal from "../modals/AcceptModal";
 
 
 const Interviews = () => {
-  const [interviewModal, setInterviewModal] = useState(false);
-  const [declineModal, setDeclineModal] = useState(false);
+  // const [interviewModal, setInterviewModal] = useState(false);
+  // const [declineModal, setDeclineModal] = useState(false);
 
   
-  const handleInterviewModal = () => {
-    setInterviewModal(!interviewModal)
-  }
+  // const handleInterviewModal = () => {
+  //   setInterviewModal(!interviewModal)
+  // }
+  // const handleDeclineModal = () => {
+  //   setDeclineModal(!declineModal);
+  // }
+
+  const [acceptModal, setAcceptModal] = useState(false);
+  const [declineModal, setDeclineModal] = useState(false);
+  const [details, setDetails] = useState(false);
+
+  const handleAcceptModal = () => {
+    setAcceptModal(!acceptModal);
+  };
+
   const handleDeclineModal = () => {
     setDeclineModal(!declineModal);
+  };
+  const handleDetails = () => {
+    setDetails(!details)
   }
   return (
     <>
-    {
+    {/* {
       interviewModal ? (
      <InterviewModal handleInterviewModal={handleInterviewModal}/> 
       ) 
@@ -34,7 +51,14 @@ const Interviews = () => {
         ) 
         :
         ""
-      }
+      } */}
+      {acceptModal ? <AcceptModal handleAcceptModal={handleAcceptModal} /> : ""}
+      {declineModal ? (
+        <DeclineModal handleDeclineModal={handleDeclineModal} />
+      ) : (
+        ""
+      )}
+      {details ? <Details handleDetails={handleDetails} /> : ""}
       <AdminNav heading="Interviews"/>
     <div>
       <div className="hidden md:block">
@@ -47,7 +71,7 @@ const Interviews = () => {
               <h5>Abdulmalik Ishaya</h5>
               <p>elmaleeq112@gmail.com</p>
             </div>
-            <div>
+            <div onClick={handleDetails}>
               <img
                 src="https://res.cloudinary.com/nhubnacademy/image/upload/v1692608267/nHubFoundation/ep_arrow-up_ykqgk7.svg"
                 alt=""
@@ -59,7 +83,7 @@ const Interviews = () => {
               <h5>Abdulmalik Ishaya</h5>
               <p>elmaleeq112@gmail.com</p>
             </div>
-            <div>
+            <div onClick={handleDetails}>
               <img
                 src="https://res.cloudinary.com/nhubnacademy/image/upload/v1692608267/nHubFoundation/ep_arrow-up_ykqgk7.svg"
                 alt=""
@@ -71,7 +95,7 @@ const Interviews = () => {
               <h5>Abdulmalik Ishaya</h5>
               <p>elmaleeq112@gmail.com</p>
             </div>
-            <div>
+            <div onClick={handleDetails}>
               <img
                 src="https://res.cloudinary.com/nhubnacademy/image/upload/v1692608267/nHubFoundation/ep_arrow-up_ykqgk7.svg"
                 alt=""
@@ -95,7 +119,7 @@ const Interviews = () => {
           <tbody>
             <tr>
               <td className="py-2">
-                <button className="flex items-center gap-1 rounded-lg bg-adminGray py-2 px-7">
+                <button className="flex items-center gap-1 rounded-lg bg-adminGray py-2 px-7"  onClick={handleDetails}>
                   <img
                     src="https://res.cloudinary.com/nhubnacademy/image/upload/v1690808993/nHubFoundation/bx_detail_bh1gnk.png"
                     alt=""
@@ -109,12 +133,16 @@ const Interviews = () => {
               <td className="py-3 text-center">Physical</td>
               <td className="py-3 text-center">11:30</td>
               <td> 
-              <InterviewDropdown handleInterviewModal={handleInterviewModal} handleDeclineModal={handleDeclineModal}/>
+              {/* <InterviewDropdown handleInterviewModal={handleInterviewModal} handleDeclineModal={handleDeclineModal}/> */}
+              <Dropdown
+                    handleAcceptModal={handleAcceptModal}
+                    handleDeclineModal={handleDeclineModal}
+                  />
               </td>
             </tr>
             <tr>
               <td className="py-2">
-                <button className="flex items-center gap-1 rounded-lg bg-adminGray py-2 px-7">
+                <button className="flex items-center gap-1 rounded-lg bg-adminGray py-2 px-7"  onClick={handleDetails}>
                   <img
                     src="https://res.cloudinary.com/nhubnacademy/image/upload/v1690808993/nHubFoundation/bx_detail_bh1gnk.png"
                     alt=""
@@ -128,12 +156,16 @@ const Interviews = () => {
               <td className="py-3 text-center">Physical</td>
               <td className="py-3 text-center">11:30</td>
               <td> 
-              <InterviewDropdown handleInterviewModal={handleInterviewModal} handleDeclineModal={handleDeclineModal}/>
+              {/* <InterviewDropdown handleInterviewModal={handleInterviewModal} handleDeclineModal={handleDeclineModal}/> */}
+              <Dropdown
+                    handleAcceptModal={handleAcceptModal}
+                    handleDeclineModal={handleDeclineModal}
+                  />
               </td>
             </tr>
             <tr>
               <td className="py-2">
-                <button className="flex items-center gap-1 rounded-lg bg-adminGray py-2 px-7">
+                <button className="flex items-center gap-1 rounded-lg bg-adminGray py-2 px-7"  onClick={handleDetails}>
                   <img
                     src="https://res.cloudinary.com/nhubnacademy/image/upload/v1690808993/nHubFoundation/bx_detail_bh1gnk.png"
                     alt=""
@@ -147,7 +179,11 @@ const Interviews = () => {
               <td className="py-3 text-center">Physical</td>
               <td className="py-3 text-center">11:30</td>
               <td> 
-              <InterviewDropdown handleInterviewModal={handleInterviewModal} handleDeclineModal={handleDeclineModal}/>
+              {/* <InterviewDropdown handleInterviewModal={handleInterviewModal} handleDeclineModal={handleDeclineModal}/> */}
+              <Dropdown
+                    handleAcceptModal={handleAcceptModal}
+                    handleDeclineModal={handleDeclineModal}
+                  />
               </td>
             </tr>
           </tbody>

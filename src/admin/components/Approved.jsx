@@ -1,6 +1,6 @@
 import AdminHeader from "../layouts/AdminHeader";
 import AppHeader from "../layouts/AppHeader";
-import Dropdown from "./Dropdown";
+import AcceptedDropdown from "./AcceptedDropdown";
 import DeleteModal from "../modals/DeleteModal";
 import { useState } from "react";
 import DeclineModal from "../modals/DeclineModal";
@@ -109,7 +109,7 @@ const Approved = () => {
                 <td className="py-3 text-center">2023-10-09</td>
                 <td className="py-3 text-center">2023-01-05</td>
                 <td>
-                  <Dropdown handleDeleteModal={handleDeleteModal} handleDeclineModal={handleDeclineModal}/>
+                  <AcceptedDropdown handleDeleteModal={handleDeleteModal} handleDeclineModal={handleDeclineModal}/>
                 </td>
               </tr>
               <tr>
@@ -129,7 +129,7 @@ const Approved = () => {
                 <td className="py-3 text-center">2023-10-09</td>
                 <td className="py-3 text-center">2023-01-05</td>
                 <td>
-                  <Dropdown handleDeleteModal={handleDeleteModal} />
+                  <AcceptedDropdown handleDeleteModal={handleDeleteModal} />
                 </td>
               </tr>
               <tr>
@@ -149,7 +149,7 @@ const Approved = () => {
                 <td className="py-3 text-center">2023-10-09</td>
                 <td className="py-3 text-center">2023-01-05</td>
                 <td>
-                  <Dropdown handleDeleteModal={handleDeleteModal} />
+                  <AcceptedDropdown handleDeleteModal={handleDeleteModal} />
                 </td>
               </tr>
             </tbody>
