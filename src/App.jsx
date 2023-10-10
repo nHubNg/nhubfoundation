@@ -23,6 +23,8 @@ import Newblog from "./admin/components/Newblog";
 import Categories from "./admin/components/Categories";
 import Tags from "./admin/components/Tags";
 import Overview from "./admin/components/Overview";
+import Application from "./admin/applications"
+import AdminBlogs from "./admin/blogadmin"
 import { AdminLogin } from "./adminLogin";
 import { FormProvider } from "./contexts/FormContext";
 
@@ -88,14 +90,14 @@ function App() {
         <Route path='/admin/login' element={<AdminLogin />} />
         <Route path="/admin" element={<Dashboard />}>
           <Route path="/admin" element={<Overview />} />
-          <Route path="/admin/applications" >
+          <Route path="/admin/applications" element={<Application />}>
             <Route path="/admin/applications/pending" element={<PendingReviews />} />
             <Route path="/admin/applications/placeher" element={<PlaceHer />} />
             <Route path="/admin/applications/interview" element={<Interviews />} />
             <Route path="/admin/applications/approved" element={<Approved />} />
             <Route path="/admin/applications/declined" element={<Declined />} />
           </Route>
-          <Route path="/admin/blogadmin">
+          <Route path="/admin/blogadmin" element={<AdminBlogs />}>
             <Route path="/admin/blogadmin/all" element={<Allblogs />} />
             <Route path="/admin/blogadmin/new" element={<Newblog />} />
             <Route path="/admin/blogadmin/categories" element={<Categories />} />

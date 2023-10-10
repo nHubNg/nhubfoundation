@@ -22,7 +22,7 @@ const SubMenu = ({ parent, open, toggle, setToggle}) => {
           <div className={`flex items-center gap-1 `}>
             <img src={parent.mobileIcon} alt=""  className="md:hidden"/>
             <img src={parent.icon} alt="" className={`hidden md:block ${open ? "w-4" : "w-6"} ${open ? "h-4" : "h-6"} `}/>
-            <p className={`${open ? "block" : "hidden"}  text-adminBlue  md:text-white font-normal `}>{parent.tittle}</p>
+            <p className={`${open ? "block" : "hidden"}  text-adminBlue  md:text-white font-normal `}>{parent.title}</p>
             <div className="md:hidden">
               <img src={parent.sideArrow}  className={`${isMenuOpen && "rotate-90 "} transition-all duration-300 h-5`} alt="" />
             </div>
@@ -30,18 +30,18 @@ const SubMenu = ({ parent, open, toggle, setToggle}) => {
         </div>
       </Link>
 
-      { isMenuOpen &&
+      {/* { isMenuOpen &&
         parent.subMenu?.map((item, index) => {
           return (
             <Link to={item.path} key={index} onClick={toggleMenu}>
               <div className="flex items-center gap-1 py-2 mt-2 hover:bg-transparent rounded-md px-3  hover:rounded-xl transition">
                 <img src={item.mobileIcon} alt=""  className="md:hidden"/>
                 <img src={item.icon} alt="" className={` hidden md:block ${open ? "w-4" : "w-6"} ${open ? "h-4" : "h-6"} `}/>
-                <p className={` ${open ? "block" : "hidden"} text-adminBlue md:text-white md:text-[15px]`}>{item.tittle}</p>
+                <p className={` ${open ? "block" : "hidden"} text-adminBlue md:text-white md:text-[15px]`}>{item.title}</p>
               </div>
             </Link>
           );
-        })}
+        })} */}
     </div>
    
   );
