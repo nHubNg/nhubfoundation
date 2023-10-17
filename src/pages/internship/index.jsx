@@ -93,7 +93,7 @@ const Internship = () => {
 
           </div>
           <div className=" md:w-[80%] md:ml-32 border border-orange rounded-[10px] flex flex-col justify-center items-center">
-            <div className="md:w-[105%] overflow-hidden px-10 md:h-[105vh] mt-2 ">
+            <div className="md:w-[105%] overflow-scroll px-10 md:h-[105vh] mt-2 ">
 
               <div className="overflow-hidden">
 
@@ -110,7 +110,7 @@ const Internship = () => {
                 <p className="text-btnRed text-center">{error}</p>
                 <p className="text-btnRed text-center">{errMsg}</p>
 
-                <div className="flex  justify-between items-center my-4 ">
+                <div className="flex justify-between items-center my-4 ">
                   {page === 0 ? (
                     ""
                   ) : (
