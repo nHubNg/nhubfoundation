@@ -90,12 +90,12 @@ function App() {
         <Route path='/admin/login' element={<AdminLogin />} />
         <Route path="/admin" element={<Dashboard />}>
           <Route path="/admin" element={<Overview />} />
-          <Route path="/admin/applications" element={<Application />}>
-            <Route path="/admin/applications/pending" element={<PendingReviews />} />
-            <Route path="/admin/applications/placeher" element={<PlaceHer />} />
-            <Route path="/admin/applications/interview" element={<Interviews />} />
-            <Route path="/admin/applications/approved" element={<Approved />} />
-            <Route path="/admin/applications/declined" element={<Declined />} />
+          <Route path="applications" element={<Application />}>
+            <Route path="pending" element={<PendingReviews />} />
+            <Route path="placeher" element={<PlaceHer />} />
+            <Route path="interview" element={<Interviews />} />
+            <Route path="approved" element={<Approved />} />
+            <Route path="declined" element={<Declined />} />
           </Route>
           <Route path="/admin/blogadmin" element={<AdminBlogs />}>
             <Route path="/admin/blogadmin/all" element={<Allblogs />} />
