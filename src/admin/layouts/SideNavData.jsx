@@ -9,8 +9,8 @@ export const SideNavData = [
        
     },
     {
-        title : 'Internship application',
-        path: '/admin/applications/interview',
+        title : 'Internship',
+        path: '/admin/applications/pending',
         icon : 'https://res.cloudinary.com/nhubnacademy/image/upload/v1691063574/nHubFoundation/charm_person_sr3kco.svg',
         mobileIcon: 'https://res.cloudinary.com/nhubnacademy/image/upload/v1692616689/nHubFoundation/charm_person_lbjbys.svg',
         sideArrow : 'https://res.cloudinary.com/nhubnacademy/image/upload/v1692793410/nHubFoundation/icons8-greater-than-50_pprtqw.png',
@@ -18,31 +18,31 @@ export const SideNavData = [
         // path : '/applications',
         subMenu: [
             {
+                title : 'New',
+                path : '/admin/applications/pending',
+                icon : 'https://res.cloudinary.com/nhubnacademy/image/upload/v1690455760/nHubFoundation/Vector_e3vumb.png',
+                mobileIcon : 'https://res.cloudinary.com/nhubnacademy/image/upload/v1692616802/nHubFoundation/mdi_account-pending-outline_l6x6ft.svg'
+            },
+            {
                 title : 'Interviews',
                 path : '/admin/applications/interview',
                 icon : 'https://res.cloudinary.com/nhubnacademy/image/upload/v1691064046/nHubFoundation/teenyicons_appointments-outline_jjlgn0.svg',
                 mobileIcon : 'https://res.cloudinary.com/nhubnacademy/image/upload/v1692616517/nHubFoundation/teenyicons_appointments-outline_olnthc.svg'
             },
             {
-                title : 'New Apps',
-                path : '/admin/applications/pending',
-                icon : 'https://res.cloudinary.com/nhubnacademy/image/upload/v1690455760/nHubFoundation/Vector_e3vumb.png',
-                mobileIcon : 'https://res.cloudinary.com/nhubnacademy/image/upload/v1692616802/nHubFoundation/mdi_account-pending-outline_l6x6ft.svg'
-            },
-            {
-                title : 'Approved Apps',
+                title : 'Approved',
                 path : '/admin/applications/approved',
                 icon : 'https://res.cloudinary.com/nhubnacademy/image/upload/v1691064046/nHubFoundation/eva_person-done-outline_exslcj.svg',
                 mobileIcon : 'https://res.cloudinary.com/nhubnacademy/image/upload/v1692616516/nHubFoundation/eva_person-done-outline_znsspy.svg'
             },
             {
-                title : 'Declined Apps',
+                title : 'Declined',
                 path : '/admin/applications/declined',
                 icon : 'https://res.cloudinary.com/nhubnacademy/image/upload/v1691064046/nHubFoundation/tabler_user-cancel_gjjmvt.svg',
                 mobileIcon : 'https://res.cloudinary.com/nhubnacademy/image/upload/v1692616516/nHubFoundation/tabler_user-cancel_ozriib.svg'
             },
                 {
-                    title : 'PlaceHer Apps',
+                    title : 'PlaceHer',
                     path : '/admin/applications/placeher',
                     icon : 'https://res.cloudinary.com/nhubnacademy/image/upload/v1691064046/nHubFoundation/akar-icons_person_mxzjpm.svg',
                     mobileIcon : 'https://res.cloudinary.com/nhubnacademy/image/upload/v1692616517/nHubFoundation/akar-icons_person_opjkfo.svg'
