@@ -1,6 +1,8 @@
 import axios from 'axios';
+import Cookies from "js-cookie";
 
-const url = import.meta.env.VITE_BASE_URL
+const cookie = Cookies.get('status')
+// const url = import.meta.env.VITE_BASE_URL
 
 export async function signIn (email, password) {
     const header = {
@@ -21,8 +23,9 @@ export async function signIn (email, password) {
 export async function getAllIntern() {
       const header = {
         "Content-Type": "application/json",
+        Authorization: "Bearer ".concat(cookie),
       };
-  const result = await axios.get(`https://nhubfoundation-v2.onrender.com/api/v1/admin/internship/get-applications`, {
+  const result = await axios.post(`https://nhubfoundation-v2.onrender.com/api/v1/admin/internship/get-applications`, {
     headers: header,
   });
    if (result.error !== null) {

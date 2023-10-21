@@ -1,14 +1,37 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import SideNav from "./layouts/SideNav";
 // import hamburger from "../assets/hamburger.svg"
-import { useState } from "react";
+import { useContext, useEffect, useState, useCallback } from "react";
+import { ActiveContext } from "../contexts/ActiveContext";
+import { getAllIntern } from "../helpers/admin";
 
 const Dashboard = () => {
+  const {activeState, setAllInterns} = useContext(ActiveContext)
   const [open, setOpen] = useState(true);
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    !activeState && navigate('/')
+  }, [activeState, navigate])
 
   const handleOpen = () => {
     setOpen(!open)
   }
+
+  const getAll = useCallback(async () => {
+    const res = await getAllIntern()
+    if (res?.data.statusCode === 200 || res?.data.statusCode === 201) {
+      console.log(res.data)
+      return setAllInterns(res)
+    } else {
+      console.log(res)
+    }
+  }, [setAllInterns]);
+
+  useEffect(()=> {
+    getAll()
+  } ,[getAll])
+
   return (
     <>
     <div className="grid grid-cols-12 ">

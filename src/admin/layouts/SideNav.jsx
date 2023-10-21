@@ -18,6 +18,8 @@ const SideNav = ({open, handleOpen}) => {
     console.log(modal);
   };
 
+
+
   return (
     <>
       {modal ? <AdminModal handleModal={handleModal} /> : ""}
@@ -39,7 +41,7 @@ const SideNav = ({open, handleOpen}) => {
             className=" hover:bg-transparent rounded-md px-3  flex items-center hover:rounded-xl"
             onClick={handleModal}
           >
-            <button className="flex items-center gap-1 py-2  ">
+            <button className="flex items-center gap-1 py-2">
               <img
                 src="https://res.cloudinary.com/nhubnacademy/image/upload/v1691063227/nHubFoundation/ant-design_logout-outlined_mcabry.svg"
                 alt=""
