@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import AdminHeader from "../layouts/AdminHeader";
 import AppHeader from "../layouts/AppHeader";
-import Dropdown from "./Dropdown";
+import DeclineDropdown from "./DeclineDropdown";
 import DeleteModal from "../modals/DeleteModal";
 import DeclineModal from "../modals/DeclineModal";
 import AdminNav from "../layouts/AdminNav";
@@ -81,7 +81,7 @@ const Declined = () => {
           </div>
         </div>
         <div className="hidden md:block">
-          <table class="table-auto mx-auto mt-10 w-[90%] overflow-auto ">
+          <table className="table-auto mx-auto mt-10 w-[90%] overflow-auto ">
             <thead>
               <tr>
                 <th className="py-3 text-left">Details</th>
@@ -110,7 +110,7 @@ const Declined = () => {
                 <td className="py-3 text-center">2023-10-09</td>
                 <td className="py-3 text-center">2023-01-05</td>
                 <td>
-                  <Dropdown handleDeleteModal={handleDeleteModal} handleDeclineModal={handleDeclineModal}/>
+                  <DeclineDropdown handleDeleteModal={handleDeleteModal} />
                 </td>
               </tr>
               <tr>
@@ -130,7 +130,7 @@ const Declined = () => {
                 <td className="py-3 text-center">2023-10-09</td>
                 <td className="py-3 text-center">2023-01-05</td>
                 <td>
-                  <Dropdown handleDeleteModal={handleDeleteModal} handleDeclineModal={handleDeclineModal}/>
+                  <DeclineDropdown handleDeleteModal={handleDeleteModal} />
                 </td>
               </tr>
               <tr>
@@ -150,7 +150,7 @@ const Declined = () => {
                 <td className="py-3 text-center">2023-10-09</td>
                 <td className="py-3 text-center">2023-01-05</td>
                 <td>
-                  <Dropdown handleDeleteModal={handleDeleteModal} handleDeclineModal={handleDeclineModal}/>
+                  <DeclineDropdown handleDeleteModal={handleDeleteModal} />
                 </td>
               </tr>
             </tbody>

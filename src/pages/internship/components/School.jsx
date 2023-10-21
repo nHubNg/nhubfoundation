@@ -1,13 +1,8 @@
-// import React, { useState } from "react";
 
 const School = ({ formData, setFormData }) => {
-  // const [hideDiv, setHideDiv] = useState(false);
 
-  // const ToggleDivVisibility = () =>{
-  //   setHideDiv(!hideDiv)
-  // }
   return (
-    <div>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-[#808080]" >
       <div className="pb-4">
         <label>
           School<span className="text-red">*</span>
@@ -17,7 +12,7 @@ const School = ({ formData, setFormData }) => {
           placeholder="e.g University of Jos"
           value={formData.school}
           onChange={(e) => setFormData({ ...formData, school: e.target.value })}
-          className="w-[100%] border-orange border-[1px] py-1 px-2 rounded-2xl outline-0"
+          className="w-[100%] border-[#808080] border-[1px] py-2 px-2 outline-0 rounded-[5px]"
         />
       </div>
       <div className="pb-4">
@@ -31,7 +26,7 @@ const School = ({ formData, setFormData }) => {
           onChange={(e) =>
             setFormData({ ...formData, department: e.target.value })
           }
-          className="w-[100%] border-orange border-[1px] py-1 px-2 rounded-2xl outline-0"
+          className="w-[100%] border-[#808080] border-[1px] py-2 px-2 outline-0 rounded-[5px]"
         />
       </div>
       <div className="pb-4">
@@ -43,7 +38,19 @@ const School = ({ formData, setFormData }) => {
           placeholder="e.g Cybersecurity"
           value={formData.course}
           onChange={(e) => setFormData({ ...formData, course: e.target.value })}
-          className="w-[100%] border-orange border-[1px] py-1 px-2 rounded-2xl outline-0"
+          className="w-[100%] border-[#808080] border-[1px] py-2 px-2 outline-0 rounded-[5px]"
+        />
+      </div>
+      <div className="pb-4">
+        <label>
+          Registration Number<span className="text-red">*</span>
+        </label>
+        <input
+          type="text"
+          placeholder="e.g UJ/2023/001"
+          value={formData.regNo}
+          onChange={(e) => setFormData({ ...formData, regNo: e.target.value })}
+          className="w-[100%] border-[#808080] border-[1px] py-2 px-2 outline-0 rounded-[5px]"
         />
       </div>
       <div className="pb-4">
@@ -56,7 +63,7 @@ const School = ({ formData, setFormData }) => {
           onChange={(e) =>
             setFormData({ ...formData, startDate: e.target.value })
           }
-          className="w-[100%] border-orange border-[1px] py-1 px-2 rounded-2xl outline-0"
+          className="w-[100%] border-[#808080] border-[1px] py-2 px-2 outline-0 rounded-[5px]"
         />
       </div>
       <div className="pb-4">
@@ -69,7 +76,7 @@ const School = ({ formData, setFormData }) => {
           onChange={(e) =>
             setFormData({ ...formData, endDate: e.target.value })
           }
-          className="w-[100%] border-orange border-[1px] py-1 px-2 rounded-2xl outline-0"
+          className="w-[100%] border-[#808080] border-[1px] py-2 px-2 outline-0 rounded-[5px]"
         />
       </div>
 
@@ -82,7 +89,7 @@ const School = ({ formData, setFormData }) => {
           onChange={(e) =>
             setFormData({ ...formData, experience: e.target.value })
           }
-          className="w-[100%]  border-orange border-[1px] outline-0 py-2 pl-2 pr-4  rounded-xl"
+          className="w-[100%] border-[#808080] border-[1px] py-2 px-2 outline-0 rounded-[5px]"
         >
           <option value="" disabled selected hidden>
             Programming Experience
@@ -98,31 +105,26 @@ const School = ({ formData, setFormData }) => {
         <select
           value={formData.track}
           onChange={(e) => setFormData({ ...formData, track: e.target.value })}
-          className="w-[100%]  border-orange border-[1px] outline-0 py-2 pl-2 pr-4  rounded-xl"
+          className="w-[100%] border-[#808080] border-[1px] py-2 px-2 outline-0 rounded-[5px]"
         >
           <option value="" disabled selected hidden>
             Select
           </option>
-          <option value="Frontend Development">Frontend Development</option>
-          <option value="Backend Development">Backend Development</option>
-          <option value="Product (UI/UX) Design">Product (UI/UX) Design</option>
+          <option value="Frontend">Frontend Development</option>
+          <option value="Backend">Backend Development</option>
+          <option value="UI/UX">Product (UI/UX) Design</option>
           <option value="Data Science">Data Science</option>
           <option value="Data Analysis">Data Analysis</option>
-          <option value="AR/VR">AR/VR</option>
-          <option value="Embedded Systems">Embedded Systems</option>
-          <option value="Networking/Cybersecurity">Networking/Cybersecurity</option>
+          <option value="VR & 3D">AR/VR</option>
+          <option value="Embedded Systems/IOT">Embedded Systems</option>
+          {/* <option value="Networking/Cybersecurity">Networking/Cybersecurity</option> */}
           <option value="Mobile App">Mobile App</option>
         </select>
-        {formData.track === "Frontend Development" && (
+        {formData.track === "Frontend" && (
           <div className="bg-orange text-white py-3 px-3 mt-3 rounded-lg">
             <div className="flex justify-between">
               <h4 className="font-medium text-lg my-1">Frontend Development PC Requirements</h4>
-              {/* <button onClick={ToggleDivVisibility}>
-                <img
-                  src="https://res.cloudinary.com/nhubnacademy/image/upload/v1687254880/nHubFoundation/icons8-close-24_u4nq4b.png"
-                  alt=""
-                />
-              </button> */}
+
             </div>
             <ul className="list-disc px-4">
               <li>Processor (CPU): Intel Core i5 & Above</li>
@@ -132,16 +134,11 @@ const School = ({ formData, setFormData }) => {
             </ul>
           </div>
         )}
-         {formData.track === "Backend Development" && (
+         {formData.track === "Backend" && (
           <div className="bg-orange text-white py-3 px-3 mt-3 rounded-lg">
             <div className="flex justify-between">
               <h4 className="font-medium text-lg my-1">Backend Development PC Requirements</h4>
-              {/* <button onClick={ToggleDivVisibility}>
-                <img
-                  src="https://res.cloudinary.com/nhubnacademy/image/upload/v1687254880/nHubFoundation/icons8-close-24_u4nq4b.png"
-                  alt=""
-                />
-              </button> */}
+
             </div>
             <ul className="list-disc px-4">
               <li>Processor (CPU): Intel Core i5 & Above</li>
@@ -151,16 +148,11 @@ const School = ({ formData, setFormData }) => {
             </ul>
           </div>
         )}
-        {formData.track === "Product (UI/UX) Design" && (
+        {formData.track === "UI/UX" && (
           <div className="bg-orange text-white py-3 px-3 mt-3 rounded-lg">
             <div className="flex justify-between">
               <h4 className="font-medium text-lg my-1">Product (UI/UX) PC Requirements</h4>
-              {/* <button onClick={ToggleDivVisibility}>
-                <img
-                  src="https://res.cloudinary.com/nhubnacademy/image/upload/v1687254880/nHubFoundation/icons8-close-24_u4nq4b.png"
-                  alt=""
-                />
-              </button> */}
+
             </div>
             <ul className="list-disc px-4">
               <li>8GB RAM</li>
@@ -171,7 +163,7 @@ const School = ({ formData, setFormData }) => {
             </ul>
           </div>
         )}
-        {formData.track === "AR/VR" && (
+        {formData.track === "VR & 3D" && (
           <div className="bg-orange text-white py-3 px-3 mt-3 rounded-lg">
             <h4 className="font-medium text-lg my-1">AR/VR App PC Requirements</h4>
             <ul className="list-disc px-4">
@@ -195,12 +187,7 @@ const School = ({ formData, setFormData }) => {
           <div className="bg-orange text-white py-3 px-3 mt-3 rounded-lg">
             <div className="flex justify-between">
               <h4 className="font-medium text-lg my-1">Mobile App PC Requirements</h4>
-              {/* <button onClick={ToggleDivVisibility}>
-                <img
-                  src="https://res.cloudinary.com/nhubnacademy/image/upload/v1687254880/nHubFoundation/icons8-close-24_u4nq4b.png"
-                  alt=""
-                />
-              </button> */}
+
             </div>
             <ul className="list-disc px-4">
               <li>Ram: 8GB and Above</li>
@@ -213,7 +200,7 @@ const School = ({ formData, setFormData }) => {
             <h4 className="font-medium text-lg my-1">Mobile App MacOs Requirements</h4>
             <ul className="list-disc px-4">
               <li>
-                MacBook Pro 2016 and above. (Apple Silicon is Recommended)
+                MacBook Pro 2016 and above. (Apple Silicon is Recommended)
               </li>
             </ul>
           </div>
@@ -222,19 +209,14 @@ const School = ({ formData, setFormData }) => {
           <div className="bg-orange text-white py-3 px-3 mt-3 rounded-lg">
             <div className="flex justify-between">
               <h4 className="font-medium text-lg my-1">Data Analysis PC Requirements</h4>
-              {/* <button onClick={ToggleDivVisibility}>
-                <img
-                  src="https://res.cloudinary.com/nhubnacademy/image/upload/v1687254880/nHubFoundation/icons8-close-24_u4nq4b.png"
-                  alt=""
-                />
-              </button> */}
+
             </div>
             <ul className="list-disc px-4">
               <li>Processor (CPU): Intel Core i5</li>
               <li>Operating System:Microsoft Windows 10 x64</li>
               <li>Memory:8 GB RAM</li>
               <li>Storage:500 GB internal storage drive</li>
-              <li>Monitor/Display:13" LCD monitor</li>
+              <li>Monitor/Display:13&apos; LCD monitor</li>
             </ul>
           </div>
         )}
@@ -242,12 +224,7 @@ const School = ({ formData, setFormData }) => {
           <div className="bg-orange text-white py-3 px-3 mt-3 rounded-lg">
             <div className="flex justify-between">
               <h4 className="font-medium text-lg my-1">Data Analysis PC Requirements</h4>
-              {/* <button onClick={ToggleDivVisibility}>
-                <img
-                  src="https://res.cloudinary.com/nhubnacademy/image/upload/v1687254880/nHubFoundation/icons8-close-24_u4nq4b.png"
-                  alt=""
-                />
-              </button> */}
+
             </div>
             <ul className="list-disc px-4 font-light ">
               <li>Processor: 2.5Ghz</li>
@@ -268,14 +245,14 @@ const School = ({ formData, setFormData }) => {
           onChange={(e) =>
             setFormData({ ...formData, duration: e.target.value })
           }
-          className="w-[100%]  border-orange border-[1px] outline-0 py-2 pl-2 pr-4  rounded-xl"
+          className="w-[100%] border-[#808080] border-[1px] py-2 px-2 outline-0 rounded-[5px]"
         >
           <option value="" disabled selected hidden>
             Select
           </option>
-          <option value="Four Months">Four Months</option>
-          <option value="Six Months">Six Months</option>
-          <option value="One year">One year</option>
+          <option value="4">Four Months</option>
+          <option value="6">Six Months</option>
+          <option value="12">One year</option>
         </select>
       </div>
     </div>

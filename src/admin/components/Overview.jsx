@@ -1,10 +1,9 @@
-import React from "react";
 import AdminHeader from "../layouts/AdminHeader";
 import AdminNav from "../layouts/AdminNav";
 
 const Overview = () => {
   return (
-    <div>
+    <div className='pb-10'>
       <div>
         <AdminNav heading="Dashboard"/>
       </div>

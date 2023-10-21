@@ -1,4 +1,3 @@
-import React from "react";
 import mobilemenu from "../../assets/hambergermenu.svg";
 import { SideNavData } from "./SideNavData";
 import SubMenu from "./SubMenu";
