@@ -19,10 +19,10 @@ const Dashboard = () => {
   }
 
   const getAll = useCallback(async () => {
-    const res = await getAllIntern()
-    if (res?.data.statusCode === 200 || res?.data.statusCode === 201) {
+    const res = await getAllIntern('isCalledForInterview', 'pending')
+    if (res?.status === 200 || res?.status === 201) {
       console.log(res.data)
-      return setAllInterns(res)
+      return setAllInterns(res.data)
     } else {
       console.log(res)
     }

@@ -9,7 +9,6 @@ export function ActiveProvider({ children }) {
     const token = Cookies.get('status')
     const isActive = token ? true : false
 
-    console.log(isActive)
     const [activeState, setActiveState] = useState(isActive);
     const [allInterns, setAllInterns] = useState(null)
 

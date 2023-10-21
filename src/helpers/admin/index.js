@@ -20,14 +20,21 @@ export async function signIn (email, password) {
       }
 }
 
-export async function getAllIntern() {
+export async function getAllIntern(item, value) {
       const header = {
         "Content-Type": "application/json",
         Authorization: "Bearer ".concat(cookie),
       };
-  const result = await axios.post(`https://nhubfoundation-v2.onrender.com/api/v1/admin/internship/get-applications`, {
-    headers: header,
-  });
+      const payload = {
+        filters: { [item] : value.toString() },
+      };
+  const result = await axios.post(
+    `https://nhubfoundation-v2.onrender.com/api/v1/admin/internship/get-applications`,
+    JSON.stringify(payload),
+    {
+      headers: header,
+    }
+  );
    if (result.error !== null) {
      return result;
    } else {
