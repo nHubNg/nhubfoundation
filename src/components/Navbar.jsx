@@ -2,9 +2,14 @@ import { NavLink, Link } from "react-router-dom";
 import hamburger from "../assets/hamburger.png"
 import logo from "../assets/logo.png"
 import close from "../assets/close.png"
+import { useState } from "react";
 
 const Navbar = ({ handleDonate, handleDesktopDonate, handleNav, nav }) => {
+  const [isActive, setIsActive] = useState(false)
   const active = "text-orange border-b-2 pb-1 border-orange";
+  const showAvatar = () => {
+    setIsActive(!isActive)
+  }
   return (
     <nav className="  bg-white">
       <div className="my-container flex items-center md:justify-between   h-14">
@@ -115,6 +120,12 @@ const Navbar = ({ handleDonate, handleDesktopDonate, handleNav, nav }) => {
                 Donate
               </button>
             </div>
+            <li className='relative'>
+              <div className='h-8 w-8 rounded-full bg-orange cursor-pointer' onClick={showAvatar}></div>
+              {isActive && <div className='absolute z-40 bg-white px-5 py-2 rounded-[5px] shadow-lg'>
+                <button><Link to={'/admin/login'} onClick={showAvatar}>Login</Link></button>
+              </div>}
+            </li>
           </ul>
         </div>
 
@@ -185,6 +196,13 @@ const Navbar = ({ handleDonate, handleDesktopDonate, handleNav, nav }) => {
             >
               Donate
             </button>
+
+            <li className='relative'>
+              <div className='h-8 w-8 rounded-full bg-orange cursor-pointer' onClick={showAvatar}></div>
+              {isActive && <div className='absolute z-40 bg-white px-5 py-2 rounded-[5px] shadow-lg'>
+                <button><Link to={'/admin/login'} onClick={showAvatar}>Login</Link></button>
+              </div>}
+            </li>
           </ul>
         </div>
       </div>

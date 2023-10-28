@@ -1,12 +1,11 @@
 import { Outlet, useNavigate } from "react-router-dom";
 import SideNav from "./layouts/SideNav";
 // import hamburger from "../assets/hamburger.svg"
-import { useContext, useEffect, useState, useCallback } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ActiveContext } from "../contexts/ActiveContext";
-import { getAllIntern } from "../helpers/admin";
 
 const Dashboard = () => {
-  const {activeState, setAllInterns} = useContext(ActiveContext)
+  const {activeState} = useContext(ActiveContext)
   const [open, setOpen] = useState(true);
   const navigate = useNavigate()
 
@@ -18,19 +17,19 @@ const Dashboard = () => {
     setOpen(!open)
   }
 
-  const getAll = useCallback(async () => {
-    const res = await getAllIntern('isCalledForInterview', 'pending')
-    if (res?.status === 200 || res?.status === 201) {
-      console.log(res.data)
-      return setAllInterns(res.data)
-    } else {
-      console.log(res)
-    }
-  }, [setAllInterns]);
+  // useCallback(async () => {
+  //   const res = await getAllIntern('isCalledForInterview', 'pending')
+  //   if (res?.status === 200 || res?.status === 201) {
+  //     console.log(res.data)
+  //     return setAllInterns(res.data)
+  //   } else {
+  //     console.log(res)
+  //   }
+  // }, [setAllInterns]);
 
-  useEffect(()=> {
-    getAll()
-  } ,[getAll])
+  // useEffect(()=> {
+  //   getAll()
+  // } ,[getAll])
 
   return (
     <>

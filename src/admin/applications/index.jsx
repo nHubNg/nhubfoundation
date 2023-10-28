@@ -15,7 +15,7 @@ const Applications = () => {
         <div className='w-full'>
             {
                 SideNavData.map((parent, i) => (
-                    <div key={i} className='flex justify-around items-center w-full px-2 lg:bg-orange pl-10'>
+                    <div key={i} className='flex justify-around items-center w-full px-2 md:bg-orange pl-10'>
                         {parent.title == "Internship" && parent.subMenu?.map((item, index) => {
                             return (
                                 <div key={index} className='flex justify-between items-center w-full pb-2'>

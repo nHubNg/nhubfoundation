@@ -35,8 +35,6 @@ import { ActiveProvider } from "./contexts/ActiveContext";
 function App() {
   const [donate, setDonate] = useState(false);
   const [nav, setNav] = useState(false);
-  // const [showNav, setShowNav] = useState(true);
-
 
   const handleNav = () => {
     setNav(!nav);
@@ -59,9 +57,9 @@ function App() {
       ? (document.body.style.overflow = "hidden")
       : (document.body.style.overflow = "unset");
   };
-
+  
   const pathname = window.location.pathname
-  console.log(pathname)
+
 
   return (
     <BrowserRouter>
@@ -108,7 +106,7 @@ function App() {
 
           </Route>
         </Routes>
-        {pathname.includes("/admin") ? "" : <Footer />}
+        {pathname.includes("/admin")  ? "" : <Footer />}
       </ActiveProvider>
     </BrowserRouter>
 

@@ -24,7 +24,7 @@ export const AdminLogin = () => {
             const res = await signIn(email, password)
             setLoading('')
             if (res?.data.statusCode === 200 || res?.data.statusCode === 201) {
-                Cookies.set('status', res.data.data.token, { expires: 1 });
+                Cookies.set('status', res.data.data.token, { expires: 2 });
                 setActiveState(true)
                 navigate('/admin')
                 return res

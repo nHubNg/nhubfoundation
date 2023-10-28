@@ -2,6 +2,7 @@ import axios from 'axios';
 import Cookies from "js-cookie";
 
 const cookie = Cookies.get('status')
+console.log(cookie)
 // const url = import.meta.env.VITE_BASE_URL
 
 export async function signIn (email, password) {
