@@ -11,8 +11,9 @@ export function ActiveProvider({ children }) {
 
     const [activeState, setActiveState] = useState(isActive);
     const [allInterns, setAllInterns] = useState(null)
+    const [detail, setDetail] = useState([])
 
 
-    return <ActiveContext.Provider value={{ activeState, setActiveState, allInterns, setAllInterns }}
+    return <ActiveContext.Provider value={{ activeState, setActiveState, allInterns, setAllInterns, detail, setDetail }}
     >{children}</ActiveContext.Provider>;
 }

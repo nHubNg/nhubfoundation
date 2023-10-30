@@ -1,7 +1,23 @@
+import { useCallback, useEffect, useState } from "react";
 import AdminHeader from "../layouts/AdminHeader";
 import AdminNav from "../layouts/AdminNav";
+import { getAnalytics } from "../../helpers/admin";
 
 const Overview = () => {
+  const [analytics, setAnalytics] = useState([])
+  const getCount = useCallback(async () => {
+    const res = await getAnalytics()
+    if (res?.status === 200 || res?.status === 201) {
+      return setAnalytics(res.data.data)
+    } else {
+      console.log(res)
+    }
+  }, [setAnalytics])
+
+  useEffect(() => {
+    getCount()
+  }, [getCount])
+
   return (
     <div className='pb-10'>
       <div>
@@ -44,21 +60,21 @@ const Overview = () => {
           <div className="flex justify-center gap-4 md:gap-6 ">
             <div className="flex flex-col justify-center items-center bg-adminBlue text-white  w-[50%] md:w-[250px] py-9 md:py-12 rounded-md">
               <h5 >Total Screenings</h5>
-              <p className="text-orange">5</p>
+              <p className="text-orange">{analytics.totalPendingScreenings}</p>
             </div>
             <div className="flex flex-col justify-center items-center bg-adminBlue text-white py-9 md:py-12  w-[50%] md:w-[250px] rounded-md">
               <h5>Total Interviews</h5>
-              <p className="text-orange">26</p>
+              <p className="text-orange">{analytics.isCalledForInterview}</p>
             </div>
           </div>
           <div className="flex justify-center  gap-4 md:gap-6">
             <div className="flex flex-col justify-center items-center bg-adminBlue text-white   w-[50%] md:w-[250px] py-9 md:py-12 rounded-md">
               <h5>Accepted Count</h5>
-              <p className="text-orange">100</p>
+              <p className="text-orange">{analytics.isAccepted}</p>
             </div>
             <div className="flex flex-col justify-center items-center bg-adminBlue text-white  w-[50%] md:w-[250px] py-9 md:py-12 rounded-md">
               <h5>Declined Count</h5>
-              <p className="text-orange">59</p>
+              <p className="text-orange">{analytics.isDeclined}</p>
             </div>
           </div>
         </div>

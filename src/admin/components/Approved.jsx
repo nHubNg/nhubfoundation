@@ -2,13 +2,17 @@ import AdminHeader from "../layouts/AdminHeader";
 import AppHeader from "../layouts/AppHeader";
 import AcceptedDropdown from "./AcceptedDropdown";
 import DeleteModal from "../modals/DeleteModal";
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, useContext } from "react";
 import DeclineModal from "../modals/DeclineModal";
 import Details from "./Details";
 import AdminNav from "../layouts/AdminNav";
 import { getAllIntern } from "../../helpers/admin";
+import { ActiveContext } from "../../contexts/ActiveContext";
+
 
 const Approved = () => {
+  const { setDetail } = useContext(ActiveContext)
+
   const [deleteModal, setDeleteModal] = useState(false);
   const [declineModal, setDeclineModal] = useState(false);
   const [allApproved, setAllApproved] = useState([])
@@ -28,7 +32,8 @@ const Approved = () => {
     getAll()
   }, [getAll])
 
-  const handleDetails = () => {
+  const handleDetails = (item) => {
+    setDetail(item)
     setDetails(!details)
   }
 
@@ -71,7 +76,7 @@ const Approved = () => {
                   <h5>{pend.first_name} {pend.last_name}</h5>
                   <p>{pend.email}</p>
                 </div>
-                <div onClick={handleDetails}>
+                <div onClick={() => handleDetails(pend)} className='cursor-pointer'>
                   <img
                     src="https://res.cloudinary.com/nhubnacademy/image/upload/v1692608267/nHubFoundation/ep_arrow-up_ykqgk7.svg"
                     alt=""
@@ -103,7 +108,7 @@ const Approved = () => {
                 return (
                   <tr key={i}>
                     <td className="py-2">
-                      <button className="flex items-center gap-1 rounded-lg bg-adminGray py-2 px-7">
+                      <button className="flex items-center gap-1 rounded-lg bg-adminGray py-2 px-7" onClick={() => handleDetails(pend)} >
                         <img
                           src="https://res.cloudinary.com/nhubnacademy/image/upload/v1690808993/nHubFoundation/bx_detail_bh1gnk.png"
                           alt=""

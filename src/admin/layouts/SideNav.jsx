@@ -15,7 +15,6 @@ const SideNav = ({open, handleOpen}) => {
 
   const handleModal = () => {
     setModal(!modal);
-    console.log(modal);
   };
 
 
@@ -30,7 +29,7 @@ const SideNav = ({open, handleOpen}) => {
               className={`${open ? "text-center" : "text-left"
                 } text-xl text-white pt-6`}
             >
-              NHUB{" "}
+              nHUB{" "}
               <span className={`${!open && "hidden text-left"}`}>FOUNDATION</span>
             </h1>
             </Link>

@@ -24,7 +24,7 @@ export async function signIn (email, password) {
 export async function getAllIntern(item, value) {
       const header = {
         "Content-Type": "application/json",
-        Authorization: "Bearer ".concat(cookie),
+        Authorization: `Bearer ${Cookies.get("status")}`,
       };
       const payload = {
         filters: { [item] : value.toString() },
@@ -41,4 +41,22 @@ export async function getAllIntern(item, value) {
    } else {
      console.log(result);
    }
+}
+
+export async function getAnalytics() {
+  const header = {
+    "Content-Type": "application/json",
+    Authorization: `Bearer ${Cookies.get("status")}`,
+  };
+  const result = await axios.get(
+    `https://nhubfoundation-v2.onrender.com/api/v1/admin/internship/count-docs`,
+    {
+      headers: header,
+    }
+  );
+  if (result.error !== null) {
+    return result;
+  } else {
+    console.log(result);
+  }
 }

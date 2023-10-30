@@ -3,6 +3,7 @@ import { SideNavData } from "./SideNavData";
 import SubMenu from "./SubMenu";
 import AdminModal from "../modals/LogoutModal";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const AdminNav = ({ heading }) => {
   const [modal, setModal] = useState(false);
@@ -43,10 +44,12 @@ const AdminNav = ({ heading }) => {
                 : "fixed left-[-100%]  h-full"
             }
           >
-            <div className="flex justify-center items-center pb-5">
-              <img src="https://res.cloudinary.com/nhubnacademy/image/upload/v1690717429/nHubFoundation/Frame_4_ftvfwy.png" className="w-8" alt="" />
-              <p>intern.admin@gmail.com</p>
-            </div>
+            <Link to='/'>
+              <div className="flex justify-center items-center pb-5">
+                <img src="https://res.cloudinary.com/nhubnacademy/image/upload/v1690717429/nHubFoundation/Frame_4_ftvfwy.png" className="w-8" alt="" />
+                <p>intern.admin@gmail.com</p>
+              </div>
+            </Link>
             <div className="flex flex-col justify-end gap-y-4">
               {SideNavData.map((parent, index) => {
                 return (

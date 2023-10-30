@@ -36,9 +36,9 @@ export const AdminLogin = () => {
         }
     }
 
-    return (<>
-        <form className="grid grid-cols-1 md:grid-cols-1 gap-6 text-textAsh mx-[100px] mt-[100px] w-[50%]">
-            <div className="pb-4">
+    return (<div className='flex justify-center items-center'>
+        <form className="flex justify-center lg:items-center items-start mx-[40px] flex-col gap-6 text-textAsh mt-[100px] w-[80%] lg:w-[50%]">
+            <div className="pb-4 w-full">
                 <label>
                     Email<span className="text-red">*</span>
                 </label>
@@ -51,7 +51,7 @@ export const AdminLogin = () => {
                 />
                 {err && email === '' ? (<p className='pt-2 text-red text-[12px]'>Please enter email</p>) : ''}
             </div>
-            <div className="pb-4">
+            <div className="pb-4 w-full">
                 <label>
                     Password<span className="text-red">*</span>
                 </label>
@@ -64,9 +64,9 @@ export const AdminLogin = () => {
                 />
                 {err && password === '' ? (<p className='pt-2 text-red text-[12px]'>Please enter password</p>) : ''}
             </div>
-            <p className='pt-2 text-[14px] text-center'>{loading}</p>
+            <p className='pt-2 text-[14px] w-full text-center'>{loading}</p>
             <button
-                className=" py-2 px-6 mt-2 md:mt-0 md:px-9 bg-orange text-white rounded-md"
+                className="w-full py-2 px-6 mt-2 md:mt-0 md:px-9 bg-orange text-white rounded-md"
                 onClick={handleLogin}
             >
                 Login
@@ -74,5 +74,5 @@ export const AdminLogin = () => {
             <p className='pt-2 text-red text-[14px] text-center'>{error}</p>
         </form>
 
-    </>)
+    </div>)
 }

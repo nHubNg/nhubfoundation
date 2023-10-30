@@ -1,15 +1,33 @@
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import hamburger from "../assets/hamburger.png"
 import logo from "../assets/logo.png"
 import close from "../assets/close.png"
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { ActiveContext } from "../contexts/ActiveContext";
+import Cookies from 'js-cookie';
 
 const Navbar = ({ handleDonate, handleDesktopDonate, handleNav, nav }) => {
+  const {activeState, setActiveState} = useContext(ActiveContext)
   const [isActive, setIsActive] = useState(false)
+  const navigate = useNavigate()
+
   const active = "text-orange border-b-2 pb-1 border-orange";
+
+  const handleLogOut = () => {
+    setActiveState(false)
+    Cookies.remove('status')
+    navigate('/')
+  }
+
   const showAvatar = () => {
     setIsActive(!isActive)
+    handleNav()
   }
+
+   const showAvatarrr = () => {
+    setIsActive(!isActive)
+  }
+
   return (
     <nav className="  bg-white">
       <div className="my-container flex items-center md:justify-between   h-14">
@@ -112,18 +130,26 @@ const Navbar = ({ handleDonate, handleDesktopDonate, handleNav, nav }) => {
                 Contact us
               </Link>
             </li>
-            <div>
-              <button
-                onClick={handleDonate}
-                className="bg-orange py-2 px-5 text-white text-center rounded-md"
-              >
-                Donate
-              </button>
-            </div>
-            <li className='relative'>
-              <div className='h-8 w-8 rounded-full bg-orange cursor-pointer' onClick={showAvatar}></div>
-              {isActive && <div className='absolute z-40 bg-white px-5 py-2 rounded-[5px] shadow-lg'>
-                <button><Link to={'/admin/login'} onClick={showAvatar}>Login</Link></button>
+            <li>
+              <div>
+                <button
+                  onClick={handleDonate}
+                  className="bg-orange py-2 px-5 text-white text-center rounded-md"
+                >
+                  Donate
+                </button>
+              </div>
+            </li>
+            <li className='relative py-2'>
+              <div className='h-8 w-8 rounded-full bg-orange cursor-pointer' onClick={showAvatarrr}></div>
+              {isActive && <div>
+                {!activeState ? <div className='absolute z-40 bg-white px-5 py-2 rounded-[5px] shadow-lg'>
+                  <button><Link to={'/admin/login'} onClick={showAvatar}>Login</Link></button>
+                </div> : <div className='absolute border-[1px] border-gray-100 top-12 z-40 bg-white px-5 py-2 rounded-[5px] shadow-lg'>
+                  <button><Link to={'/admin'} onClick={showAvatar}>Dashboard</Link></button>
+                  <hr />
+                  <button onClick={handleLogOut}>Logout</button>
+                </div>}
               </div>}
             </li>
           </ul>
@@ -199,9 +225,15 @@ const Navbar = ({ handleDonate, handleDesktopDonate, handleNav, nav }) => {
 
             <li className='relative'>
               <div className='h-8 w-8 rounded-full bg-orange cursor-pointer' onClick={showAvatar}></div>
-              {isActive && <div className='absolute z-40 bg-white px-5 py-2 rounded-[5px] shadow-lg'>
-                <button><Link to={'/admin/login'} onClick={showAvatar}>Login</Link></button>
-              </div>}
+              {isActive && <div>
+                {!activeState ? <div className='absolute -left-9 z-40 bg-white px-5 py-2 rounded-[5px] shadow-lg'>
+                  <button><Link to={'/admin/login'} onClick={showAvatar}>Login</Link></button>
+                </div> : <div className='absolute -left-9 border-[1px] border-gray-100 top-9 z-40 bg-white px-5 py-2 rounded-[5px] shadow-lg'>
+                  <button><Link to={'/admin'} onClick={showAvatar}>Dashboard</Link></button>
+                  <hr />
+                    <button onClick={handleLogOut}>Logout</button>
+                </div>}
+                </div>}
             </li>
           </ul>
         </div>

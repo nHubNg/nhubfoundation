@@ -1,7 +1,7 @@
 import AdminHeader from "../layouts/AdminHeader";
 import AppHeader from "../layouts/AppHeader";
 // import InterviewDropdown from "./InterviewDropdown";
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, useContext } from "react";
 // import InterviewModal from "../modals/InterviewModal";
 import DeclineModal from "../modals/DeclineModal";
 import AdminNav from "../layouts/AdminNav";
@@ -9,6 +9,7 @@ import Dropdown from "./Dropdown";
 import Details from "./Details";
 import AcceptModal from "../modals/AcceptModal";
 import { getAllIntern } from "../../helpers/admin";
+import { ActiveContext } from "../../contexts/ActiveContext";
 
 
 const Interviews = () => {
@@ -22,6 +23,8 @@ const Interviews = () => {
   // const handleDeclineModal = () => {
   //   setDeclineModal(!declineModal);
   // }
+  const { setDetail } = useContext(ActiveContext)
+
   const [allInterview, setAllInterview] = useState([])
 
   const getAll = useCallback(async () => {
@@ -48,9 +51,12 @@ const Interviews = () => {
   const handleDeclineModal = () => {
     setDeclineModal(!declineModal);
   };
-  const handleDetails = () => {
+
+  const handleDetails = (item) => {
+    setDetail(item)
     setDetails(!details)
   }
+
   return (
     <>
     {/* {
@@ -88,7 +94,7 @@ const Interviews = () => {
                   <h5>{pend.first_name} {pend.last_name}</h5>
                   <p>{pend.email}</p>
                 </div>
-                <div onClick={handleDetails}>
+                <div onClick={() => handleDetails(pend)} className='cursor-pointer'>
                   <img
                     src="https://res.cloudinary.com/nhubnacademy/image/upload/v1692608267/nHubFoundation/ep_arrow-up_ykqgk7.svg"
                     alt=""
@@ -120,7 +126,7 @@ const Interviews = () => {
                 return (
                   <tr key={i}>
               <td className="py-2">
-                <button className="flex items-center gap-1 rounded-lg bg-adminGray py-2 px-7"  onClick={handleDetails}>
+                      <button className="flex items-center gap-1 rounded-lg bg-adminGray py-2 px-7" onClick={() => handleDetails(pend)}>
                   <img
                     src="https://res.cloudinary.com/nhubnacademy/image/upload/v1690808993/nHubFoundation/bx_detail_bh1gnk.png"
                     alt=""
