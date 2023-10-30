@@ -49,10 +49,12 @@ const PendingReviews = () => {
   const [declineModal, setDeclineModal] = useState(false);
 
 
-  const handleInterviewModal = () => {
+  const handleInterviewModal = (item) => {
+    setDetail(item)
     setInterviewModal(!interviewModal)
   }
-  const handleDeclineModal = () => {
+  const handleDeclineModal = (item) => {
+      setDetail(item)
     setDeclineModal(!declineModal);
   }
   return (
@@ -169,7 +171,7 @@ const PendingReviews = () => {
                     handleAcceptModal={handleAcceptModal}
                     handleDeclineModal={handleDeclineModal}
                   /> */}
-                      <InterviewDropdown handleInterviewModal={handleInterviewModal} handleDeclineModal={handleDeclineModal} />
+                      <InterviewDropdown handleInterviewModal={() => handleInterviewModal(pend._id)} handleDeclineModal={() => handleDeclineModal(pend._id)} />
                     </td>
                   </tr>
                 )

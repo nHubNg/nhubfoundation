@@ -69,7 +69,7 @@ const Approved = () => {
         </div>
         <AppHeader total={allApproved.length} />
         <div className="mt-8  md:hidden flex flex-col gap-y-5">
-          {allApproved.length > 1 ? allApproved.map((pend, i) => {
+          {allApproved.length > 0 ? allApproved.map((pend, i) => {
             return (
               <div key={i} className="flex justify-between items-center w-[90%] mx-auto bg-white shadow-md shadow-adminShadow py-4 px-5 rounded-lg">
                 <div>
@@ -104,7 +104,7 @@ const Approved = () => {
               </tr>
             </thead>
             <tbody>
-              {allApproved.length > 1 ? allApproved.map((pend, i) => {
+              {allApproved.length > 0 ? allApproved.map((pend, i) => {
                 return (
                   <tr key={i}>
                     <td className="py-2">

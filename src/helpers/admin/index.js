@@ -1,9 +1,9 @@
 import axios from 'axios';
 import Cookies from "js-cookie";
 
-const cookie = Cookies.get('status')
-console.log(cookie)
-// const url = import.meta.env.VITE_BASE_URL
+// const cookie = Cookies.get('status')
+// console.log(cookie)
+const url = import.meta.env.VITE_BASE_URL
 
 export async function signIn (email, password) {
     const header = {
@@ -13,7 +13,7 @@ export async function signIn (email, password) {
           email: email,
           password: password,
       };
-      const result = await axios.post(`https://nhubfoundation-v2.onrender.com/api/v1/auth/sign-in`, JSON.stringify(payload),{ headers: header})
+      const result = await axios.post(`${url}/auth/sign-in`, JSON.stringify(payload),{ headers: header})
       if (result.data.statusCode === 200 || result.data.statusCode === 201){
         return result
       } else {
@@ -30,7 +30,7 @@ export async function getAllIntern(item, value) {
         filters: { [item] : value.toString() },
       };
   const result = await axios.post(
-    `https://nhubfoundation-v2.onrender.com/api/v1/admin/internship/get-applications`,
+    `${url}/admin/internship/get-applications`,
     JSON.stringify(payload),
     {
       headers: header,
@@ -49,7 +49,27 @@ export async function getAnalytics() {
     Authorization: `Bearer ${Cookies.get("status")}`,
   };
   const result = await axios.get(
-    `https://nhubfoundation-v2.onrender.com/api/v1/admin/internship/count-docs`,
+    `${url}/admin/internship/count-docs`,
+    {
+      headers: header,
+    }
+  );
+  if (result.error !== null) {
+    return result;
+  } else {
+    console.log(result);
+  }
+}
+
+export async function editRequest(id, item) {
+  const header = {
+    "Content-Type": "application/json",
+    Authorization: `Bearer ${Cookies.get("status")}`,
+  };
+  const payload = item;
+  const result = await axios.patch(
+    `${url}/admin/internship/update/${id}`,
+    JSON.stringify(payload),
     {
       headers: header,
     }

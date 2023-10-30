@@ -29,7 +29,7 @@ const AdminNav = ({ heading }) => {
     <>
       {modal ? <AdminModal handleModal={handleModal} /> : ""}
       <div className="header py-4 px-8 flex justify-center items-center md:hidden z-40">
-        <div onClick={handleToggle}>
+        <div onClick={handleToggle} className="cursor-pointer">
           <img src={mobilemenu} alt="" />
         </div>
         <h1 className="mx-auto text-white">{heading}</h1>

@@ -87,7 +87,7 @@ const Interviews = () => {
       </div>
       <AppHeader total={allInterview.length}/>
       <div className="mt-8  md:hidden flex flex-col gap-y-5">
-          {allInterview.length > 1 ? allInterview.map((pend, i) => {
+          {allInterview.length > 0 ? allInterview.map((pend, i) => {
             return (
               <div key={i} className="flex justify-between items-center w-[90%] mx-auto bg-white shadow-md shadow-adminShadow py-4 px-5 rounded-lg">
                 <div>
@@ -122,7 +122,7 @@ const Interviews = () => {
             </tr>
           </thead>
           <tbody>
-              {allInterview.length > 1 ? allInterview.map((pend, i) => {
+              {allInterview.length > 0 ? allInterview.map((pend, i) => {
                 return (
                   <tr key={i}>
               <td className="py-2">

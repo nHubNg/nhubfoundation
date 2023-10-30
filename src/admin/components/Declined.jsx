@@ -19,7 +19,7 @@ const Declined = () => {
 
 
   const getAll = useCallback(async () => {
-    const res = await getAllIntern('isApproved', 'approved')
+    const res = await getAllIntern('isApproved', 'declined')
     if (res?.status === 200 || res?.status === 201) {
       return setAllDeclined(res.data.data)
     } else {
@@ -69,7 +69,7 @@ const Declined = () => {
         </div>
         <AppHeader total={allDeclined.length} />
         <div className="mt-8  md:hidden flex flex-col gap-y-5">
-          {allDeclined.length > 1 ? allDeclined.map((pend, i) => {
+          {allDeclined.length > 0 ? allDeclined.map((pend, i) => {
             return (
               <div key={i} className="flex justify-between items-center w-[90%] mx-auto bg-white shadow-md shadow-adminShadow py-4 px-5 rounded-lg">
                 <div>
@@ -103,7 +103,7 @@ const Declined = () => {
               </tr>
             </thead>
             <tbody>
-              {allDeclined.length > 1 ? allDeclined.map((pend, i) => {
+              {allDeclined.length > 0 ? allDeclined.map((pend, i) => {
                 return (
                   <tr key={i}>
                     <td className="py-2">
@@ -121,7 +121,7 @@ const Declined = () => {
                     <td className="py-3 text-center">{pend.phone}</td>
                     <td className="py-3 text-center">{pend.start_date}</td>
                     <td className="py-3 text-center">{pend.end_date}</td>
-                    <td>
+                    <td className='cursor-pointer'>
                       <DeclineDropdown handleDeleteModal={handleDeleteModal} />
                     </td>
                     </tr>

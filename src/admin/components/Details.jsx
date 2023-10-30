@@ -3,6 +3,7 @@ import { ActiveContext } from "../../contexts/ActiveContext"
 
 const Details = ({ handleDetails }) => {
   const {detail} = useContext(ActiveContext)
+  console.log(detail)
 
   return (
     <div>
