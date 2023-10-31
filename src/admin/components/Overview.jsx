@@ -21,7 +21,7 @@ const Overview = () => {
   return (
     <div className='pb-10'>
       <div>
-        <AdminNav heading="Dashboard"/>
+        <AdminNav heading="Dashboard" />
       </div>
       <div className="hidden md:block">
         <AdminHeader heading="Dashboard" text="Admin profile" />
@@ -57,7 +57,11 @@ const Overview = () => {
       </div>
       <div>
         <div className=" mx-auto flex flex-col gap-6 mt-10 px-6 text-center">
-          <div className="flex justify-center gap-4 md:gap-6 ">
+          <div className="flex justify-center flex-wrap gap-4 md:gap-6 ">
+            <div className="flex flex-col justify-center items-center bg-adminBlue text-white   w-[50%] md:w-[250px] py-9 md:py-12 rounded-md">
+              <h5>Total Count</h5>
+              <p className="text-orange">{analytics.globalTotal}</p>
+            </div>
             <div className="flex flex-col justify-center items-center bg-adminBlue text-white  w-[50%] md:w-[250px] py-9 md:py-12 rounded-md">
               <h5 >Total Screenings</h5>
               <p className="text-orange">{analytics.totalPendingScreenings}</p>
@@ -67,7 +71,7 @@ const Overview = () => {
               <p className="text-orange">{analytics.isCalledForInterview}</p>
             </div>
           </div>
-          <div className="flex justify-center  gap-4 md:gap-6">
+          <div className="flex justify-center flex-wrap gap-4 md:gap-6">
             <div className="flex flex-col justify-center items-center bg-adminBlue text-white   w-[50%] md:w-[250px] py-9 md:py-12 rounded-md">
               <h5>Accepted Count</h5>
               <p className="text-orange">{analytics.isAccepted}</p>
@@ -76,6 +80,18 @@ const Overview = () => {
               <h5>Declined Count</h5>
               <p className="text-orange">{analytics.isDeclined}</p>
             </div>
+            <div className="flex flex-col justify-center items-center bg-adminBlue text-white  w-[50%] md:w-[250px] py-9 md:py-12 rounded-md">
+              <h5>Current Count</h5>
+              <p className="text-orange">{analytics.current}</p>
+            </div>
+          </div>
+          
+          <div className="flex justify-center flex-wrap gap-4 md:gap-6">
+            <div className="flex flex-col justify-center items-center bg-adminBlue text-white   w-[50%] md:w-[250px] py-9 md:py-12 rounded-md">
+              <h5>Completed Count</h5>
+              <p className="text-orange">{analytics.done}</p>
+            </div>
+
           </div>
         </div>
       </div>

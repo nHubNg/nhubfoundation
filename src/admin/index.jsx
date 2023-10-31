@@ -33,7 +33,7 @@ const Dashboard = () => {
 
   return (
     <>
-    <div className="grid grid-cols-12 ">
+    <div className="grid grid-cols-12 h-[100vh]">
       <div className={` ${open ? "md:col-span-3": "md:col-span-2"}  ${open ? "lg:col-span-2" : "lg:col-span-1"}  bg-orange min-h-[100vh] hidden md:block relative`  }>
         <div className="sticky top-1">
           <SideNav open={open} setOpen={setOpen}  handleOpen={handleOpen}/>

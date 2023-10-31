@@ -99,7 +99,7 @@ const PendingReviews = () => {
         </div>
         <AppHeader total={allPending.length} />
         <div className="mt-8  md:hidden flex flex-col gap-y-5 pb-20">
-          {allPending.length > 1 ? allPending.map((pend, i) => {
+          {allPending.length > 0 ? allPending.map((pend, i) => {
             return (
               <div key={i} className="flex justify-between items-center w-[90%] mx-auto bg-white shadow-md shadow-adminShadow py-4 px-5 rounded-lg">
                 <div>
@@ -131,13 +131,14 @@ const PendingReviews = () => {
                 <th className="py-3 text-left">Details</th>
                 <th className="py-3 text-center">Email</th>
                 <th className="py-3 text-center">Interview</th>
+                <th className="py-3 text-center">Duration(M)</th>
                 <th className="py-3 text-center hidden md:block">Start</th>
                 <th className="py-3 text-center">End</th>
                 <th className="py-3 text-center">Actions</th>
               </tr>
             </thead>
             <tbody>
-              {allPending.length > 1 ? allPending.map((pend, i) => {
+              {allPending.length > 0 ? allPending.map((pend, i) => {
                 return (
                   <tr key={i}>
                     <td className="py-2">
@@ -153,6 +154,7 @@ const PendingReviews = () => {
                       {pend.email}
                     </td>
                     <td className="py-3 text-center">{pend.interview_location}</td>
+                    <td className="py-3 text-center">{pend.months}</td>
                     <td className="py-3 text-center">{pend.start_date}</td>
                     <td className="py-3 text-center">{pend.end_date}</td>
                     <td>

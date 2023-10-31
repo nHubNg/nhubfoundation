@@ -15,7 +15,7 @@ const AdminBlogs = () => {
         <div className=''>
             {
                 SideNavData.map((parent, i) => (
-                    <div key={i} className='flex justify-around items-center w-full  lg:bg-orange px-2 pl-10'>
+                    <div key={i} className='flex justify-around items-center w-full  md:bg-orange px-2 pl-10'>
                         {parent.title == "Blogs" && parent.subMenu?.map((item, index) => {
                             return (
                                 <div key={index} className='flex justify-between items-center w-full pb-2'>

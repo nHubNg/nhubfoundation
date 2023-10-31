@@ -1,7 +1,7 @@
 import AdminHeader from "../layouts/AdminHeader";
 import AppHeader from "../layouts/AppHeader";
 import AcceptedDropdown from "./AcceptedDropdown";
-import DeleteModal from "../modals/DeleteModal";
+import StartModal from "../modals/StartModal";
 import { useEffect, useState, useCallback, useContext } from "react";
 import DeclineModal from "../modals/DeclineModal";
 import Details from "./Details";
@@ -13,7 +13,7 @@ import { ActiveContext } from "../../contexts/ActiveContext";
 const Approved = () => {
   const { setDetail } = useContext(ActiveContext)
 
-  const [deleteModal, setDeleteModal] = useState(false);
+  const [startModal, setStartModal] = useState(false);
   const [declineModal, setDeclineModal] = useState(false);
   const [allApproved, setAllApproved] = useState([])
   const [details, setDetails] = useState(false);
@@ -37,9 +37,9 @@ const Approved = () => {
     setDetails(!details)
   }
 
-  const handleDeleteModal = (item) => {
+  const handleStartModal = (item) => {
     setDetail(item)
-    setDeleteModal(!deleteModal);
+    setStartModal(!startModal);
   };
 
   const handleDeclineModal = (item) => {
@@ -49,8 +49,8 @@ const Approved = () => {
   return (
     <>
       {details ? <Details handleDetails={handleDetails} /> : ""}
-      {deleteModal ? (
-        <DeleteModal handleDeleteModal={handleDeleteModal} />
+      {startModal ? (
+        <StartModal handleStartModal={handleStartModal} />
       ) : (
         ""
       )}
@@ -79,13 +79,15 @@ const Approved = () => {
                   <p>{pend.email}</p>
                 </div>
                 <div>
-                  <div onClick={() => handleDetails(pend)} className='cursor-pointer'>
-                    <img
-                      src="https://res.cloudinary.com/nhubnacademy/image/upload/v1692608267/nHubFoundation/ep_arrow-up_ykqgk7.svg"
-                      alt=""
-                    />
+                  <div className='flex justify-center items-center gap-3'>
+                    <div onClick={() => handleDetails(pend)} className='cursor-pointer'>
+                      <img
+                        src="https://res.cloudinary.com/nhubnacademy/image/upload/v1692608267/nHubFoundation/ep_arrow-up_ykqgk7.svg"
+                        alt=""
+                      />
+                    </div>
+                    <AcceptedDropdown handleStartModal={() => handleStartModal(pend._id)} handleDeclineModal={() => handleDeclineModal(pend._id)} />
                   </div>
-                  <AcceptedDropdown handleDeleteModal={() => handleDeleteModal(pend._id)} handleDeclineModal={() => handleDeclineModal(pend._id)} />
                 </div>
               </div>
             )
@@ -127,8 +129,8 @@ const Approved = () => {
                     <td className="py-3 text-center">{pend.phone}</td>
                     <td className="py-3 text-center">{pend.start_date}</td>
                     <td className="py-3 text-center">{pend.end_date}</td>
-                    <td>
-                      <AcceptedDropdown handleDeleteModal={() => handleDeleteModal(pend._id)} handleDeclineModal={() => handleDeclineModal(pend._id)} />
+                    <td className="cursor-pointer">
+                      <AcceptedDropdown handleStartModal={() => handleStartModal(pend._id)} handleDeclineModal={() => handleDeclineModal(pend._id)} />
                     </td>
                   </tr>
                 )

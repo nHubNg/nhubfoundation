@@ -3,11 +3,10 @@ import { ActiveContext } from "../../contexts/ActiveContext"
 
 const Details = ({ handleDetails }) => {
   const {detail} = useContext(ActiveContext)
-console.log(detail)
   return (
     <div>
       <div className="bg-overlay h-[100vh] w-[100%] top-0 left-0 fixed z-50 flex items-center md:justify-end justify-center ">
-        <div className="bg-white  mx-auto rounded-lg py-10 w-[98%] md:w-[50%] flex flex-col gap-y-10 justify-center  text-center text-[18px] px-10 font-bold">
+        <div className="bg-white  mx-auto rounded-lg py-10 w-[98%] md:w-[60%] flex flex-col gap-y-10 justify-center  text-center text-[18px] px-10 font-bold">
           <h1 className='text-[20px]'> {detail.first_name} {detail.last_name}</h1>
           <h1>Details</h1>
           <div className="flex justify-between items-center">
@@ -19,6 +18,7 @@ console.log(detail)
             <p className="text-[16px] text-black font-bolder">Dept: <span className='font-[400] text-gray text-[15px]'>{detail.department}</span></p>
             <p className="text-[16px] text-black font-bolder">Reg No: <span className='font-[400] text-gray text-[15px]'>{detail.reg_number}</span></p>
             <p className="text-[16px] text-black font-bolder">Duration: <span className='font-[400] text-gray text-[15px]'>{detail.internship_duration} months</span></p>
+            <p className="text-[16px] text-black font-bolder">Actual Duration: <span className='font-[400] text-gray text-[15px]'>{detail.months} months</span></p>
           </div>
 
           <div className="flex justify-between items-center">

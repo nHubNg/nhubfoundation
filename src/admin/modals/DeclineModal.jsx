@@ -4,7 +4,6 @@ import { useContext } from "react"
 
 const DeclineModal = ({handleDeclineModal}) => {
   const {detail} = useContext(ActiveContext)
-  console.log(detail)
   const declineApp = async () => {
     const res = await editRequest(detail, {"isApproved" : "declined"})
     if (res?.status === 200 || res?.status === 201){

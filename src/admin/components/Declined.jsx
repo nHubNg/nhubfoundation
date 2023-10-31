@@ -1,8 +1,8 @@
 import { useEffect, useState, useCallback, useContext } from "react";
 import AdminHeader from "../layouts/AdminHeader";
 import AppHeader from "../layouts/AppHeader";
-import DeclineDropdown from "./DeclineDropdown";
-import DeleteModal from "../modals/DeleteModal";
+// import DeclineDropdown from "./DeclineDropdown";
+import DeleteModal from "../modals/StartModal";
 import DeclineModal from "../modals/DeclineModal";
 import Details from "./Details";
 import AdminNav from "../layouts/AdminNav";
@@ -41,7 +41,7 @@ const Declined = () => {
     setDeleteModal(!deleteModal);
   };
   const handleDeclineModal = (item) => {
-  setDetail(item)
+    setDetail(item)
     setDeclineModal(!declineModal);
   }
 
@@ -85,7 +85,7 @@ const Declined = () => {
                       alt=""
                     />
                   </div>
-                  <DeclineDropdown handleDeleteModal={() => handleDeleteModal(pend._id)} />
+                  {/* <DeclineDropdown handleDeleteModal={() => handleDeleteModal(pend._id)} /> */}
                 </div>
               </div>
             )
@@ -104,7 +104,7 @@ const Declined = () => {
                 <th className="py-3 text-center">Phone</th>
                 <th className="py-3 text-center">Start</th>
                 <th className="py-3 text-center">End</th>
-                <th className="py-3 text-center">Actions</th>
+                {/* <th className="py-3 text-center">Actions</th> */}
               </tr>
             </thead>
             <tbody>
@@ -126,10 +126,10 @@ const Declined = () => {
                     <td className="py-3 text-center">{pend.phone}</td>
                     <td className="py-3 text-center">{pend.start_date}</td>
                     <td className="py-3 text-center">{pend.end_date}</td>
-                    <td className='cursor-pointer'>
+                    {/* <td className='cursor-pointer'>
                       <DeclineDropdown handleDeleteModal={() => handleDeleteModal(pend._id)} />
-                    </td>
-                    </tr>
+                    </td> */}
+                  </tr>
                 )
               }) : <div className='mt-16 w-full'>
                 <div className="hidden md:block lg:flex justify-center items-center">

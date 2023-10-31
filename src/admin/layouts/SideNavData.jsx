@@ -36,6 +36,18 @@ export const SideNavData = [
                 mobileIcon: 'https://res.cloudinary.com/nhubnacademy/image/upload/v1692616516/nHubFoundation/eva_person-done-outline_znsspy.svg'
             },
             {
+                title: 'Started',
+                path: '/admin/applications/started',
+                icon: 'https://res.cloudinary.com/nhubnacademy/image/upload/v1691064046/nHubFoundation/akar-icons_person_mxzjpm.svg',
+                mobileIcon: 'https://res.cloudinary.com/nhubnacademy/image/upload/v1692616517/nHubFoundation/akar-icons_person_opjkfo.svg'
+            },
+            {
+                title: 'Ended',
+                path: '/admin/applications/ended',
+                icon: 'https://res.cloudinary.com/nhubnacademy/image/upload/v1691064046/nHubFoundation/akar-icons_person_mxzjpm.svg',
+                mobileIcon: 'https://res.cloudinary.com/nhubnacademy/image/upload/v1692616517/nHubFoundation/akar-icons_person_opjkfo.svg'
+            },
+            {
                 title: 'Declined',
                 path: '/admin/applications/declined',
                 icon: 'https://res.cloudinary.com/nhubnacademy/image/upload/v1691064046/nHubFoundation/tabler_user-cancel_gjjmvt.svg',

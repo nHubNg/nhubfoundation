@@ -103,7 +103,7 @@ const Interviews = () => {
                       alt=""
                     />
                   </div>
-                  <Dropdown
+                  <Dropdown pend={pend}
                     handleAcceptModal={() => handleAcceptModal(pend._id)}
                     handleDeclineModal={() => handleDeclineModal(pend._id)}
                   />
@@ -146,10 +146,10 @@ const Interviews = () => {
                     <td className="py-3 text-center">{pend.start_date}</td>
                     <td className="py-3 text-center">{pend.end_date}</td>
                     <td className="py-3 text-center">{pend.interview_location}</td>
-                    <td className="py-3 text-center">{pend.interview_time}</td>
+                    <td className="py-3 text-center">{pend.interviewTime}</td>
                     <td>
-                      {/* <InterviewDropdown handleInterviewModal={handleInterviewModal} handleDeclineModal={handleDeclineModal}/> */}
-                      <Dropdown
+                      
+                      <Dropdown pend={pend}
                         handleAcceptModal={() => handleAcceptModal(pend._id)}
                         handleDeclineModal={() => handleDeclineModal(pend._id)}
                       />

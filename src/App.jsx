@@ -28,6 +28,8 @@ import AdminBlogs from "./admin/blogadmin"
 import { AdminLogin } from "./adminLogin";
 import { FormProvider } from "./contexts/FormContext";
 import { ActiveProvider } from "./contexts/ActiveContext";
+import Start from "./admin/components/Start";
+import End from "./admin/components/End";
 
 // import Success from "./pages/Success/Success";
 
@@ -95,6 +97,8 @@ function App() {
               <Route path="placeher" element={<PlaceHer />} />
               <Route path="interview" element={<Interviews />} />
               <Route path="approved" element={<Approved />} />
+              <Route path="started" element={<Start />} />
+              <Route path="ended" element={<End />} />
               <Route path="declined" element={<Declined />} />
             </Route>
             <Route path="/admin/blogadmin" element={<AdminBlogs />}>
