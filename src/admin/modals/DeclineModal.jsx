@@ -8,7 +8,7 @@ const DeclineModal = ({handleDeclineModal}) => {
   const declineApp = async () => {
     const res = await editRequest(detail, {"isApproved" : "declined"})
     if (res?.status === 200 || res?.status === 201){
-      console.log('deleted')
+      window.location.reload(false);
       handleDeclineModal()
       return
     } else {

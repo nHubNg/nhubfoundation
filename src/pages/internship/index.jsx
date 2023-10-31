@@ -19,6 +19,7 @@ const Internship = () => {
   const { formData, setFormData } = useContext(FormContext);
   const [page, setPage] = useState(0);
   const [error, setError] = useState('')
+  const [loading, setLoading] = useState('')
   const [errMsg, setErrMsg] = useState(null)
   const [success, setSuccess] = useState(false)
 
@@ -63,13 +64,16 @@ const Internship = () => {
         return setError('Please ensure all fields are filled in before submission.')
       } else {
         setError('')
+        setLoading('Loading...')
         const res = await SubmitInternship(formData.email, formData.phone, formData.firstname, formData.lastname, formData.school, formData.department, formData.course, formData.regNo, formData.startDate, formData.endDate, formData.experience, formData.track, formData.gender, formData.interview, formData.duration, formData.it, formData.cover)
-        console.log(res)
+        
         if (res.status === 200 || res.status === 201) {
+          setLoading('')
           alert(res.data.message)
           setSuccess(true)
         } else {
-          setErrMsg(res.data.errors)
+        setLoading('')
+          setErrMsg(res.data.message)
         }
       }
     } else {
@@ -106,7 +110,7 @@ const Internship = () => {
                 <div className="mt-2">
                   {pageDisplay()}
                 </div>
-
+                <p className="text-orange text-center">{loading}</p>
                 <p className="text-btnRed text-center">{error}</p>
                 <p className="text-btnRed text-center">{errMsg}</p>
 

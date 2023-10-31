@@ -16,7 +16,7 @@ const Interviews = () => {
   // const [interviewModal, setInterviewModal] = useState(false);
   // const [declineModal, setDeclineModal] = useState(false);
 
-  
+
   // const handleInterviewModal = () => {
   //   setInterviewModal(!interviewModal)
   // }
@@ -44,11 +44,13 @@ const Interviews = () => {
   const [declineModal, setDeclineModal] = useState(false);
   const [details, setDetails] = useState(false);
 
-  const handleAcceptModal = () => {
+  const handleAcceptModal = (item) => {
+    setDetail(item)
     setAcceptModal(!acceptModal);
   };
 
-  const handleDeclineModal = () => {
+  const handleDeclineModal = (item) => {
+    setDetail(item)
     setDeclineModal(!declineModal);
   };
 
@@ -59,7 +61,7 @@ const Interviews = () => {
 
   return (
     <>
-    {/* {
+      {/* {
       interviewModal ? (
      <InterviewModal handleInterviewModal={handleInterviewModal}/> 
       ) 
@@ -80,13 +82,13 @@ const Interviews = () => {
         ""
       )}
       {details ? <Details handleDetails={handleDetails} /> : ""}
-      <AdminNav heading="Interviews"/>
-    <div>
-      <div className="hidden md:block">
-        <AdminHeader heading="Interviews" text="Pending  interviews" />
-      </div>
-      <AppHeader total={allInterview.length}/>
-      <div className="mt-8  md:hidden flex flex-col gap-y-5">
+      <AdminNav heading="Interviews" />
+      <div>
+        <div className="hidden md:block">
+          <AdminHeader heading="Interviews" text="Pending  interviews" />
+        </div>
+        <AppHeader total={allInterview.length} />
+        <div className="mt-8  md:hidden flex flex-col gap-y-5 pb-20">
           {allInterview.length > 0 ? allInterview.map((pend, i) => {
             return (
               <div key={i} className="flex justify-between items-center w-[90%] mx-auto bg-white shadow-md shadow-adminShadow py-4 px-5 rounded-lg">
@@ -94,10 +96,16 @@ const Interviews = () => {
                   <h5>{pend.first_name} {pend.last_name}</h5>
                   <p>{pend.email}</p>
                 </div>
-                <div onClick={() => handleDetails(pend)} className='cursor-pointer'>
-                  <img
-                    src="https://res.cloudinary.com/nhubnacademy/image/upload/v1692608267/nHubFoundation/ep_arrow-up_ykqgk7.svg"
-                    alt=""
+                <div className='flex justify-center items-center gap-3'>
+                  <div onClick={() => handleDetails(pend)} className='cursor-pointer'>
+                    <img
+                      src="https://res.cloudinary.com/nhubnacademy/image/upload/v1692608267/nHubFoundation/ep_arrow-up_ykqgk7.svg"
+                      alt=""
+                    />
+                  </div>
+                  <Dropdown
+                    handleAcceptModal={() => handleAcceptModal(pend._id)}
+                    handleDeclineModal={() => handleDeclineModal(pend._id)}
                   />
                 </div>
               </div>
@@ -108,44 +116,44 @@ const Interviews = () => {
             </div>
           </div>}
         </div>
-      <div className="hidden md:block">
-        <table className="table-auto mx-auto mt-10 w-[90%] overflow-auto ">
-          <thead>
-            <tr>
-              <th className="py-3 text-left">Details</th>
-              <th className="py-3 text-center">Email</th>
-              <th className="py-3 text-center">Start Date</th>
-              <th className="py-3 text-center">Interview Date</th>
-              <th className="py-3 text-center">Location</th>
-              <th className="py-3 text-center">Time</th>
-              <th className="py-3 text-center">Actions</th>
-            </tr>
-          </thead>
-          <tbody>
+        <div className="hidden md:block">
+          <table className="table-auto mx-auto mt-10 w-[90%] overflow-auto ">
+            <thead>
+              <tr>
+                <th className="py-3 text-left">Details</th>
+                <th className="py-3 text-center">Email</th>
+                <th className="py-3 text-center">Start Date</th>
+                <th className="py-3 text-center">Interview Date</th>
+                <th className="py-3 text-center">Location</th>
+                <th className="py-3 text-center">Time</th>
+                <th className="py-3 text-center">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
               {allInterview.length > 0 ? allInterview.map((pend, i) => {
                 return (
                   <tr key={i}>
-              <td className="py-2">
+                    <td className="py-2">
                       <button className="flex items-center gap-1 rounded-lg bg-adminGray py-2 px-7" onClick={() => handleDetails(pend)}>
-                  <img
-                    src="https://res.cloudinary.com/nhubnacademy/image/upload/v1690808993/nHubFoundation/bx_detail_bh1gnk.png"
-                    alt=""
-                  />
+                        <img
+                          src="https://res.cloudinary.com/nhubnacademy/image/upload/v1690808993/nHubFoundation/bx_detail_bh1gnk.png"
+                          alt=""
+                        />
                         {pend.first_name} {pend.last_name}
-                </button>
-              </td>
+                      </button>
+                    </td>
                     <td className="py-3 text-center text-orange">{pend.email}</td>
-                    <td className="py-3 text-center">pend.start_date</td>
+                    <td className="py-3 text-center">{pend.start_date}</td>
                     <td className="py-3 text-center">{pend.end_date}</td>
                     <td className="py-3 text-center">{pend.interview_location}</td>
                     <td className="py-3 text-center">{pend.interview_time}</td>
-              <td> 
-              {/* <InterviewDropdown handleInterviewModal={handleInterviewModal} handleDeclineModal={handleDeclineModal}/> */}
-              <Dropdown
-                    handleAcceptModal={handleAcceptModal}
-                    handleDeclineModal={handleDeclineModal}
-                  />
-              </td>
+                    <td>
+                      {/* <InterviewDropdown handleInterviewModal={handleInterviewModal} handleDeclineModal={handleDeclineModal}/> */}
+                      <Dropdown
+                        handleAcceptModal={() => handleAcceptModal(pend._id)}
+                        handleDeclineModal={() => handleDeclineModal(pend._id)}
+                      />
+                    </td>
                   </tr>
                 )
               }) : <div className='mt-16 w-full'>
@@ -157,11 +165,11 @@ const Interviews = () => {
                   </div>
                 </div>
               </div>}
-           
-          </tbody>
-        </table>
+
+            </tbody>
+          </table>
+        </div>
       </div>
-    </div>
     </>
   );
 };

@@ -224,7 +224,7 @@ const Navbar = ({ handleDonate, handleDesktopDonate, handleNav, nav }) => {
             </button>
 
             <li className='relative'>
-              <div className='h-8 w-8 rounded-full bg-orange cursor-pointer' onClick={showAvatar}></div>
+              <div className='h-8 w-8 rounded-full bg-orange cursor-pointer' onClick={showAvatarrr}></div>
               {isActive && <div>
                 {!activeState ? <div className='absolute -left-9 z-40 bg-white px-5 py-2 rounded-[5px] shadow-lg'>
                   <button><Link to={'/admin/login'} onClick={showAvatar}>Login</Link></button>

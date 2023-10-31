@@ -3,12 +3,11 @@ import { ActiveContext } from "../../contexts/ActiveContext"
 
 const Details = ({ handleDetails }) => {
   const {detail} = useContext(ActiveContext)
-  console.log(detail)
-
+console.log(detail)
   return (
     <div>
       <div className="bg-overlay h-[100vh] w-[100%] top-0 left-0 fixed z-50 flex items-center md:justify-end justify-center ">
-        <div className="bg-white  mx-auto rounded-lg py-10 w-[80%] md:w-[50%] flex flex-col gap-y-10 justify-center  text-center text-[18px] px-10 font-bold">
+        <div className="bg-white  mx-auto rounded-lg py-10 w-[98%] md:w-[50%] flex flex-col gap-y-10 justify-center  text-center text-[18px] px-10 font-bold">
           <h1 className='text-[20px]'> {detail.first_name} {detail.last_name}</h1>
           <h1>Details</h1>
           <div className="flex justify-between items-center">

@@ -55,7 +55,6 @@ export async function SubmitInternship(
     throw new Error("cover_letter must be a File object.");
   }
 
-  console.log(formData);
 
   const result = await axios.post(
     "https://nhubfoundation-v2.onrender.com/api/v1/internhsip/create",

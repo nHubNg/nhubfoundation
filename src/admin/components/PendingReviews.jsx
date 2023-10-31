@@ -16,9 +16,14 @@ import { ActiveContext } from "../../contexts/ActiveContext";
 const PendingReviews = () => {
   //   const [acceptModal, setAcceptModal] = useState(false);
   //   const [declineModal, setDeclineModal] = useState(false);
-  const {setDetail} = useContext(ActiveContext)
+  const { setDetail } = useContext(ActiveContext)
   const [details, setDetails] = useState(false);
   const [allPending, setAllPending] = useState([])
+  const [open, setOpen] = useState(false);
+
+  const toggle = () => {
+    setOpen(!open)
+  }
 
   const getAll = useCallback(async () => {
     const res = await getAllIntern('isCalledForInterview', 'pending')
@@ -51,10 +56,12 @@ const PendingReviews = () => {
 
   const handleInterviewModal = (item) => {
     setDetail(item)
+    setOpen(!open)
     setInterviewModal(!interviewModal)
   }
   const handleDeclineModal = (item) => {
-      setDetail(item)
+    setDetail(item)
+    setOpen(!open)
     setDeclineModal(!declineModal);
   }
   return (
@@ -65,7 +72,9 @@ const PendingReviews = () => {
       ) : (
         ""
       )} */}
-      {details ? <Details handleDetails={handleDetails} /> : ""}
+      {details ? <div>
+        <Details handleDetails={handleDetails} />
+      </div> : ""}
       {
         interviewModal ? (
           <InterviewModal handleInterviewModal={handleInterviewModal} />
@@ -89,7 +98,7 @@ const PendingReviews = () => {
           />
         </div>
         <AppHeader total={allPending.length} />
-        <div className="mt-8  md:hidden flex flex-col gap-y-5">
+        <div className="mt-8  md:hidden flex flex-col gap-y-5 pb-20">
           {allPending.length > 1 ? allPending.map((pend, i) => {
             return (
               <div key={i} className="flex justify-between items-center w-[90%] mx-auto bg-white shadow-md shadow-adminShadow py-4 px-5 rounded-lg">
@@ -97,45 +106,25 @@ const PendingReviews = () => {
                   <h5>{pend.first_name} {pend.last_name}</h5>
                   <p>{pend.email}</p>
                 </div>
-                <div onClick={() => handleDetails(pend)} className='cursor-pointer'>
-                  <img
-                    src="https://res.cloudinary.com/nhubnacademy/image/upload/v1692608267/nHubFoundation/ep_arrow-up_ykqgk7.svg"
-                    alt=""
-                  />
+                <div className='flex justify-center items-center gap-3'>
+                  <div onClick={() => handleDetails(pend)} className='cursor-pointer'>
+                    <img
+                      src="https://res.cloudinary.com/nhubnacademy/image/upload/v1692608267/nHubFoundation/ep_arrow-up_ykqgk7.svg"
+                      alt=""
+                    />
+                  </div>
+                  <InterviewDropdown handleInterviewModal={() => handleInterviewModal(pend)} handleDeclineModal={() => handleDeclineModal(pend._id)} toggle={toggle} open={open} />
                 </div>
               </div>
-                )
+            )
           }) : <div className="flex justify-center md:hidden">
             <div className=" mt-10 py-2 w-[90%] flex justify-center px-4 rounded-sm">
               <p>No Pending Applications</p>
             </div>
           </div>}
-          {/* <div className="flex justify-between items-center w-[90%] mx-auto bg-white shadow-md  shadow-adminShadow py-4 px-5 rounded-lg">
-              <div>
-                <h5>Abdulmalik Ishaya</h5>
-                <p>elmaleeq112@gmail.com</p>
-              </div>
-              <div onClick={handleDetails}>
-                <img
-                  src="https://res.cloudinary.com/nhubnacademy/image/upload/v1692608267/nHubFoundation/ep_arrow-up_ykqgk7.svg"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div className="flex justify-between items-center w-[90%] mx-auto bg-white shadow-md  shadow-adminShadow py-4 px-5 rounded-lg">
-              <div>
-                <h5>Abdulmalik Ishaya</h5>
-                <p>elmaleeq112@gmail.com</p>
-              </div>
-              <div onClick={handleDetails}>
-                <img
-                  src="https://res.cloudinary.com/nhubnacademy/image/upload/v1692608267/nHubFoundation/ep_arrow-up_ykqgk7.svg"
-                  alt=""
-                />
-              </div>
-            </div> */}
+
         </div>
-        <div className="overflow-x-auto hidden md:block">
+        <div className="overflow-x-auto hidden md:block pb-20">
           <table className="table-auto mx-auto mt-10 w-[90%] overflow-auto ">
             <thead>
               <tr>
@@ -171,18 +160,19 @@ const PendingReviews = () => {
                     handleAcceptModal={handleAcceptModal}
                     handleDeclineModal={handleDeclineModal}
                   /> */}
-                      <InterviewDropdown handleInterviewModal={() => handleInterviewModal(pend._id)} handleDeclineModal={() => handleDeclineModal(pend._id)} />
+                  
+                      <InterviewDropdown handleInterviewModal={() => handleInterviewModal(pend)} handleDeclineModal={() => handleDeclineModal(pend._id)} toggle={toggle} open={open} />
                     </td>
                   </tr>
                 )
               }) : <div className='mt-16 w-full'>
-                  <div className="hidden md:block lg:flex justify-center items-center">
-                    <div className="flex justify-center items-center py-5 w-[100%] mx-auto md:mt-[-40px] bg-white shadow-lg rounded-md gap-10">
-                      <div className=" py-2 w-[100%] flex justify-between px-4 rounded-md">
-                        <p>No Pending Application</p>
-                          </div>
+                <div className="hidden md:block lg:flex justify-center items-center">
+                  <div className="flex justify-center items-center py-5 w-[100%] mx-auto md:mt-[-40px] bg-white shadow-lg rounded-md gap-10">
+                    <div className=" py-2 w-[100%] flex justify-between px-4 rounded-md">
+                      <p>No Pending Application</p>
                     </div>
                   </div>
+                </div>
               </div>}
 
             </tbody>

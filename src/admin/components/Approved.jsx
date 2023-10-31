@@ -37,11 +37,13 @@ const Approved = () => {
     setDetails(!details)
   }
 
-  const handleDeleteModal = () => {
+  const handleDeleteModal = (item) => {
+    setDetail(item)
     setDeleteModal(!deleteModal);
   };
 
-  const handleDeclineModal = () => {
+  const handleDeclineModal = (item) => {
+    setDetail(item)
     setDeclineModal(!declineModal);
   }
   return (
@@ -68,7 +70,7 @@ const Approved = () => {
           />
         </div>
         <AppHeader total={allApproved.length} />
-        <div className="mt-8  md:hidden flex flex-col gap-y-5">
+        <div className="mt-8  md:hidden flex flex-col gap-y-5 pb-20">
           {allApproved.length > 0 ? allApproved.map((pend, i) => {
             return (
               <div key={i} className="flex justify-between items-center w-[90%] mx-auto bg-white shadow-md shadow-adminShadow py-4 px-5 rounded-lg">
@@ -76,11 +78,14 @@ const Approved = () => {
                   <h5>{pend.first_name} {pend.last_name}</h5>
                   <p>{pend.email}</p>
                 </div>
-                <div onClick={() => handleDetails(pend)} className='cursor-pointer'>
-                  <img
-                    src="https://res.cloudinary.com/nhubnacademy/image/upload/v1692608267/nHubFoundation/ep_arrow-up_ykqgk7.svg"
-                    alt=""
-                  />
+                <div>
+                  <div onClick={() => handleDetails(pend)} className='cursor-pointer'>
+                    <img
+                      src="https://res.cloudinary.com/nhubnacademy/image/upload/v1692608267/nHubFoundation/ep_arrow-up_ykqgk7.svg"
+                      alt=""
+                    />
+                  </div>
+                  <AcceptedDropdown handleDeleteModal={() => handleDeleteModal(pend._id)} handleDeclineModal={() => handleDeclineModal(pend._id)} />
                 </div>
               </div>
             )
@@ -123,7 +128,7 @@ const Approved = () => {
                     <td className="py-3 text-center">{pend.start_date}</td>
                     <td className="py-3 text-center">{pend.end_date}</td>
                     <td>
-                      <AcceptedDropdown handleDeleteModal={handleDeleteModal} handleDeclineModal={handleDeclineModal} />
+                      <AcceptedDropdown handleDeleteModal={() => handleDeleteModal(pend._id)} handleDeclineModal={() => handleDeclineModal(pend._id)} />
                     </td>
                   </tr>
                 )
