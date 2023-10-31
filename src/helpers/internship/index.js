@@ -69,6 +69,7 @@ export async function SubmitInternship(
     return result;
   } else {
     console.log(result);
-    throw new Error("Internship submission failed.");
+    return result;
+    // throw new Error("Internship submission failed.");
   }
 }

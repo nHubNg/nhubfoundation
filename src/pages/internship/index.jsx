@@ -66,12 +66,13 @@ const Internship = () => {
         setError('')
         setLoading('Loading...')
         const res = await SubmitInternship(formData.email, formData.phone, formData.firstname, formData.lastname, formData.school, formData.department, formData.course, formData.regNo, formData.startDate, formData.endDate, formData.experience, formData.track, formData.gender, formData.interview, formData.duration, formData.it, formData.cover)
-        
+        setLoading('')
         if (res.status === 200 || res.status === 201) {
           setLoading('')
           alert(res.data.message)
           setSuccess(true)
         } else {
+          console.log('error')
         setLoading('')
           setErrMsg(res.data.message)
         }

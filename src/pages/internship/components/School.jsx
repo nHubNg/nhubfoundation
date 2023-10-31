@@ -118,7 +118,7 @@ const School = ({ formData, setFormData }) => {
           <option value="VR & 3D">AR/VR</option>
           <option value="Embedded Systems/IOT">Embedded Systems</option>
           {/* <option value="Networking/Cybersecurity">Networking/Cybersecurity</option> */}
-          <option value="Mobile App">Mobile App</option>
+          {/* <option value="Mobile App">Mobile App</option> */}
         </select>
         {formData.track === "Frontend" && (
           <div className="bg-orange text-white py-3 px-3 mt-3 rounded-lg">

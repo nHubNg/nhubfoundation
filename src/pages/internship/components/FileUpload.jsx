@@ -44,8 +44,7 @@ const FileUpload = ({formData, setFormData}) => {
             accept="application/pdf"
             className="hidden"
             onChange={(e) =>
-              {console.log(e.target.files[0])
-                setFormData({ ...formData, cover: e.target.files[0]})}
+                setFormData({ ...formData, cover: e.target.files[0]})
             }
           />
         </div>
