@@ -2,12 +2,13 @@ import { ActiveContext } from "../../contexts/ActiveContext"
 import { editRequest } from "../../helpers/admin"
 import { useContext } from "react"
 
-const EndModal = ({ handleEndModal }) => {
+const EndModal = ({ handleEndModal, setFetch }) => {
     const { detail } = useContext(ActiveContext)
     const startApp = async () => {
         const res = await editRequest(detail, { "isFinished": true, "isStarted": false })
         if (res?.status === 200 || res?.status === 201) {
-            window.location.reload(false);
+            // window.location.reload(false);
+            setFetch(true)
             handleEndModal()
             return
         } else {

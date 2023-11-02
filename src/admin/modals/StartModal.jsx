@@ -2,12 +2,13 @@ import { ActiveContext } from "../../contexts/ActiveContext"
 import { editRequest } from "../../helpers/admin"
 import { useContext } from "react"
 
-const StartModal = ({handleStartModal}) => {
+const StartModal = ({handleStartModal, setFetch}) => {
     const {detail} = useContext(ActiveContext)
   const startApp = async () => {
     const res = await editRequest(detail, {"isStarted" : true})
     if (res?.status === 200 || res?.status === 201){
-      window.location.reload(false);
+      // window.location.reload(false);
+      setFetch(true)
       handleStartModal()
       return
     } else {

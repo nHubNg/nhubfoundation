@@ -73,7 +73,7 @@ const End = () => {
 
                 </div>
                 <div className="hidden md:block">
-                    <table className="table-auto mx-auto mt-10 w-[90%] overflow-auto ">
+                    <table className="table-auto mx-auto mt-10 w-[95%] overflow-auto ">
                         <thead>
                             <tr>
                                 <th className="py-3 text-left font">Details</th>

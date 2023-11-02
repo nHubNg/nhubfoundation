@@ -80,3 +80,24 @@ export async function editRequest(id, item) {
     console.log(result);
   }
 }
+
+export async function acceptRequest(id) {
+  const header = {
+    "Content-Type": "application/json",
+    Authorization: `Bearer ${Cookies.get("status")}`,
+  };
+   const payload = {};
+  const result = await axios.post(
+    `${url}/admin/internship/approve/${id}`,
+    JSON.stringify(payload),
+    {
+      headers: header,
+    }
+  );
+  if (result.error !== null) {
+    console.log(result)
+    return result;
+  } else {
+    console.log(result);
+  }
+}

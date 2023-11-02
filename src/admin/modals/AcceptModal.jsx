@@ -1,15 +1,20 @@
 import { ActiveContext } from "../../contexts/ActiveContext"
-import { editRequest } from "../../helpers/admin"
+import { acceptRequest, editRequest } from "../../helpers/admin"
 import { useContext } from "react"
 
 const AcceptModal = ({handleAcceptModal}) => {
   const { detail } = useContext(ActiveContext)
   console.log(detail)
+
   const acceptApp = async () => {
-    const res = await editRequest(detail, { "isApproved": "approved" })
+    const res = await acceptRequest(detail)
     if (res?.status === 200 || res?.status === 201) {
-      window.location.reload(false);
-      handleAcceptModal()
+      const resp = await editRequest(detail, { "isApproved": "approved" })
+      if (resp?.status === 200 || resp?.status === 201) {
+        window.location.reload(false);
+        handleAcceptModal()
+        return
+      }
       return
     } else {
       console.log(res)

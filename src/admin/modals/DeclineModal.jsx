@@ -2,12 +2,13 @@ import { ActiveContext } from "../../contexts/ActiveContext"
 import { editRequest } from "../../helpers/admin"
 import { useContext } from "react"
 
-const DeclineModal = ({handleDeclineModal}) => {
+const DeclineModal = ({handleDeclineModal, setFetch}) => {
   const {detail} = useContext(ActiveContext)
   const declineApp = async () => {
     const res = await editRequest(detail, {"isApproved" : "declined"})
     if (res?.status === 200 || res?.status === 201){
-      window.location.reload(false);
+      // window.location.reload(false);
+      setFetch(true)
       handleDeclineModal()
       return
     } else {

@@ -3,7 +3,7 @@ import close from "../../assets/close.png";
 import { ActiveContext } from "../../contexts/ActiveContext";
 import { editRequest } from "../../helpers/admin";
 
-const InterviewModal = ({ handleInterviewModal }) => {
+const InterviewModal = ({ handleInterviewModal, setFetch }) => {
   const {detail} = useContext(ActiveContext)
   const [date, setDate] = useState('')
   const [virtual, setVirtual] = useState('')
@@ -30,7 +30,8 @@ const InterviewModal = ({ handleInterviewModal }) => {
     }
     const res = await editRequest(detail._id, payload)
     if (res?.status === 200 || res?.status === 201){
-      window.location.reload(false);
+      // window.location.reload(false);
+      setFetch(true)
       handleInterviewModal()
       console.log('called')
       return

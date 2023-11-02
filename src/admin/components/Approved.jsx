@@ -17,6 +17,7 @@ const Approved = () => {
   const [declineModal, setDeclineModal] = useState(false);
   const [allApproved, setAllApproved] = useState([])
   const [details, setDetails] = useState(false);
+  const [fetch, setFetch] = useState(false)
 
 
   const getAll = useCallback(async () => {
@@ -30,7 +31,7 @@ const Approved = () => {
 
   useEffect(() => {
     getAll()
-  }, [getAll])
+  }, [getAll, fetch])
 
   const handleDetails = (item) => {
     setDetail(item)
@@ -50,13 +51,13 @@ const Approved = () => {
     <>
       {details ? <Details handleDetails={handleDetails} /> : ""}
       {startModal ? (
-        <StartModal handleStartModal={handleStartModal} />
+        <StartModal setFetch={setFetch} handleStartModal={handleStartModal} />
       ) : (
         ""
       )}
       {
         declineModal ? (
-          <DeclineModal handleDeclineModal={handleDeclineModal} />
+          <DeclineModal setFetch={setFetch} handleDeclineModal={handleDeclineModal} />
         )
           :
           ""
@@ -99,7 +100,7 @@ const Approved = () => {
 
         </div>
         <div className="hidden md:block">
-          <table className="table-auto mx-auto mt-10 w-[90%] overflow-auto ">
+          <table className="table-auto mx-auto mt-10 w-[95%] overflow-auto ">
             <thead>
               <tr>
                 <th className="py-3 text-left font">Details</th>

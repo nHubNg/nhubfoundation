@@ -16,6 +16,8 @@ const Declined = () => {
   const [declineModal, setDeclineModal] = useState(false);
   const [allDeclined, setAllDeclined] = useState([])
   const [details, setDetails] = useState(false);
+  const [fetch, setFetch] = useState(false)
+
 
 
   const getAll = useCallback(async () => {
@@ -29,7 +31,7 @@ const Declined = () => {
 
   useEffect(() => {
     getAll()
-  }, [getAll])
+  }, [getAll, fetch])
 
   const handleDetails = (item) => {
     setDetail(item)
@@ -56,7 +58,7 @@ const Declined = () => {
       )}
       {
         declineModal ? (
-          <DeclineModal handleDeclineModal={handleDeclineModal} />
+          <DeclineModal setFetch={setFetch} handleDeclineModal={handleDeclineModal} />
         )
           :
           ""

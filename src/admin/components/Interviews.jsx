@@ -117,14 +117,15 @@ const Interviews = () => {
           </div>}
         </div>
         <div className="hidden md:block">
-          <table className="table-auto mx-auto mt-10 w-[90%] overflow-auto ">
+          <table className="table-auto mx-auto mt-10 w-[95%] overflow-auto ">
             <thead>
               <tr>
                 <th className="py-3 text-left">Details</th>
                 <th className="py-3 text-center">Email</th>
                 <th className="py-3 text-center">Start Date</th>
-                <th className="py-3 text-center">Interview Date</th>
+                <th className="py-3 text-center">End Date</th>
                 <th className="py-3 text-center">Location</th>
+                <th className="py-3 text-center">Interview</th>
                 <th className="py-3 text-center">Time</th>
                 <th className="py-3 text-center">Actions</th>
               </tr>
@@ -146,8 +147,9 @@ const Interviews = () => {
                     <td className="py-3 text-center">{pend.start_date}</td>
                     <td className="py-3 text-center">{pend.end_date}</td>
                     <td className="py-3 text-center">{pend.interview_location}</td>
+                    <td className="py-3 text-center">{pend.interviewDate.slice(0, -6)}</td>
                     <td className="py-3 text-center">{pend.interviewTime}</td>
-                    <td>
+                    <td className='cursor-pointer'>
                       
                       <Dropdown pend={pend}
                         handleAcceptModal={() => handleAcceptModal(pend._id)}

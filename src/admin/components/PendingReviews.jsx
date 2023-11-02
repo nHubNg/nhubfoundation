@@ -20,6 +20,8 @@ const PendingReviews = () => {
   const [details, setDetails] = useState(false);
   const [allPending, setAllPending] = useState([])
   const [open, setOpen] = useState(false);
+  const [fetch, setFetch] = useState(false)
+
 
   const toggle = () => {
     setOpen(!open)
@@ -36,7 +38,7 @@ const PendingReviews = () => {
 
   useEffect(() => {
     getAll()
-  }, [getAll])
+  }, [getAll, fetch])
 
   //   const handleAcceptModal = () => {
   //     setAcceptModal(!acceptModal);
@@ -77,14 +79,14 @@ const PendingReviews = () => {
       </div> : ""}
       {
         interviewModal ? (
-          <InterviewModal handleInterviewModal={handleInterviewModal} />
+          <InterviewModal setFetch={setFetch} handleInterviewModal={handleInterviewModal} />
         )
           :
           ""
       }
       {
         declineModal ? (
-          <DeclineModal handleDeclineModal={handleDeclineModal} />
+          <DeclineModal setFetch={setFetch} handleDeclineModal={handleDeclineModal} />
         )
           :
           ""
@@ -125,7 +127,7 @@ const PendingReviews = () => {
 
         </div>
         <div className="overflow-x-auto hidden md:block pb-20">
-          <table className="table-auto mx-auto mt-10 w-[90%] overflow-auto ">
+          <table className="table-auto mx-auto mt-10 w-[95%] overflow-auto ">
             <thead>
               <tr>
                 <th className="py-3 text-left">Details</th>
