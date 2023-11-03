@@ -70,8 +70,7 @@ const Overview = () => {
               <h5>Total Interviews</h5>
               <p className="text-orange">{analytics.isCalledForInterview}</p>
             </div>
-          </div>
-          <div className="flex justify-center flex-wrap gap-4 md:gap-6">
+
             <div className="flex flex-col justify-center items-center bg-adminBlue text-white   w-[50%] md:w-[250px] py-9 md:py-12 rounded-md">
               <h5>Accepted Count</h5>
               <p className="text-orange">{analytics.isAccepted}</p>
@@ -84,9 +83,7 @@ const Overview = () => {
               <h5>Current Count</h5>
               <p className="text-orange">{analytics.current}</p>
             </div>
-          </div>
           
-          <div className="flex justify-center flex-wrap gap-4 md:gap-6">
             <div className="flex flex-col justify-center items-center bg-adminBlue text-white   w-[50%] md:w-[250px] py-9 md:py-12 rounded-md">
               <h5>Completed Count</h5>
               <p className="text-orange">{analytics.done}</p>
