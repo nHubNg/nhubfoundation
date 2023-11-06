@@ -87,7 +87,7 @@ const Internship = () => {
     <>
 
       <ScrollToTopOnMount />
-      <div className="md:flex justify-between overflow-x-hidden mb-10 w-full p-4 gap-10">
+      <div className="md:flex justify-between overflow-x-hidden mb-10 w-full p-4 gap-10 px-12">
         <div className="pt-10 md:w-[40%]">
           <InstructModal />
         </div>
