@@ -31,7 +31,7 @@ const Navbar = ({ handleDonate, handleDesktopDonate, handleNav, nav }) => {
   return (
     <nav className="  bg-white">
       <div className="my-container flex items-center md:justify-between   h-14">
-        <div onClick={handleNav} className="lg:hidden">
+        <div onClick={handleNav} className="lg:hidden cursor-pointer">
           <img
             // src={
             //   "https://res.cloudinary.com/nhubnacademy/image/upload/v1682899502/nHubFoundation/Vector_9_hsbdsn.png"

@@ -29,7 +29,7 @@ const FileUpload = ({formData, setFormData}) => {
             />
             <p>drag and drop your file</p>
             <p>Or</p>
-            <button onClick={handleCoverInput} className="bg-blue py-0 px-3 rounded-md">
+            <button onClick={handleCoverInput} className="bg-blue py-1 px-3 rounded-md">
               Browse file
             </button>
             <p>

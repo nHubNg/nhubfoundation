@@ -11,6 +11,7 @@ const AdminModal = ({handleModal}) => {
     setActiveState(false)
     Cookies.remove('status')
     navigate('/')
+    window.location.reload(false);
   }
   
   return (

@@ -87,18 +87,18 @@ const Internship = () => {
     <>
 
       <ScrollToTopOnMount />
-      <div className="md:flex justify-between overflow-x-hidden mb-10 w-full p-4">
-        <div className="pt-10  md:w-[500px]">
+      <div className="md:flex justify-between overflow-x-hidden mb-10 w-full p-4 gap-10">
+        <div className="pt-10 md:w-[40%]">
           <InstructModal />
         </div>
-        <div className="">
+        <div className=" md:w-[60%]">
           <div className="pt-10 text-center  font-semibold pb-8 ">
             <h1 className="text-black text-2xl">Internship Application</h1>
             <p className="text-black capitalize">All fields are Required</p>
 
           </div>
-          <div className=" md:w-[80%] md:ml-32 border border-orange rounded-[10px] flex flex-col justify-center items-center">
-            <div className="md:w-[105%] overflow-scroll px-10 md:h-[105vh] mt-2 ">
+          <div className="border border-orange rounded-[10px] flex flex-col justify-center items-center">
+            <div className="overflow-scroll px-10  mt-2 ">
 
               <div className="overflow-hidden">
 
