@@ -13,7 +13,11 @@ export async function signIn (email, password) {
           email: email,
           password: password,
       };
-      const result = await axios.post(`${url}/auth/sign-in`, JSON.stringify(payload),{ headers: header})
+      const result = await axios.post(
+        `https://nhubfoundation-v2.onrender.com/api/v1/auth/sign-in`,
+        JSON.stringify(payload),
+        { headers: header }
+      );
       if (result.data.statusCode === 200 || result.data.statusCode === 201){
         return result
       } else {
