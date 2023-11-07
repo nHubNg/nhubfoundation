@@ -158,7 +158,6 @@ const Internship = () => {
   const handleNextClick = (e) => {
     e.preventDefault()
     if (canProceed()) {
-      console.log(formData.cover.size.length, formData.it.name)
       if (page === 2 && formData.cover.name !== "" &&
         formData.it.name !== "") {
         handleSubmit(e)
