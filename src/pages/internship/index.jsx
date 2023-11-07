@@ -144,21 +144,28 @@ const Internship = () => {
         formData.endDate !== "" &&
         formData.experience !== "" &&
         formData.track !== "" &&
-        formData.duration !== ""
+        formData.duration !== "" &&
+        formData.regNo !== ""
       );
     } else if (page === 2) {
       return (
-        formData.cover.length > 0 &&
-        formData.it.length > 0 &&
-        formData.regNo !== ""
+        formData.cover.name !== "" &&
+        formData.it.name !== ""
       );
     }
   };
 
-  const handleNextClick = () => {
+  const handleNextClick = (e) => {
+    e.preventDefault()
     if (canProceed()) {
+      console.log(formData.cover.size.length, formData.it.name)
+      if (page === 2 && formData.cover.name !== "" &&
+        formData.it.name !== "") {
+        handleSubmit(e)
+      } else {
       setPage((currPage) => currPage + 1);
       setError("");
+      }
     } else {
       setError("Please ensure all fields are filled in before proceeding.");
     }
