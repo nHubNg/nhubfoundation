@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useContext, useRef } from "react";
 import PersonalDetails from "./components/PersonalDetails";
 import School from "./components/School";
 import FileUpload from "./components/FileUpload";
@@ -6,6 +6,9 @@ import { InstructModal } from "./components/InstructModal";
 import { FormContext } from "../../contexts/FormContext";
 import { SubmitInternship } from "../../helpers/internship";
 import Modal from "../../components/Success";
+import LoadingBar from 'react-top-loading-bar'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function ScrollToTopOnMount() {
   useEffect(() => {
@@ -15,6 +18,7 @@ function ScrollToTopOnMount() {
   return null;
 }
 const Internship = () => {
+  const ref = useRef(null) //Ref for network loading bar
   const { formData, setFormData } = useContext(FormContext);
   const [page, setPage] = useState(0);
   const [error, setError] = useState("");
@@ -84,12 +88,15 @@ const Internship = () => {
         formData.it.length === 0 ||
         formData.regNo === ""
       ) {
-        return setError(
-          "Please ensure all fields are filled in before submission."
-        );
+        
+        // return setError(
+        //   "Please ensure all fields are filled in before submission."
+        // );
+        return splashNotify("Please ensure all fields are filled in before submission.", "ERROR")
       } else {
-        setError("");
-        setLoading("Loading...");
+        ref.current.continuousStart();
+        // setError("");
+        // setLoading("Loading...");
         const res = await SubmitInternship(
           formData.email,
           formData.phone,
@@ -112,16 +119,22 @@ const Internship = () => {
         setLoading("");
         if (res.status === 200 || res.status === 201) {
           setLoading("");
-          alert(res.data.message);
+         
           setSuccess(true);
+          ref.current.complete();
+          splashNotify(capitalizeFirstLetter(res.data.message), "SUCCESS")
         } else {
           console.log("error");
           setLoading("");
+          splashNotify(capitalizeFirstLetter(res.data.message), "ERROR")
           setErrMsg(res.data.message);
+          ref.current.complete();
         }
       }
     } else {
       setPage((currPage) => currPage + 1);
+      splashNotify("Saved Successfully!", "SUCCESS")
+      ref.current.complete();
     }
   };
 
@@ -158,20 +171,63 @@ const Internship = () => {
   const handleNextClick = (e) => {
     e.preventDefault()
     if (canProceed()) {
+      ref.current.continuousStart();
       if (page === 2 && formData.cover.name !== "" &&
         formData.it.name !== "") {
         handleSubmit(e)
       } else {
+        ref.current.complete();
       setPage((currPage) => currPage + 1);
-      setError("");
+      splashNotify("Saved Successfully", "SUCCESS")
+      // setError("");
+      
       }
     } else {
-      setError("Please ensure all fields are filled in before proceeding.");
+      splashNotify("Please ensure all fields are filled in before submission.", "ERROR")
+      // setError("Please ensure all fields are filled in before proceeding.");
     }
   };
 
+  const splashNotify = (msg, type) => {
+    const splashConfig = {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+    }
+
+    switch (type.toUpperCase()) {
+        case 'ERROR':
+            toast.error(capitalizeFirstLetter(msg), splashConfig);
+            break;
+        case 'SUCCESS':
+            toast.success(capitalizeFirstLetter(msg), splashConfig);
+            break;
+        case 'WARNING':
+            toast.warn(capitalizeFirstLetter(msg), splashConfig);
+            break;
+        case 'INFO':
+            toast.info(capitalizeFirstLetter(msg), splashConfig);
+            break;
+        default:
+            toast(capitalizeFirstLetter(msg), splashConfig);
+            break;
+    }
+
+}
+
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
   return (
     <>
+     <LoadingBar color='#f11946' ref={ref} />
+        <ToastContainer />
       <ScrollToTopOnMount />
       <div className="md:flex justify-between overflow-x-hidden mb-10 w-full p-4 gap-10 px-12">
         <div className="pt-10 md:w-[40%]">
