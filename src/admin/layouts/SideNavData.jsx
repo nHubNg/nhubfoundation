@@ -10,7 +10,7 @@ export const SideNavData = [
     },
     {
         title: 'Internship',
-        path: '/admin/applications/pending',
+        path: '/admin/applications/pending/',
         icon: 'https://res.cloudinary.com/nhubnacademy/image/upload/v1691063574/nHubFoundation/charm_person_sr3kco.svg',
         mobileIcon: 'https://res.cloudinary.com/nhubnacademy/image/upload/v1692616689/nHubFoundation/charm_person_lbjbys.svg',
         sideArrow: 'https://res.cloudinary.com/nhubnacademy/image/upload/v1692793410/nHubFoundation/icons8-greater-than-50_pprtqw.png',
@@ -19,7 +19,7 @@ export const SideNavData = [
         subMenu: [
             {
                 title: 'New',
-                path: '/admin/applications/pending',
+                path: '/admin/applications/pending/',
                 icon: 'https://res.cloudinary.com/nhubnacademy/image/upload/v1690455760/nHubFoundation/Vector_e3vumb.png',
                 mobileIcon: 'https://res.cloudinary.com/nhubnacademy/image/upload/v1692616802/nHubFoundation/mdi_account-pending-outline_l6x6ft.svg'
             },

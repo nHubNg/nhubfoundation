@@ -59,7 +59,7 @@ function App() {
       ? (document.body.style.overflow = "hidden")
       : (document.body.style.overflow = "unset");
   };
-  
+
   const pathname = window.location.pathname
 
 
@@ -110,7 +110,7 @@ function App() {
 
           </Route>
         </Routes>
-        {pathname.includes("/admin")  ? "" : <Footer />}
+        {pathname.includes("/admin") ? "" : <Footer />}
       </ActiveProvider>
     </BrowserRouter>
 
