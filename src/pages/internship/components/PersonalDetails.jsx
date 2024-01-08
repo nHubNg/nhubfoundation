@@ -11,6 +11,7 @@ const PersonalDetails = () => {
           First Name<span className="text-red">*</span>
         </label>
         <input
+        required
           type="text"
           placeholder="First Name"
           value={formData.firstname}
@@ -25,6 +26,7 @@ const PersonalDetails = () => {
           Last Name<span className="text-red">*</span>
         </label>
         <input
+        required
           type="text"
           placeholder="Last Name"
           value={formData.lastname}
@@ -39,7 +41,8 @@ const PersonalDetails = () => {
           Email<span className="text-red">*</span>
         </label>
         <input
-          type="text"
+          type="email"
+          required
           placeholder="e.g yourname@example.com"
           value={formData.email}
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -51,7 +54,8 @@ const PersonalDetails = () => {
           Phone Number<span className="text-red">*</span>
         </label>
         <input
-          type="text"
+          type="tel"
+          required
           placeholder="e.g +2348000000000"
           value={formData.phone}
           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
