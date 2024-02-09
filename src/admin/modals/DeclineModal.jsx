@@ -7,7 +7,6 @@ const DeclineModal = ({handleDeclineModal, setFetch}) => {
   const declineApp = async () => {
     const res = await editRequest(detail, {"isApproved" : "declined"})
     if (res?.status === 200 || res?.status === 201){
-      // window.location.reload(false);
       setFetch(true)
       handleDeclineModal()
       return

@@ -1,27 +1,25 @@
-import { useState, useContext } from "react";
+import React, { useState, useContext } from "react";
 import { ActiveContext } from "../../contexts/ActiveContext";
 import { rescheduleRequest } from "../../helpers/admin";
 
-const RescheduleModal = ({ handleRescheduleModal }) => {
+const RescheduleModal = ({ handleRescheduleModal, closeModal }) => {
   const { detail } = useContext(ActiveContext);
   const [formData, setFormData] = useState({
-    interviewDate: '',
-    interviewTime: '',
+    interviewDate: "",
+    interviewTime: "",
   });
+  const [loading, setLoading] = useState(false)
 
   const updateSchedule = async (e) => {
+    setLoading(true)
     e.preventDefault();
     const { interviewDate, interviewTime } = formData;
-    console.log(interviewDate);
-    console.log(interviewTime);
-
-    // Rest of your logic using interviewDate value
     const res = await rescheduleRequest(detail, formData);
-    // ...
-
-    // handleRescheduleModal();
+    setLoading(false)
+    if (res?.status === 200 || res?.status === 201) {
+      closeModal(); 
+    }
   };
-
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -30,6 +28,9 @@ const RescheduleModal = ({ handleRescheduleModal }) => {
     });
   };
 
+  const handleClose = () => {
+    closeModal();
+  }
   return (
     <div>
       <div className="bg-overlay h-[100vh]  w-[100%] top-0 left-0 fixed z-50 flex items-center md:justify-end justify-center "></div>
@@ -65,14 +66,15 @@ const RescheduleModal = ({ handleRescheduleModal }) => {
             </div>
             <div className="flex justify-center space-x-4">
               <button
+              disabled={loading}
                 type="submit"
                 className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition duration-300"
               >
-                Reschedule
+                {loading? "Rescheduling.." :"Reschedule"}
               </button>
               <button
                 type="button"
-                onClick={handleRescheduleModal}
+                onClick={handleClose} 
                 className="bg-red text-white px-4 py-2 rounded-md hover:bg-red-600 transition duration-300"
               >
                 Cancel

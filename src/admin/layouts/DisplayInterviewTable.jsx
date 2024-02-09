@@ -61,26 +61,15 @@ const DisplayInterviewTable = ({data, fieldNames, handleNameSearch}) => {
     setRescheduleModal(!rescheduleModal)
   }
 
-  
+  const closeRescheduleModal = () => {
+    setRescheduleModal(false);
+  };
+
 
   return (
     <>
-     {/* {
-      interviewModal ? (
-     <InterviewModal handleInterviewModal={handleInterviewModal}/> 
-      ) 
-      :
-      ""
-    }
-    {
-        declineModal ? (
-       <DeclineModal handleDeclineModal={handleDeclineModal}/> 
-        ) 
-        :
-        ""
-      } */}
-      {acceptModal ? <AcceptModal handleAcceptModal={handleAcceptModal} /> : ""}
-      {rescheduleModal ? <ResheduleModal handleResheduleModal={handleRescheduleModal} /> : ""}
+  
+      {rescheduleModal ? <ResheduleModal handleResheduleModal={handleRescheduleModal} onClose={closeRescheduleModal}/> : ""}
       {declineModal ? (
         <DeclineModal handleDeclineModal={handleDeclineModal} />
       ) : (
@@ -104,7 +93,12 @@ const DisplayInterviewTable = ({data, fieldNames, handleNameSearch}) => {
               alt=""
             />
           </div>
-          <InterviewDropdown handleInterviewModal={() => handleInterviewModal(pend)} handleDeclineModal={() => handleDeclineModal(pend._id)} toggle={toggle} open={open} />
+          <Dropdown pend={pend}
+                        handleAcceptModal={() => handleAcceptModal(pend._id)}
+                        handleDeclineModal={() => handleDeclineModal(pend._id)}
+                        handleRescheduleModal={() => handleRescheduleModal(pend._id)}
+                      />
+          {/* <InterviewDropdown handleInterviewModal={() => handleInterviewModal(pend)} handleDeclineModal={() => handleDeclineModal(pend._id)} toggle={toggle} open={open} /> */}
         </div>
       </div>
     )
