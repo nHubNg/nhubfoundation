@@ -7,7 +7,7 @@ const EndModal = ({ handleEndModal, setFetch }) => {
     const startApp = async () => {
         const res = await editRequest(detail, { "isFinished": true, "isStarted": false })
         if (res?.status === 200 || res?.status === 201) {
-            // window.location.reload(false);
+            
             setFetch(true)
             handleEndModal()
             return
@@ -18,7 +18,7 @@ const EndModal = ({ handleEndModal, setFetch }) => {
 
     return (
         <div>
-            <div className="bg-overlay h-[100vh]  w-[100%] top-0 left-0 fixed z-50 flex items-center md:justify-end justify-center ">
+            <div className="bg-overlay h-[100vh]  w-[100%] top-0 right-0 fixed z-50 flex items-center md:justify-end justify-center ">
                 <div className="bg-white  mx-auto rounded-lg h-[35%]  w-[75%] md:w-[30%] flex flex-col gap-y-10 justify-center  text-center text-[20px] font-medium">
                     Are you sure you want to mark this applicant as end?
                     <div className="flex justify-center text-white gap-5">

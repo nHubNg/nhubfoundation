@@ -5,17 +5,23 @@ import Details from "./Details";
 import AdminNav from "../layouts/AdminNav";
 import { getAllIntern } from "../../helpers/admin";
 import { ActiveContext } from "../../contexts/ActiveContext";
+import { obscureEmail } from "../../customMethods";
+import { format } from "date-fns";
 
 const End = () => {
     const { setDetail } = useContext(ActiveContext)
 
-    const [allEnded, setAllEnded] = useState([])
+    const [allEnded, setAllEnded] = useState(() => {
+        const Finished = localStorage.getItem('isFinished')
+      return Finished ? JSON.parse(Finished) : []
+    })
     const [details, setDetails] = useState(false);
 
 
     const getAll = useCallback(async () => {
         const res = await getAllIntern('isFinished', true)
         if (res?.status === 200 || res?.status === 201) {
+            localStorage.setItem('isFinished',JSON.stringify(res.data.data))
             return setAllEnded(res.data.data)
         } else {
             console.log(res)
@@ -31,6 +37,16 @@ const End = () => {
         setDetails(!details)
     }
 
+    const handleNameSearch = (elem) => {
+        const searchString = elem.target.value
+        const filteredResults = allEnded.filter(
+          (item) =>
+            item.first_name.toLowerCase().includes(searchString.toLowerCase()) ||
+            item.last_name.toLowerCase().includes(searchString.toLowerCase()) ||
+            item.email.toLowerCase().includes(searchString.toLowerCase())
+        );
+        setAllEnded(filteredResults);
+      }
     return (
         <>
             {details ? <Details handleDetails={handleDetails} /> : ""}
@@ -43,14 +59,16 @@ const End = () => {
                         text="All ended applications"
                     />
                 </div>
-                <AppHeader total={allEnded.length} />
+                <AppHeader total={allEnded.length} handleNameSearch={handleNameSearch}/>
                 <div className="mt-8  md:hidden flex flex-col gap-y-5 pb-20">
                     {allEnded.length > 0 ? allEnded.map((pend, i) => {
                         return (
                             <div key={i} className="flex justify-between items-center w-[90%] mx-auto bg-white shadow-md shadow-adminShadow py-4 px-5 rounded-lg">
                                 <div>
                                     <h5>{pend.first_name} {pend.last_name}</h5>
-                                    <p>{pend.email}</p>
+                                    <p>
+                                    {obscureEmail(pend.email.toLowerCase())}
+                                    </p>
                                 </div>
                                 <div>
                                     <div className='flex justify-center items-center gap-3'>
@@ -73,14 +91,14 @@ const End = () => {
 
                 </div>
                 <div className="hidden md:block">
-                    <table className="table-auto mx-auto mt-10 w-[95%] overflow-auto ">
+                    <table className="table-auto mx-auto text-sm mt-10 w-[95%] overflow-auto ">
                         <thead>
                             <tr>
                                 <th className="py-3 text-left font">Details</th>
-                                <th className="py-3 text-center">Email</th>
-                                <th className="py-3 text-center">Phone</th>
-                                <th className="py-3 text-center">Start</th>
-                                <th className="py-3 text-center">End</th>
+                                <th className="py-3 text-left">Email</th>
+                                <th className="py-3 text-left">Phone</th>
+                                <th className="py-3 text-left">Start</th>
+                                <th className="py-3 text-left">End</th>
                                
                             </tr>
                         </thead>
@@ -97,12 +115,12 @@ const End = () => {
                                                 {pend.first_name} {pend.last_name}
                                             </button>
                                         </td>
-                                        <td className="py-3 text-center text-orange">
-                                            {pend.email}
+                                        <td className="py-3 text-left text-orange">
+                                            {obscureEmail(pend.email.toLowerCase())}
                                         </td>
-                                        <td className="py-3 text-center">{pend.phone}</td>
-                                        <td className="py-3 text-center">{pend.start_date}</td>
-                                        <td className="py-3 text-center">{pend.end_date}</td>
+                                        <td className="py-3 text-left">{pend.phone}</td>
+                                        <td className="py-3 text-left">{format(pend.start_date, 'MMMM do, yyyy')}</td>
+                                        <td className="py-3 text-left">{format(pend.end_date, 'MMMM do, yyyy')}</td>
                                         
                                     </tr>
                                 )

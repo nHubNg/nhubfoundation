@@ -2,6 +2,8 @@ import { useCallback, useEffect, useState } from "react";
 import AdminHeader from "../layouts/AdminHeader";
 import AdminNav from "../layouts/AdminNav";
 import { getAnalytics } from "../../helpers/admin";
+import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 
 const Overview = () => {
   const [analytics, setAnalytics] = useState([])
@@ -17,7 +19,13 @@ const Overview = () => {
   useEffect(() => {
     getCount()
   }, [getCount])
-
+  const navigate= useNavigate()
+  const handleClick = () => {
+    if (setAnalytics.current) {
+      navigate("/redirect-route");
+    } else {
+    }
+  };
   return (
     <div className='pb-10'>
       <div>
@@ -36,12 +44,7 @@ const Overview = () => {
           <div className="w-full">
             <h5 className="px-3">Full name</h5>
             <p className="border border-adminBorder w-[95%] md:w-[100%] mx-auto  rounded-md outline-none px-3 py-2 mt-2">Bashir Shiedu</p>
-            {/* <input
-              type="text"
-              name=""
-              id=""
-              className="border border-adminBorder w-[100%]  rounded-md outline-none px-3 py-2 mt-2"
-            /> */}
+           
           </div>
           <div>
             <h5 className="px-3">Email address</h5>
@@ -58,37 +61,48 @@ const Overview = () => {
       <div>
         <div className=" mx-auto flex flex-col gap-6 mt-10 px-6 text-center">
           <div className="flex justify-center flex-wrap gap-4 md:gap-6 ">
+          <Link to="#" className="link-div">
             <div className="flex flex-col justify-center items-center bg-adminBlue text-white   w-[50%] md:w-[250px] py-9 md:py-12 rounded-md">
               <h5>Total Count</h5>
               <p className="text-orange">{analytics.globalTotal}</p>
             </div>
+            </Link>
+            <Link to="#" className="link-div">
             <div className="flex flex-col justify-center items-center bg-adminBlue text-white  w-[50%] md:w-[250px] py-9 md:py-12 rounded-md">
               <h5 >Total Screenings</h5>
               <p className="text-orange">{analytics.totalPendingScreenings}</p>
             </div>
+            </Link>
+            <Link to="/admin/applications/interview" className="link-div">
             <div className="flex flex-col justify-center items-center bg-adminBlue text-white py-9 md:py-12  w-[50%] md:w-[250px] rounded-md">
               <h5>Total Interviews</h5>
               <p className="text-orange">{analytics.isCalledForInterview}</p>
             </div>
-
+            </Link>
+            <Link to="/admin/applications/approved" className="link-div">
             <div className="flex flex-col justify-center items-center bg-adminBlue text-white   w-[50%] md:w-[250px] py-9 md:py-12 rounded-md">
               <h5>Accepted Count</h5>
-              <p className="text-orange">{analytics.isAccepted}</p>
+              <p  className="text-orange">{analytics.isAccepted}</p>
             </div>
+            </Link>
+            <Link to="/admin/applications/declined" className="link-div">
             <div className="flex flex-col justify-center items-center bg-adminBlue text-white  w-[50%] md:w-[250px] py-9 md:py-12 rounded-md">
               <h5>Declined Count</h5>
               <p className="text-orange">{analytics.isDeclined}</p>
             </div>
+            </Link>
+            <Link to="/admin/applications/started" className="link-div">
             <div className="flex flex-col justify-center items-center bg-adminBlue text-white  w-[50%] md:w-[250px] py-9 md:py-12 rounded-md">
               <h5>Current Count</h5>
               <p className="text-orange">{analytics.current}</p>
             </div>
-          
+          </Link>
+          <Link to="/admin/applications/ended" className="link-div">
             <div className="flex flex-col justify-center items-center bg-adminBlue text-white   w-[50%] md:w-[250px] py-9 md:py-12 rounded-md">
               <h5>Completed Count</h5>
               <p className="text-orange">{analytics.done}</p>
             </div>
-
+            </Link>
           </div>
         </div>
       </div>

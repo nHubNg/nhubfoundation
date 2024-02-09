@@ -8,13 +8,18 @@ import Details from "./Details";
 import AdminNav from "../layouts/AdminNav";
 import { getAllIntern } from "../../helpers/admin";
 import { ActiveContext } from "../../contexts/ActiveContext";
+import { obscureEmail } from "../../customMethods";
+import { format } from "date-fns";
 
 
 const Declined = () => {
   const { setDetail } = useContext(ActiveContext)
   const [deleteModal, setDeleteModal] = useState(false);
   const [declineModal, setDeclineModal] = useState(false);
-  const [allDeclined, setAllDeclined] = useState([])
+  const [allDeclined, setAllDeclined] = useState( () =>{
+    const NotApproved = localStorage.getItem('NotApproved')
+    return NotApproved ? JSON.parse(NotApproved): []
+})
   const [details, setDetails] = useState(false);
   const [fetch, setFetch] = useState(false)
 
@@ -23,6 +28,7 @@ const Declined = () => {
   const getAll = useCallback(async () => {
     const res = await getAllIntern('isApproved', 'declined')
     if (res?.status === 200 || res?.status === 201) {
+      localStorage.setItem('NotApproved', JSON.stringify(res.data.data))
       return setAllDeclined(res.data.data)
     } else {
       console.log(res)
@@ -47,7 +53,16 @@ const Declined = () => {
     setDeclineModal(!declineModal);
   }
 
-
+  const handleNameSearch = (elem) => {
+    const searchString = elem.target.value
+    const filteredResults = allDeclined.filter(
+      (item) =>
+        item.first_name.toLowerCase().includes(searchString.toLowerCase()) ||
+        item.last_name.toLowerCase().includes(searchString.toLowerCase()) ||
+        item.email.toLowerCase().includes(searchString.toLowerCase())
+    );
+    setAllDeclined(filteredResults);
+  }
   return (
     <>
       {details ? <Details handleDetails={handleDetails} /> : ""}
@@ -71,7 +86,7 @@ const Declined = () => {
             text="All declined applications"
           />
         </div>
-        <AppHeader total={allDeclined.length} />
+        <AppHeader total={allDeclined.length} handleNameSearch={handleNameSearch}/>
         <div className="mt-8  md:hidden flex flex-col gap-y-5 pb-20">
           {allDeclined.length > 0 ? allDeclined.map((pend, i) => {
             return (
@@ -97,15 +112,15 @@ const Declined = () => {
             </div>
           </div>}
         </div>
-        <div className="hidden md:block">
+        <div className="hidden md:block text-sm">
           <table className="table-auto mx-auto mt-10 w-[90%] overflow-auto ">
             <thead>
               <tr>
                 <th className="py-3 text-left">Details</th>
-                <th className="py-3 text-center">Email</th>
-                <th className="py-3 text-center">Phone</th>
-                <th className="py-3 text-center">Start</th>
-                <th className="py-3 text-center">End</th>
+                <th className="py-3 text-left">Email</th>
+                <th className="py-3 text-left">Phone</th>
+                <th className="py-3 text-left">Start</th>
+                <th className="py-3 text-left">End</th>
                 {/* <th className="py-3 text-center">Actions</th> */}
               </tr>
             </thead>
@@ -122,12 +137,12 @@ const Declined = () => {
                         {pend.first_name} {pend.last_name}
                       </button>
                     </td>
-                    <td className="py-3 text-center text-orange">
-                      {pend.email}
+                    <td className="py-3 text-left text-orange">
+                      {obscureEmail(pend.email).toLowerCase()}
                     </td>
-                    <td className="py-3 text-center">{pend.phone}</td>
-                    <td className="py-3 text-center">{pend.start_date}</td>
-                    <td className="py-3 text-center">{pend.end_date}</td>
+                    <td className="py-3 text-left">{pend.phone}</td>
+                    <td className="py-3 text-left">{format(pend.start_date, 'MMMM do, yyyy')}</td>
+                    <td className="py-3 text-left">{format(pend.end_date, 'MMMM do, yyyy')}</td>
                     {/* <td className='cursor-pointer'>
                       <DeclineDropdown handleDeleteModal={() => handleDeleteModal(pend._id)} />
                     </td> */}

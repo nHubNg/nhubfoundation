@@ -4,10 +4,17 @@ import AdminNav from "../layouts/AdminNav";
 import { getAllIntern } from "../../helpers/admin";
 import { ActiveContext } from "../../contexts/ActiveContext";
 import DisplayInterviewTable from "../layouts/DisplayInterviewTable";
+import AppHeader from "../layouts/AppHeader";
+import Dropdown from "./Dropdown";
+import AcceptModal from "../modals/AcceptModal";
+import RescheduleModal from "../modals/ResheduleModal";
 
 const Interviews = () => {
   const { setDetail } = useContext(ActiveContext);
-  const [filteredData, setFilteredData] = useState([])
+  const [acceptModal, setAcceptModal] = useState(false);
+  const [declineModal, setDeclineModal] = useState(false);
+  const [rescheduleModal, setRescheduleModal] = useState(false); // State variable for reschedule modal
+  const [filteredData, setFilteredData] = useState([]);
   const [allInterview, setAllInterview] = useState(() => {
     const cachedData = localStorage.getItem("cachedInterviewData");
     return cachedData ? JSON.parse(cachedData) : [];
@@ -20,7 +27,6 @@ const Interviews = () => {
         const data = res.data.data;
         setAllInterview(data);
         setFilteredData(data);
-        // Cache the fetched data in local storage
         localStorage.setItem("cachedInterviewData", JSON.stringify(data));
       } else {
         console.log(res);
@@ -30,8 +36,12 @@ const Interviews = () => {
     }
   }, []);
 
+  useEffect(() => {
+    getAll();
+  }, [getAll]);
+
   const handleNameSearch = (elem) => {
-    const searchString = elem.target.value
+    const searchString = elem.target.value;
     const filteredResults = allInterview.filter(
       (item) =>
         item.first_name.toLowerCase().includes(searchString.toLowerCase()) ||
@@ -39,12 +49,26 @@ const Interviews = () => {
         item.email.toLowerCase().includes(searchString.toLowerCase())
     );
     setFilteredData(filteredResults);
-  }
+  };
 
+  const handleAcceptModal = (detailId) => {
+    setDetail(detailId);
+    setAcceptModal(true);
+  };
 
-  useEffect(() => {
-    getAll();
-  }, [getAll]);
+  const handleDeclineModal = (detailId) => {
+    setDetail(detailId);
+    setDeclineModal(true);
+  };
+
+  const handleRescheduleModal = (detailId) => {
+    setDetail(detailId);
+    setRescheduleModal(true);
+  };
+
+  const closeRescheduleModal = () => {
+    setRescheduleModal(false);
+  };
 
   const TableFieldNames = [
     "Details",
@@ -55,24 +79,31 @@ const Interviews = () => {
     "Date",
     "Time",
     "Actions",
-  ]
+  ];
+
+  const handleDetails = (item) => {
+    setDetail(item);
+  };
 
   return (
     <>
       <AdminNav heading="Interviews" />
       <div>
-        <div className="hidden md:block">
-          <AdminHeader heading="Interviews" text="Pending interviews" />
-        </div>
-        {filteredData.length === 0 ? 
-        <DisplayInterviewTable handleNameSearch={handleNameSearch}
-          data={allInterview}
-          fieldNames={TableFieldNames} 
-        />
-        : 
-        <DisplayInterviewTable data={filteredData} fieldNames={TableFieldNames} handleNameSearch={handleNameSearch} />
-      }
-        
+        <AdminHeader heading="Interviews" text="Pending interviews" />
+
+
+        {filteredData.length === 0 ? (
+          <DisplayInterviewTable
+            handleNameSearch={handleNameSearch}
+            data={allInterview}
+            fieldNames={TableFieldNames}
+          />
+        ) : (
+          <DisplayInterviewTable data={filteredData} fieldNames={TableFieldNames} handleNameSearch={handleNameSearch} />
+        )}
+
+        {rescheduleModal && <RescheduleModal isOpen={rescheduleModal} onClose={() => closeRescheduleModal()} />}
+        {acceptModal && <AcceptModal isOpen={acceptModal} onClose={() => setAcceptModal(false)} />}
       </div>
     </>
   );

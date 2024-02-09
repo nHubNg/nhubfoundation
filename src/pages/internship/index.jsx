@@ -21,7 +21,7 @@ function ScrollToTopOnMount() {
   return null;
 }
 const Internship = () => {
-  const ref = useRef(null) //Ref for network loading bar
+  const ref = useRef(null) 
   const { formData, setFormData } = useContext(FormContext);
   const [page, setPage] = useState(0);
   const [error, setError] = useState("");

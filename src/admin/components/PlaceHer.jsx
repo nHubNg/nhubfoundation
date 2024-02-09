@@ -2,6 +2,16 @@ import AdminHeader from "../layouts/AdminHeader";
 import AppHeader from "../layouts/AppHeader";
 import AdminNav from "../layouts/AdminNav";
 
+const handleNameSearch = (elem) => {
+  // const searchString = elem.target.value
+  // const filteredResults = allInterview.filter(
+  //   (item) =>
+  //     item.first_name.toLowerCase().includes(searchString.toLowerCase()) ||
+  //     item.last_name.toLowerCase().includes(searchString.toLowerCase()) ||
+  //     item.email.toLowerCase().includes(searchString.toLowerCase())
+  // );
+  // setFilteredData(filteredResults);
+}
 const PlaceHer = () => {
   return (
     <div>
@@ -10,7 +20,7 @@ const PlaceHer = () => {
         <div className="hidden md:block">
           <AdminHeader heading="Placeher Applications" text="All applicants" />
         </div>
-        <AppHeader total={4} />
+        <AppHeader total={4} handleNameSearch={handleNameSearch}/>
       </div>
       <div className="mt-8  md:hidden flex flex-col gap-y-5">
           <div className="flex justify-between items-center w-[90%] mx-auto bg-white shadow-md shadow-adminShadow py-4 px-5 rounded-lg">
