@@ -2,7 +2,7 @@ import { useState } from "react"
 
 
 
-const Dropdown = ({ handleAcceptModal, handleDeclineModal, pend }) => {
+const Dropdown = ({ handleAcceptModal, handleDeclineModal, handleRescheduleModal, pend }) => {
   const [open, setOpen] = useState(false);
 
   const toggle = () => {
@@ -19,6 +19,7 @@ const Dropdown = ({ handleAcceptModal, handleDeclineModal, pend }) => {
         {open && <div className="bg-white w-28 h-20 mx-auto shadow-lg flex flex-col justify-center px-3 py-2 gap-y-2 rounded-md absolute top-12 z-40 ">
           <p onClick={() => { handleAcceptModal(), toggle() }} className="text-green-500 cursor-pointer">Accept</p>
           {pend.interview_location === 'Virtual' && <a href={pend.interviewLink} target='_blank' rel='noreferrer' className="text-btnMaroon cursor-pointer">Join virtual</a>}
+          <p onClick={() => { handleRescheduleModal(), toggle() }} className="cursor-pointer text-blue">Reschedule</p>
           <p onClick={() => { handleDeclineModal(), toggle() }} className="text-btnRed cursor-pointer">Decline</p>
         </div>}
       </div>

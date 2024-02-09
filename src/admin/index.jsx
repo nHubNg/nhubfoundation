@@ -9,9 +9,9 @@ const Dashboard = () => {
   const [open, setOpen] = useState(true);
   const navigate = useNavigate()
 
-  useEffect(() => {
-    !activeState && navigate('/')
-  }, [activeState, navigate])
+  // useEffect(() => {
+  //   !activeState && navigate('/')
+  // }, [activeState, navigate])
 
   const handleOpen = () => {
     setOpen(!open)

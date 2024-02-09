@@ -108,3 +108,24 @@ export async function acceptRequest(id) {
     console.log(result);
   }
 }
+
+
+export async function rescheduleRequest(id, item) {
+  const header = {
+    "Content-Type": "application/json",
+    Authorization: `Bearer ${Cookies.get("status")}`,
+  };
+  const payload = item;
+  const result = await axios.patch(
+    `${url}/admin/internship/reschedule/${id}`,
+    JSON.stringify(payload),
+    {
+      headers: header,
+    }
+  );
+  if (result.error !== null) {
+    return result;
+  } else {
+    console.log(result);
+  }
+}
