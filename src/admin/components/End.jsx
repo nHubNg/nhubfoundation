@@ -31,6 +31,16 @@ const End = () => {
         setDetails(!details)
     }
 
+    const handleNameSearch = (elem) => {
+        const searchString = elem.target.value
+        const filteredResults = allEnded.filter(
+          (item) =>
+            item.first_name.toLowerCase().includes(searchString.toLowerCase()) ||
+            item.last_name.toLowerCase().includes(searchString.toLowerCase()) ||
+            item.email.toLowerCase().includes(searchString.toLowerCase())
+        );
+        setAllEnded(filteredResults);
+      }
     return (
         <>
             {details ? <Details handleDetails={handleDetails} /> : ""}
@@ -43,7 +53,7 @@ const End = () => {
                         text="All ended applications"
                     />
                 </div>
-                <AppHeader total={allEnded.length} />
+                <AppHeader total={allEnded.length} handleNameSearch={handleNameSearch}/>
                 <div className="mt-8  md:hidden flex flex-col gap-y-5 pb-20">
                     {allEnded.length > 0 ? allEnded.map((pend, i) => {
                         return (

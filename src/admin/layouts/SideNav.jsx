@@ -2,28 +2,27 @@ import { SideNavData } from "./SideNavData";
 import SubMenu from "./SubMenu";
 import { useState } from "react";
 import AdminModal from "../modals/LogoutModal";
-import hamburger from "../../assets/hamburger.svg"
+import hamburger from "../../assets/hamburger.svg";
 import { Link } from "react-router-dom";
 
-const SideNav = ({open, handleOpen}) => {
+const SideNav = ({ open, handleOpen }) => {
   const [modal, setModal] = useState(false);
-  // const [open, setOpen] = useState(true);
-
-  // const handleOpen = () => {
-  //   setOpen(!open)
-  // }
+  const [subMenuOpen, setSubMenuOpen] = useState(false); 
 
   const handleModal = () => {
     setModal(!modal);
   };
 
-
+  const toggleSubMenu = () => {
+    setSubMenuOpen(!subMenuOpen);
+  };
 
   return (
     <>
       {modal ? <AdminModal handleModal={handleModal} /> : ""}
       <div className=" md:transition-all md:duration-500 md:ease-in-out ">
-        <div className={`flex flex-col justify-center  pt-2 ${open ? "md:px-1" : "md:px-10"} lg:px-4 gap-y-3  md:transition-all md:duration-500 md:ease-in-out `}>
+        <div className={`flex flex-col justify-center  pt-2 ${open ? "md:px-1" : "md:px-10"
+          } lg:px-4 gap-y-3  md:transition-all md:duration-500 md:ease-in-out `}>
           <Link to={'/'}>
             <h1
               className={`${open ? "text-center" : "text-left"
@@ -32,9 +31,17 @@ const SideNav = ({open, handleOpen}) => {
               nHUB{" "}
               <span className={`${!open && "hidden text-left"}`}>FOUNDATION</span>
             </h1>
-            </Link>
+          </Link>
           {SideNavData.map((parent, index) => {
-            return <SubMenu parent={parent} key={index} open={open} />;
+            return (
+              <SubMenu
+                parent={parent}
+                key={index}
+                open={open}
+                toggle={subMenuOpen}
+                setToggle={toggleSubMenu}
+              />
+            );
           })}
           <div
             className=" hover:bg-transparent rounded-md px-3  flex items-center hover:rounded-xl"
@@ -55,7 +62,7 @@ const SideNav = ({open, handleOpen}) => {
               </p>
             </button>
           </div>
-          <button onClick={handleOpen} className="absolute top-4 right-[-15px]">
+          <button onClick={handleOpen} className={`absolute top-4 right-[-15px]`}>
             <img src={hamburger} alt="" />
           </button>
         </div>

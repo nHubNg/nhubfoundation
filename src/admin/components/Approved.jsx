@@ -18,16 +18,21 @@ const Approved = () => {
   const [allApproved, setAllApproved] = useState([])
   const [details, setDetails] = useState(false);
   const [fetch, setFetch] = useState(false)
+  const [searchQuery, setSearchQuery] = useState("");
 
 
   const getAll = useCallback(async () => {
-    const res = await getAllIntern('isApproved', 'approved')
+    const res = await getAllIntern('isApproved', 'approved');
     if (res?.status === 200 || res?.status === 201) {
-      return setAllApproved(res.data.data)
+      const approvedData = res.data.data;
+      
+      const startedUsers = approvedData.filter(user => user.isStarted === false && user.isFinished === false);
+      console.log(startedUsers)
+      return setAllApproved(startedUsers);
     } else {
-      console.log(res)
     }
   }, [setAllApproved]);
+  
 
   useEffect(() => {
     getAll()
@@ -47,6 +52,18 @@ const Approved = () => {
     setDetail(item)
     setDeclineModal(!declineModal);
   }
+
+  const handleNameSearch = (elem) => {
+    const searchString = elem.target.value
+    const filteredResults = allApproved.filter(
+      (item) =>
+        item.first_name.toLowerCase().includes(searchString.toLowerCase()) ||
+        item.last_name.toLowerCase().includes(searchString.toLowerCase()) ||
+        item.email.toLowerCase().includes(searchString.toLowerCase())
+    );
+    setAllApproved(filteredResults);
+  }
+  
   return (
     <>
       {details ? <Details handleDetails={handleDetails} /> : ""}
@@ -70,8 +87,9 @@ const Approved = () => {
             text="All approved applications"
           />
         </div>
-        <AppHeader total={allApproved.length} />
-        <div className="mt-8  md:hidden flex flex-col gap-y-5 pb-20">
+        <AppHeader total={allApproved.length} handleNameSearch={handleNameSearch} />
+                 <div className="mt-8  md:hidden flex flex-col gap-y-5 pb-20">
+          
           {allApproved.length > 0 ? allApproved.map((pend, i) => {
             return (
               <div key={i} className="flex justify-between items-center w-[90%] mx-auto bg-white shadow-md shadow-adminShadow py-4 px-5 rounded-lg">

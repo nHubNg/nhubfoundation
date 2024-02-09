@@ -47,7 +47,16 @@ const Declined = () => {
     setDeclineModal(!declineModal);
   }
 
-
+  const handleNameSearch = (elem) => {
+    const searchString = elem.target.value
+    const filteredResults = allDeclined.filter(
+      (item) =>
+        item.first_name.toLowerCase().includes(searchString.toLowerCase()) ||
+        item.last_name.toLowerCase().includes(searchString.toLowerCase()) ||
+        item.email.toLowerCase().includes(searchString.toLowerCase())
+    );
+    setAllDeclined(filteredResults);
+  }
   return (
     <>
       {details ? <Details handleDetails={handleDetails} /> : ""}
@@ -71,7 +80,7 @@ const Declined = () => {
             text="All declined applications"
           />
         </div>
-        <AppHeader total={allDeclined.length} />
+        <AppHeader total={allDeclined.length} handleNameSearch={handleNameSearch}/>
         <div className="mt-8  md:hidden flex flex-col gap-y-5 pb-20">
           {allDeclined.length > 0 ? allDeclined.map((pend, i) => {
             return (

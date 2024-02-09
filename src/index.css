@@ -17,4 +17,21 @@
   }
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F26024;
+  border-radius: 2rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 

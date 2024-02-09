@@ -15,6 +15,7 @@ const Start = () => {
     const [allStarted, setAllStarted] = useState([])
     const [details, setDetails] = useState(false);
     const [fetch, setFetch] = useState(false)
+    const [searchQuery, setSearchQuery] = useState("")
 
 
 
@@ -40,6 +41,27 @@ const Start = () => {
         setDetail(item)
         setEndModal(!endModal);
     };
+    const handleSearch = (event) =>  {
+        const searchTerm = event.target.value.toLowerCase()
+        setSearchQuery(searchTerm)
+        if(searchTerm === "") {
+            getAll()
+        }else{
+            const filterStarted = setAllStarted.filter((user) => {
+                `${user.first_name} ${user.last_name}}`
+            })
+        }
+    }
+    const handleNameSearch = (elem) => {
+        const searchString = elem.target.value
+        const filteredResults = allStarted.filter(
+          (item) =>
+            item.first_name.toLowerCase().includes(searchString.toLowerCase()) ||
+            item.last_name.toLowerCase().includes(searchString.toLowerCase()) ||
+            item.email.toLowerCase().includes(searchString.toLowerCase())
+        );
+        setAllStarted(filteredResults);
+      }
 
 
     return (
@@ -59,7 +81,7 @@ const Start = () => {
                         text="All started applications"
                     />
                 </div>
-                <AppHeader total={allStarted.length} />
+                <AppHeader total={allStarted.length} handleNameSearch={handleNameSearch}/>
                 <div className="mt-8  md:hidden flex flex-col gap-y-5 pb-20">
                     {allStarted.length > 0 ? allStarted.map((pend, i) => {
                         return (
