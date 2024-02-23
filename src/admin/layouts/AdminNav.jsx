@@ -19,7 +19,7 @@ const AdminNav = ({ heading }) => {
   const handleToggle = () => {
     SideNavData.map((nav) => {
       if (nav.subMenu > 1) {
-        setToggle(false);
+        setToggle(true);
       } else {
         setToggle(!toggle);
       }

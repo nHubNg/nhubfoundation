@@ -12,12 +12,15 @@ const AcceptModal = ({ isOpen, onClose }) => {
     try {
       const res = await acceptRequest(detail);
       if (res?.status === 200 || res?.status === 201) {
+        setLoading(false)
+        console.log(res)
         const resp = await editRequest(detail, { "isApproved": "approved" });
         if (resp?.status === 200 || resp?.status === 201) {
-          window.location.reload(false);
+          window.location.href='/admin/applications/approved'
         }
       } else {
         console.log(res);
+        setLoading(false)
       }
     } catch (error) {
       console.error("Error accepting application:", error);

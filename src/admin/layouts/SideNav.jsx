@@ -15,7 +15,7 @@ const SideNav = ({ open, handleOpen }) => {
 
   const toggleSubMenu = () => {
     setSubMenuOpen(!subMenuOpen);
-  };
+      };
 
   return (
     <>
