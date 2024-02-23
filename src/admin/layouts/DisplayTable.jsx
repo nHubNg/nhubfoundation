@@ -102,7 +102,7 @@ const DisplayTable = ({data, fieldNames, handleNameSearch}) => {
 <div className="mt-8  md:hidden flex flex-col gap-y-5 pb-20">
   {data?.length > 0 ? data?.map((pend, i) => {
     return (
-      <div key={i} className="flex justify-between items-center w-[90%] mx-auto bg-white shadow-md shadow-adminShadow py-4 px-5 rounded-lg">
+      <div key={i+1} className="flex justify-between items-center w-[90%] mx-auto bg-white shadow-md shadow-adminShadow py-4 px-5 rounded-lg">
         <div>
           <h5 style={{fontWeight: 'bolder'}}>{pend.first_name} {pend.last_name}</h5>
           <p>{obscureEmail(pend.email)}</p>
