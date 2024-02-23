@@ -29,7 +29,8 @@ const DisplayInterviewTable = ({data, fieldNames, handleNameSearch}) => {
   }
 
 
-    const handleAcceptModal = () => {
+    const handleAcceptModal = (item) => {
+      setDetail(item);
       setAcceptModal(!acceptModal);
     };
 

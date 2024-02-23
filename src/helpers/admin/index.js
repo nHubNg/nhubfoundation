@@ -100,7 +100,7 @@ export async function acceptRequest(id) {
     {
       headers: header,
     }
-  );
+    );
   if (result.error !== null) {
     console.log(result);
     return result;
