@@ -120,7 +120,7 @@ const Footer = () => {
                   className="active:text-orange hover:text-orange"
                   href="tel:0806 864 0710"
                 >
-                  0806 864 0710
+                  0816 740 3660
                 </a>
               </li>
             </ul>
