@@ -23,8 +23,8 @@ import Newblog from "./admin/components/Newblog";
 import Categories from "./admin/components/Categories";
 import Tags from "./admin/components/Tags";
 import Overview from "./admin/components/Overview";
-import Application from "./admin/applications"
-import AdminBlogs from "./admin/blogadmin"
+import Application from "./admin/applications";
+import AdminBlogs from "./admin/blogadmin";
 import { AdminLogin } from "./adminLogin";
 import { FormProvider } from "./contexts/FormContext";
 import { ActiveProvider } from "./contexts/ActiveContext";
@@ -60,21 +60,23 @@ function App() {
       : (document.body.style.overflow = "unset");
   };
 
-  const pathname = window.location.pathname
-
+  const pathname = window.location.pathname;
 
   return (
     <BrowserRouter>
       <ActiveProvider>
         {donate ? <Modal handleDesktopDonate={handleDesktopDonate} /> : ""}
-        {pathname.includes("/admin") ? "" : <Navbar
-          handleDonate={handleDonate}
-          handleNav={handleNav}
-          handleDesktopDonate={handleDesktopDonate}
-          nav={nav}
-        />
-        }
-        { }
+        {pathname.startsWith("/admin") ? (
+          ""
+        ) : (
+          <Navbar
+            handleDonate={handleDonate}
+            handleNav={handleNav}
+            handleDesktopDonate={handleDesktopDonate}
+            nav={nav}
+          />
+        )}
+        {}
         <FormProvider>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -89,7 +91,7 @@ function App() {
         </FormProvider>
         <Routes>
           {/* <Route path="/success" element={<Success />} /> */}
-          <Route path='/admin/login' element={<AdminLogin />} />
+          <Route path="/admin/login" element={<AdminLogin />} />
           <Route path="/admin" element={<Dashboard />}>
             <Route path="/admin" element={<Overview />} />
             <Route path="applications" element={<Application />}>
@@ -104,16 +106,17 @@ function App() {
             <Route path="/admin/blogadmin" element={<AdminBlogs />}>
               <Route path="/admin/blogadmin/all" element={<Allblogs />} />
               <Route path="/admin/blogadmin/new" element={<Newblog />} />
-              <Route path="/admin/blogadmin/categories" element={<Categories />} />
+              <Route
+                path="/admin/blogadmin/categories"
+                element={<Categories />}
+              />
               <Route path="/admin/blogadmin/tags" element={<Tags />} />
             </Route>
-
           </Route>
         </Routes>
         {pathname.includes("/admin") ? "" : <Footer />}
       </ActiveProvider>
     </BrowserRouter>
-
   );
 }
 

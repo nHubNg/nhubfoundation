@@ -12,58 +12,60 @@ import { SyncLoader } from "react-spinners";
 import { obscureEmail } from "../../customMethods";
 import { format } from "date-fns";
 
-
 const Approved = () => {
-  const { setDetail } = useContext(ActiveContext)
+  const { setDetail } = useContext(ActiveContext);
 
   const [startModal, setStartModal] = useState(false);
   const [declineModal, setDeclineModal] = useState(false);
- 
+
+  const [moveToStart, setMoveToStart] = useState(false);
+
   const [details, setDetails] = useState(false);
-  const [fetch, setFetch] = useState(false)
+  const [fetch, setFetch] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [loading, setLoading] = useState(true); 
+  const [loading, setLoading] = useState(true);
   const [allApproved, setAllApproved] = useState(() => {
     const storedData = localStorage.getItem("startedUsers");
     return storedData ? JSON.parse(storedData) : [];
   });
   const getAll = useCallback(async () => {
-    const res = await getAllIntern('isApproved', 'approved');
+    const res = await getAllIntern("isApproved", "approved");
     if (res?.status === 200 || res?.status === 201) {
       const approvedData = res.data.data;
-      
-      const startedUsers = approvedData.filter(user => user.isStarted === false && user.isFinished === false);
-      console.log(startedUsers)
-      localStorage.setItem('startedUsers', JSON.stringify(startedUsers))
+
+      const startedUsers = approvedData.filter(
+        (user) => user.isStarted === false && user.isFinished === false
+      );
+      console.log(startedUsers);
+      localStorage.setItem("startedUsers", JSON.stringify(startedUsers));
       setAllApproved(startedUsers);
-      setLoading(false); 
+      setLoading(false);
     } else {
-      setLoading(false); 
+      setLoading(false);
     }
   }, [setAllApproved]);
 
-
   useEffect(() => {
-    getAll()
-  }, [getAll, fetch])
+    getAll();
+  }, [getAll, fetch]);
 
   const handleDetails = (item) => {
-    setDetail(item)
-    setDetails(!details)
-  }
+    setDetail(item);
+    setDetails(!details);
+  };
 
   const handleStartModal = (item) => {
-    setDetail(item)
+    setDetail(item);
     setStartModal(!startModal);
   };
 
   const handleDeclineModal = (item) => {
-    setDetail(item)
+    setDetail(item);
     setDeclineModal(!declineModal);
-  }
+  };
 
   const handleNameSearch = (elem) => {
-    const searchString = elem.target.value
+    const searchString = elem.target.value;
     const filteredResults = allApproved.filter(
       (item) =>
         item.first_name.toLowerCase().includes(searchString.toLowerCase()) ||
@@ -71,8 +73,8 @@ const Approved = () => {
         item.email.toLowerCase().includes(searchString.toLowerCase())
     );
     setAllApproved(filteredResults);
-  }
-  
+  };
+
   return (
     <>
       {details ? <Details handleDetails={handleDetails} /> : ""}
@@ -81,13 +83,14 @@ const Approved = () => {
       ) : (
         ""
       )}
-      {
-        declineModal ? (
-          <DeclineModal setFetch={setFetch} handleDeclineModal={handleDeclineModal} />
-        )
-          :
-          ""
-      }
+      {declineModal ? (
+        <DeclineModal
+          setFetch={setFetch}
+          handleDeclineModal={handleDeclineModal}
+        />
+      ) : (
+        ""
+      )}
       <AdminNav heading="Approved Applications" />
       <div>
         <div className="hidden md:block">
@@ -96,35 +99,49 @@ const Approved = () => {
             text="All approved applications"
           />
         </div>
-        <AppHeader total={allApproved.length} handleNameSearch={handleNameSearch} />
+        <AppHeader
+          total={allApproved.length}
+          handleNameSearch={handleNameSearch}
+        />
 
-        {loading ? ( 
+        {loading ? (
           <div className="flex justify-center items-center py-5 w-full">
             <SyncLoader color="#f26024" />
           </div>
         ) : allApproved.length > 0 ? (
           <div className="mt-8  md:hidden flex flex-col gap-y-5 pb-20">
             {allApproved.map((pend, i) => (
-              <div key={i} className="flex justify-between items-center w-[90%] mx-auto bg-white shadow-md shadow-adminShadow py-4 px-5 rounded-lg">
+              <div
+                key={i}
+                className="flex justify-between items-center w-[90%] mx-auto bg-white shadow-md shadow-adminShadow py-4 px-5 rounded-lg"
+              >
                 <div>
-                  <h5>{pend.first_name} {pend.last_name}</h5>
+                  <h5>
+                    {pend.first_name} {pend.last_name}
+                  </h5>
                   <p>{pend.email}</p>
                 </div>
                 <div>
-                  <div className='flex justify-center items-center gap-3'>
-                    <div onClick={() => handleDetails(pend)} className='cursor-pointer'>
+                  <div className="flex justify-center items-center gap-3">
+                    <div
+                      onClick={() => handleDetails(pend)}
+                      className="cursor-pointer"
+                    >
                       <img
                         src="https://res.cloudinary.com/nhubnacademy/image/upload/v1692608267/nHubFoundation/ep_arrow-up_ykqgk7.svg"
                         alt=""
                       />
                     </div>
-                    <AcceptedDropdown handleStartModal={() => handleStartModal(pend._id)} handleDeclineModal={() => handleDeclineModal(pend._id)} />
+                    <AcceptedDropdown
+                      handleStartModal={() => handleStartModal(pend._id)}
+                      handleDeclineModal={() => handleDeclineModal(pend._id)}
+                    />
                   </div>
                 </div>
               </div>
             ))}
           </div>
-        ) : ( 
+        ) : (
           <div className="hidden md:block lg:flex justify-center items-center py-5 w-full mx-auto">
             <p>No Approved Application</p>
           </div>
@@ -147,7 +164,10 @@ const Approved = () => {
               {allApproved.map((pend, i) => (
                 <tr key={i}>
                   <td className="py-2">
-                    <button className="flex items-center gap-1 rounded-lg bg-adminGray py-2 px-7" onClick={() => handleDetails(pend)} >
+                    <button
+                      className="flex items-center gap-1 rounded-lg bg-adminGray py-2 px-7"
+                      onClick={() => handleDetails(pend)}
+                    >
                       <img
                         src="https://res.cloudinary.com/nhubnacademy/image/upload/v1690808993/nHubFoundation/bx_detail_bh1gnk.png"
                         alt=""
@@ -156,21 +176,26 @@ const Approved = () => {
                     </button>
                   </td>
                   <td className="py-3 text-left text-orange">
-                  {obscureEmail(pend.email.toLowerCase())}
-
+                    {obscureEmail(pend.email.toLowerCase())}
                   </td>
                   <td className="py-3 text-left">{pend.phone}</td>
-                  <td className="py-3 text-left">{format(pend.start_date, 'MMMM do, yyyy')}</td>
-                  <td className="py-3 text-left">{format(pend.end_date, 'MMMM do, yyyy')}</td>
+                  <td className="py-3 text-left">
+                    {format(pend.start_date, "MMMM do, yyyy")}
+                  </td>
+                  <td className="py-3 text-left">
+                    {format(pend.end_date, "MMMM do, yyyy")}
+                  </td>
                   <td className="cursor-pointer">
-                    <AcceptedDropdown handleStartModal={() => handleStartModal(pend._id)} handleDeclineModal={() => handleDeclineModal(pend._id)} />
+                    <AcceptedDropdown
+                      handleStartModal={() => handleStartModal(pend._id)}
+                      handleDeclineModal={() => handleDeclineModal(pend._id)}
+                    />
                   </td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
-        
       </div>
     </>
   );
