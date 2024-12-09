@@ -14,7 +14,7 @@ const StartedDropdown = ({ handleEndModal }) => {
   };
 
   const handleConfirmModal = () => {
-    console.log("Opening confirm modal..."); // Debugging click behavior
+    console.log("Opening confirm modal..."); // Debugging click-behavior
     setShowConfirmModal(true);
   };
   const confirmEndAction = () => {
