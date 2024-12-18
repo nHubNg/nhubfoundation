@@ -31,12 +31,14 @@ const Trainings = () => {
               className="text-[15px] px-8
           list-image-[url('https://res.cloudinary.com/nhubnacademy/image/upload/v1683034207/Vector_ptvzrq.png')]"
             >
-              <li className="  p-2">Frontend Web Development</li>
-              <li className="  p-2">Backend web development</li>
-              <li className="  p-2">Product (UI/UX) Design</li>
-              <li className=" p-2">Data Analysis</li>
-              <li className="p-2">Embedded systems and IoT</li>
-              <li className=" p-2">Mobile App Development</li>
+              {/* <li className="  p-2">Frontend Web Development</li> */}
+              {/* <li className="  p-2">Backend web development</li> */}
+              <li className=" p-2">Blockchain (1 year and above)</li>
+              <li className="  p-2">UI/UX Design (3 Months and above)</li>
+              {/* <li className=" p-2">Data Analysis</li> */}
+              <li className="p-2">Embedded systems (4 Months and above)</li>
+              {/* <li className=" p-2">Mobile App Development</li> */}
+              <li className=" p-2">Cyber Security (4 Months and above)</li>
             </ul>
             <div className="w-[200px] bg-orange mx-auto text-center py-3 rounded-md mt-3 cursor-pointer hover:bg-purple transition-all duration-300 hover:scale-110">
               <Link to="/internship" className=" text-white font-[500]" href="">
