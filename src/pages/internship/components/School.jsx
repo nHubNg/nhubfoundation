@@ -1,8 +1,6 @@
-
 const School = ({ formData, setFormData }) => {
-
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-[#808080]" >
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-[#808080]">
       <div className="pb-4">
         <label>
           School<span className="text-red">*</span>
@@ -131,21 +129,28 @@ const School = ({ formData, setFormData }) => {
           <option value="" disabled selected hidden>
             Select
           </option>
-          <option value="Frontend">Frontend Development</option>
-          <option value="Backend">Backend Development</option>
-          <option value="UI/UX">Product (UI/UX) Design</option>
-          <option value="Data Science">Data Science</option>
-          <option value="Data Analysis">Data Analysis</option>
-          <option value="VR & 3D">AR/VR</option>
+          <option value="Blockchain">Blockchain (1 Year and above)</option>
+          <option value="UI/UX">
+            Product (UI/UX) Design(3 Months and above)
+          </option>
           <option value="Embedded Systems/IOT">Embedded Systems</option>
+          <option value="Data Analysis">
+            Data Analysis (4 Months and above)
+          </option>
+          {/* <option value="Frontend">Frontend Development</option> */}
+          {/* <option value="Backend">Backend Development</option> */}
+          {/* <option value="Data Science">Data Science</option> */}
+          {/* <option value="VR & 3D">AR/VR</option> */}
+
           {/* <option value="Networking/Cybersecurity">Networking/Cybersecurity</option> */}
           {/* <option value="Mobile App">Mobile App</option> */}
         </select>
         {formData.track === "Frontend" && (
           <div className="bg-orange text-white py-3 px-3 mt-3 rounded-lg">
             <div className="flex justify-between">
-              <h4 className="font-medium text-lg my-1">Frontend Development Minimum PC Requirements</h4>
-
+              <h4 className="font-medium text-lg my-1">
+                Frontend Development Minimum PC Requirements
+              </h4>
             </div>
             <ul className="list-disc px-4">
               <li>Processor (CPU): Intel Core i5 & Above</li>
@@ -155,11 +160,12 @@ const School = ({ formData, setFormData }) => {
             </ul>
           </div>
         )}
-         {formData.track === "Backend" && (
+        {formData.track === "Backend" && (
           <div className="bg-orange text-white py-3 px-3 mt-3 rounded-lg">
             <div className="flex justify-between">
-              <h4 className="font-medium text-lg my-1">Backend Development Minimum PC Requirements</h4>
-
+              <h4 className="font-medium text-lg my-1">
+                Backend Development Minimum PC Requirements
+              </h4>
             </div>
             <ul className="list-disc px-4">
               <li>RAM: 8 GB RAM </li>
@@ -172,8 +178,9 @@ const School = ({ formData, setFormData }) => {
         {formData.track === "UI/UX" && (
           <div className="bg-orange text-white py-3 px-3 mt-3 rounded-lg">
             <div className="flex justify-between">
-              <h4 className="font-medium text-lg my-1">Product (UI/UX) Minimum PC Requirements</h4>
-
+              <h4 className="font-medium text-lg my-1">
+                Product (UI/UX) Minimum PC Requirements
+              </h4>
             </div>
             <ul className="list-disc px-4">
               <li>8GB RAM</li>
@@ -186,7 +193,9 @@ const School = ({ formData, setFormData }) => {
         )}
         {formData.track === "VR & 3D" && (
           <div className="bg-orange text-white py-3 px-3 mt-3 rounded-lg">
-            <h4 className="font-medium text-lg my-1">AR/VR App Minimum PC Requirements</h4>
+            <h4 className="font-medium text-lg my-1">
+              AR/VR App Minimum PC Requirements
+            </h4>
             <ul className="list-disc px-4">
               <li>Ram: 8GB and Above</li>
               <li>Intel i5 and above </li>
@@ -195,7 +204,9 @@ const School = ({ formData, setFormData }) => {
               <li>Storage: 500GB (Preferably SSD)</li>
               <li>Graphics Memory:4GB Graphics Card Dedicated is required. </li>
             </ul>
-            <h4 className="font-medium text-lg my-1">AR/VR App Minimum Software Requirements</h4>
+            <h4 className="font-medium text-lg my-1">
+              AR/VR App Minimum Software Requirements
+            </h4>
             <ul className="list-disc px-4">
               <li>Blender</li>
               <li>Unity</li>
@@ -207,8 +218,9 @@ const School = ({ formData, setFormData }) => {
         {formData.track === "Mobile App" && (
           <div className="bg-orange text-white py-3 px-3 mt-3 rounded-lg">
             <div className="flex justify-between">
-              <h4 className="font-medium text-lg my-1">Mobile App PC Requirements</h4>
-
+              <h4 className="font-medium text-lg my-1">
+                Mobile App PC Requirements
+              </h4>
             </div>
             <ul className="list-disc px-4">
               <li>Ram: 8GB and Above</li>
@@ -218,7 +230,9 @@ const School = ({ formData, setFormData }) => {
               <li>Storage: 250GB and above (Preferably SSD)</li>
               <li>Graphics Memory: Dedicated is recommended. </li>
             </ul>
-            <h4 className="font-medium text-lg my-1">Mobile App MacOs Requirements</h4>
+            <h4 className="font-medium text-lg my-1">
+              Mobile App MacOs Requirements
+            </h4>
             <ul className="list-disc px-4">
               <li>
                 MacBook Pro 2016 and above. (Apple Silicon is Recommended)
@@ -229,8 +243,9 @@ const School = ({ formData, setFormData }) => {
         {formData.track === "Data Analysis" && (
           <div className="bg-orange text-white py-3 px-3 mt-3 rounded-lg">
             <div className="flex justify-between">
-              <h4 className="font-medium text-lg my-1">Data Analysis Minimum PC Requirements</h4>
-
+              <h4 className="font-medium text-lg my-1">
+                Data Analysis Minimum PC Requirements
+              </h4>
             </div>
             <ul className="list-disc px-4">
               <li>Processor (CPU): Intel Core i5</li>
@@ -244,8 +259,9 @@ const School = ({ formData, setFormData }) => {
         {formData.track === "Data Science" && (
           <div className="bg-orange text-white py-3 px-3 mt-3 rounded-lg">
             <div className="flex justify-between">
-              <h4 className="font-medium text-lg my-1">Data Science Minimum PC Requirements</h4>
-
+              <h4 className="font-medium text-lg my-1">
+                Data Science Minimum PC Requirements
+              </h4>
             </div>
             <ul className="list-disc px-4">
               <li>Processor (CPU): Intel Core i5</li>
@@ -256,15 +272,16 @@ const School = ({ formData, setFormData }) => {
             </ul>
           </div>
         )}
-         {formData.track === "Networking/Cybersecurity" && (
+        {formData.track === "Networking/Cybersecurity" && (
           <div className="bg-orange text-white py-3 px-3 mt-3 rounded-lg">
             <div className="flex justify-between">
-              <h4 className="font-medium text-lg my-1">Data Analysis PC Requirements</h4>
-
+              <h4 className="font-medium text-lg my-1">
+                Data Analysis PC Requirements
+              </h4>
             </div>
             <ul className="list-disc px-4 font-light ">
               <li>Processor: 2.5Ghz</li>
-              <li >Operating System:Microsoft Windows 10 x64</li>
+              <li>Operating System:Microsoft Windows 10 x64</li>
               <li>Memory:4 GB RAM & 8GB</li>
               <li>Storage:320 GB HDD/SSD and above</li>
               <li>Core i3 and Above</li>
@@ -272,7 +289,6 @@ const School = ({ formData, setFormData }) => {
           </div>
         )}
       </div>
-      
     </div>
   );
 };
