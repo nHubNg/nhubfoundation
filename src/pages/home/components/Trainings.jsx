@@ -38,7 +38,7 @@ const Trainings = () => {
               {/* <li className=" p-2">Data Analysis</li> */}
               <li className="p-2">Embedded systems (4 Months and above)</li>
               {/* <li className=" p-2">Mobile App Development</li> */}
-              <li className=" p-2">Cyber Security (4 Months and above)</li>
+              <li className=" p-2">Data Analysis (4 Months and above)</li>
             </ul>
             <div className="w-[200px] bg-orange mx-auto text-center py-3 rounded-md mt-3 cursor-pointer hover:bg-purple transition-all duration-300 hover:scale-110">
               <Link to="/internship" className=" text-white font-[500]" href="">
