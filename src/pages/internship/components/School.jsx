@@ -145,6 +145,41 @@ const School = ({ formData, setFormData }) => {
           {/* <option value="Networking/Cybersecurity">Networking/Cybersecurity</option> */}
           {/* <option value="Mobile App">Mobile App</option> */}
         </select>
+        {formData.track === "Blockchain" && (
+  <div className="bg-orange text-white py-3 px-3 mt-3 rounded-lg">
+    <div className="flex justify-between">
+      <h4 className="font-medium text-lg my-1">
+        Blockchain Development Minimum PC Requirements
+      </h4>
+    </div>
+    <ul className="list-disc px-4">
+      <li>Processor (CPU): Intel Core i7 or AMD Ryzen 7 & Above</li>
+      <li>Operating System: Microsoft Windows 10 x64, macOS, or Linux</li>
+      <li>Memory: 16 GB RAM & Above</li>
+      <li>Storage: 1 TB SSD for fast storage and performance</li>
+      <li>Graphics: Dedicated GPU with at least 4 GB VRAM (e.g., NVIDIA GTX 1650 or better)</li>
+      <li>Network: Reliable internet connection for blockchain sync and development</li>
+    </ul>
+  </div>
+)}
+{formData.track === "Embedded Systems/IOT" && (
+  <div className="bg-orange text-white py-3 px-3 mt-3 rounded-lg">
+    <div className="flex justify-between">
+      <h4 className="font-medium text-lg my-1">
+        Embedded Systems/IOT Development Minimum PC Requirements
+      </h4>
+    </div>
+    <ul className="list-disc px-4">
+      <li>Processor (CPU): Intel Core i5 or AMD Ryzen 5 & Above</li>
+      <li>Operating System: Microsoft Windows 10 x64, macOS, or Linux</li>
+      <li>Memory: 8 GB RAM & Above</li>
+      <li>Storage: 500 GB internal storage drive (SSD preferred)</li>
+      <li>USB Ports: At least 3 USB ports (for connecting IoT devices)</li>
+      <li>Connectivity: Wi-Fi and Bluetooth support for IoT communication</li>
+      <li>Additional Tools: Support for VirtualBox or VMWare for running embedded simulations</li>
+    </ul>
+  </div>
+)}
         {formData.track === "Frontend" && (
           <div className="bg-orange text-white py-3 px-3 mt-3 rounded-lg">
             <div className="flex justify-between">
@@ -272,11 +307,11 @@ const School = ({ formData, setFormData }) => {
             </ul>
           </div>
         )} */}
-        {formData.track === "Networking/Cybersecurity" && (
+        {/* {formData.track === "Networking/Cybersecurity" && (
           <div className="bg-orange text-white py-3 px-3 mt-3 rounded-lg">
             <div className="flex justify-between">
               <h4 className="font-medium text-lg my-1">
-                Data Analysis PC Requirements
+                Networking/Cybersecurity PC Requirements
               </h4>
             </div>
             <ul className="list-disc px-4 font-light ">
@@ -287,7 +322,7 @@ const School = ({ formData, setFormData }) => {
               <li>Core i3 and Above</li>
             </ul>
           </div>
-        )}
+        )} */}
       </div>
     </div>
   );
