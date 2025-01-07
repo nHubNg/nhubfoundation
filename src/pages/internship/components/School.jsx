@@ -133,18 +133,53 @@ const School = ({ formData, setFormData }) => {
           <option value="UI/UX">
             Product (UI/UX) Design(3 Months and above)
           </option>
-          <option value="Embedded Systems/IOT">Embedded Systems</option>
+          <option value="Embedded Systems/IOT">Embedded Systems (4 Months and above)</option>
           <option value="Data Analysis">
             Data Analysis (4 Months and above)
           </option>
-          {/* <option value="Frontend">Frontend Development</option> */}
-          {/* <option value="Backend">Backend Development</option> */}
+          <option value="Frontend">Frontend Development (6 months and above)</option>
+          <option value="Backend">Backend Development(6 months and above)</option>
           {/* <option value="Data Science">Data Science</option> */}
           {/* <option value="VR & 3D">AR/VR</option> */}
 
           {/* <option value="Networking/Cybersecurity">Networking/Cybersecurity</option> */}
           {/* <option value="Mobile App">Mobile App</option> */}
         </select>
+        {formData.track === "Blockchain" && (
+  <div className="bg-orange text-white py-3 px-3 mt-3 rounded-lg">
+    <div className="flex justify-between">
+      <h4 className="font-medium text-lg my-1">
+        Blockchain Development Minimum PC Requirements
+      </h4>
+    </div>
+    <ul className="list-disc px-4">
+      <li>Processor (CPU): Intel Core i7 or AMD Ryzen 7 & Above</li>
+      <li>Operating System: Microsoft Windows 10 x64, macOS, or Linux</li>
+      <li>Memory: 16 GB RAM & Above</li>
+      <li>Storage: 1 TB SSD for fast storage and performance</li>
+      <li>Graphics: Dedicated GPU with at least 4 GB VRAM (e.g., NVIDIA GTX 1650 or better)</li>
+      <li>Network: Reliable internet connection for blockchain sync and development</li>
+    </ul>
+  </div>
+)}
+{formData.track === "Embedded Systems/IOT" && (
+  <div className="bg-orange text-white py-3 px-3 mt-3 rounded-lg">
+    <div className="flex justify-between">
+      <h4 className="font-medium text-lg my-1">
+        Embedded Systems/IOT Development Minimum PC Requirements
+      </h4>
+    </div>
+    <ul className="list-disc px-4">
+      <li>Processor (CPU): Intel Core i5 or AMD Ryzen 5 & Above</li>
+      <li>Operating System: Microsoft Windows 10 x64, macOS, or Linux</li>
+      <li>Memory: 8 GB RAM & Above</li>
+      <li>Storage: 500 GB internal storage drive (SSD preferred)</li>
+      <li>USB Ports: At least 3 USB ports (for connecting IoT devices)</li>
+      <li>Connectivity: Wi-Fi and Bluetooth support for IoT communication</li>
+      <li>Additional Tools: Support for VirtualBox or VMWare for running embedded simulations</li>
+    </ul>
+  </div>
+)}
         {formData.track === "Frontend" && (
           <div className="bg-orange text-white py-3 px-3 mt-3 rounded-lg">
             <div className="flex justify-between">
@@ -191,7 +226,7 @@ const School = ({ formData, setFormData }) => {
             </ul>
           </div>
         )}
-        {formData.track === "VR & 3D" && (
+        {/* {formData.track === "VR & 3D" && (
           <div className="bg-orange text-white py-3 px-3 mt-3 rounded-lg">
             <h4 className="font-medium text-lg my-1">
               AR/VR App Minimum PC Requirements
@@ -239,7 +274,7 @@ const School = ({ formData, setFormData }) => {
               </li>
             </ul>
           </div>
-        )}
+        )} */}
         {formData.track === "Data Analysis" && (
           <div className="bg-orange text-white py-3 px-3 mt-3 rounded-lg">
             <div className="flex justify-between">
@@ -256,7 +291,7 @@ const School = ({ formData, setFormData }) => {
             </ul>
           </div>
         )}
-        {formData.track === "Data Science" && (
+        {/* {formData.track === "Data Science" && (
           <div className="bg-orange text-white py-3 px-3 mt-3 rounded-lg">
             <div className="flex justify-between">
               <h4 className="font-medium text-lg my-1">
@@ -271,12 +306,12 @@ const School = ({ formData, setFormData }) => {
               <li>Monitor/Display:13&apos; LCD monitor</li>
             </ul>
           </div>
-        )}
-        {formData.track === "Networking/Cybersecurity" && (
+        )} */}
+        {/* {formData.track === "Networking/Cybersecurity" && (
           <div className="bg-orange text-white py-3 px-3 mt-3 rounded-lg">
             <div className="flex justify-between">
               <h4 className="font-medium text-lg my-1">
-                Data Analysis PC Requirements
+                Networking/Cybersecurity PC Requirements
               </h4>
             </div>
             <ul className="list-disc px-4 font-light ">
@@ -287,7 +322,7 @@ const School = ({ formData, setFormData }) => {
               <li>Core i3 and Above</li>
             </ul>
           </div>
-        )}
+        )} */}
       </div>
     </div>
   );
