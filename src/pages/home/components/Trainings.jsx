@@ -31,11 +31,11 @@ const Trainings = () => {
               className="text-[15px] px-8
           list-image-[url('https://res.cloudinary.com/nhubnacademy/image/upload/v1683034207/Vector_ptvzrq.png')]"
             >
-              {/* <li className="  p-2">Frontend Web Development</li> */}
-              {/* <li className="  p-2">Backend web development</li> */}
               <li className=" p-2">Blockchain (1 Year and above)</li>
               <li className="  p-2"> Product (UI/UX) Design (3 Months and above)</li>
               <li className="p-2">Embedded systems (4 Months and above)</li>
+              <li className="  p-2">Frontend Web Development (6 Months and above)</li>
+              <li className="  p-2">Backend web development (6 Months and above)</li>
               {/* <li className=" p-2">Mobile App Development</li> */}
               <li className=" p-2">Data Analysis (4 Months and above)</li>
             </ul>

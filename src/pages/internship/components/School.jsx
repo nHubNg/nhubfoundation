@@ -133,12 +133,12 @@ const School = ({ formData, setFormData }) => {
           <option value="UI/UX">
             Product (UI/UX) Design(3 Months and above)
           </option>
-          <option value="Embedded Systems/IOT">Embedded Systems</option>
+          <option value="Embedded Systems/IOT">Embedded Systems (4 Months and above)</option>
           <option value="Data Analysis">
             Data Analysis (4 Months and above)
           </option>
-          {/* <option value="Frontend">Frontend Development</option> */}
-          {/* <option value="Backend">Backend Development</option> */}
+          <option value="Frontend">Frontend Development (6 months and above)</option>
+          <option value="Backend">Backend Development(6 months and above)</option>
           {/* <option value="Data Science">Data Science</option> */}
           {/* <option value="VR & 3D">AR/VR</option> */}
 
@@ -191,7 +191,7 @@ const School = ({ formData, setFormData }) => {
             </ul>
           </div>
         )}
-        {formData.track === "VR & 3D" && (
+        {/* {formData.track === "VR & 3D" && (
           <div className="bg-orange text-white py-3 px-3 mt-3 rounded-lg">
             <h4 className="font-medium text-lg my-1">
               AR/VR App Minimum PC Requirements
@@ -239,7 +239,7 @@ const School = ({ formData, setFormData }) => {
               </li>
             </ul>
           </div>
-        )}
+        )} */}
         {formData.track === "Data Analysis" && (
           <div className="bg-orange text-white py-3 px-3 mt-3 rounded-lg">
             <div className="flex justify-between">
@@ -256,7 +256,7 @@ const School = ({ formData, setFormData }) => {
             </ul>
           </div>
         )}
-        {formData.track === "Data Science" && (
+        {/* {formData.track === "Data Science" && (
           <div className="bg-orange text-white py-3 px-3 mt-3 rounded-lg">
             <div className="flex justify-between">
               <h4 className="font-medium text-lg my-1">
@@ -271,7 +271,7 @@ const School = ({ formData, setFormData }) => {
               <li>Monitor/Display:13&apos; LCD monitor</li>
             </ul>
           </div>
-        )}
+        )} */}
         {formData.track === "Networking/Cybersecurity" && (
           <div className="bg-orange text-white py-3 px-3 mt-3 rounded-lg">
             <div className="flex justify-between">
