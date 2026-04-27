@@ -118,9 +118,9 @@ const Footer = () => {
                 />
                 <a
                   className="active:text-orange hover:text-orange"
-                  href="tel:0806 864 0710"
+                  href="tel:0810 117 4443"
                 >
-                  0816 740 3660
+                  +234 810 117 4443
                 </a>
               </li>
             </ul>
